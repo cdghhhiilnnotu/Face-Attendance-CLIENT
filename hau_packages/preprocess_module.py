@@ -1,6 +1,6 @@
 from keras.preprocessing.image import ImageDataGenerator, load_img, img_to_array
 import os
-os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '1'
 import cv2
 
 def tracking_face(img, haar_model= 'haarcascade_frontalface_default.xml'):

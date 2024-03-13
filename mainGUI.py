@@ -13,6 +13,9 @@ widget = QtWidgets.QStackedWidget()
 loginWin = LoginWindow(widget)
 attendanceWin = AttendanceWindow(widget)
 
+widget.setFixedWidth(800)
+widget.setFixedHeight(500)
+
 widget.addWidget(loginWin)
 widget.addWidget(attendanceWin)
 widget.setWindowTitle(widget.currentWidget().objectName())

@@ -13,17 +13,18 @@ class LoginWindow(QMainWindow):
         super(LoginWindow, self).__init__()
         loadUi("login.ui", self)
         # self.widget.setWindowTitle("Login")
-        self.signup.setMaximumWidth(0)
-        self.signin_btn.clicked.connect(self.logging_in)
+        self.signup_page.setMaximumWidth(0)
+        self.signin_btn.clicked.connect(self.logging_in_func)
         self.register_btn.clicked.connect(self.enter_register)
-        self.cancel_register_btn.clicked.connect(self.exit_register)
+        self.cancel_btn.clicked.connect(self.exit_register)
 
-    def logging_in(self):
+    def logging_in_func(self):
         self.widget.setCurrentIndex(self.widget.currentIndex() + 1)
         self.widget.setWindowTitle(self.widget.currentWidget().objectName())
+        self.widget.currentWidget().logging_in_func()
 
     def enter_register(self):
-        self.signup.setMaximumWidth(2000)
+        self.signup_page.setMaximumWidth(2000)
 
     def exit_register(self):
-        self.signup.setMaximumWidth(0)
+        self.signup_page.setMaximumWidth(0)

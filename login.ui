@@ -27,7 +27,7 @@
   <property name="windowTitle">
    <string notr="true">Login</string>
   </property>
-  <widget class="QWidget" name="mainWidget">
+  <widget class="QWidget" name="loginWidget">
    <property name="enabled">
     <bool>true</bool>
    </property>
@@ -59,7 +59,7 @@
      <number>2</number>
     </property>
     <item>
-     <widget class="QWidget" name="parent" native="true">
+     <widget class="QWidget" name="container" native="true">
       <property name="layoutDirection">
        <enum>Qt::LeftToRight</enum>
       </property>
@@ -86,7 +86,7 @@
         <number>1</number>
        </property>
        <item>
-        <widget class="QWidget" name="signin" native="true">
+        <widget class="QWidget" name="signin_page" native="true">
          <property name="styleSheet">
           <string notr="true">background-color: rgb(188, 188, 188);
 border-radius: 9px;
@@ -136,10 +136,171 @@ border-radius: 13px;</string>
            <string>Register</string>
           </property>
          </widget>
+         <widget class="QLineEdit" name="signin_username_input">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>160</y>
+            <width>331</width>
+            <height>30</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Cambria</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 7px;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="signin_password_input">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>240</y>
+            <width>331</width>
+            <height>30</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Cambria</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 7px;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="signin_username_label">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>120</y>
+            <width>261</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Cambria</family>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Tên đăng nhập</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="signin_password_label">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>200</y>
+            <width>261</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Cambria</family>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Mật khẩu</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="signin_forgot_password_btn">
+          <property name="geometry">
+           <rect>
+            <x>182</x>
+            <y>280</y>
+            <width>161</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Cambria</family>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-radius: 13px;
+background-color: rgba(255, 255, 255, 109);</string>
+          </property>
+          <property name="text">
+           <string>Quên mật khẩu</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="signin_name_label">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>30</y>
+            <width>261</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Cambria</family>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>ĐĂNG NHẬP</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
         </widget>
        </item>
        <item>
-        <widget class="QWidget" name="signup" native="true">
+        <widget class="QWidget" name="signup_page" native="true">
          <property name="maximumSize">
           <size>
            <width>16777215</width>
@@ -172,7 +333,7 @@ border-radius: 13px;</string>
            <string>Sign Up</string>
           </property>
          </widget>
-         <widget class="QPushButton" name="cancel_register_btn">
+         <widget class="QPushButton" name="cancel_btn">
           <property name="geometry">
            <rect>
             <x>240</x>
@@ -192,6 +353,37 @@ border-radius: 13px;</string>
           </property>
           <property name="text">
            <string>Cancel</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="signup_name_label">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>30</y>
+            <width>261</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Cambria</family>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>ĐĂNG KÝ</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
           </property>
          </widget>
         </widget>

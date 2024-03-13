@@ -18,7 +18,7 @@
   <property name="windowTitle">
    <string notr="true">Attendance</string>
   </property>
-  <widget class="QWidget" name="mainWidget">
+  <widget class="QWidget" name="attendanceWidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
     <property name="spacing">
      <number>0</number>
@@ -36,7 +36,7 @@
      <number>2</number>
     </property>
     <item>
-     <widget class="QWidget" name="parent" native="true">
+     <widget class="QWidget" name="container" native="true">
       <property name="layoutDirection">
        <enum>Qt::LeftToRight</enum>
       </property>
@@ -97,7 +97,7 @@ border-radius: 13px;</string>
            <string>Log Out</string>
           </property>
          </widget>
-         <widget class="QWidget" name="navBtns" native="true">
+         <widget class="QWidget" name="remote_controllers" native="true">
           <property name="geometry">
            <rect>
             <x>-1</x>
@@ -145,7 +145,7 @@ border-radius: 5px;</string>
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="recog_btn">
+            <widget class="QPushButton" name="recognize_btn">
              <property name="minimumSize">
               <size>
                <width>0</width>
@@ -215,7 +215,7 @@ border-radius: 5px;</string>
         </widget>
        </item>
        <item>
-        <widget class="QWidget" name="actions" native="true">
+        <widget class="QWidget" name="main" native="true">
          <property name="maximumSize">
           <size>
            <width>16777215</width>
@@ -228,9 +228,9 @@ border-radius: 9px;</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <item>
-           <widget class="QStackedWidget" name="pages">
+           <widget class="QStackedWidget" name="main_pages">
             <property name="currentIndex">
-             <number>0</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="home_page">
              <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,3">
@@ -250,12 +250,12 @@ border-radius: 9px;</string>
                <number>1</number>
               </property>
               <item>
-               <widget class="QWidget" name="home_func" native="true">
-                <widget class="QPushButton" name="train_btn">
+               <widget class="QWidget" name="home_controllers" native="true">
+                <widget class="QPushButton" name="home_train_btn">
                  <property name="geometry">
                   <rect>
-                   <x>470</x>
-                   <y>80</y>
+                   <x>420</x>
+                   <y>85</y>
                    <width>93</width>
                    <height>28</height>
                   </rect>
@@ -273,7 +273,7 @@ border-radius: 13px;</string>
                   <string>Train</string>
                  </property>
                 </widget>
-                <widget class="QPushButton" name="collect_btn">
+                <widget class="QPushButton" name="home_get_data_btn">
                  <property name="geometry">
                   <rect>
                    <x>470</x>
@@ -317,7 +317,7 @@ border-radius: 13px;</string>
                   <string>Search</string>
                  </property>
                 </widget>
-                <widget class="QLineEdit" name="class_box">
+                <widget class="QLineEdit" name="home_class_input">
                  <property name="geometry">
                   <rect>
                    <x>22</x>
@@ -329,7 +329,7 @@ border-radius: 13px;</string>
                  <property name="font">
                   <font>
                    <family>Cambria</family>
-                   <pointsize>11</pointsize>
+                   <pointsize>10</pointsize>
                   </font>
                  </property>
                  <property name="styleSheet">
@@ -340,7 +340,7 @@ border-radius: 7px;</string>
                   <string/>
                  </property>
                 </widget>
-                <widget class="QLabel" name="model_name">
+                <widget class="QLabel" name="model_name_label">
                  <property name="geometry">
                   <rect>
                    <x>20</x>
@@ -369,7 +369,7 @@ border-radius: 7px;</string>
                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                  </property>
                 </widget>
-                <widget class="QLabel" name="home_name">
+                <widget class="QLabel" name="home_name_label">
                  <property name="geometry">
                   <rect>
                    <x>20</x>
@@ -402,6 +402,10 @@ border-radius: 7px;</string>
               </item>
               <item>
                <widget class="QWidget" name="home_view" native="true">
+                <property name="styleSheet">
+                 <string notr="true">border-radius: 5px;
+background-color: rgb(255, 255, 255);</string>
+                </property>
                 <layout class="QVBoxLayout" name="verticalLayout_3">
                  <property name="spacing">
                   <number>0</number>
@@ -428,6 +432,12 @@ border-radius: 7px;</string>
                    <property name="styleSheet">
                     <string notr="true">border-radius: 5px;
 background-color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="verticalScrollMode">
+                    <enum>QAbstractItemView::ScrollPerPixel</enum>
+                   </property>
+                   <property name="horizontalScrollMode">
+                    <enum>QAbstractItemView::ScrollPerPixel</enum>
                    </property>
                    <column>
                     <property name="text">
@@ -523,7 +533,7 @@ background-color: rgb(255, 255, 255);</string>
               </item>
              </layout>
             </widget>
-            <widget class="QWidget" name="recog_page">
+            <widget class="QWidget" name="recognize_page">
              <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,3">
               <property name="spacing">
                <number>2</number>
@@ -541,8 +551,8 @@ background-color: rgb(255, 255, 255);</string>
                <number>1</number>
               </property>
               <item>
-               <widget class="QWidget" name="recog_func" native="true">
-                <widget class="QPushButton" name="open_btn">
+               <widget class="QWidget" name="recognize_controllers" native="true">
+                <widget class="QPushButton" name="recognize_open_img_btn">
                  <property name="geometry">
                   <rect>
                    <x>360</x>
@@ -564,7 +574,7 @@ border-radius: 13px;</string>
                   <string>Open</string>
                  </property>
                 </widget>
-                <widget class="QLineEdit" name="image_name">
+                <widget class="QLineEdit" name="recognize_img_path_input">
                  <property name="enabled">
                   <bool>false</bool>
                  </property>
@@ -576,12 +586,18 @@ border-radius: 13px;</string>
                    <height>30</height>
                   </rect>
                  </property>
+                 <property name="font">
+                  <font>
+                   <family>Cambria</family>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
                  <property name="styleSheet">
                   <string notr="true">background-color: rgb(255, 255, 255);
 border-radius: 7px;</string>
                  </property>
                 </widget>
-                <widget class="QLabel" name="recog_name">
+                <widget class="QLabel" name="recognize_name_label">
                  <property name="geometry">
                   <rect>
                    <x>20</x>
@@ -610,7 +626,7 @@ border-radius: 7px;</string>
                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                  </property>
                 </widget>
-                <widget class="QPushButton" name="recog_tab_1">
+                <widget class="QPushButton" name="recognize_tab_1_btn">
                  <property name="geometry">
                   <rect>
                    <x>400</x>
@@ -632,7 +648,7 @@ border-radius: 5px;</string>
                   <string/>
                  </property>
                 </widget>
-                <widget class="QComboBox" name="model_box_list">
+                <widget class="QComboBox" name="recognize_models_box">
                  <property name="geometry">
                   <rect>
                    <x>140</x>
@@ -641,8 +657,14 @@ border-radius: 5px;</string>
                    <height>22</height>
                   </rect>
                  </property>
+                 <property name="font">
+                  <font>
+                   <family>Cambria</family>
+                   <pointsize>9</pointsize>
+                  </font>
+                 </property>
                 </widget>
-                <widget class="QPushButton" name="guess_btn">
+                <widget class="QPushButton" name="recognize_guess_btn">
                  <property name="geometry">
                   <rect>
                    <x>460</x>
@@ -664,7 +686,7 @@ border-radius: 13px;</string>
                   <string>Guess</string>
                  </property>
                 </widget>
-                <widget class="QPushButton" name="recog_tab_2">
+                <widget class="QPushButton" name="recognize_tab_2_btn">
                  <property name="geometry">
                   <rect>
                    <x>450</x>
@@ -686,7 +708,7 @@ border-radius: 5px;</string>
                   <string/>
                  </property>
                 </widget>
-                <widget class="QPushButton" name="recog_tab_3">
+                <widget class="QPushButton" name="recognize_tab_3_btn">
                  <property name="geometry">
                   <rect>
                    <x>500</x>
@@ -711,12 +733,16 @@ border-radius: 5px;</string>
                </widget>
               </item>
               <item>
-               <widget class="QStackedWidget" name="recog_subpage">
-                <property name="currentIndex">
-                 <number>0</number>
+               <widget class="QStackedWidget" name="recognize_view">
+                <property name="styleSheet">
+                 <string notr="true">border-radius: 5px;
+background-color: rgb(255, 255, 255);</string>
                 </property>
-                <widget class="QWidget" name="detect_pic">
-                 <widget class="QLabel" name="detect_img">
+                <property name="currentIndex">
+                 <number>2</number>
+                </property>
+                <widget class="QWidget" name="recognize_image">
+                 <widget class="QLabel" name="recognize_input_img_label">
                   <property name="geometry">
                    <rect>
                     <x>1</x>
@@ -729,15 +755,15 @@ border-radius: 5px;</string>
                    <string/>
                   </property>
                   <property name="pixmap">
-                   <pixmap>../../../HAU/SoSD/Working/Nhóm 3/GameHomeMader/CLIENT/Ui/Assets/images/games/game1.png</pixmap>
+                   <pixmap>resources/apps/no_data_found.png</pixmap>
                   </property>
                   <property name="scaledContents">
                    <bool>true</bool>
                   </property>
                  </widget>
                 </widget>
-                <widget class="QWidget" name="recog_pic">
-                 <widget class="QLabel" name="recog_img">
+                <widget class="QWidget" name="recognize_detect">
+                 <widget class="QLabel" name="recognize_output_img_label">
                   <property name="geometry">
                    <rect>
                     <x>1</x>
@@ -750,17 +776,35 @@ border-radius: 5px;</string>
                    <string/>
                   </property>
                   <property name="pixmap">
-                   <pixmap>../../../HAU/SoSD/Working/Nhóm 3/GameHomeMader/CLIENT/Ui/Assets/images/games/game5.png</pixmap>
+                   <pixmap>resources/apps/no_data_found.png</pixmap>
                   </property>
                   <property name="scaledContents">
                    <bool>true</bool>
                   </property>
                  </widget>
                 </widget>
-                <widget class="QWidget" name="report_in_img">
+                <widget class="QWidget" name="recognize_report">
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
                  <layout class="QVBoxLayout" name="verticalLayout_10">
+                  <property name="spacing">
+                   <number>0</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>1</number>
+                  </property>
                   <item>
-                   <widget class="QTableWidget" name="recog_table">
+                   <widget class="QTableWidget" name="recognize_table">
                     <property name="font">
                      <font>
                       <family>Cambria</family>
@@ -770,21 +814,30 @@ border-radius: 5px;</string>
                      <string notr="true">border-radius: 5px;
 background-color: rgb(255, 255, 255);</string>
                     </property>
-                    <property name="lineWidth">
-                     <number>1</number>
+                    <property name="verticalScrollMode">
+                     <enum>QAbstractItemView::ScrollPerPixel</enum>
                     </property>
-                    <property name="selectionMode">
-                     <enum>QAbstractItemView::ExtendedSelection</enum>
+                    <property name="horizontalScrollMode">
+                     <enum>QAbstractItemView::ScrollPerPixel</enum>
                     </property>
-                    <property name="showGrid">
-                     <bool>true</bool>
+                    <property name="gridStyle">
+                     <enum>Qt::SolidLine</enum>
                     </property>
                     <attribute name="horizontalHeaderVisible">
+                     <bool>true</bool>
+                    </attribute>
+                    <attribute name="horizontalHeaderMinimumSectionSize">
+                     <number>49</number>
+                    </attribute>
+                    <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
                      <bool>false</bool>
+                    </attribute>
+                    <attribute name="horizontalHeaderStretchLastSection">
+                     <bool>true</bool>
                     </attribute>
                     <column>
                      <property name="text">
-                      <string>Box</string>
+                      <string>Box Color</string>
                      </property>
                      <property name="font">
                       <font>
@@ -840,7 +893,7 @@ background-color: rgb(255, 255, 255);</string>
                <number>1</number>
               </property>
               <item>
-               <widget class="QWidget" name="report_func" native="true">
+               <widget class="QWidget" name="report_controllers" native="true">
                 <widget class="QPushButton" name="report_search_btn">
                  <property name="geometry">
                   <rect>
@@ -863,7 +916,7 @@ border-radius: 13px;</string>
                   <string>Search</string>
                  </property>
                 </widget>
-                <widget class="QLineEdit" name="class_name">
+                <widget class="QLineEdit" name="report_class_input">
                  <property name="geometry">
                   <rect>
                    <x>22</x>
@@ -875,7 +928,7 @@ border-radius: 13px;</string>
                  <property name="font">
                   <font>
                    <family>Cambria</family>
-                   <pointsize>9</pointsize>
+                   <pointsize>10</pointsize>
                   </font>
                  </property>
                  <property name="styleSheet">
@@ -886,7 +939,7 @@ border-radius: 7px;</string>
                   <string/>
                  </property>
                 </widget>
-                <widget class="QLabel" name="report_name">
+                <widget class="QLabel" name="report_name_label">
                  <property name="geometry">
                   <rect>
                    <x>20</x>
@@ -919,7 +972,26 @@ border-radius: 7px;</string>
               </item>
               <item>
                <widget class="QWidget" name="report_view" native="true">
+                <property name="styleSheet">
+                 <string notr="true">border-radius: 5px;
+background-color: rgb(255, 255, 255);</string>
+                </property>
                 <layout class="QVBoxLayout" name="verticalLayout_6">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>1</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>1</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>1</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>1</number>
+                 </property>
                  <item>
                   <widget class="QTableWidget" name="report_table">
                    <property name="font">
@@ -930,6 +1002,12 @@ border-radius: 7px;</string>
                    <property name="styleSheet">
                     <string notr="true">border-radius: 5px;
 background-color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="verticalScrollMode">
+                    <enum>QAbstractItemView::ScrollPerPixel</enum>
+                   </property>
+                   <property name="horizontalScrollMode">
+                    <enum>QAbstractItemView::ScrollPerPixel</enum>
                    </property>
                    <column>
                     <property name="text">
@@ -1059,8 +1137,8 @@ background-color: rgb(255, 255, 255);</string>
                <number>1</number>
               </property>
               <item>
-               <widget class="QWidget" name="chart_func" native="true">
-                <widget class="QPushButton" name="show_chart_btn">
+               <widget class="QWidget" name="chart_controllers" native="true">
+                <widget class="QPushButton" name="chart_show_btn">
                  <property name="geometry">
                   <rect>
                    <x>360</x>
@@ -1082,7 +1160,7 @@ border-radius: 13px;</string>
                   <string>Model</string>
                  </property>
                 </widget>
-                <widget class="QLineEdit" name="model_trained">
+                <widget class="QLineEdit" name="chart_model_name_input">
                  <property name="geometry">
                   <rect>
                    <x>22</x>
@@ -1093,7 +1171,8 @@ border-radius: 13px;</string>
                  </property>
                  <property name="font">
                   <font>
-                   <pointsize>11</pointsize>
+                   <family>Cambria</family>
+                   <pointsize>10</pointsize>
                   </font>
                  </property>
                  <property name="styleSheet">
@@ -1104,7 +1183,7 @@ border-radius: 7px;</string>
                   <string/>
                  </property>
                 </widget>
-                <widget class="QLabel" name="chart_name">
+                <widget class="QLabel" name="chart_name_label">
                  <property name="geometry">
                   <rect>
                    <x>20</x>
@@ -1133,7 +1212,7 @@ border-radius: 7px;</string>
                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                  </property>
                 </widget>
-                <widget class="QLabel" name="model_name_2">
+                <widget class="QLabel" name="chart_result_text_label">
                  <property name="geometry">
                   <rect>
                    <x>90</x>
@@ -1183,7 +1262,7 @@ border-radius: 7px;</string>
                   <number>1</number>
                  </property>
                  <item>
-                  <widget class="QLabel" name="chart_pic">
+                  <widget class="QLabel" name="chart_result_img_label">
                    <property name="maximumSize">
                     <size>
                      <width>560</width>
@@ -1197,7 +1276,7 @@ border-radius: 7px;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap>../../../HAU/SoSD/Working/Nhóm 3/GameHomeMader/CLIENT/Ui/Assets/images/games/game3.png</pixmap>
+                    <pixmap>resources/apps/no_data_found.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
