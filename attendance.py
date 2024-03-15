@@ -1,12 +1,17 @@
 import sys
 import os
 from PyQt5.QtCore import Qt
+import threading
 
 from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QMainWindow, QApplication, QTableWidgetItem, QAbstractItemView, QFileDialog
 from PyQt5.QtGui import QIcon, QPixmap, QBrush, QColor
 from packages_import import *
+
+def background_func(func, args):
+    th = threading.Thread(target=func, args=args)
+    th.start()
 
 class AttendanceWindow(QMainWindow):
     def __init__(self, widget):
@@ -27,8 +32,8 @@ class AttendanceWindow(QMainWindow):
         self.chart_btn.clicked.connect(lambda: self.swtich_page_func(3))
         
         self.home_search_btn.clicked.connect(self.hp_search_func)
-        self.home_get_data_btn.clicked.connect(self.hp_get_data_func)
-        self.home_train_btn.clicked.connect(self.hp_training_func)
+        self.home_get_data_btn.clicked.connect(lambda: background_func(self.hp_get_data_func, ()))
+        self.home_train_btn.clicked.connect(lambda: background_func(self.hp_training_func, ()))
         self.recognize_guess_btn.clicked.connect(self.recp_show_guess_func)
         self.recognize_open_img_btn.clicked.connect(self.recp_open_image_to_guess_func)
         self.recognize_tab_1_btn.clicked.connect(lambda: self.recp_switch_subpage_func(0))
@@ -120,9 +125,10 @@ class AttendanceWindow(QMainWindow):
         evaluate_model(self.model, self.model_name_text, self.test_ds)
         plot_train_history(self.history, f"{self.class_id_name}_acc_loss.png")
         self.chp_show_chart_func()
-        if self.class_id_name not in self.list_model_trained:
-            self.list_model_trained.append(self.class_id_name)
-            self.recognize_models_box.addItem(self.class_id_name) 
+        # if self.class_id_name not in self.list_model_trained:
+        #     self.list_model_trained.append(self.class_id_name)
+        #     self.recognize_models_box.addItem(self.class_id_name)
+        self.recp_init_func()
 
 
     # RECOGNITION PAGE
