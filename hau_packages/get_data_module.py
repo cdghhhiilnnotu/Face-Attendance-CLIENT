@@ -63,9 +63,3 @@ def get_sv_by_msv(msv):
         if s['MaSV'] == msv:
             return s
 
-if __name__ == "__main__":
-    student_msv = get_msv_by_class('TH5216_20CN3')
-    # for msv in student_msv:
-
-    # download_dataset(student_links)
-

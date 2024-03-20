@@ -3,11 +3,8 @@ import shutil
 import cv2
 from preprocess_module import tracking_face
 from get_data_module import get_msv_by_class, get_sv_by_msv
-import sys
-sys.path.append('..\\')
 
 current_dir = os. getcwd()
-print(current_dir)
 
 def reset_path(path_name, remake=True):
     if os.path.exists(path_name):
@@ -19,7 +16,6 @@ def download_dataset(dataset_path, download_urls):
     current_dir = os. getcwd()
     os.chdir(dataset_path)
     for down_url in download_urls:
-        # os.system(f'gdown --no-cookies {down_url}')
         os.system(f'gdown --folder {down_url}')
     os.chdir(current_dir)
 
@@ -38,7 +34,6 @@ def download_dataset_by_class(dataset_path, class_id):
     download_dataset(dataset_path, student_links)
 
 def cleaning_dataset(dataset_path, haar_model):
-    # print(dataset_path)
     for fold in os.listdir(dataset_path):
         fold_dir = os.path.join(dataset_path, fold)
         if os.path.isdir(fold_dir):

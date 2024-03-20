@@ -14,7 +14,7 @@ class LoginWindow(QMainWindow):
         super(LoginWindow, self).__init__()
         loadUi("login.ui", self)
         self.passwordIsHide = True
-        # self.widget.setWindowTitle("Login")
+        
         self.signup_page.setMaximumWidth(0)
         self.signin_btn.clicked.connect(self.logging_in_func)
         self.about_btn.clicked.connect(self.enter_register)
@@ -29,8 +29,6 @@ class LoginWindow(QMainWindow):
         else:
             self.signin_password_input.setEchoMode(QLineEdit.Normal)
 
-        
-    
     def init_login(self):
         self.passwordIsHide = False
         self.hiding_password()
@@ -43,9 +41,7 @@ class LoginWindow(QMainWindow):
         else:
             self.wrong_user()
         
-
     def correct_user(self):
-        print("CORRECT")
         success_login(self.signin_username_input.text())
         self.widget.setCurrentIndex(self.widget.currentIndex() + 1)
         self.widget.setWindowTitle(self.widget.currentWidget().objectName())
@@ -54,9 +50,7 @@ class LoginWindow(QMainWindow):
 
     def wrong_user(self):
         self.signin_name_label.setStyleSheet("color: '#ff0000'")
-        print("WRONG")
         self.init_login()
-
 
     def enter_register(self):
         self.signup_page.setMaximumWidth(2000)

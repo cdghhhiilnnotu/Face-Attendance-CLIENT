@@ -15,6 +15,6 @@ def get_model_config(model_weight):
     x = keras.layers.Dense(15, activation='softmax')(x)
     model = tf.keras.Model(inputs, x)
 
-    model.load_weights(f'models_dir/{model_weight}.keras')
+    model.load_weights(f'hau_models/{model_weight}.keras')
     return model
 

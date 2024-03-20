@@ -7,7 +7,6 @@ user = {}
 def logging_user(username, password):
     try:
         user = requests.get(BASE_DIR + f"/giaovien/logging/{username}/{password}").json()
-        print(user)
         return user
     except:
         print("FAIL TO GET API")

@@ -9,7 +9,6 @@ from training_module import *
 from predict_module import *
 from model_module import *
 from logging_module import *
-from help_module import *
 
 
 # CONST

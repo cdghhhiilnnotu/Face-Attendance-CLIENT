@@ -131,9 +131,6 @@ class AttendanceWindow(QMainWindow):
         evaluate_model(self.model, self.model_name_text, self.test_ds)
         plot_train_history(self.history, f"{self.class_id_name}_acc_loss.png")
         self.chp_show_chart_func()
-        # if self.class_id_name not in self.list_model_trained:
-        #     self.list_model_trained.append(self.class_id_name)
-        #     self.recognize_models_box.addItem(self.class_id_name)
         self.recp_init_func()
 
 
@@ -169,7 +166,6 @@ class AttendanceWindow(QMainWindow):
         try:
             self.model = get_model_config(self.recognize_models_box.currentText())
             self.dataset_path = os.path.join(DATASETS_PATH,self.recognize_models_box.currentText())
-            # self.model = get_model_config("TH5216_20CN3")
             result_img_path, colors, guesses_indexes = guessing_img(self.dataset_path, self.img_guess_name, self.model)
             self.display_image_func(self.recognize_output_img_label, result_img_path)
             self.recp_show_recognition_table_func(colors, guesses_indexes)
@@ -192,7 +188,6 @@ class AttendanceWindow(QMainWindow):
             itemMSV = QTableWidgetItem(str(os.listdir(self.dataset_path)[guesses_indexes[idx]]))
             itemMSV.setBackground(QBrush(QColor(255, 255, 255)))
             self.recognize_table.setItem(idx, 1, itemMSV)
-        # self.recognize_table
 
     def recp_open_image_to_guess_func(self):
         fname = QFileDialog.getOpenFileName(self, "Open File", "", "All Files (*)")
