@@ -56,7 +56,8 @@ class AttendanceWindow(QMainWindow):
         self.chp_init_func()
         self.swtich_page_func(0)
         self.widget.setCurrentIndex(self.widget.currentIndex() - 1)
-        self.widget.setWindowTitle(self.widget.currentWidget().objectName())    
+        self.widget.setWindowTitle(self.widget.currentWidget().objectName())
+        self.widget.currentWidget().init_login() 
 
     def swtich_page_func(self, index):
         self.main_pages.setCurrentIndex(index)
@@ -73,6 +74,7 @@ class AttendanceWindow(QMainWindow):
         self.hp_init_class_func("")
         self.home_train_btn.hide()
         self.home_get_data_btn.hide()
+        self.home_class_input.setText("")
 
         self.hp_show_table_func()
     
@@ -88,6 +90,7 @@ class AttendanceWindow(QMainWindow):
         self.chp_show_chart_func()
 
     def hp_show_table_func(self):
+        self.home_table.horizontalHeader().setVisible(True)
         datasv = get_sv_by_class(self.class_id_name)
         row = 0
         self.home_table.setRowCount(len(datasv))
@@ -98,29 +101,32 @@ class AttendanceWindow(QMainWindow):
             "QHeaderView::section { color:white; background-color:#232326;}"
         )
         for e in datasv:
-            self.home_table.setItem(row, 0, QTableWidgetItem(e['MSV']))
+            self.home_table.setItem(row, 0, QTableWidgetItem(e['MaSV']))
             self.home_table.setItem(row, 1, QTableWidgetItem(e['TenSV']))
             self.home_table.setItem(row, 2, QTableWidgetItem(e['LopQL']))
             self.home_table.setItem(row, 3, QTableWidgetItem(e['NgSinh']))
             self.home_table.setItem(row, 4, QTableWidgetItem(e['SDT']))
             row += 1
-        self.dataset_path = self.class_id_name
+        self.dataset_path = os.path.join(DATASETS_PATH,self.class_id_name)
         self.home_get_data_btn.show()
         
     def hp_get_data_func(self):
-        download_dataset_by_class(self.dataset_path,self.class_id_name)
-        cleaning_dataset(self.dataset_path, MODEL_HAAR)
-        augmentation_dataset_main(self.dataset_path)
-        standardized_image(self.dataset_path)
-        split_folder(self.dataset_path, self.img_path)
+        try:
+            download_dataset_by_class(self.dataset_path,self.class_id_name)
+            cleaning_dataset(self.dataset_path, MODEL_HAAR)
+            augmentation_dataset_main(self.dataset_path)
+            standardized_image(self.dataset_path)
+            split_folder(self.dataset_path, self.img_path)
 
-        self.students, self.student_classes = data_classify(self.dataset_path, self.img_path)
-        self.train_ds, self.val_ds, self.test_ds = augmentation_dataset_extra(self.img_path)
-        self.home_train_btn.show()
+            self.students, self.student_classes = data_classify(self.dataset_path, self.img_path)
+            self.train_ds, self.val_ds, self.test_ds = augmentation_dataset_extra(self.img_path)
+            self.home_train_btn.show()
+        except:
+            pass
 
     def hp_training_func(self):
         self.model = compile_model(self.student_classes)
-        self.model, self.history  = fit_model(self.model, self.train_ds, self.val_ds, self.model_name_text, 1)
+        self.model, self.history  = fit_model(self.model, self.train_ds, self.val_ds, self.model_name_text, 10)
 
         evaluate_model(self.model, self.model_name_text, self.test_ds)
         plot_train_history(self.history, f"{self.class_id_name}_acc_loss.png")
@@ -162,7 +168,7 @@ class AttendanceWindow(QMainWindow):
     def recp_show_guess_func(self):
         try:
             self.model = get_model_config(self.recognize_models_box.currentText())
-            self.dataset_path = self.recognize_models_box.currentText()
+            self.dataset_path = os.path.join(DATASETS_PATH,self.recognize_models_box.currentText())
             # self.model = get_model_config("TH5216_20CN3")
             result_img_path, colors, guesses_indexes = guessing_img(self.dataset_path, self.img_guess_name, self.model)
             self.display_image_func(self.recognize_output_img_label, result_img_path)
@@ -171,6 +177,7 @@ class AttendanceWindow(QMainWindow):
             pass
 
     def recp_show_recognition_table_func(self, colors, guesses_indexes):
+        self.recognize_table.horizontalHeader().setVisible(True)
         self.recognize_table.setRowCount(len(colors))
         self.recognize_table.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.recognize_table.setStyleSheet(
@@ -203,7 +210,8 @@ class AttendanceWindow(QMainWindow):
         self.repp_show_report_table_func()
 
     def repp_show_report_table_func(self):
-        datasv = get_sv_by_class(self.report_class_input.text())
+        self.report_table.horizontalHeader().setVisible(True)
+        datasv = get_baocao_all_class(self.report_class_input.text())
         row = 0
         self.report_table.setRowCount(len(datasv))
         self.report_table.setSelectionBehavior(QAbstractItemView.SelectRows)
@@ -213,11 +221,11 @@ class AttendanceWindow(QMainWindow):
             "QHeaderView::section { color:white; background-color:#232326; }"
         )
         for e in datasv:
-            self.report_table.setItem(row, 0, QTableWidgetItem(e['MSV']))
+            self.report_table.setItem(row, 0, QTableWidgetItem(e['MaSV']))
             self.report_table.setItem(row, 1, QTableWidgetItem(e['TenSV']))
             self.report_table.setItem(row, 2, QTableWidgetItem(e['LopQL']))
-            self.report_table.setItem(row, 3, QTableWidgetItem(e['NgSinh']))
-            self.report_table.setItem(row, 4, QTableWidgetItem(e['SDT']))
+            self.report_table.setItem(row, 3, QTableWidgetItem(e['MaLop']))
+            self.report_table.setItem(row, 4, QTableWidgetItem(str(e['DiemDanh'])))
             row += 1
 
 

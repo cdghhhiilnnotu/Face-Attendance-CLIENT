@@ -1,6 +1,6 @@
 import json
 
-fileJSON = 'api.json'
+fileJSON = 'api1.json'
 
 # Opening JSON file
 def openJSON():
@@ -34,14 +34,33 @@ def get_sv_by_class(classID):
         if item['MaLop'] == classID:
             dsmsv.append(item['MaSV'])
     for item in data_by_key('sinhvien'):
-        if item['MSV'] in dsmsv:
+        if item['MaSV'] in dsmsv:
+            dssv.append(item)
+    return dssv
+
+def get_baocao_by_class(classID):
+    dsmsv = []
+    
+    dssv = []
+    for item in data_by_key('baocao'):
+        if item['MaLop'] == classID:
+            dsmsv.append(item['MaSV'])
+    for item in data_by_key('sinhvien'):
+        if item['MaSV'] in dsmsv:
+            dssv.append(item)
+    return dssv
+
+def get_baocao_all_class(classID):
+    dssv = []
+    for item in data_by_key('baocao_all'):
+        if item['MaLop'] == classID:
             dssv.append(item)
     return dssv
 
 def get_sv_by_msv(msv):
     data = openJSON()
     for s in data['sinhvien']:
-        if s['MSV'] == msv:
+        if s['MaSV'] == msv:
             return s
 
 if __name__ == "__main__":

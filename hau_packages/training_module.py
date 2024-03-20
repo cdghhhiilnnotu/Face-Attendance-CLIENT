@@ -48,7 +48,7 @@ def compile_model(student_classes):
     return model
 
 def fit_model(model, train_ds, val_ds, model_name, epoch):
-    checkpointer = ModelCheckpoint(filepath=f'models_dir/{model_name}',
+    checkpointer = ModelCheckpoint(filepath=f'hau_models/{model_name}',
                                    monitor='val_accuracy', mode='max',
                                    verbose=1, save_best_only=True)
     early_stopping = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=3)
@@ -59,7 +59,7 @@ def fit_model(model, train_ds, val_ds, model_name, epoch):
     return model, history
 
 def evaluate_model(model, model_name, test_ds):
-    model.load_weights(f'models_dir/{model_name}')
+    model.load_weights(f'hau_models/{model_name}')
     score = model.evaluate(test_ds, verbose=1)
 
 def plot_train_history(history, file_name_fig):

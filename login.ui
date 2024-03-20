@@ -111,10 +111,10 @@ border-radius: 9px;
 border-radius: 13px;</string>
           </property>
           <property name="text">
-           <string>Sign In</string>
+           <string>Đăng nhập</string>
           </property>
          </widget>
-         <widget class="QPushButton" name="register_btn">
+         <widget class="QPushButton" name="about_btn">
           <property name="geometry">
            <rect>
             <x>240</x>
@@ -133,7 +133,7 @@ border-radius: 13px;</string>
 border-radius: 13px;</string>
           </property>
           <property name="text">
-           <string>Register</string>
+           <string>About Us</string>
           </property>
          </widget>
          <widget class="QLineEdit" name="signin_username_input">
@@ -164,7 +164,7 @@ border-radius: 7px;</string>
            <rect>
             <x>10</x>
             <y>240</y>
-            <width>331</width>
+            <width>291</width>
             <height>30</height>
            </rect>
           </property>
@@ -180,6 +180,9 @@ border-radius: 7px;</string>
           </property>
           <property name="text">
            <string/>
+          </property>
+          <property name="echoMode">
+           <enum>QLineEdit::Password</enum>
           </property>
          </widget>
          <widget class="QLabel" name="signin_username_label">
@@ -244,28 +247,6 @@ border-radius: 7px;</string>
            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
           </property>
          </widget>
-         <widget class="QPushButton" name="signin_forgot_password_btn">
-          <property name="geometry">
-           <rect>
-            <x>182</x>
-            <y>280</y>
-            <width>161</width>
-            <height>28</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <family>Cambria</family>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">border-radius: 13px;
-background-color: rgba(255, 255, 255, 109);</string>
-          </property>
-          <property name="text">
-           <string>Quên mật khẩu</string>
-          </property>
-         </widget>
          <widget class="QLabel" name="signin_name_label">
           <property name="geometry">
            <rect>
@@ -297,6 +278,28 @@ background-color: rgba(255, 255, 255, 109);</string>
            <set>Qt::AlignCenter</set>
           </property>
          </widget>
+         <widget class="QPushButton" name="hide_password_btn">
+          <property name="geometry">
+           <rect>
+            <x>309</x>
+            <y>241</y>
+            <width>28</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Cambria</family>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(109, 109, 109);
+border-radius: 13px;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
         </widget>
        </item>
        <item>
@@ -311,28 +314,6 @@ background-color: rgba(255, 255, 255, 109);</string>
           <string notr="true">background-color: rgb(109, 109, 109);
 border-radius: 9px;</string>
          </property>
-         <widget class="QPushButton" name="signup_btn">
-          <property name="geometry">
-           <rect>
-            <x>120</x>
-            <y>380</y>
-            <width>93</width>
-            <height>28</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <family>Cambria</family>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(188, 188, 188);
-border-radius: 13px;</string>
-          </property>
-          <property name="text">
-           <string>Sign Up</string>
-          </property>
-         </widget>
          <widget class="QPushButton" name="cancel_btn">
           <property name="geometry">
            <rect>
@@ -352,10 +333,10 @@ border-radius: 13px;</string>
 border-radius: 13px;</string>
           </property>
           <property name="text">
-           <string>Cancel</string>
+           <string>Thoát</string>
           </property>
          </widget>
-         <widget class="QLabel" name="signup_name_label">
+         <widget class="QLabel" name="aboutus_label">
           <property name="geometry">
            <rect>
             <x>50</x>
@@ -380,10 +361,51 @@ border-radius: 13px;</string>
            <string notr="true"/>
           </property>
           <property name="text">
-           <string>ĐĂNG KÝ</string>
+           <string>ABOUT US</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="aboutus_info_label">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>70</y>
+            <width>321</width>
+            <height>301</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Cambria</family>
+            <pointsize>8</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(190, 188, 188);
+padding: 0px 10px;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::AutoText</enum>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+          <property name="margin">
+           <number>10</number>
           </property>
          </widget>
         </widget>

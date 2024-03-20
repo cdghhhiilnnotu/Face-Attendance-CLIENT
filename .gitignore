@@ -161,7 +161,8 @@ cython_debug/
 
 models_dirs/
 imgs/
-TH5216_20CN3/
+hau_datasets/
+TH4307.1_20CN3/
 back_ups/
 
 *.keras
