@@ -4,7 +4,7 @@ from preprocess_module import *
 import numpy as np
 import random
 
-def guessing_img(dataset_img, img_path, model):
+def guessing_img(dataset_img, img_path, model, name):
     colors = []
     img = cv2.imread(img_path)
     data_x, face_loc = tracking_face(img)
@@ -29,8 +29,8 @@ def guessing_img(dataset_img, img_path, model):
             color = (0, 0, 255)
         cv2.rectangle(img, (x, y),(x+w, y+h), color, 3)
         colors.append(color)
-    cv2.imwrite(f"{dataset_img}_result.png", img)
+    cv2.imwrite(os.path.join("hau_results", f"{name}_result.png"), img)
 
-    return f"{dataset_img}_result.png", colors, [np.argmax(guess) for guess in guesses]
+    return os.path.join("hau_results", f"{name}_result.png"), colors, [np.argmax(guess) for guess in guesses]
 
 

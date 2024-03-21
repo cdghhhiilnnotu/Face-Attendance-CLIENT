@@ -9,7 +9,7 @@ def tracking_face(img, haar_model= 'haarcascade_frontalface_default.xml'):
     img = cv2.resize(img, (int(img.shape[1]/(img.shape[0]/512)),512), interpolation=cv2.INTER_AREA)
     img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     face_detector = cv2.CascadeClassifier(haar_model)
-    faces = face_detector.detectMultiScale(img_gray, 1.2, 5)
+    faces = face_detector.detectMultiScale(img_gray, 1.4, 3)
 
     for (x, y, w, h) in faces:
         img_faces.append(img[y:y+h, x:x+w])

@@ -40,6 +40,7 @@ class AttendanceWindow(QMainWindow):
         self.recognize_tab_2_btn.clicked.connect(lambda: self.recp_switch_subpage_func(1))
         self.recognize_tab_3_btn.clicked.connect(lambda: self.recp_switch_subpage_func(2))
         self.report_search_btn.clicked.connect(self.repp_show_report_table_func)
+        self.chart_show_btn.clicked.connect(self.chp_show_chart_func)
 
 
     def logging_in_func(self):
@@ -126,10 +127,10 @@ class AttendanceWindow(QMainWindow):
 
     def hp_training_func(self):
         self.model = compile_model(self.student_classes)
-        self.model, self.history  = fit_model(self.model, self.train_ds, self.val_ds, self.model_name_text, 10)
+        self.model, self.history  = fit_model(self.model, self.train_ds, self.val_ds, self.model_name_text, 5)
 
         evaluate_model(self.model, self.model_name_text, self.test_ds)
-        plot_train_history(self.history, f"{self.class_id_name}_acc_loss.png")
+        plot_train_history(self.history, os.path.join(STATISTIC_PATH, f"{self.class_id_name}_acc_loss.png"))
         self.chp_show_chart_func()
         self.recp_init_func()
 
@@ -139,7 +140,7 @@ class AttendanceWindow(QMainWindow):
         self.recp_show_recognition_table_func([], [])
         self.recognize_img_path_input.setText("")
         if os.path.exists(MODEL_DIR):
-            self.recognize_models_box.addItems([m.split(".")[0] for m in os.listdir(MODEL_DIR)])
+            self.recognize_models_box.addItems([m.split(".keras")[0] for m in os.listdir(MODEL_DIR)])
 
         if self.recognize_models_box.count() > 0:
             self.recognize_guess_btn.show()
@@ -163,14 +164,11 @@ class AttendanceWindow(QMainWindow):
         )
 
     def recp_show_guess_func(self):
-        try:
-            self.model = get_model_config(self.recognize_models_box.currentText())
-            self.dataset_path = os.path.join(DATASETS_PATH,self.recognize_models_box.currentText())
-            result_img_path, colors, guesses_indexes = guessing_img(self.dataset_path, self.img_guess_name, self.model)
-            self.display_image_func(self.recognize_output_img_label, result_img_path)
-            self.recp_show_recognition_table_func(colors, guesses_indexes)
-        except:
-            pass
+        self.model = get_model_config(self.recognize_models_box.currentText(), len(os.listdir(os.path.join(DATASETS_PATH,self.recognize_models_box.currentText()))))
+        self.dataset_path = os.path.join(DATASETS_PATH,self.recognize_models_box.currentText())
+        result_img_path, colors, guesses_indexes = guessing_img(self.dataset_path, self.img_guess_name, self.model, self.recognize_models_box.currentText())
+        self.display_image_func(self.recognize_output_img_label, result_img_path)
+        self.recp_show_recognition_table_func(colors, guesses_indexes)
 
     def recp_show_recognition_table_func(self, colors, guesses_indexes):
         self.recognize_table.horizontalHeader().setVisible(True)
@@ -226,14 +224,17 @@ class AttendanceWindow(QMainWindow):
 
     # CHART PAGE
     def chp_init_func(self):
-        if self.recognize_models_box.count() < 0:
-            self.display_image_func(self.chart_result_img_label, UNKNOWN_IMAGE_PATH)
-        else:
-            self.chp_show_chart_func()
+        self.display_image_func(self.chart_result_img_label, UNKNOWN_IMAGE_PATH)
+        # if self.recognize_models_box.count() < 0:
+        #     self.display_image_func(self.chart_result_img_label, UNKNOWN_IMAGE_PATH)
+        # else:
+        #     self.chp_show_chart_func()
 
     def chp_show_chart_func(self):
-        self.display_image_func(self.chart_result_img_label, f"{self.class_id_name}_acc_loss.png")
-
+        try:
+            self.display_image_func(self.chart_result_img_label, os.path.join(STATISTIC_PATH, f"{self.chart_model_name_input.text()}_acc_loss.png"))
+        except:
+            self.display_image_func(self.chart_result_img_label, UNKNOWN_IMAGE_PATH)
         
 
 

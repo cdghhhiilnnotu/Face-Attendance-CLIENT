@@ -13,6 +13,8 @@ from logging_module import *
 
 # CONST
 DATASETS_PATH = 'hau_datasets'
+RESULTS_PATH = 'hau_results'
+STATISTIC_PATH = 'hau_statistics'
 UNKNOWN_IMAGE_PATH = "resources\\apps\\no_data_found.png"
 MODEL_FILE_EXTENSION = ".keras"
 MODEL_DIR = "hau_models"
