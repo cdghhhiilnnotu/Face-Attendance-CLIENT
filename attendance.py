@@ -144,6 +144,8 @@ class AttendanceWindow(QMainWindow):
 
         if self.recognize_models_box.count() > 0:
             self.recognize_guess_btn.show()
+            self.recognize_tab_2_btn.show()
+            self.recognize_tab_3_btn.show()
         else:
             self.recognize_guess_btn.hide()
             self.recognize_tab_2_btn.hide()
@@ -166,9 +168,15 @@ class AttendanceWindow(QMainWindow):
     def recp_show_guess_func(self):
         self.model = get_model_config(self.recognize_models_box.currentText(), len(os.listdir(os.path.join(DATASETS_PATH,self.recognize_models_box.currentText()))))
         self.dataset_path = os.path.join(DATASETS_PATH,self.recognize_models_box.currentText())
-        result_img_path, colors, guesses_indexes = guessing_img(self.dataset_path, self.img_guess_name, self.model, self.recognize_models_box.currentText())
-        self.display_image_func(self.recognize_output_img_label, result_img_path)
-        self.recp_show_recognition_table_func(colors, guesses_indexes)
+        # result_img_path, colors, guesses_indexes = guessing_img(self.dataset_path, self.img_guess_name, self.model, self.recognize_models_box.currentText())
+        # self.display_image_func(self.recognize_output_img_label, result_img_path)
+        # self.recp_show_recognition_table_func(colors, guesses_indexes)
+        if not revert_cam():
+            self.display_image_func(self.recognize_output_img_label, "")
+            self.recp_switch_subpage_func(0)
+        else:
+            self.recp_switch_subpage_func(1)
+        real_time_predict(os.listdir(self.dataset_path), self.model, self.recognize_models_box.currentText(), self.recognize_output_img_label)
 
     def recp_show_recognition_table_func(self, colors, guesses_indexes):
         self.recognize_table.horizontalHeader().setVisible(True)
