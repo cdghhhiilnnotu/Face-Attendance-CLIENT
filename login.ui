@@ -2,22 +2,13 @@
 <ui version="4.0">
  <class>Login</class>
  <widget class="QMainWindow" name="Login">
-  <property name="enabled">
-   <bool>true</bool>
-  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>720</width>
-    <height>480</height>
+    <width>591</width>
+    <height>411</height>
    </rect>
-  </property>
-  <property name="sizePolicy">
-   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-    <horstretch>0</horstretch>
-    <verstretch>0</verstretch>
-   </sizepolicy>
   </property>
   <property name="font">
    <font>
@@ -25,397 +16,293 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string notr="true">Login</string>
+   <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="loginWidget">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>720</width>
-     <height>480</height>
-    </size>
-   </property>
-   <property name="font">
-    <font>
-     <family>MS Shell Dlg 2</family>
-    </font>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <property name="spacing">
-     <number>0</number>
+  <widget class="QWidget" name="login_window">
+   <widget class="QWidget" name="window" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>591</width>
+      <height>411</height>
+     </rect>
     </property>
-    <property name="leftMargin">
-     <number>2</number>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
     </property>
-    <property name="topMargin">
-     <number>2</number>
-    </property>
-    <property name="rightMargin">
-     <number>2</number>
-    </property>
-    <property name="bottomMargin">
-     <number>2</number>
-    </property>
-    <item>
-     <widget class="QWidget" name="container" native="true">
-      <property name="layoutDirection">
-       <enum>Qt::LeftToRight</enum>
-      </property>
-      <property name="autoFillBackground">
-       <bool>false</bool>
-      </property>
-      <property name="styleSheet">
-       <string notr="true"/>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,0">
-       <property name="spacing">
-        <number>2</number>
-       </property>
-       <property name="leftMargin">
-        <number>1</number>
-       </property>
-       <property name="topMargin">
-        <number>1</number>
-       </property>
-       <property name="rightMargin">
-        <number>1</number>
-       </property>
-       <property name="bottomMargin">
-        <number>1</number>
-       </property>
-       <item>
-        <widget class="QWidget" name="signin_page" native="true">
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(188, 188, 188);
-border-radius: 9px;
+    <property name="styleSheet">
+     <string notr="true">QPushButton#sign_in_btn{
+	background-color: rgba(85, 98, 112, 200);
+	color: rgba(255,255,255,200);
+	border-radius: 5px;
+}
+
+QPushButton#sign_in_btn:pressed{
+	padding-left: 5px;
+	padding-top: 5px;
+	background-color: rgba(255,107,107, 255);
+	background-position: calc(100% - 5px)center;
+}
+
+QPushButton#sign_in_btn:hover{
+	background-color: rgba(255,107,107, 255);
+}
+
 </string>
-         </property>
-         <widget class="QPushButton" name="signin_btn">
-          <property name="geometry">
-           <rect>
-            <x>120</x>
-            <y>380</y>
-            <width>93</width>
-            <height>28</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <family>Cambria</family>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(109, 109, 109);
-border-radius: 13px;</string>
-          </property>
-          <property name="text">
-           <string>Đăng nhập</string>
-          </property>
-         </widget>
-         <widget class="QPushButton" name="about_btn">
-          <property name="geometry">
-           <rect>
-            <x>240</x>
-            <y>380</y>
-            <width>93</width>
-            <height>28</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <family>Cambria</family>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(109, 109, 109);
-border-radius: 13px;</string>
-          </property>
-          <property name="text">
-           <string>About Us</string>
-          </property>
-         </widget>
-         <widget class="QLineEdit" name="signin_username_input">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>160</y>
-            <width>331</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <family>Cambria</family>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);
-border-radius: 7px;</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-         </widget>
-         <widget class="QLineEdit" name="signin_password_input">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>240</y>
-            <width>291</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <family>Cambria</family>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);
-border-radius: 7px;</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="echoMode">
-           <enum>QLineEdit::Password</enum>
-          </property>
-         </widget>
-         <widget class="QLabel" name="signin_username_label">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>120</y>
-            <width>261</width>
-            <height>28</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <family>Cambria</family>
-            <pointsize>11</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-            <underline>false</underline>
-           </font>
-          </property>
-          <property name="layoutDirection">
-           <enum>Qt::LeftToRight</enum>
-          </property>
-          <property name="styleSheet">
-           <string notr="true"/>
-          </property>
-          <property name="text">
-           <string>Tên đăng nhập</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-          </property>
-         </widget>
-         <widget class="QLabel" name="signin_password_label">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>200</y>
-            <width>261</width>
-            <height>28</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <family>Cambria</family>
-            <pointsize>11</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-            <underline>false</underline>
-           </font>
-          </property>
-          <property name="layoutDirection">
-           <enum>Qt::LeftToRight</enum>
-          </property>
-          <property name="styleSheet">
-           <string notr="true"/>
-          </property>
-          <property name="text">
-           <string>Mật khẩu</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-          </property>
-         </widget>
-         <widget class="QLabel" name="signin_name_label">
-          <property name="geometry">
-           <rect>
-            <x>50</x>
-            <y>30</y>
-            <width>261</width>
-            <height>28</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <family>Cambria</family>
-            <pointsize>11</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-            <underline>false</underline>
-           </font>
-          </property>
-          <property name="layoutDirection">
-           <enum>Qt::LeftToRight</enum>
-          </property>
-          <property name="styleSheet">
-           <string notr="true"/>
-          </property>
-          <property name="text">
-           <string>ĐĂNG NHẬP</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-         <widget class="QPushButton" name="hide_password_btn">
-          <property name="geometry">
-           <rect>
-            <x>309</x>
-            <y>241</y>
-            <width>28</width>
-            <height>28</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <family>Cambria</family>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(109, 109, 109);
-border-radius: 13px;</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-         </widget>
-        </widget>
-       </item>
-       <item>
-        <widget class="QWidget" name="signup_page" native="true">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(109, 109, 109);
-border-radius: 9px;</string>
-         </property>
-         <widget class="QPushButton" name="cancel_btn">
-          <property name="geometry">
-           <rect>
-            <x>240</x>
-            <y>380</y>
-            <width>93</width>
-            <height>28</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <family>Cambria</family>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(188, 188, 188);
-border-radius: 13px;</string>
-          </property>
-          <property name="text">
-           <string>Thoát</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="aboutus_label">
-          <property name="geometry">
-           <rect>
-            <x>50</x>
-            <y>30</y>
-            <width>261</width>
-            <height>28</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <family>Cambria</family>
-            <pointsize>11</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-            <underline>false</underline>
-           </font>
-          </property>
-          <property name="layoutDirection">
-           <enum>Qt::LeftToRight</enum>
-          </property>
-          <property name="styleSheet">
-           <string notr="true"/>
-          </property>
-          <property name="text">
-           <string>ABOUT US</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-         <widget class="QLabel" name="aboutus_info_label">
-          <property name="geometry">
-           <rect>
-            <x>20</x>
-            <y>70</y>
-            <width>321</width>
-            <height>301</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <family>Cambria</family>
-            <pointsize>8</pointsize>
-            <weight>50</weight>
-            <bold>false</bold>
-            <underline>false</underline>
-           </font>
-          </property>
-          <property name="layoutDirection">
-           <enum>Qt::LeftToRight</enum>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(190, 188, 188);
-padding: 0px 10px;</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="textFormat">
-           <enum>Qt::AutoText</enum>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-          </property>
-          <property name="wordWrap">
-           <bool>true</bool>
-          </property>
-          <property name="margin">
-           <number>10</number>
-          </property>
-         </widget>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-   </layout>
+    </property>
+    <widget class="QLabel" name="log_side">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>40</y>
+       <width>260</width>
+       <height>330</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Cambria</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 10px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="decor_side">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>25</y>
+       <width>270</width>
+       <height>360</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Cambria</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(85, 98, 112, 255), stop:1 rgba(255, 107, 107, 255));
+border-radius: 10px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="sign_in_title">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>60</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Cascadia Code</family>
+       <pointsize>13</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>ĐĂNG NHẬP</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="signin_username_input">
+     <property name="geometry">
+      <rect>
+       <x>322</x>
+       <y>120</y>
+       <width>190</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Cascadia Code</family>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(0,0,0,0);
+border: 2px solid rgba(0,0,0,0);
+border-bottom-color: rgba(46, 82, 101, 200);
+color: rgb(0,0,0);
+padding-bottom:7px;
+</string>
+     </property>
+     <property name="placeholderText">
+      <string>Tên đăng nhập</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="signin_password_input">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>190</y>
+       <width>191</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Cascadia Code</family>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(0,0,0,0);
+border: 2px solid rgba(0,0,0,0);
+border-bottom-color: rgba(46, 82, 101, 200);
+color: rgb(0,0,0);
+padding-bottom:7px;
+</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+     <property name="placeholderText">
+      <string>Mật khẩu</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="signin_btn">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>270</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Cascadia Code</family>
+       <pointsize>8</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Đăng nhập</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="wrong_pass_label">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>230</y>
+       <width>131</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Cascadia Mono SemiBold</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 0, 4);</string>
+     </property>
+     <property name="text">
+      <string>Sai mật khẩu!</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="signin_exit_btn">
+     <property name="geometry">
+      <rect>
+       <x>45</x>
+       <y>30</y>
+       <width>25</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Cascadia Code</family>
+       <pointsize>8</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255, 0);
+border-radius: 10px;
+
+QPushButton #exit_btn:hover{
+	background-color: rgb(255, 255, 255);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="resources/EC8482/resources.qrc">
+       <normaloff>:/icons/x.svg</normaloff>:/icons/x.svg</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="hide_password_btn">
+     <property name="geometry">
+      <rect>
+       <x>517</x>
+       <y>195</y>
+       <width>25</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Cascadia Code</family>
+       <pointsize>8</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 12px;
+background-color: rgb(2, 123, 199);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>:/icons/EC8482/alert-circle.svg</normaloff>:/icons/EC8482/alert-circle.svg</iconset>
+     </property>
+    </widget>
+   </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources/EC8482/resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

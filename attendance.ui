@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>500</height>
+    <width>1276</width>
+    <height>753</height>
    </rect>
   </property>
   <property name="font">
@@ -19,22 +19,203 @@
    <string notr="true">Attendance</string>
   </property>
   <widget class="QWidget" name="attendanceWidget">
-   <layout class="QHBoxLayout" name="horizontalLayout">
+   <layout class="QVBoxLayout" name="verticalLayout_19">
     <property name="spacing">
-     <number>0</number>
+     <number>1</number>
     </property>
     <property name="leftMargin">
-     <number>2</number>
+     <number>0</number>
     </property>
     <property name="topMargin">
-     <number>2</number>
+     <number>0</number>
     </property>
     <property name="rightMargin">
-     <number>2</number>
+     <number>0</number>
     </property>
     <property name="bottomMargin">
-     <number>2</number>
+     <number>0</number>
     </property>
+    <item>
+     <widget class="QWidget" name="panel_window" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(33, 37, 43);
+border-top-right-radius: 5px;
+border-top-left-radius: 5px;</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="leftMargin">
+        <number>5</number>
+       </property>
+       <property name="topMargin">
+        <number>5</number>
+       </property>
+       <property name="rightMargin">
+        <number>5</number>
+       </property>
+       <property name="bottomMargin">
+        <number>5</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="icon_attendance">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="resources/EC8482/resources.qrc">:/icons/airplay.svg</pixmap>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="name_attendance">
+         <property name="font">
+          <font>
+           <family>Cascadia Code</family>
+           <pointsize>11</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Điểm danh sinh viên</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>1017</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="attendance_minimize_btn">
+         <property name="minimumSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resources/EC8482/resources.qrc">
+           <normaloff>:/icons/divide-circle.svg</normaloff>:/icons/divide-circle.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="attendance_expand_btn">
+         <property name="minimumSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resources/EC8482/resources.qrc">
+           <normaloff>:/icons/circle.svg</normaloff>:/icons/circle.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="attendance_exit_btn">
+         <property name="minimumSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resources/EC8482/resources.qrc">
+           <normaloff>:/icons/x-circle.svg</normaloff>:/icons/x-circle.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
     <item>
      <widget class="QWidget" name="container" native="true">
       <property name="layoutDirection">
@@ -44,174 +225,351 @@
        <bool>false</bool>
       </property>
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">background-color: rgb(44, 49, 58);</string>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="2,0">
+      <layout class="QHBoxLayout" name="horizontalLayout">
        <property name="spacing">
-        <number>2</number>
+        <number>0</number>
        </property>
        <property name="leftMargin">
-        <number>1</number>
+        <number>0</number>
        </property>
        <property name="topMargin">
-        <number>1</number>
+        <number>0</number>
        </property>
        <property name="rightMargin">
-        <number>1</number>
+        <number>0</number>
        </property>
        <property name="bottomMargin">
-        <number>1</number>
+        <number>0</number>
        </property>
        <item>
         <widget class="QWidget" name="menu" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="maximumSize">
           <size>
-           <width>200</width>
+           <width>500</width>
            <height>16777215</height>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(188, 188, 188);
+          <string notr="true">background-color: rgb(44, 49, 58);
 border-radius: 9px;
 </string>
          </property>
-         <widget class="QPushButton" name="logout_btn">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>460</y>
-            <width>93</width>
-            <height>28</height>
-           </rect>
+         <layout class="QVBoxLayout" name="verticalLayout_11">
+          <property name="spacing">
+           <number>1</number>
           </property>
-          <property name="font">
-           <font>
-            <family>Cambria</family>
-           </font>
+          <property name="leftMargin">
+           <number>0</number>
           </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(109, 109, 109);
-border-radius: 13px;</string>
+          <property name="topMargin">
+           <number>0</number>
           </property>
-          <property name="text">
-           <string>Log Out</string>
+          <property name="rightMargin">
+           <number>0</number>
           </property>
-         </widget>
-         <widget class="QWidget" name="remote_controllers" native="true">
-          <property name="geometry">
-           <rect>
-            <x>-1</x>
-            <y>180</y>
-            <width>201</width>
-            <height>161</height>
-           </rect>
+          <property name="bottomMargin">
+           <number>0</number>
           </property>
-          <layout class="QVBoxLayout" name="verticalLayout">
-           <property name="spacing">
-            <number>0</number>
-           </property>
-           <property name="leftMargin">
-            <number>1</number>
-           </property>
-           <property name="topMargin">
-            <number>1</number>
-           </property>
-           <property name="rightMargin">
-            <number>1</number>
-           </property>
-           <property name="bottomMargin">
-            <number>1</number>
-           </property>
-           <item>
-            <widget class="QPushButton" name="home_btn">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>35</height>
-              </size>
+          <item>
+           <widget class="QPushButton" name="menu_btn">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>40</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Cascadia Code</family>
+              <pointsize>13</pointsize>
+             </font>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(33, 37, 43);
+border-top-right-radius: 9px;
+border-top-left-radius: 9px;
+border-bottom-right-radius: 9px;
+border-bottom-left-radius: 9px;
+margin: 1px 1px 1px 1px;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources/EC8482/resources.qrc">
+              <normaloff>:/icons/menu.svg</normaloff>:/icons/menu.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="autoRepeatDelay">
+             <number>300</number>
+            </property>
+            <property name="autoRepeatInterval">
+             <number>100</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>160</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QWidget" name="remote_controllers" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>210</height>
+             </size>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <property name="spacing">
+              <number>0</number>
              </property>
-             <property name="font">
-              <font>
-               <family>Cambria</family>
-              </font>
+             <property name="leftMargin">
+              <number>0</number>
              </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(109, 109, 109);
-border-radius: 5px;</string>
+             <property name="topMargin">
+              <number>0</number>
              </property>
-             <property name="text">
-              <string>Home</string>
+             <property name="rightMargin">
+              <number>0</number>
              </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="recognize_btn">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>35</height>
-              </size>
+             <property name="bottomMargin">
+              <number>0</number>
              </property>
-             <property name="font">
-              <font>
-               <family>Cambria</family>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(109, 109, 109);
-border-radius: 5px;</string>
-             </property>
-             <property name="text">
-              <string>Recognition</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="report_btn">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>35</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <family>Cambria</family>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(109, 109, 109);
-border-radius: 5px;</string>
-             </property>
-             <property name="text">
-              <string>Report</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="chart_btn">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>35</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <family>Cambria</family>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(109, 109, 109);
-border-radius: 5px;</string>
-             </property>
-             <property name="text">
-              <string>Model Chart</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
+             <item>
+              <widget class="QPushButton" name="home_btn">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Cascadia Code</family>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(33, 37, 43);
+border-top-right-radius: 9px;
+border-top-left-radius: 9px;
+border-bottom-right-radius: 9px;
+border-bottom-left-radius: 9px;
+margin: 1px 1px 1px 1px;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="resources/EC8482/resources.qrc">
+                 <normaloff>:/icons/home.svg</normaloff>:/icons/home.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="recognize_btn">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Cascadia Code</family>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(33, 37, 43);
+border-top-right-radius: 9px;
+border-top-left-radius: 9px;
+border-bottom-right-radius: 9px;
+border-bottom-left-radius: 9px;
+margin: 1px 1px 1px 1px;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="resources/EC8482/resources.qrc">
+                 <normaloff>:/icons/life-buoy.svg</normaloff>:/icons/life-buoy.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="report_btn">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Cascadia Code</family>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(33, 37, 43);
+border-top-right-radius: 9px;
+border-top-left-radius: 9px;
+border-bottom-right-radius: 9px;
+border-bottom-left-radius: 9px;
+margin: 1px 1px 1px 1px;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="resources/EC8482/resources.qrc">
+                 <normaloff>:/icons/file-text.svg</normaloff>:/icons/file-text.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="chart_btn">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Cascadia Code</family>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(33, 37, 43);
+border-top-right-radius: 0px;
+border-top-left-radius: 9px;
+border-bottom-right-radius: 0px;
+border-bottom-left-radius: 9px;
+margin: 1px 0px 1px 1px;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="resources/EC8482/resources.qrc">
+                 <normaloff>:/icons/pie-chart.svg</normaloff>:/icons/pie-chart.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Expanding</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>294</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="logout_btn">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Cascadia Code</family>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(33, 37, 43);
+border-top-right-radius: 9px;
+border-top-left-radius: 9px;
+border-bottom-right-radius: 9px;
+border-bottom-left-radius: 9px;
+margin: 1px 1px 1px 1px;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources/EC8482/resources.qrc">
+              <normaloff>:/icons/power.svg</normaloff>:/icons/power.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item>
@@ -223,14 +581,14 @@ border-radius: 5px;</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(109, 109, 109);
+          <string notr="true">background-color: rgb(33, 37, 43);
 border-radius: 9px;</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <item>
            <widget class="QStackedWidget" name="main_pages">
             <property name="currentIndex">
-             <number>0</number>
+             <number>3</number>
             </property>
             <widget class="QWidget" name="home_page">
              <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,3">
@@ -251,182 +609,341 @@ border-radius: 9px;</string>
               </property>
               <item>
                <widget class="QWidget" name="home_controllers" native="true">
-                <widget class="QPushButton" name="home_train_btn">
-                 <property name="geometry">
-                  <rect>
-                   <x>420</x>
-                   <y>85</y>
-                   <width>93</width>
-                   <height>28</height>
-                  </rect>
+                <layout class="QVBoxLayout" name="verticalLayout_12">
+                 <property name="spacing">
+                  <number>0</number>
                  </property>
-                 <property name="font">
-                  <font>
-                   <family>Cambria</family>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">background-color: rgb(188, 188, 188);
-border-radius: 13px;</string>
-                 </property>
-                 <property name="text">
-                  <string>Train</string>
-                 </property>
-                </widget>
-                <widget class="QPushButton" name="home_get_data_btn">
-                 <property name="geometry">
-                  <rect>
-                   <x>470</x>
-                   <y>50</y>
-                   <width>93</width>
-                   <height>28</height>
-                  </rect>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Cambria</family>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">background-color: rgb(188, 188, 188);
-border-radius: 13px;</string>
-                 </property>
-                 <property name="text">
-                  <string>Get Data</string>
-                 </property>
-                </widget>
-                <widget class="QPushButton" name="home_search_btn">
-                 <property name="geometry">
-                  <rect>
-                   <x>360</x>
-                   <y>50</y>
-                   <width>93</width>
-                   <height>28</height>
-                  </rect>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Cambria</family>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">background-color: rgb(188, 188, 188);
-border-radius: 13px;</string>
-                 </property>
-                 <property name="text">
-                  <string>Search</string>
-                 </property>
-                </widget>
-                <widget class="QLineEdit" name="home_class_input">
-                 <property name="geometry">
-                  <rect>
-                   <x>22</x>
-                   <y>50</y>
-                   <width>331</width>
-                   <height>30</height>
-                  </rect>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Cambria</family>
-                   <pointsize>10</pointsize>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">background-color: rgb(255, 255, 255);
+                 <item>
+                  <widget class="QLabel" name="home_name_label">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Cascadia Mono SemiBold</family>
+                     <pointsize>15</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                     <underline>false</underline>
+                     <strikeout>false</strikeout>
+                    </font>
+                   </property>
+                   <property name="layoutDirection">
+                    <enum>Qt::LeftToRight</enum>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);
+padding-left: 10px;</string>
+                   </property>
+                   <property name="text">
+                    <string>TRANG CHỦ</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="widget_3" native="true">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>150</height>
+                    </size>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_4">
+                    <item>
+                     <widget class="QWidget" name="widget_2" native="true">
+                      <layout class="QVBoxLayout" name="verticalLayout_13">
+                       <property name="spacing">
+                        <number>5</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>7</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>7</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>7</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>7</number>
+                       </property>
+                       <item>
+                        <widget class="QLineEdit" name="home_class_input">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="minimumSize">
+                          <size>
+                           <width>300</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Cascadia Code</family>
+                           <pointsize>10</pointsize>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(255, 255, 255);
 border-radius: 7px;</string>
-                 </property>
-                 <property name="text">
-                  <string/>
-                 </property>
-                </widget>
-                <widget class="QLabel" name="model_name_label">
-                 <property name="geometry">
-                  <rect>
-                   <x>20</x>
-                   <y>82</y>
-                   <width>331</width>
-                   <height>28</height>
-                  </rect>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Cambria</family>
-                   <pointsize>11</pointsize>
-                   <underline>true</underline>
-                  </font>
-                 </property>
-                 <property name="layoutDirection">
-                  <enum>Qt::LeftToRight</enum>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">color: rgb(255, 255, 255);</string>
-                 </property>
-                 <property name="text">
-                  <string>model_name.keras</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                 </property>
-                </widget>
-                <widget class="QLabel" name="home_name_label">
-                 <property name="geometry">
-                  <rect>
-                   <x>20</x>
-                   <y>10</y>
-                   <width>121</width>
-                   <height>28</height>
-                  </rect>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Cambria</family>
-                   <pointsize>15</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                   <underline>false</underline>
-                   <strikeout>false</strikeout>
-                  </font>
-                 </property>
-                 <property name="layoutDirection">
-                  <enum>Qt::LeftToRight</enum>
-                 </property>
-                 <property name="text">
-                  <string>HOME</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                 </property>
-                </widget>
+                         </property>
+                         <property name="inputMask">
+                          <string/>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <spacer name="verticalSpacer_3">
+                         <property name="orientation">
+                          <enum>Qt::Vertical</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>20</width>
+                           <height>46</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="model_name_label">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Cascadia Code</family>
+                           <pointsize>11</pointsize>
+                           <underline>true</underline>
+                          </font>
+                         </property>
+                         <property name="layoutDirection">
+                          <enum>Qt::LeftToRight</enum>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">color: rgb(255, 255, 255);</string>
+                         </property>
+                         <property name="text">
+                          <string>model_name.keras</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget" native="true">
+                      <property name="minimumSize">
+                       <size>
+                        <width>150</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_14">
+                       <property name="spacing">
+                        <number>5</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>1</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>1</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>1</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>1</number>
+                       </property>
+                       <item>
+                        <widget class="QPushButton" name="home_search_btn">
+                         <property name="minimumSize">
+                          <size>
+                           <width>150</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>10</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Cascadia Code</family>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(40, 44, 52);
+color: rgb(255, 255, 255);
+border-radius: 5px;</string>
+                         </property>
+                         <property name="text">
+                          <string>Tìm kiếm</string>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="resources/EC8482/resources.qrc">
+                           <normaloff>:/icons/search.svg</normaloff>:/icons/search.svg</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>25</width>
+                           <height>25</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="home_get_data_btn">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="minimumSize">
+                          <size>
+                           <width>150</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>150</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Cascadia Code</family>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(40, 44, 52);
+color: rgb(255, 255, 255);
+border-radius: 5px;</string>
+                         </property>
+                         <property name="text">
+                          <string> Dữ liệu</string>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="resources/EC8482/resources.qrc">
+                           <normaloff>:/icons/archive.svg</normaloff>:/icons/archive.svg</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>25</width>
+                           <height>25</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="home_train_btn">
+                         <property name="minimumSize">
+                          <size>
+                           <width>150</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>150</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Cascadia Code</family>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(40, 44, 52);
+color: rgb(255, 255, 255);
+border-radius: 5px;</string>
+                         </property>
+                         <property name="text">
+                          <string> Huấn luyện</string>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="resources/EC8482/resources.qrc">
+                           <normaloff>:/icons/zap.svg</normaloff>:/icons/zap.svg</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>25</width>
+                           <height>25</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
                </widget>
               </item>
               <item>
                <widget class="QWidget" name="home_view" native="true">
+                <property name="font">
+                 <font>
+                  <family>Cascadia Code</family>
+                 </font>
+                </property>
                 <property name="styleSheet">
                  <string notr="true">border-radius: 5px;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(44, 49, 58);</string>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_3">
                  <property name="spacing">
                   <number>0</number>
                  </property>
                  <property name="leftMargin">
-                  <number>1</number>
+                  <number>11</number>
                  </property>
                  <property name="topMargin">
-                  <number>1</number>
+                  <number>11</number>
                  </property>
                  <property name="rightMargin">
-                  <number>1</number>
+                  <number>11</number>
                  </property>
                  <property name="bottomMargin">
-                  <number>1</number>
+                  <number>11</number>
                  </property>
                  <item>
                   <widget class="QTableWidget" name="home_table">
                    <property name="font">
                     <font>
-                     <family>Cambria</family>
+                     <family>Cascadia Code</family>
                     </font>
                    </property>
                    <property name="styleSheet">
@@ -445,7 +962,7 @@ background-color: rgb(255, 255, 255);</string>
                     </property>
                     <property name="font">
                      <font>
-                      <family>Cambria</family>
+                      <family>Cascadia Code</family>
                       <pointsize>11</pointsize>
                       <weight>75</weight>
                       <bold>true</bold>
@@ -468,7 +985,7 @@ background-color: rgb(255, 255, 255);</string>
                     </property>
                     <property name="font">
                      <font>
-                      <family>Cambria</family>
+                      <family>Cascadia Code</family>
                       <pointsize>11</pointsize>
                       <weight>75</weight>
                       <bold>true</bold>
@@ -484,7 +1001,7 @@ background-color: rgb(255, 255, 255);</string>
                     </property>
                     <property name="font">
                      <font>
-                      <family>Cambria</family>
+                      <family>Cascadia Code</family>
                       <pointsize>11</pointsize>
                       <weight>75</weight>
                       <bold>true</bold>
@@ -500,7 +1017,7 @@ background-color: rgb(255, 255, 255);</string>
                     </property>
                     <property name="font">
                      <font>
-                      <family>Cambria</family>
+                      <family>Cascadia Code</family>
                       <pointsize>11</pointsize>
                       <weight>75</weight>
                       <bold>true</bold>
@@ -516,7 +1033,7 @@ background-color: rgb(255, 255, 255);</string>
                     </property>
                     <property name="font">
                      <font>
-                      <family>Cambria</family>
+                      <family>Cascadia Code</family>
                       <pointsize>11</pointsize>
                       <weight>75</weight>
                       <bold>true</bold>
@@ -534,7 +1051,7 @@ background-color: rgb(255, 255, 255);</string>
              </layout>
             </widget>
             <widget class="QWidget" name="recognize_page">
-             <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,3">
+             <layout class="QVBoxLayout" name="verticalLayout_5" stretch="3,7">
               <property name="spacing">
                <number>2</number>
               </property>
@@ -552,267 +1069,472 @@ background-color: rgb(255, 255, 255);</string>
               </property>
               <item>
                <widget class="QWidget" name="recognize_controllers" native="true">
-                <widget class="QPushButton" name="recognize_open_img_btn">
-                 <property name="geometry">
-                  <rect>
-                   <x>360</x>
-                   <y>50</y>
-                   <width>93</width>
-                   <height>28</height>
-                  </rect>
+                <layout class="QVBoxLayout" name="verticalLayout_15">
+                 <property name="spacing">
+                  <number>5</number>
                  </property>
-                 <property name="font">
-                  <font>
-                   <family>Cambria</family>
-                  </font>
+                 <property name="leftMargin">
+                  <number>11</number>
                  </property>
-                 <property name="styleSheet">
-                  <string notr="true">background-color: rgb(188, 188, 188);
-border-radius: 13px;</string>
+                 <property name="topMargin">
+                  <number>11</number>
                  </property>
-                 <property name="text">
-                  <string>Open</string>
+                 <property name="rightMargin">
+                  <number>11</number>
                  </property>
-                </widget>
-                <widget class="QLineEdit" name="recognize_img_path_input">
-                 <property name="enabled">
-                  <bool>false</bool>
+                 <property name="bottomMargin">
+                  <number>11</number>
                  </property>
-                 <property name="geometry">
-                  <rect>
-                   <x>22</x>
-                   <y>50</y>
-                   <width>331</width>
-                   <height>30</height>
-                  </rect>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Cambria</family>
-                   <pointsize>10</pointsize>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">background-color: rgb(255, 255, 255);
-border-radius: 7px;</string>
-                 </property>
-                </widget>
-                <widget class="QLabel" name="recognize_name_label">
-                 <property name="geometry">
-                  <rect>
-                   <x>20</x>
-                   <y>10</y>
-                   <width>171</width>
-                   <height>28</height>
-                  </rect>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Cambria</family>
-                   <pointsize>15</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                   <underline>false</underline>
-                   <strikeout>false</strikeout>
-                  </font>
-                 </property>
-                 <property name="layoutDirection">
-                  <enum>Qt::LeftToRight</enum>
-                 </property>
-                 <property name="text">
-                  <string>RECOGNITION</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                 </property>
-                </widget>
-                <widget class="QPushButton" name="recognize_tab_1_btn">
-                 <property name="geometry">
-                  <rect>
-                   <x>400</x>
-                   <y>100</y>
-                   <width>40</width>
-                   <height>10</height>
-                  </rect>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Cambria</family>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">background-color: rgb(188, 188, 188);
+                 <item>
+                  <widget class="QLabel" name="recognize_name_label">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Cascadia Mono SemiBold</family>
+                     <pointsize>15</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                     <underline>false</underline>
+                     <strikeout>false</strikeout>
+                    </font>
+                   </property>
+                   <property name="layoutDirection">
+                    <enum>Qt::LeftToRight</enum>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);
+padding-left: 10px;</string>
+                   </property>
+                   <property name="text">
+                    <string>ĐIỂM DANH</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="widget_7" native="true">
+                   <layout class="QHBoxLayout" name="horizontalLayout_5">
+                    <property name="spacing">
+                     <number>5</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>1</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>1</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>1</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>1</number>
+                    </property>
+                    <item>
+                     <widget class="QWidget" name="widget_5" native="true">
+                      <layout class="QVBoxLayout" name="verticalLayout_17">
+                       <item>
+                        <widget class="QLineEdit" name="recognize_img_path_input">
+                         <property name="enabled">
+                          <bool>false</bool>
+                         </property>
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Cascadia Code</family>
+                           <pointsize>10</pointsize>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 5px;
+padding-left: 5px;</string>
+                         </property>
+                         <property name="inputMask">
+                          <string/>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="frame">
+                          <bool>true</bool>
+                         </property>
+                         <property name="echoMode">
+                          <enum>QLineEdit::Normal</enum>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QComboBox" name="recognize_models_box">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Cascadia Code</family>
+                           <pointsize>9</pointsize>
+                          </font>
+                         </property>
+                         <property name="layoutDirection">
+                          <enum>Qt::LeftToRight</enum>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">color: rgb(255, 255, 255);
+padding-right: 20px;</string>
+                         </property>
+                         <property name="currentText">
+                          <string/>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QWidget" name="widget_4" native="true">
+                         <layout class="QHBoxLayout" name="horizontalLayout_6">
+                          <property name="leftMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="topMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="bottomMargin">
+                           <number>0</number>
+                          </property>
+                          <item>
+                           <widget class="QPushButton" name="recognize_tab_1_btn">
+                            <property name="maximumSize">
+                             <size>
+                              <width>50</width>
+                              <height>16777215</height>
+                             </size>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Cambria</family>
+                             </font>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">background-color: rgb(188, 188, 188);
 border-radius: 5px;</string>
-                 </property>
-                 <property name="text">
-                  <string/>
-                 </property>
-                </widget>
-                <widget class="QComboBox" name="recognize_models_box">
-                 <property name="geometry">
-                  <rect>
-                   <x>140</x>
-                   <y>85</y>
-                   <width>211</width>
-                   <height>22</height>
-                  </rect>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Cambria</family>
-                   <pointsize>9</pointsize>
-                  </font>
-                 </property>
-                </widget>
-                <widget class="QPushButton" name="recognize_guess_btn">
-                 <property name="geometry">
-                  <rect>
-                   <x>460</x>
-                   <y>50</y>
-                   <width>93</width>
-                   <height>28</height>
-                  </rect>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Cambria</family>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">background-color: rgb(188, 188, 188);
-border-radius: 13px;</string>
-                 </property>
-                 <property name="text">
-                  <string>Guess</string>
-                 </property>
-                </widget>
-                <widget class="QPushButton" name="recognize_tab_2_btn">
-                 <property name="geometry">
-                  <rect>
-                   <x>450</x>
-                   <y>100</y>
-                   <width>40</width>
-                   <height>10</height>
-                  </rect>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Cambria</family>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">background-color: rgba(188, 188, 188, 100);
+                            </property>
+                            <property name="text">
+                             <string/>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QPushButton" name="recognize_tab_2_btn">
+                            <property name="maximumSize">
+                             <size>
+                              <width>50</width>
+                              <height>16777215</height>
+                             </size>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Cambria</family>
+                             </font>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">background-color: rgba(188, 188, 188, 100);
 border-radius: 5px;</string>
-                 </property>
-                 <property name="text">
-                  <string/>
-                 </property>
-                </widget>
-                <widget class="QPushButton" name="recognize_tab_3_btn">
-                 <property name="geometry">
-                  <rect>
-                   <x>500</x>
-                   <y>100</y>
-                   <width>40</width>
-                   <height>10</height>
-                  </rect>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Cambria</family>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">background-color: rgba(188, 188, 188, 100);
+                            </property>
+                            <property name="text">
+                             <string/>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QPushButton" name="recognize_tab_3_btn">
+                            <property name="maximumSize">
+                             <size>
+                              <width>50</width>
+                              <height>16777215</height>
+                             </size>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Cambria</family>
+                             </font>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">background-color: rgba(188, 188, 188, 100);
 border-radius: 5px;</string>
-                 </property>
-                 <property name="text">
-                  <string/>
-                 </property>
-                </widget>
+                            </property>
+                            <property name="text">
+                             <string/>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <spacer name="horizontalSpacer">
+                            <property name="orientation">
+                             <enum>Qt::Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                             <enum>QSizePolicy::Maximum</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>800</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_6" native="true">
+                      <layout class="QVBoxLayout" name="verticalLayout_16">
+                       <item>
+                        <widget class="QPushButton" name="recognize_open_img_btn">
+                         <property name="minimumSize">
+                          <size>
+                           <width>150</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Cascadia Code</family>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(40, 44, 52);
+color: rgb(255, 255, 255);
+border-radius: 5px;</string>
+                         </property>
+                         <property name="text">
+                          <string> Mở ảnh</string>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="resources/EC8482/resources.qrc">
+                           <normaloff>:/icons/crosshair.svg</normaloff>:/icons/crosshair.svg</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>25</width>
+                           <height>25</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="recognize_guess_btn">
+                         <property name="minimumSize">
+                          <size>
+                           <width>150</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Cascadia Code</family>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(40, 44, 52);
+color: rgb(255, 255, 255);
+border-radius: 5px;</string>
+                         </property>
+                         <property name="text">
+                          <string> Điểm danh</string>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="resources/EC8482/resources.qrc">
+                           <normaloff>:/icons/smile.svg</normaloff>:/icons/smile.svg</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>25</width>
+                           <height>25</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="recognize_export_btn">
+                         <property name="minimumSize">
+                          <size>
+                           <width>150</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Cascadia Code</family>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(40, 44, 52);
+color: rgb(255, 255, 255);
+border-radius: 5px;</string>
+                         </property>
+                         <property name="text">
+                          <string> Kết quả</string>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="resources/EC8482/resources.qrc">
+                           <normaloff>:/icons/user-check.svg</normaloff>:/icons/user-check.svg</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>25</width>
+                           <height>25</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <spacer name="verticalSpacer_4">
+                         <property name="orientation">
+                          <enum>Qt::Vertical</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>20</width>
+                           <height>40</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
                </widget>
               </item>
               <item>
                <widget class="QStackedWidget" name="recognize_view">
+                <property name="font">
+                 <font>
+                  <family>Cascadia Code</family>
+                 </font>
+                </property>
                 <property name="styleSheet">
                  <string notr="true">border-radius: 5px;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(44, 49, 58);</string>
                 </property>
                 <property name="currentIndex">
-                 <number>1</number>
+                 <number>2</number>
                 </property>
                 <widget class="QWidget" name="recognize_image">
-                 <widget class="QLabel" name="recognize_input_img_label">
-                  <property name="geometry">
-                   <rect>
-                    <x>1</x>
-                    <y>1</y>
-                    <width>561</width>
-                    <height>351</height>
-                   </rect>
-                  </property>
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="pixmap">
-                   <pixmap>resources/apps/no_data_found.png</pixmap>
-                  </property>
-                  <property name="scaledContents">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
+                 <property name="styleSheet">
+                  <string notr="true">border-radius: 5px;</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_9">
+                  <item>
+                   <widget class="QLabel" name="recognize_input_img_label">
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(238, 0, 255);</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="pixmap">
+                     <pixmap>C:/Users/Duong/.designer/backup/resources/apps/no_data_found.png</pixmap>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
                 </widget>
                 <widget class="QWidget" name="recognize_detect">
-                 <widget class="QLabel" name="recognize_output_img_label">
-                  <property name="geometry">
-                   <rect>
-                    <x>1</x>
-                    <y>1</y>
-                    <width>561</width>
-                    <height>351</height>
-                   </rect>
-                  </property>
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="pixmap">
-                   <pixmap>resources/apps/no_data_found.png</pixmap>
-                  </property>
-                  <property name="scaledContents">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
+                 <property name="styleSheet">
+                  <string notr="true">border-radius: 5px;</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_8">
+                  <item>
+                   <widget class="QLabel" name="recognize_output_img_label">
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(127, 255, 29);</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="pixmap">
+                     <pixmap>C:/Users/Duong/.designer/backup/resources/apps/no_data_found.png</pixmap>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
                 </widget>
                 <widget class="QWidget" name="recognize_report">
                  <property name="styleSheet">
-                  <string notr="true"/>
+                  <string notr="true">background-color: rgb(44, 49, 58);
+border-radius: 5px;</string>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_10">
                   <property name="spacing">
                    <number>0</number>
                   </property>
                   <property name="leftMargin">
-                   <number>1</number>
+                   <number>11</number>
                   </property>
                   <property name="topMargin">
-                   <number>1</number>
+                   <number>11</number>
                   </property>
                   <property name="rightMargin">
-                   <number>1</number>
+                   <number>11</number>
                   </property>
                   <property name="bottomMargin">
-                   <number>1</number>
+                   <number>11</number>
                   </property>
                   <item>
                    <widget class="QTableWidget" name="recognize_table">
                     <property name="font">
                      <font>
-                      <family>Cambria</family>
+                      <family>Cascadia Code</family>
                      </font>
                     </property>
                     <property name="styleSheet">
                      <string notr="true">border-radius: 5px;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(0, 170, 255);</string>
                     </property>
                     <property name="verticalScrollMode">
                      <enum>QAbstractItemView::ScrollPerPixel</enum>
@@ -841,7 +1563,7 @@ background-color: rgb(255, 255, 255);</string>
                      </property>
                      <property name="font">
                       <font>
-                       <family>Cambria</family>
+                       <family>Cascadia Code</family>
                        <pointsize>11</pointsize>
                        <weight>75</weight>
                        <bold>true</bold>
@@ -857,7 +1579,7 @@ background-color: rgb(255, 255, 255);</string>
                      </property>
                      <property name="font">
                       <font>
-                       <family>Cambria</family>
+                       <family>Cascadia Code</family>
                        <pointsize>11</pointsize>
                        <weight>75</weight>
                        <bold>true</bold>
@@ -876,7 +1598,7 @@ background-color: rgb(255, 255, 255);</string>
              </layout>
             </widget>
             <widget class="QWidget" name="report_page">
-             <layout class="QVBoxLayout" name="verticalLayout_7" stretch="1,3">
+             <layout class="QVBoxLayout" name="verticalLayout_7" stretch="3,7">
               <property name="spacing">
                <number>2</number>
               </property>
@@ -894,114 +1616,145 @@ background-color: rgb(255, 255, 255);</string>
               </property>
               <item>
                <widget class="QWidget" name="report_controllers" native="true">
-                <widget class="QPushButton" name="report_search_btn">
-                 <property name="geometry">
-                  <rect>
-                   <x>360</x>
-                   <y>50</y>
-                   <width>93</width>
-                   <height>28</height>
-                  </rect>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Cambria</family>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">background-color: rgb(188, 188, 188);
-border-radius: 13px;</string>
-                 </property>
-                 <property name="text">
-                  <string>Search</string>
-                 </property>
-                </widget>
-                <widget class="QLineEdit" name="report_class_input">
-                 <property name="geometry">
-                  <rect>
-                   <x>22</x>
-                   <y>50</y>
-                   <width>331</width>
-                   <height>30</height>
-                  </rect>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Cambria</family>
-                   <pointsize>10</pointsize>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">background-color: rgb(255, 255, 255);
-border-radius: 7px;</string>
-                 </property>
-                 <property name="text">
-                  <string/>
-                 </property>
-                </widget>
-                <widget class="QLabel" name="report_name_label">
-                 <property name="geometry">
-                  <rect>
-                   <x>20</x>
-                   <y>10</y>
-                   <width>121</width>
-                   <height>28</height>
-                  </rect>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Cambria</family>
-                   <pointsize>15</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                   <underline>false</underline>
-                   <strikeout>false</strikeout>
-                  </font>
-                 </property>
-                 <property name="layoutDirection">
-                  <enum>Qt::LeftToRight</enum>
-                 </property>
-                 <property name="text">
-                  <string>REPORTS</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                 </property>
-                </widget>
+                <layout class="QVBoxLayout" name="verticalLayout_18">
+                 <item>
+                  <widget class="QLabel" name="report_name_label">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Cascadia Mono SemiBold</family>
+                     <pointsize>15</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                     <underline>false</underline>
+                     <strikeout>false</strikeout>
+                    </font>
+                   </property>
+                   <property name="layoutDirection">
+                    <enum>Qt::LeftToRight</enum>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);
+padding-left: 10px;</string>
+                   </property>
+                   <property name="text">
+                    <string>BÁO CÁO</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="widget_8" native="true">
+                   <layout class="QHBoxLayout" name="horizontalLayout_7">
+                    <item>
+                     <widget class="QLineEdit" name="report_class_input">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Cascadia Code</family>
+                        <pointsize>10</pointsize>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 5px;</string>
+                      </property>
+                      <property name="inputMask">
+                       <string/>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="report_search_btn">
+                      <property name="minimumSize">
+                       <size>
+                        <width>150</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Cascadia Code</family>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(40, 44, 52);
+color: rgb(255, 255, 255);
+border-radius: 5px;</string>
+                      </property>
+                      <property name="text">
+                       <string>Tìm kiếm</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources/EC8482/resources.qrc">
+                        <normaloff>:/icons/search.svg</normaloff>:/icons/search.svg</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>25</width>
+                        <height>25</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
                </widget>
               </item>
               <item>
                <widget class="QWidget" name="report_view" native="true">
+                <property name="font">
+                 <font>
+                  <family>Cascadia Code</family>
+                 </font>
+                </property>
                 <property name="styleSheet">
                  <string notr="true">border-radius: 5px;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(44, 49, 58);</string>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_6">
                  <property name="spacing">
-                  <number>0</number>
+                  <number>11</number>
                  </property>
                  <property name="leftMargin">
-                  <number>1</number>
+                  <number>11</number>
                  </property>
                  <property name="topMargin">
-                  <number>1</number>
+                  <number>11</number>
                  </property>
                  <property name="rightMargin">
-                  <number>1</number>
+                  <number>11</number>
                  </property>
                  <property name="bottomMargin">
-                  <number>1</number>
+                  <number>11</number>
                  </property>
                  <item>
                   <widget class="QTableWidget" name="report_table">
                    <property name="font">
                     <font>
-                     <family>Cambria</family>
+                     <family>Cascadia Code</family>
                     </font>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">border-radius: 5px;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(0, 255, 64);</string>
                    </property>
                    <property name="verticalScrollMode">
                     <enum>QAbstractItemView::ScrollPerPixel</enum>
@@ -1015,7 +1768,7 @@ background-color: rgb(255, 255, 255);</string>
                     </property>
                     <property name="font">
                      <font>
-                      <family>Cambria</family>
+                      <family>Cascadia Code</family>
                       <pointsize>11</pointsize>
                       <weight>75</weight>
                       <bold>true</bold>
@@ -1038,7 +1791,7 @@ background-color: rgb(255, 255, 255);</string>
                     </property>
                     <property name="font">
                      <font>
-                      <family>Cambria</family>
+                      <family>Cascadia Code</family>
                       <pointsize>11</pointsize>
                       <weight>75</weight>
                       <bold>true</bold>
@@ -1054,7 +1807,7 @@ background-color: rgb(255, 255, 255);</string>
                     </property>
                     <property name="font">
                      <font>
-                      <family>Cambria</family>
+                      <family>Cascadia Code</family>
                       <pointsize>11</pointsize>
                       <weight>75</weight>
                       <bold>true</bold>
@@ -1070,7 +1823,7 @@ background-color: rgb(255, 255, 255);</string>
                     </property>
                     <property name="font">
                      <font>
-                      <family>Cambria</family>
+                      <family>Cascadia Code</family>
                       <pointsize>11</pointsize>
                       <weight>75</weight>
                       <bold>true</bold>
@@ -1086,7 +1839,7 @@ background-color: rgb(255, 255, 255);</string>
                     </property>
                     <property name="font">
                      <font>
-                      <family>Cambria</family>
+                      <family>Cascadia Code</family>
                       <pointsize>11</pointsize>
                       <weight>75</weight>
                       <bold>true</bold>
@@ -1104,7 +1857,7 @@ background-color: rgb(255, 255, 255);</string>
              </layout>
             </widget>
             <widget class="QWidget" name="chart_page">
-             <layout class="QVBoxLayout" name="verticalLayout_9" stretch="1,3">
+             <layout class="QVBoxLayout" name="verticalLayout_9" stretch="3,7">
               <property name="spacing">
                <number>2</number>
               </property>
@@ -1122,145 +1875,170 @@ background-color: rgb(255, 255, 255);</string>
               </property>
               <item>
                <widget class="QWidget" name="chart_controllers" native="true">
-                <widget class="QPushButton" name="chart_show_btn">
-                 <property name="geometry">
-                  <rect>
-                   <x>360</x>
-                   <y>50</y>
-                   <width>93</width>
-                   <height>28</height>
-                  </rect>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Cambria</family>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">background-color: rgb(188, 188, 188);
-border-radius: 13px;</string>
-                 </property>
-                 <property name="text">
-                  <string>Model</string>
-                 </property>
-                </widget>
-                <widget class="QLineEdit" name="chart_model_name_input">
-                 <property name="geometry">
-                  <rect>
-                   <x>22</x>
-                   <y>50</y>
-                   <width>331</width>
-                   <height>30</height>
-                  </rect>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Cambria</family>
-                   <pointsize>10</pointsize>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">background-color: rgb(255, 255, 255);
-border-radius: 7px;</string>
-                 </property>
-                 <property name="text">
-                  <string/>
-                 </property>
-                </widget>
-                <widget class="QLabel" name="chart_name_label">
-                 <property name="geometry">
-                  <rect>
-                   <x>20</x>
-                   <y>10</y>
-                   <width>121</width>
-                   <height>28</height>
-                  </rect>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Cambria</family>
-                   <pointsize>15</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                   <underline>false</underline>
-                   <strikeout>false</strikeout>
-                  </font>
-                 </property>
-                 <property name="layoutDirection">
-                  <enum>Qt::LeftToRight</enum>
-                 </property>
-                 <property name="text">
-                  <string>CHART</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                 </property>
-                </widget>
-                <widget class="QLabel" name="chart_result_text_label">
-                 <property name="geometry">
-                  <rect>
-                   <x>90</x>
-                   <y>81</y>
-                   <width>261</width>
-                   <height>28</height>
-                  </rect>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Cambria</family>
-                   <pointsize>11</pointsize>
-                   <underline>false</underline>
-                  </font>
-                 </property>
-                 <property name="layoutDirection">
-                  <enum>Qt::LeftToRight</enum>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">color: rgb(255, 255, 255);</string>
-                 </property>
-                 <property name="text">
-                  <string>Accuracy: 100% - Loss: 0%</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                 </property>
-                </widget>
+                <layout class="QVBoxLayout" name="verticalLayout_8" stretch="1,1,3">
+                 <item>
+                  <widget class="QLabel" name="chart_name_label">
+                   <property name="font">
+                    <font>
+                     <family>Cascadia Mono SemiBold</family>
+                     <pointsize>15</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                     <underline>false</underline>
+                     <strikeout>false</strikeout>
+                    </font>
+                   </property>
+                   <property name="layoutDirection">
+                    <enum>Qt::LeftToRight</enum>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);
+padding-left: 10px;</string>
+                   </property>
+                   <property name="text">
+                    <string>BIỂU ĐỒ HUẤN LUYỆN MÔ HÌNH</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="search_panel" native="true">
+                   <layout class="QHBoxLayout" name="horizontalLayout_3">
+                    <item>
+                     <widget class="QLineEdit" name="chart_model_name_input">
+                      <property name="minimumSize">
+                       <size>
+                        <width>30</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Cascadia Code</family>
+                        <pointsize>10</pointsize>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 5px;</string>
+                      </property>
+                      <property name="inputMask">
+                       <string/>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="chart_show_btn">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>150</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Cascadia Code</family>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(40, 44, 52);
+color: rgb(255, 255, 255);
+border-radius: 5px;</string>
+                      </property>
+                      <property name="text">
+                       <string> Mô hình</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources/EC8482/resources.qrc">
+                        <normaloff>:/icons/codesandbox.svg</normaloff>:/icons/codesandbox.svg</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>25</width>
+                        <height>25</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="chart_result_text_label">
+                   <property name="font">
+                    <font>
+                     <family>Cascadia Code</family>
+                     <pointsize>11</pointsize>
+                     <underline>false</underline>
+                    </font>
+                   </property>
+                   <property name="layoutDirection">
+                    <enum>Qt::LeftToRight</enum>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);
+padding: 0px 5px 0px 5px;</string>
+                   </property>
+                   <property name="text">
+                    <string>Model: ...</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
                </widget>
               </item>
               <item>
                <widget class="QWidget" name="chart_view" native="true">
-                <layout class="QVBoxLayout" name="verticalLayout_8">
+                <property name="font">
+                 <font>
+                  <family>Cascadia Code</family>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(44, 49, 58);</string>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_10">
                  <property name="spacing">
                   <number>0</number>
-                 </property>
-                 <property name="leftMargin">
-                  <number>1</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>1</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>1</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>1</number>
                  </property>
                  <item>
                   <widget class="QLabel" name="chart_result_img_label">
                    <property name="maximumSize">
                     <size>
-                     <width>560</width>
-                     <height>350</height>
+                     <width>50000</width>
+                     <height>50000</height>
                     </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Cascadia Code</family>
+                    </font>
                    </property>
                    <property name="layoutDirection">
                     <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(0, 255, 204);</string>
                    </property>
                    <property name="text">
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap>resources/apps/no_data_found.png</pixmap>
+                    <pixmap>C:/Users/Duong/.designer/backup/resources/apps/no_data_found.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -1286,6 +2064,8 @@ border-radius: 7px;</string>
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources/EC8482/resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
