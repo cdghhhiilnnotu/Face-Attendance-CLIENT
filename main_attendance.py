@@ -121,7 +121,7 @@ class AttendanceWindow(QMainWindow):
     
     def hp_init_class_func(self, name_of_class):
         self.class_id_name = name_of_class
-        self.home_controllers.setStyleSheet("background-image: url(./resources/apps/bg_header.png)")
+        self.home_controllers.setStyleSheet("QWidget#home_controllers{background-image: url(./resources/apps/bg_header.png)}")
         self.model_name_label.setText(self.class_id_name + HauSettings.MODEL_FILE_EXTENSION)
         self.model_name_text = self.model_name_label.text()
 
