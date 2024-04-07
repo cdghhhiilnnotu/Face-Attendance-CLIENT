@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1276</width>
+    <width>1250</width>
     <height>753</height>
    </rect>
   </property>
@@ -50,7 +50,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(33, 37, 43);
+       <string notr="true">background-color: rgb(59,89,152);
 border-top-right-radius: 5px;
 border-top-left-radius: 5px;</string>
       </property>
@@ -80,6 +80,9 @@ border-top-left-radius: 5px;</string>
            <width>30</width>
            <height>30</height>
           </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
          </property>
          <property name="text">
           <string/>
@@ -225,7 +228,7 @@ border-top-left-radius: 5px;</string>
        <bool>false</bool>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(44, 49, 58);</string>
+       <string notr="true">background-color: rgb(255,255,255);</string>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <property name="spacing">
@@ -258,7 +261,7 @@ border-top-left-radius: 5px;</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(44, 49, 58);
+          <string notr="true">background-color: rgb(255,255,255);
 border-radius: 9px;
 </string>
          </property>
@@ -302,7 +305,7 @@ border-radius: 9px;
              <enum>Qt::LeftToRight</enum>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-color: rgb(33, 37, 43);
+             <string notr="true">background-color: rgb(59,89,152);
 border-top-right-radius: 9px;
 border-top-left-radius: 9px;
 border-bottom-right-radius: 9px;
@@ -384,7 +387,7 @@ margin: 1px 1px 1px 1px;</string>
                 </font>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: rgb(33, 37, 43);
+                <string notr="true">background-color: rgb(59,89,152);
 border-top-right-radius: 9px;
 border-top-left-radius: 9px;
 border-bottom-right-radius: 9px;
@@ -420,7 +423,7 @@ margin: 1px 1px 1px 1px;</string>
                 </font>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: rgb(33, 37, 43);
+                <string notr="true">background-color: rgb(59,89,152);
 border-top-right-radius: 9px;
 border-top-left-radius: 9px;
 border-bottom-right-radius: 9px;
@@ -456,7 +459,7 @@ margin: 1px 1px 1px 1px;</string>
                 </font>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: rgb(33, 37, 43);
+                <string notr="true">background-color: rgb(59,89,152);
 border-top-right-radius: 9px;
 border-top-left-radius: 9px;
 border-bottom-right-radius: 9px;
@@ -492,12 +495,12 @@ margin: 1px 1px 1px 1px;</string>
                 </font>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: rgb(33, 37, 43);
-border-top-right-radius: 0px;
+                <string notr="true">background-color: rgb(59,89,152);
+border-top-right-radius: 9px;
 border-top-left-radius: 9px;
-border-bottom-right-radius: 0px;
+border-bottom-right-radius: 9px;
 border-bottom-left-radius: 9px;
-margin: 1px 0px 1px 1px;</string>
+margin: 1px 1px 1px 1px;</string>
                </property>
                <property name="text">
                 <string/>
@@ -547,7 +550,7 @@ margin: 1px 0px 1px 1px;</string>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-color: rgb(33, 37, 43);
+             <string notr="true">background-color: rgb(59,89,152);
 border-top-right-radius: 9px;
 border-top-left-radius: 9px;
 border-bottom-right-radius: 9px;
@@ -581,14 +584,14 @@ margin: 1px 1px 1px 1px;</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(33, 37, 43);
+          <string notr="true">background-color: rgb(255,255,255);
 border-radius: 9px;</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <item>
            <widget class="QStackedWidget" name="main_pages">
             <property name="currentIndex">
-             <number>3</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="home_page">
              <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,3">
@@ -641,7 +644,7 @@ border-radius: 9px;</string>
                     <enum>Qt::LeftToRight</enum>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">color: rgb(255, 255, 255);
+                    <string notr="true">color: rgb(40, 44, 52);
 padding-left: 10px;</string>
                    </property>
                    <property name="text">
@@ -701,6 +704,7 @@ padding-left: 10px;</string>
                          </property>
                          <property name="styleSheet">
                           <string notr="true">background-color: rgb(255, 255, 255);
+border: 1px solid rgb(40, 44, 52);
 border-radius: 7px;</string>
                          </property>
                          <property name="inputMask">
@@ -921,7 +925,7 @@ border-radius: 5px;</string>
                 </property>
                 <property name="styleSheet">
                  <string notr="true">border-radius: 5px;
-background-color: rgb(44, 49, 58);</string>
+background-color: rgb(1,147,222);</string>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_3">
                  <property name="spacing">
@@ -1164,6 +1168,7 @@ padding-left: 10px;</string>
                          </property>
                          <property name="styleSheet">
                           <string notr="true">background-color: rgb(255, 255, 255);
+border: 1px solid rgb(0,0,0);
 border-radius: 5px;
 padding-left: 5px;</string>
                          </property>
@@ -1336,7 +1341,7 @@ border-radius: 5px;</string>
                          </property>
                          <property name="icon">
                           <iconset resource="resources/EC8482/resources.qrc">
-                           <normaloff>:/icons/crosshair.svg</normaloff>:/icons/crosshair.svg</iconset>
+                           <normaloff>:/icons/image.svg</normaloff>:/icons/image.svg</iconset>
                          </property>
                          <property name="iconSize">
                           <size>
@@ -1369,7 +1374,7 @@ border-radius: 5px;</string>
                          </property>
                          <property name="icon">
                           <iconset resource="resources/EC8482/resources.qrc">
-                           <normaloff>:/icons/smile.svg</normaloff>:/icons/smile.svg</iconset>
+                           <normaloff>:/icons/user-check.svg</normaloff>:/icons/user-check.svg</iconset>
                          </property>
                          <property name="iconSize">
                           <size>
@@ -1402,7 +1407,7 @@ border-radius: 5px;</string>
                          </property>
                          <property name="icon">
                           <iconset resource="resources/EC8482/resources.qrc">
-                           <normaloff>:/icons/user-check.svg</normaloff>:/icons/user-check.svg</iconset>
+                           <normaloff>:/icons/check-square.svg</normaloff>:/icons/check-square.svg</iconset>
                          </property>
                          <property name="iconSize">
                           <size>
@@ -1443,10 +1448,10 @@ border-radius: 5px;</string>
                 </property>
                 <property name="styleSheet">
                  <string notr="true">border-radius: 5px;
-background-color: rgb(44, 49, 58);</string>
+background-color: rgb(1,147,222);</string>
                 </property>
                 <property name="currentIndex">
-                 <number>2</number>
+                 <number>1</number>
                 </property>
                 <widget class="QWidget" name="recognize_image">
                  <property name="styleSheet">
@@ -1461,7 +1466,7 @@ background-color: rgb(44, 49, 58);</string>
                      </font>
                     </property>
                     <property name="styleSheet">
-                     <string notr="true">background-color: rgb(238, 0, 255);</string>
+                     <string notr="true">background-color: rgb(255, 255, 255);</string>
                     </property>
                     <property name="text">
                      <string/>
@@ -1489,7 +1494,7 @@ background-color: rgb(44, 49, 58);</string>
                      </font>
                     </property>
                     <property name="styleSheet">
-                     <string notr="true">background-color: rgb(127, 255, 29);</string>
+                     <string notr="true">background-color: rgb(255,255,255);</string>
                     </property>
                     <property name="text">
                      <string/>
@@ -1506,7 +1511,7 @@ background-color: rgb(44, 49, 58);</string>
                 </widget>
                 <widget class="QWidget" name="recognize_report">
                  <property name="styleSheet">
-                  <string notr="true">background-color: rgb(44, 49, 58);
+                  <string notr="true">background-color: rgb(1,147,222);
 border-radius: 5px;</string>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -1534,7 +1539,7 @@ border-radius: 5px;</string>
                     </property>
                     <property name="styleSheet">
                      <string notr="true">border-radius: 5px;
-background-color: rgb(0, 170, 255);</string>
+background-color: rgb(255,255, 255);</string>
                     </property>
                     <property name="verticalScrollMode">
                      <enum>QAbstractItemView::ScrollPerPixel</enum>
@@ -1727,7 +1732,7 @@ border-radius: 5px;</string>
                 </property>
                 <property name="styleSheet">
                  <string notr="true">border-radius: 5px;
-background-color: rgb(44, 49, 58);</string>
+background-color: rgb(1,147,222);</string>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_6">
                  <property name="spacing">
@@ -2009,7 +2014,7 @@ padding: 0px 5px 0px 5px;</string>
                  </font>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">background-color: rgb(44, 49, 58);</string>
+                 <string notr="true">background-color: rgb(1,147,222);</string>
                 </property>
                 <layout class="QHBoxLayout" name="horizontalLayout_10">
                  <property name="spacing">

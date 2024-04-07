@@ -33,7 +33,7 @@ class HauSettings():
                     ):
         return f"""
         color: rgb(255,255,255);
-        background-color: rgb(33, 37, 43);
+        background-color: rgb(59,89,152);
         border-top-right-radius: {border_top_right_radius}px;
         border-top-left-radius: {border_top_left_radius}px;
         border-bottom-right-radius: {border_bottom_right_radius}px;

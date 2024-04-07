@@ -91,7 +91,7 @@ class AttendanceWindow(QMainWindow):
         self.menu_btn.setStyleSheet(HauSettings.menu_btns_style(9,9,0,0,1,1,1,1))
         self.menu_btn.setText("  MENU")
         self.logout_btn.setStyleSheet(HauSettings.menu_btns_style(0,0,9,9,1,1,1,1))
-        self.logout_btn.setText("  LOG OUT")
+        self.logout_btn.setText("  ĐĂNG XUẤT")
         
     def collapse_menu(self):
         self.menu.setMinimumWidth(50)
@@ -121,7 +121,7 @@ class AttendanceWindow(QMainWindow):
     
     def hp_init_class_func(self, name_of_class):
         self.class_id_name = name_of_class
-
+        self.home_controllers.setStyleSheet("background-image: url(./resources/apps/bg_header.png)")
         self.model_name_label.setText(self.class_id_name + HauSettings.MODEL_FILE_EXTENSION)
         self.model_name_text = self.model_name_label.text()
 

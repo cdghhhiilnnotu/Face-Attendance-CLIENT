@@ -161,10 +161,10 @@ cython_debug/
 
 models_dirs/
 imgs/
-hau_datasets/
-TH4307.1_20CN3/
-hau_statistics/
-hau_results/
+*_models/
+*_datasets/
+*_statistics/
+*_results/
 back_ups/
 
 *.keras
