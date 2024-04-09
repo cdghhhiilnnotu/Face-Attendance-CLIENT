@@ -13,7 +13,6 @@ widget.addWidget(loginWin)
 widget.addWidget(attendanceWin)
 widget.setWindowTitle(widget.currentWidget().objectName())
 widget.setWindowFlag(Qt.FramelessWindowHint)
-widget.setAttribute(Qt.WA_TranslucentBackground)
 widget.show()
 
 try:
