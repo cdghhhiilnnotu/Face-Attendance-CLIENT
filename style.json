@@ -1,8 +1,6 @@
 {
 	"QMainWindow":[
 		{
-			"tittle":"Games Traders",
-			"icon":":/images/icon-app-user.png",
 			"frameless": true,
 			"transluscentBg": true,
 			"navigation":[
@@ -12,8 +10,8 @@
 					"restore":[
 						{	
 							"buttonName": "attendance_expand_btn",
-							"normalIcon": ":/icons/EC8482/square.svg",
-							"maximizedIcon": ":/icons/EC8482/copy.svg"
+							"normalIcon": ":/icon-EC8482/EC8482/octagon.svg",
+							"maximizedIcon": ":/icon-EC8482/EC8482/copy.svg"
 						}
 					],
 					"moveWindow": "panel_window",

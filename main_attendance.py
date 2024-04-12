@@ -22,7 +22,9 @@ class AttendanceWindow(QMainWindow):
         self.img_guess_name = ""
         self.list_model_trained = []
         self.collector = CollectData.check_user("","")
-        
+        self.isRecording = False
+        self.isTraining = False
+
         self.ui.menu_btn.clicked.connect(self.menu_func)
         self.ui.logout_btn.clicked.connect(self.logout_func)
         self.ui.home_btn.clicked.connect(lambda: self.swtich_page_func(0))
@@ -63,6 +65,8 @@ class AttendanceWindow(QMainWindow):
     def attendance_init(self):
         # self.ui.widget.setWindowFlag(Qt.Window)
         # self.ui.widget.setAttribute(Qt.WA_TranslucentBackground)
+        self.ui.attendance_expand_btn.hide()
+        self.ui.attendance_minimize_btn.hide()
         self.setFixedWidth(1280)
         self.setFixedHeight(720)
         # self.widget.move(109, 109)
@@ -178,13 +182,16 @@ class AttendanceWindow(QMainWindow):
     def hp_training_func(self):
         print("PRESS HOME TRAIN BUTTON")
         try:
-            DatasetSupport.download_datasets_by_class_id(self.class_id_name, self.dataset_path, self.collector)
-            self.model = HauModel(self.dataset_path, 1, self.class_id_name, model_dir=self.collector.MODEL_DIR)
-            self.model.training()
-            self.model.evaluating()
-            self.model.plot_train_history(os.path.join(self.collector.STATISTIC_PATH,self.class_id_name + ".png"))
-            self.chp_show_chart_func()
-            self.recp_init_func()
+            if not self.isTraining:
+                self.isTraining = True
+                DatasetSupport.download_datasets_by_class_id(self.class_id_name, self.dataset_path, self.collector)
+                self.model = HauModel(self.dataset_path, 1, self.class_id_name, model_dir=self.collector.MODEL_DIR)
+                self.model.training()
+                self.model.evaluating()
+                self.model.plot_train_history(os.path.join(self.collector.STATISTIC_PATH,self.class_id_name + ".png"))
+                # self.chp_show_chart_func()
+                self.recp_init_func()
+                self.isTraining = False
         except:
             pass
 
@@ -249,13 +256,16 @@ class AttendanceWindow(QMainWindow):
         self.thread[1].stop()
 
     def start_capture_video(self):
-        self.dataset_path = os.path.join(self.collector.DATASETS_PATH,self.ui.recognize_models_box.currentText())
-        self.model = HauModel(self.dataset_path, 1, self.class_id_name, model_dir=self.collector.MODEL_DIR) 
-        self.model.load_model(self.ui.recognize_models_box.currentText())
-        self.thread[1] = Thread_Video(1, os.listdir(self.dataset_path), self.model, self.ui.recognize_output_img_label)
-        self.thread[1].cam_enable = True
-        self.thread[1].start()
-        self.thread[1].signal.connect(self.show_wedcam)
+        if not self.isRecording:
+            self.isRecording = True
+            self.dataset_path = os.path.join(self.collector.DATASETS_PATH,self.ui.recognize_models_box.currentText())
+            self.model = HauModel(self.dataset_path, 1, self.class_id_name, model_dir=self.collector.MODEL_DIR) 
+            self.model.load_model(self.ui.recognize_models_box.currentText())
+            self.thread[1] = Thread_Video(1, os.listdir(self.dataset_path), self.model, self.ui.recognize_output_img_label)
+            self.thread[1].cam_enable = True
+            self.thread[1].start()
+            self.thread[1].signal.connect(self.show_wedcam)
+
 
     def show_wedcam(self, cv_img):
         """Updates the image_label with a new opencv image"""

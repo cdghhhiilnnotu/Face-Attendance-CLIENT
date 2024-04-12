@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'loginTeDljY.ui'
+## Form generated from reading UI file 'loginaaVOND.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -58,6 +58,9 @@ class Ui_Login(object):
         self.decor_side.setFont(font)
         self.decor_side.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(85, 98, 112, 255), stop:1 rgba(255, 107, 107, 255));\n"
 "border-radius: 10px;")
+        self.decor_side.setPixmap(QPixmap(u":/apps/apps/login_bg.png"))
+        self.decor_side.setScaledContents(True)
+        self.decor_side.setAlignment(Qt.AlignCenter)
         self.sign_in_title = QLabel(self.window)
         self.sign_in_title.setObjectName(u"sign_in_title")
         self.sign_in_title.setGeometry(QRect(360, 60, 141, 31))
@@ -127,7 +130,7 @@ class Ui_Login(object):
 "	background-color: rgb(255, 255, 255);\n"
 "}")
         icon = QIcon()
-        icon.addFile(u":/icons/x.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u":/icon-EC8482/EC8482/x-octagon.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.signin_exit_btn.setIcon(icon)
         self.hide_password_btn = QPushButton(self.window)
         self.hide_password_btn.setObjectName(u"hide_password_btn")

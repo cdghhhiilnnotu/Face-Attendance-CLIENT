@@ -94,6 +94,15 @@ border-radius: 10px;</string>
      <property name="text">
       <string/>
      </property>
+     <property name="pixmap">
+      <pixmap resource="resources/resources.qrc">:/apps/apps/login_bg.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
     </widget>
     <widget class="QLabel" name="sign_in_title">
      <property name="geometry">
@@ -256,8 +265,8 @@ QPushButton #exit_btn:hover{
       <string/>
      </property>
      <property name="icon">
-      <iconset resource="resources/EC8482/resources.qrc">
-       <normaloff>:/icons/x.svg</normaloff>:/icons/x.svg</iconset>
+      <iconset resource="resources/resources.qrc">
+       <normaloff>:/icon-EC8482/EC8482/x-octagon.svg</normaloff>:/icon-EC8482/EC8482/x-octagon.svg</iconset>
      </property>
     </widget>
     <widget class="QPushButton" name="hide_password_btn">
@@ -302,7 +311,7 @@ background-color: rgb(2, 123, 199);</string>
   </widget>
  </widget>
  <resources>
-  <include location="resources/EC8482/resources.qrc"/>
+  <include location="resources/resources.qrc"/>
  </resources>
  <connections/>
 </ui>

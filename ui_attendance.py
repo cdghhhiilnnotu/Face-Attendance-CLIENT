@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'attendancelwBrjO.ui'
+## Form generated from reading UI file 'attendanceLbwDZn.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -18,7 +18,7 @@ class Ui_Attendance(object):
     def setupUi(self, Attendance):
         if not Attendance.objectName():
             Attendance.setObjectName(u"Attendance")
-        Attendance.resize(1333, 820)
+        Attendance.resize(1333, 819)
         font = QFont()
         font.setFamily(u"Cambria")
         Attendance.setFont(font)
@@ -43,7 +43,8 @@ class Ui_Attendance(object):
         self.icon_attendance.setObjectName(u"icon_attendance")
         self.icon_attendance.setMinimumSize(QSize(30, 30))
         self.icon_attendance.setMaximumSize(QSize(30, 30))
-        self.icon_attendance.setPixmap(QPixmap(u":/icons/airplay.svg"))
+        self.icon_attendance.setPixmap(QPixmap(u":/apps/apps/logo_app.png"))
+        self.icon_attendance.setScaledContents(True)
         self.icon_attendance.setAlignment(Qt.AlignCenter)
 
         self.horizontalLayout_2.addWidget(self.icon_attendance)
@@ -70,7 +71,7 @@ class Ui_Attendance(object):
         self.attendance_minimize_btn.setMinimumSize(QSize(25, 25))
         self.attendance_minimize_btn.setMaximumSize(QSize(25, 25))
         icon = QIcon()
-        icon.addFile(u":/icons/divide-circle.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u":/icon-EC8482/EC8482/minus-circle.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.attendance_minimize_btn.setIcon(icon)
         self.attendance_minimize_btn.setIconSize(QSize(25, 25))
 
@@ -81,7 +82,7 @@ class Ui_Attendance(object):
         self.attendance_expand_btn.setMinimumSize(QSize(25, 25))
         self.attendance_expand_btn.setMaximumSize(QSize(25, 25))
         icon1 = QIcon()
-        icon1.addFile(u":/icons/circle.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon1.addFile(u":/icon-EC8482/EC8482/octagon.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.attendance_expand_btn.setIcon(icon1)
         self.attendance_expand_btn.setIconSize(QSize(25, 25))
 
@@ -92,7 +93,7 @@ class Ui_Attendance(object):
         self.attendance_exit_btn.setMinimumSize(QSize(25, 25))
         self.attendance_exit_btn.setMaximumSize(QSize(25, 25))
         icon2 = QIcon()
-        icon2.addFile(u":/icons/x-circle.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon2.addFile(u":/icon-EC8482/EC8482/x-octagon.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.attendance_exit_btn.setIcon(icon2)
         self.attendance_exit_btn.setIconSize(QSize(25, 25))
 
@@ -141,7 +142,7 @@ class Ui_Attendance(object):
 "font-size: 12pt;\n"
 "")
         icon3 = QIcon()
-        icon3.addFile(u":/icons_dark/icon_dark/menu.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon3.addFile(u":/icon-dark/icon-dark/menu.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.menu_btn.setIcon(icon3)
         self.menu_btn.setIconSize(QSize(30, 30))
         self.menu_btn.setAutoRepeatDelay(300)
@@ -171,7 +172,7 @@ class Ui_Attendance(object):
 "font-size: 12pt;\n"
 "")
         icon4 = QIcon()
-        icon4.addFile(u":/icons_dark/icon_dark/home.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon4.addFile(u":/icon-dark/icon-dark/home.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.home_btn.setIcon(icon4)
         self.home_btn.setIconSize(QSize(30, 30))
 
@@ -188,7 +189,7 @@ class Ui_Attendance(object):
 "font-size: 12pt;\n"
 "")
         icon5 = QIcon()
-        icon5.addFile(u":/icons_dark/icon_dark/user-check.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon5.addFile(u":/icon-dark/icon-dark/user-check.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.recognize_btn.setIcon(icon5)
         self.recognize_btn.setIconSize(QSize(30, 30))
 
@@ -205,7 +206,7 @@ class Ui_Attendance(object):
 "font-size: 12pt;\n"
 "")
         icon6 = QIcon()
-        icon6.addFile(u":/icons_dark/icon_dark/file-text.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon6.addFile(u":/icon-dark/icon-dark/file-text.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.report_btn.setIcon(icon6)
         self.report_btn.setIconSize(QSize(30, 30))
 
@@ -222,7 +223,7 @@ class Ui_Attendance(object):
 "font-size: 12pt;\n"
 "")
         icon7 = QIcon()
-        icon7.addFile(u":/icons_dark/icon_dark/pie-chart.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon7.addFile(u":/icon-dark/icon-dark/pie-chart.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.chart_btn.setIcon(icon7)
         self.chart_btn.setIconSize(QSize(30, 30))
 
@@ -246,7 +247,7 @@ class Ui_Attendance(object):
 "font-size: 12pt;\n"
 "")
         icon8 = QIcon()
-        icon8.addFile(u":/icons_dark/icon_dark/log-out.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon8.addFile(u":/icon-dark/icon-dark/log-out.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.logout_btn.setIcon(icon8)
         self.logout_btn.setIconSize(QSize(30, 30))
 
@@ -360,23 +361,6 @@ class Ui_Attendance(object):
 
         self.verticalLayout_14.addWidget(self.home_search_btn)
 
-        self.home_get_data_btn = QPushButton(self.widget)
-        self.home_get_data_btn.setObjectName(u"home_get_data_btn")
-        sizePolicy.setHeightForWidth(self.home_get_data_btn.sizePolicy().hasHeightForWidth())
-        self.home_get_data_btn.setSizePolicy(sizePolicy)
-        self.home_get_data_btn.setMinimumSize(QSize(150, 30))
-        self.home_get_data_btn.setMaximumSize(QSize(150, 30))
-        self.home_get_data_btn.setFont(font5)
-        self.home_get_data_btn.setStyleSheet(u"background-color: rgb(190,207,187);\n"
-"color: rgb(0,0,0);\n"
-"border-radius: 5px;\n"
-"border: 2px solid #000;\n"
-"font-weight: bold;\n"
-"font-size: 12pt;")
-        self.home_get_data_btn.setIconSize(QSize(25, 25))
-
-        self.verticalLayout_14.addWidget(self.home_get_data_btn)
-
         self.home_train_btn = QPushButton(self.widget)
         self.home_train_btn.setObjectName(u"home_train_btn")
         self.home_train_btn.setMinimumSize(QSize(150, 30))
@@ -394,6 +378,10 @@ class Ui_Attendance(object):
         self.home_train_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_14.addWidget(self.home_train_btn)
+
+        self.verticalSpacer_5 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_14.addItem(self.verticalSpacer_5)
 
 
         self.horizontalLayout_4.addWidget(self.widget)
@@ -445,6 +433,7 @@ class Ui_Attendance(object):
         self.home_table.setObjectName(u"home_table")
         self.home_table.setFont(font6)
         self.home_table.setStyleSheet(u"border-radius: 5px;\n"
+"border: 0px;\n"
 "background-color: rgb(255, 255, 255);")
         self.home_table.setVerticalScrollMode(QAbstractItemView.ScrollPerPixel)
         self.home_table.setHorizontalScrollMode(QAbstractItemView.ScrollPerPixel)
@@ -534,7 +523,7 @@ class Ui_Attendance(object):
         font8.setPointSize(9)
         self.recognize_models_box.setFont(font8)
         self.recognize_models_box.setLayoutDirection(Qt.LeftToRight)
-        self.recognize_models_box.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+        self.recognize_models_box.setStyleSheet(u"color: rgb(0, 0, 0);\n"
 "padding-right: 20px;")
 
         self.verticalLayout_17.addWidget(self.recognize_models_box)
@@ -693,9 +682,7 @@ class Ui_Attendance(object):
         self.recognize_report.setStyleSheet(u"background-color: rgb(44, 49, 58);\n"
 "border-radius: 5px;")
         self.verticalLayout_10 = QVBoxLayout(self.recognize_report)
-        self.verticalLayout_10.setSpacing(0)
         self.verticalLayout_10.setObjectName(u"verticalLayout_10")
-        self.verticalLayout_10.setContentsMargins(11, 11, 11, 11)
         self.recognize_table = QTableWidget(self.recognize_report)
         if (self.recognize_table.columnCount() < 2):
             self.recognize_table.setColumnCount(2)
@@ -720,6 +707,26 @@ class Ui_Attendance(object):
         self.recognize_table.horizontalHeader().setStretchLastSection(True)
 
         self.verticalLayout_10.addWidget(self.recognize_table)
+
+        self.widget_9 = QWidget(self.recognize_report)
+        self.widget_9.setObjectName(u"widget_9")
+        self.widget_9.setMinimumSize(QSize(0, 70))
+        self.widget_9.setStyleSheet(u"border: 0px")
+        self.recognize_keep_btn = QPushButton(self.widget_9)
+        self.recognize_keep_btn.setObjectName(u"recognize_keep_btn")
+        self.recognize_keep_btn.setGeometry(QRect(1040, 20, 150, 30))
+        self.recognize_keep_btn.setMinimumSize(QSize(150, 30))
+        self.recognize_keep_btn.setFont(font5)
+        self.recognize_keep_btn.setStyleSheet(u"background-color: rgb(190,207,187);\n"
+"color: rgb(0,0,0);\n"
+"border-radius: 5px;\n"
+"border: 2px solid #000;\n"
+"font-weight: bold;\n"
+"font-size: 12pt;")
+        self.recognize_keep_btn.setIcon(icon12)
+        self.recognize_keep_btn.setIconSize(QSize(25, 25))
+
+        self.verticalLayout_10.addWidget(self.widget_9)
 
         self.recognize_view.addWidget(self.recognize_report)
 
@@ -960,7 +967,7 @@ class Ui_Attendance(object):
 
         self.retranslateUi(Attendance)
 
-        self.main_pages.setCurrentIndex(1)
+        self.main_pages.setCurrentIndex(0)
         self.recognize_view.setCurrentIndex(2)
 
 
@@ -983,7 +990,6 @@ class Ui_Attendance(object):
         self.home_class_input.setInputMask("")
         self.home_class_input.setText("")
         self.home_search_btn.setText(QCoreApplication.translate("Attendance", u"T\u00ecm ki\u1ebfm", None))
-        self.home_get_data_btn.setText(QCoreApplication.translate("Attendance", u" D\u1eef li\u1ec7u", None))
         self.home_train_btn.setText(QCoreApplication.translate("Attendance", u" Hu\u1ea5n luy\u1ec7n", None))
         ___qtablewidgetitem = self.home_table.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("Attendance", u"MSV", None));
@@ -1012,6 +1018,7 @@ class Ui_Attendance(object):
         ___qtablewidgetitem5.setText(QCoreApplication.translate("Attendance", u"Box Color", None));
         ___qtablewidgetitem6 = self.recognize_table.horizontalHeaderItem(1)
         ___qtablewidgetitem6.setText(QCoreApplication.translate("Attendance", u"M\u00e3 sinh vi\u00ean", None));
+        self.recognize_keep_btn.setText(QCoreApplication.translate("Attendance", u"Gi\u1eef", None))
         self.report_name_label.setText(QCoreApplication.translate("Attendance", u"B\u00c1O C\u00c1O", None))
         self.report_class_input.setInputMask("")
         self.report_class_input.setText("")
