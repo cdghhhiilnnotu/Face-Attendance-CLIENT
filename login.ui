@@ -94,18 +94,6 @@ border-radius: 10px;</string>
      <property name="text">
       <string/>
      </property>
-     <property name="pixmap">
-      <pixmap resource="resources/EC8482/resources.qrc">:/apps/login_bg.png</pixmap>
-     </property>
-     <property name="scaledContents">
-      <bool>true</bool>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-     <property name="margin">
-      <number>0</number>
-     </property>
     </widget>
     <widget class="QLabel" name="sign_in_title">
      <property name="geometry">

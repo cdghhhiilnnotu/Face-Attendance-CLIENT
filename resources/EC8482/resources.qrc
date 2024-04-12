@@ -288,8 +288,4 @@
     <file>zoom-in.svg</file>
     <file>zoom-out.svg</file>
   </qresource>
-  <qresource prefix="apps">
-    <file>no_data_found.png</file>
-    <file>login_bg.png</file>
-  </qresource>
 </RCC>

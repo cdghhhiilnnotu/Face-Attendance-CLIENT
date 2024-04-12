@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1250</width>
-    <height>753</height>
+    <width>1333</width>
+    <height>820</height>
    </rect>
   </property>
   <property name="font">
@@ -21,7 +21,7 @@
   <widget class="QWidget" name="attendanceWidget">
    <layout class="QVBoxLayout" name="verticalLayout_19">
     <property name="spacing">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="leftMargin">
      <number>0</number>
@@ -50,7 +50,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(59,89,152);
+       <string notr="true">background-color: rgb(33, 37, 43);
 border-top-right-radius: 5px;
 border-top-left-radius: 5px;</string>
       </property>
@@ -81,14 +81,11 @@ border-top-left-radius: 5px;</string>
            <height>30</height>
           </size>
          </property>
-         <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);</string>
-         </property>
          <property name="text">
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap resource="resources/EC8482/resources.qrc">:/icons/airplay.svg</pixmap>
+          <pixmap>:/icons/airplay.svg</pixmap>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -147,7 +144,7 @@ border-top-left-radius: 5px;</string>
           <string/>
          </property>
          <property name="icon">
-          <iconset resource="resources/EC8482/resources.qrc">
+          <iconset>
            <normaloff>:/icons/divide-circle.svg</normaloff>:/icons/divide-circle.svg</iconset>
          </property>
          <property name="iconSize">
@@ -176,7 +173,7 @@ border-top-left-radius: 5px;</string>
           <string/>
          </property>
          <property name="icon">
-          <iconset resource="resources/EC8482/resources.qrc">
+          <iconset>
            <normaloff>:/icons/circle.svg</normaloff>:/icons/circle.svg</iconset>
          </property>
          <property name="iconSize">
@@ -205,7 +202,7 @@ border-top-left-radius: 5px;</string>
           <string/>
          </property>
          <property name="icon">
-          <iconset resource="resources/EC8482/resources.qrc">
+          <iconset>
            <normaloff>:/icons/x-circle.svg</normaloff>:/icons/x-circle.svg</iconset>
          </property>
          <property name="iconSize">
@@ -228,23 +225,23 @@ border-top-left-radius: 5px;</string>
        <bool>false</bool>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255,255,255);</string>
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <property name="spacing">
-        <number>0</number>
+        <number>8</number>
        </property>
        <property name="leftMargin">
-        <number>0</number>
+        <number>4</number>
        </property>
        <property name="topMargin">
-        <number>0</number>
+        <number>4</number>
        </property>
        <property name="rightMargin">
-        <number>0</number>
+        <number>4</number>
        </property>
        <property name="bottomMargin">
-        <number>0</number>
+        <number>4</number>
        </property>
        <item>
         <widget class="QWidget" name="menu" native="true">
@@ -261,7 +258,7 @@ border-top-left-radius: 5px;</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(255,255,255);
+          <string notr="true">background-color:rgb(223,229,219);
 border-radius: 9px;
 </string>
          </property>
@@ -298,26 +295,26 @@ border-radius: 9px;
             <property name="font">
              <font>
               <family>Cascadia Code</family>
-              <pointsize>13</pointsize>
+              <pointsize>12</pointsize>
              </font>
             </property>
             <property name="layoutDirection">
              <enum>Qt::LeftToRight</enum>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-color: rgb(59,89,152);
-border-top-right-radius: 9px;
-border-top-left-radius: 9px;
-border-bottom-right-radius: 9px;
-border-bottom-left-radius: 9px;
-margin: 1px 1px 1px 1px;</string>
+             <string notr="true">margin: 4px 4px 4px 4px;
+background-color:rgb(188,203,234);
+border-radius:9px;
+border: 2px solid #000;
+font-size: 12pt;
+</string>
             </property>
             <property name="text">
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="resources/EC8482/resources.qrc">
-              <normaloff>:/icons/menu.svg</normaloff>:/icons/menu.svg</iconset>
+             <iconset resource="resources/resources.qrc">
+              <normaloff>:/icons_dark/icon_dark/menu.svg</normaloff>:/icons_dark/icon_dark/menu.svg</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -384,22 +381,23 @@ margin: 1px 1px 1px 1px;</string>
                <property name="font">
                 <font>
                  <family>Cascadia Code</family>
+                 <pointsize>12</pointsize>
                 </font>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: rgb(59,89,152);
-border-top-right-radius: 9px;
-border-top-left-radius: 9px;
-border-bottom-right-radius: 9px;
-border-bottom-left-radius: 9px;
-margin: 1px 1px 1px 1px;</string>
+                <string notr="true">margin: 4px 4px 4px 4px;
+background-color:rgb(188,203,234);
+border-radius:9px;
+border: 2px solid #000;
+font-size: 12pt;
+</string>
                </property>
                <property name="text">
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="resources/EC8482/resources.qrc">
-                 <normaloff>:/icons/home.svg</normaloff>:/icons/home.svg</iconset>
+                <iconset resource="resources/resources.qrc">
+                 <normaloff>:/icons_dark/icon_dark/home.svg</normaloff>:/icons_dark/icon_dark/home.svg</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -420,22 +418,23 @@ margin: 1px 1px 1px 1px;</string>
                <property name="font">
                 <font>
                  <family>Cascadia Code</family>
+                 <pointsize>12</pointsize>
                 </font>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: rgb(59,89,152);
-border-top-right-radius: 9px;
-border-top-left-radius: 9px;
-border-bottom-right-radius: 9px;
-border-bottom-left-radius: 9px;
-margin: 1px 1px 1px 1px;</string>
+                <string notr="true">margin: 4px 4px 4px 4px;
+background-color:rgb(188,203,234);
+border-radius:9px;
+border: 2px solid #000;
+font-size: 12pt;
+</string>
                </property>
                <property name="text">
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="resources/EC8482/resources.qrc">
-                 <normaloff>:/icons/life-buoy.svg</normaloff>:/icons/life-buoy.svg</iconset>
+                <iconset resource="resources/resources.qrc">
+                 <normaloff>:/icons_dark/icon_dark/user-check.svg</normaloff>:/icons_dark/icon_dark/user-check.svg</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -456,22 +455,23 @@ margin: 1px 1px 1px 1px;</string>
                <property name="font">
                 <font>
                  <family>Cascadia Code</family>
+                 <pointsize>12</pointsize>
                 </font>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: rgb(59,89,152);
-border-top-right-radius: 9px;
-border-top-left-radius: 9px;
-border-bottom-right-radius: 9px;
-border-bottom-left-radius: 9px;
-margin: 1px 1px 1px 1px;</string>
+                <string notr="true">margin: 4px 4px 4px 4px;
+background-color:rgb(188,203,234);
+border-radius:9px;
+border: 2px solid #000;
+font-size: 12pt;
+</string>
                </property>
                <property name="text">
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="resources/EC8482/resources.qrc">
-                 <normaloff>:/icons/file-text.svg</normaloff>:/icons/file-text.svg</iconset>
+                <iconset resource="resources/resources.qrc">
+                 <normaloff>:/icons_dark/icon_dark/file-text.svg</normaloff>:/icons_dark/icon_dark/file-text.svg</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -492,22 +492,23 @@ margin: 1px 1px 1px 1px;</string>
                <property name="font">
                 <font>
                  <family>Cascadia Code</family>
+                 <pointsize>12</pointsize>
                 </font>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: rgb(59,89,152);
-border-top-right-radius: 9px;
-border-top-left-radius: 9px;
-border-bottom-right-radius: 9px;
-border-bottom-left-radius: 9px;
-margin: 1px 1px 1px 1px;</string>
+                <string notr="true">margin: 4px 4px 4px 4px;
+background-color:rgb(188,203,234);
+border-radius:9px;
+border: 2px solid #000;
+font-size: 12pt;
+</string>
                </property>
                <property name="text">
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="resources/EC8482/resources.qrc">
-                 <normaloff>:/icons/pie-chart.svg</normaloff>:/icons/pie-chart.svg</iconset>
+                <iconset resource="resources/resources.qrc">
+                 <normaloff>:/icons_dark/icon_dark/pie-chart.svg</normaloff>:/icons_dark/icon_dark/pie-chart.svg</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -547,22 +548,23 @@ margin: 1px 1px 1px 1px;</string>
             <property name="font">
              <font>
               <family>Cascadia Code</family>
+              <pointsize>12</pointsize>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-color: rgb(59,89,152);
-border-top-right-radius: 9px;
-border-top-left-radius: 9px;
-border-bottom-right-radius: 9px;
-border-bottom-left-radius: 9px;
-margin: 1px 1px 1px 1px;</string>
+             <string notr="true">margin: 4px 4px 4px 4px;
+background-color:rgb(188,203,234);
+border-radius:9px;
+border: 2px solid #000;
+font-size: 12pt;
+</string>
             </property>
             <property name="text">
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="resources/EC8482/resources.qrc">
-              <normaloff>:/icons/power.svg</normaloff>:/icons/power.svg</iconset>
+             <iconset resource="resources/resources.qrc">
+              <normaloff>:/icons_dark/icon_dark/log-out.svg</normaloff>:/icons_dark/icon_dark/log-out.svg</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -584,7 +586,7 @@ margin: 1px 1px 1px 1px;</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(255,255,255);
+          <string notr="true">background-color:rgb(223,228,219);
 border-radius: 9px;</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -612,8 +614,8 @@ border-radius: 9px;</string>
               </property>
               <item>
                <widget class="QWidget" name="home_controllers" native="true">
-                <property name="styleSheet">
-                 <string notr="true">background-color: rgb(255, 0, 0);</string>
+                <property name="autoFillBackground">
+                 <bool>false</bool>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_12">
                  <property name="spacing">
@@ -636,7 +638,7 @@ border-radius: 9px;</string>
                    <property name="font">
                     <font>
                      <family>Cascadia Mono SemiBold</family>
-                     <pointsize>15</pointsize>
+                     <pointsize>20</pointsize>
                      <weight>75</weight>
                      <bold>true</bold>
                      <underline>false</underline>
@@ -647,9 +649,10 @@ border-radius: 9px;</string>
                     <enum>Qt::LeftToRight</enum>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">color: rgb(40, 44, 52);
-background-color: rgba(255, 255, 255, 0);
-padding-left: 10px;</string>
+                    <string notr="true">color: rgb(0, 0, 0);
+padding-left: 10px;
+font-weight: bold;
+font-size: 20pt;</string>
                    </property>
                    <property name="text">
                     <string>TRANG CHỦ</string>
@@ -667,15 +670,9 @@ padding-left: 10px;</string>
                      <height>150</height>
                     </size>
                    </property>
-                   <property name="styleSheet">
-                    <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
-                   </property>
                    <layout class="QHBoxLayout" name="horizontalLayout_4">
                     <item>
                      <widget class="QWidget" name="widget_2" native="true">
-                      <property name="styleSheet">
-                       <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
-                      </property>
                       <layout class="QVBoxLayout" name="verticalLayout_13">
                        <property name="spacing">
                         <number>5</number>
@@ -714,8 +711,8 @@ padding-left: 10px;</string>
                          </property>
                          <property name="styleSheet">
                           <string notr="true">background-color: rgb(255, 255, 255);
-border: 1px solid rgb(40, 44, 52);
-border-radius: 7px;</string>
+border-radius: 7px;
+border: 2px solid #000;</string>
                          </property>
                          <property name="inputMask">
                           <string/>
@@ -737,36 +734,6 @@ border-radius: 7px;</string>
                           </size>
                          </property>
                         </spacer>
-                       </item>
-                       <item>
-                        <widget class="QLabel" name="model_name_label">
-                         <property name="minimumSize">
-                          <size>
-                           <width>0</width>
-                           <height>30</height>
-                          </size>
-                         </property>
-                         <property name="font">
-                          <font>
-                           <family>Cascadia Code</family>
-                           <pointsize>11</pointsize>
-                           <underline>true</underline>
-                          </font>
-                         </property>
-                         <property name="layoutDirection">
-                          <enum>Qt::LeftToRight</enum>
-                         </property>
-                         <property name="styleSheet">
-                          <string notr="true">color: rgb(40, 44, 52);
-background-color: rgba(255, 255, 255, 0);</string>
-                         </property>
-                         <property name="text">
-                          <string>model_name.keras</string>
-                         </property>
-                         <property name="alignment">
-                          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                         </property>
-                        </widget>
                        </item>
                       </layout>
                      </widget>
@@ -812,19 +779,21 @@ background-color: rgba(255, 255, 255, 0);</string>
                          <property name="font">
                           <font>
                            <family>Cascadia Code</family>
+                           <pointsize>12</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
                           </font>
                          </property>
                          <property name="styleSheet">
-                          <string notr="true">background-color: rgb(40, 44, 52);
-color: rgb(255, 255, 255);
-border-radius: 5px;</string>
+                          <string notr="true">background-color: rgb(190,207,187);
+color: rgb(0,0,0);
+border-radius: 5px;
+border: 2px solid #000;
+font-weight: bold;
+font-size: 12pt;</string>
                          </property>
                          <property name="text">
                           <string>Tìm kiếm</string>
-                         </property>
-                         <property name="icon">
-                          <iconset resource="resources/EC8482/resources.qrc">
-                           <normaloff>:/icons/search.svg</normaloff>:/icons/search.svg</iconset>
                          </property>
                          <property name="iconSize">
                           <size>
@@ -857,19 +826,21 @@ border-radius: 5px;</string>
                          <property name="font">
                           <font>
                            <family>Cascadia Code</family>
+                           <pointsize>12</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
                           </font>
                          </property>
                          <property name="styleSheet">
-                          <string notr="true">background-color: rgb(40, 44, 52);
-color: rgb(255, 255, 255);
-border-radius: 5px;</string>
+                          <string notr="true">background-color: rgb(190,207,187);
+color: rgb(0,0,0);
+border-radius: 5px;
+border: 2px solid #000;
+font-weight: bold;
+font-size: 12pt;</string>
                          </property>
                          <property name="text">
                           <string> Dữ liệu</string>
-                         </property>
-                         <property name="icon">
-                          <iconset resource="resources/EC8482/resources.qrc">
-                           <normaloff>:/icons/archive.svg</normaloff>:/icons/archive.svg</iconset>
                          </property>
                          <property name="iconSize">
                           <size>
@@ -896,18 +867,24 @@ border-radius: 5px;</string>
                          <property name="font">
                           <font>
                            <family>Cascadia Code</family>
+                           <pointsize>12</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
                           </font>
                          </property>
                          <property name="styleSheet">
-                          <string notr="true">background-color: rgb(40, 44, 52);
-color: rgb(255, 255, 255);
-border-radius: 5px;</string>
+                          <string notr="true">background-color: rgb(190,207,187);
+color: rgb(0,0,0);
+border-radius: 5px;
+border: 2px solid #000;
+font-weight: bold;
+font-size: 12pt;</string>
                          </property>
                          <property name="text">
                           <string> Huấn luyện</string>
                          </property>
                          <property name="icon">
-                          <iconset resource="resources/EC8482/resources.qrc">
+                          <iconset>
                            <normaloff>:/icons/zap.svg</normaloff>:/icons/zap.svg</iconset>
                          </property>
                          <property name="iconSize">
@@ -936,7 +913,10 @@ border-radius: 5px;</string>
                 </property>
                 <property name="styleSheet">
                  <string notr="true">border-radius: 5px;
-background-color: rgb(1,147,222);</string>
+background-color:rgb(54, 71, 107); 
+border-radius: 5px;
+border: 2px solid #000;
+</string>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_3">
                  <property name="spacing">
@@ -1060,6 +1040,38 @@ background-color: rgb(255, 255, 255);</string>
                    </column>
                   </widget>
                  </item>
+                 <item>
+                  <widget class="QLabel" name="model_name_label">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Cascadia Code</family>
+                     <pointsize>11</pointsize>
+                     <underline>true</underline>
+                    </font>
+                   </property>
+                   <property name="layoutDirection">
+                    <enum>Qt::LeftToRight</enum>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255,255,255);
+
+border-radius: 5px;
+border: 0px solid ;</string>
+                   </property>
+                   <property name="text">
+                    <string>model_name.keras</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   </property>
+                  </widget>
+                 </item>
                 </layout>
                </widget>
               </item>
@@ -1117,7 +1129,7 @@ background-color: rgb(255, 255, 255);</string>
                    <property name="font">
                     <font>
                      <family>Cascadia Mono SemiBold</family>
-                     <pointsize>15</pointsize>
+                     <pointsize>20</pointsize>
                      <weight>75</weight>
                      <bold>true</bold>
                      <underline>false</underline>
@@ -1128,9 +1140,10 @@ background-color: rgb(255, 255, 255);</string>
                     <enum>Qt::LeftToRight</enum>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">color: rgb(40, 44, 52);
-background-color: rgba(255, 255, 255, 0);
-padding-left: 10px;</string>
+                    <string notr="true">color: rgb(0, 0, 0);
+padding-left: 10px;
+font-weight: bold;
+font-size: 20pt;</string>
                    </property>
                    <property name="text">
                     <string>ĐIỂM DANH</string>
@@ -1142,11 +1155,6 @@ padding-left: 10px;</string>
                  </item>
                  <item>
                   <widget class="QWidget" name="widget_7" native="true">
-                   <property name="styleSheet">
-                    <string>color: rgb(255, 255, 255);
-background-color: rgba(255, 255, 255, 0);
-padding-left: 10px;</string>
-                   </property>
                    <layout class="QHBoxLayout" name="horizontalLayout_5">
                     <property name="spacing">
                      <number>5</number>
@@ -1165,11 +1173,6 @@ padding-left: 10px;</string>
                     </property>
                     <item>
                      <widget class="QWidget" name="widget_5" native="true">
-                      <property name="styleSheet">
-                       <string>color: rgb(255, 255, 255);
-background-color: rgba(255, 255, 255, 0);
-padding-left: 10px;</string>
-                      </property>
                       <layout class="QVBoxLayout" name="verticalLayout_17">
                        <item>
                         <widget class="QLineEdit" name="recognize_img_path_input">
@@ -1189,10 +1192,12 @@ padding-left: 10px;</string>
                           </font>
                          </property>
                          <property name="styleSheet">
-                          <string notr="true">background-color: rgb(255, 255, 255);
-border: 1px solid rgb(0,0,0);
+                          <string notr="true">
 border-radius: 5px;
-padding-left: 5px;</string>
+padding-left: 5px;
+background-color: rgb(255, 255, 255);
+border-radius: 7px;
+border: 2px solid #000;</string>
                          </property>
                          <property name="inputMask">
                           <string/>
@@ -1227,8 +1232,7 @@ padding-left: 5px;</string>
                          </property>
                          <property name="styleSheet">
                           <string notr="true">color: rgb(255, 255, 255);
-padding-right: 20px;
-background-color: rgb(255, 66, 66);</string>
+padding-right: 20px;</string>
                          </property>
                          <property name="currentText">
                           <string/>
@@ -1237,11 +1241,6 @@ background-color: rgb(255, 66, 66);</string>
                        </item>
                        <item>
                         <widget class="QWidget" name="widget_4" native="true">
-                         <property name="styleSheet">
-                          <string>color: rgb(255, 255, 255);
-background-color: rgba(255, 255, 255, 0);
-padding-left: 10px;</string>
-                         </property>
                          <layout class="QHBoxLayout" name="horizontalLayout_6">
                           <property name="leftMargin">
                            <number>0</number>
@@ -1345,11 +1344,6 @@ border-radius: 5px;</string>
                     </item>
                     <item>
                      <widget class="QWidget" name="widget_6" native="true">
-                      <property name="styleSheet">
-                       <string>color: rgb(255, 255, 255);
-background-color: rgba(255, 255, 255, 0);
-padding-left: 10px;</string>
-                      </property>
                       <layout class="QVBoxLayout" name="verticalLayout_16">
                        <item>
                         <widget class="QPushButton" name="recognize_open_img_btn">
@@ -1362,19 +1356,25 @@ padding-left: 10px;</string>
                          <property name="font">
                           <font>
                            <family>Cascadia Code</family>
+                           <pointsize>12</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
                           </font>
                          </property>
                          <property name="styleSheet">
-                          <string notr="true">background-color: rgb(40, 44, 52);
-color: rgb(255, 255, 255);
-border-radius: 5px;</string>
+                          <string notr="true">background-color: rgb(190,207,187);
+color: rgb(0,0,0);
+border-radius: 5px;
+border: 2px solid #000;
+font-weight: bold;
+font-size: 12pt;</string>
                          </property>
                          <property name="text">
                           <string> Mở ảnh</string>
                          </property>
                          <property name="icon">
-                          <iconset resource="resources/EC8482/resources.qrc">
-                           <normaloff>:/icons/image.svg</normaloff>:/icons/image.svg</iconset>
+                          <iconset>
+                           <normaloff>:/icons/crosshair.svg</normaloff>:/icons/crosshair.svg</iconset>
                          </property>
                          <property name="iconSize">
                           <size>
@@ -1395,19 +1395,25 @@ border-radius: 5px;</string>
                          <property name="font">
                           <font>
                            <family>Cascadia Code</family>
+                           <pointsize>12</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
                           </font>
                          </property>
                          <property name="styleSheet">
-                          <string notr="true">background-color: rgb(40, 44, 52);
-color: rgb(255, 255, 255);
-border-radius: 5px;</string>
+                          <string notr="true">background-color: rgb(190,207,187);
+color: rgb(0,0,0);
+border-radius: 5px;
+border: 2px solid #000;
+font-weight: bold;
+font-size: 12pt;</string>
                          </property>
                          <property name="text">
                           <string> Điểm danh</string>
                          </property>
                          <property name="icon">
-                          <iconset resource="resources/EC8482/resources.qrc">
-                           <normaloff>:/icons/user-check.svg</normaloff>:/icons/user-check.svg</iconset>
+                          <iconset>
+                           <normaloff>:/icons/smile.svg</normaloff>:/icons/smile.svg</iconset>
                          </property>
                          <property name="iconSize">
                           <size>
@@ -1428,19 +1434,25 @@ border-radius: 5px;</string>
                          <property name="font">
                           <font>
                            <family>Cascadia Code</family>
+                           <pointsize>12</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
                           </font>
                          </property>
                          <property name="styleSheet">
-                          <string notr="true">background-color: rgb(40, 44, 52);
-color: rgb(255, 255, 255);
-border-radius: 5px;</string>
+                          <string notr="true">background-color: rgb(190,207,187);
+color: rgb(0,0,0);
+border-radius: 5px;
+border: 2px solid #000;
+font-weight: bold;
+font-size: 12pt;</string>
                          </property>
                          <property name="text">
                           <string> Kết quả</string>
                          </property>
                          <property name="icon">
-                          <iconset resource="resources/EC8482/resources.qrc">
-                           <normaloff>:/icons/check-square.svg</normaloff>:/icons/check-square.svg</iconset>
+                          <iconset>
+                           <normaloff>:/icons/user-check.svg</normaloff>:/icons/user-check.svg</iconset>
                          </property>
                          <property name="iconSize">
                           <size>
@@ -1481,10 +1493,14 @@ border-radius: 5px;</string>
                 </property>
                 <property name="styleSheet">
                  <string notr="true">border-radius: 5px;
-background-color: rgb(1,147,222);</string>
+background-color:rgb(54, 71, 107); 
+border-radius: 5px;
+border: 2px solid #000;
+
+</string>
                 </property>
                 <property name="currentIndex">
-                 <number>1</number>
+                 <number>2</number>
                 </property>
                 <widget class="QWidget" name="recognize_image">
                  <property name="styleSheet">
@@ -1499,13 +1515,13 @@ background-color: rgb(1,147,222);</string>
                      </font>
                     </property>
                     <property name="styleSheet">
-                     <string notr="true">background-color: rgb(255, 255, 255);</string>
+                     <string notr="true">background-color: rgb(238, 0, 255);</string>
                     </property>
                     <property name="text">
                      <string/>
                     </property>
                     <property name="pixmap">
-                     <pixmap>C:/Users/Duong/.designer/backup/resources/apps/no_data_found.png</pixmap>
+                     <pixmap>../../../Duong/.designer/backup/resources/apps/no_data_found.png</pixmap>
                     </property>
                     <property name="scaledContents">
                      <bool>true</bool>
@@ -1527,13 +1543,13 @@ background-color: rgb(1,147,222);</string>
                      </font>
                     </property>
                     <property name="styleSheet">
-                     <string notr="true">background-color: rgb(255,255,255);</string>
+                     <string notr="true">background-color: rgb(127, 255, 29);</string>
                     </property>
                     <property name="text">
                      <string/>
                     </property>
                     <property name="pixmap">
-                     <pixmap>C:/Users/Duong/.designer/backup/resources/apps/no_data_found.png</pixmap>
+                     <pixmap>../../../Duong/.designer/backup/resources/apps/no_data_found.png</pixmap>
                     </property>
                     <property name="scaledContents">
                      <bool>true</bool>
@@ -1544,7 +1560,7 @@ background-color: rgb(1,147,222);</string>
                 </widget>
                 <widget class="QWidget" name="recognize_report">
                  <property name="styleSheet">
-                  <string notr="true">background-color: rgb(1,147,222);
+                  <string notr="true">background-color: rgb(44, 49, 58);
 border-radius: 5px;</string>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -1572,7 +1588,7 @@ border-radius: 5px;</string>
                     </property>
                     <property name="styleSheet">
                      <string notr="true">border-radius: 5px;
-background-color: rgb(255,255, 255);</string>
+background-color: rgb(0, 170, 255);</string>
                     </property>
                     <property name="verticalScrollMode">
                      <enum>QAbstractItemView::ScrollPerPixel</enum>
@@ -1666,7 +1682,7 @@ background-color: rgb(255,255, 255);</string>
                    <property name="font">
                     <font>
                      <family>Cascadia Mono SemiBold</family>
-                     <pointsize>15</pointsize>
+                     <pointsize>20</pointsize>
                      <weight>75</weight>
                      <bold>true</bold>
                      <underline>false</underline>
@@ -1677,9 +1693,10 @@ background-color: rgb(255,255, 255);</string>
                     <enum>Qt::LeftToRight</enum>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">color: rgb(40, 44, 52);
-background-color: rgba(255, 255, 255, 0);
-padding-left: 10px;</string>
+                    <string notr="true">color: rgb(0, 0, 0);
+padding-left: 10px;
+font-weight: bold;
+font-size: 20pt;</string>
                    </property>
                    <property name="text">
                     <string>BÁO CÁO</string>
@@ -1691,9 +1708,6 @@ padding-left: 10px;</string>
                  </item>
                  <item>
                   <widget class="QWidget" name="widget_8" native="true">
-                   <property name="styleSheet">
-                    <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
-                   </property>
                    <layout class="QHBoxLayout" name="horizontalLayout_7">
                     <item>
                      <widget class="QLineEdit" name="report_class_input">
@@ -1711,8 +1725,8 @@ padding-left: 10px;</string>
                       </property>
                       <property name="styleSheet">
                        <string notr="true">background-color: rgb(255, 255, 255);
-border: 1px solid rgb(0,0,0);
-border-radius: 5px;</string>
+border-radius: 7px;
+border: 2px solid #000;</string>
                       </property>
                       <property name="inputMask">
                        <string/>
@@ -1733,18 +1747,24 @@ border-radius: 5px;</string>
                       <property name="font">
                        <font>
                         <family>Cascadia Code</family>
+                        <pointsize>12</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
                        </font>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">background-color: rgb(40, 44, 52);
-color: rgb(255, 255, 255);
-border-radius: 5px;</string>
+                       <string notr="true">background-color: rgb(190,207,187);
+color: rgb(0,0,0);
+border-radius: 5px;
+border: 2px solid #000;
+font-weight: bold;
+font-size: 12pt;</string>
                       </property>
                       <property name="text">
                        <string>Tìm kiếm</string>
                       </property>
                       <property name="icon">
-                       <iconset resource="resources/EC8482/resources.qrc">
+                       <iconset>
                         <normaloff>:/icons/search.svg</normaloff>:/icons/search.svg</iconset>
                       </property>
                       <property name="iconSize">
@@ -1770,7 +1790,9 @@ border-radius: 5px;</string>
                 </property>
                 <property name="styleSheet">
                  <string notr="true">border-radius: 5px;
-background-color: rgb(1,147,222);</string>
+background-color:rgb(54, 71, 107); 
+border-radius: 5px;
+border: 2px solid #000;</string>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_6">
                  <property name="spacing">
@@ -1924,7 +1946,7 @@ background-color: rgb(0, 255, 64);</string>
                    <property name="font">
                     <font>
                      <family>Cascadia Mono SemiBold</family>
-                     <pointsize>15</pointsize>
+                     <pointsize>20</pointsize>
                      <weight>75</weight>
                      <bold>true</bold>
                      <underline>false</underline>
@@ -1935,9 +1957,10 @@ background-color: rgb(0, 255, 64);</string>
                     <enum>Qt::LeftToRight</enum>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">color: rgb(40, 44, 52);
-background-color: rgba(255, 255, 255, 0);
-padding-left: 10px;</string>
+                    <string notr="true">color: rgb(0, 0, 0);
+padding-left: 10px;
+font-weight: bold;
+font-size: 20pt;</string>
                    </property>
                    <property name="text">
                     <string>BIỂU ĐỒ HUẤN LUYỆN MÔ HÌNH</string>
@@ -1949,9 +1972,6 @@ padding-left: 10px;</string>
                  </item>
                  <item>
                   <widget class="QWidget" name="search_panel" native="true">
-                   <property name="styleSheet">
-                    <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
-                   </property>
                    <layout class="QHBoxLayout" name="horizontalLayout_3">
                     <item>
                      <widget class="QLineEdit" name="chart_model_name_input">
@@ -1969,8 +1989,8 @@ padding-left: 10px;</string>
                       </property>
                       <property name="styleSheet">
                        <string notr="true">background-color: rgb(255, 255, 255);
-border: 1px solid rgb(0,0,0);
-border-radius: 5px;</string>
+border-radius: 7px;
+border: 2px solid #000;</string>
                       </property>
                       <property name="inputMask">
                        <string/>
@@ -1997,18 +2017,24 @@ border-radius: 5px;</string>
                       <property name="font">
                        <font>
                         <family>Cascadia Code</family>
+                        <pointsize>12</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
                        </font>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">background-color: rgb(40, 44, 52);
-color: rgb(255, 255, 255);
-border-radius: 5px;</string>
+                       <string notr="true">background-color: rgb(190,207,187);
+color: rgb(0,0,0);
+border-radius: 5px;
+border: 2px solid #000;
+font-weight: bold;
+font-size: 12pt;</string>
                       </property>
                       <property name="text">
                        <string> Mô hình</string>
                       </property>
                       <property name="icon">
-                       <iconset resource="resources/EC8482/resources.qrc">
+                       <iconset>
                         <normaloff>:/icons/codesandbox.svg</normaloff>:/icons/codesandbox.svg</iconset>
                       </property>
                       <property name="iconSize">
@@ -2035,8 +2061,7 @@ border-radius: 5px;</string>
                     <enum>Qt::LeftToRight</enum>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">color: rgb(255, 255, 255);
-background-color: rgba(255, 255, 255, 0);
+                    <string notr="true">color: rgb(0, 0, 0);
 padding-left: 10px;</string>
                    </property>
                    <property name="text">
@@ -2058,7 +2083,10 @@ padding-left: 10px;</string>
                  </font>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">background-color: rgb(1,147,222);</string>
+                 <string notr="true">border-radius: 5px;
+background-color:rgb(54, 71, 107); 
+border-radius: 5px;
+border: 2px solid #000;</string>
                 </property>
                 <layout class="QHBoxLayout" name="horizontalLayout_10">
                  <property name="spacing">
@@ -2087,7 +2115,7 @@ padding-left: 10px;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap>C:/Users/Duong/.designer/backup/resources/apps/no_data_found.png</pixmap>
+                    <pixmap>../../../Duong/.designer/backup/resources/apps/no_data_found.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -2114,7 +2142,7 @@ padding-left: 10px;</string>
   </widget>
  </widget>
  <resources>
-  <include location="resources/EC8482/resources.qrc"/>
+  <include location="resources/resources.qrc"/>
  </resources>
  <connections/>
 </ui>

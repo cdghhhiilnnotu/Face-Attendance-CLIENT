@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'attendanceVXEbXf.ui'
+## Form generated from reading UI file 'attendancelwBrjO.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -18,7 +18,7 @@ class Ui_Attendance(object):
     def setupUi(self, Attendance):
         if not Attendance.objectName():
             Attendance.setObjectName(u"Attendance")
-        Attendance.resize(1250, 753)
+        Attendance.resize(1333, 820)
         font = QFont()
         font.setFamily(u"Cambria")
         Attendance.setFont(font)
@@ -26,14 +26,14 @@ class Ui_Attendance(object):
         self.attendanceWidget = QWidget(Attendance)
         self.attendanceWidget.setObjectName(u"attendanceWidget")
         self.verticalLayout_19 = QVBoxLayout(self.attendanceWidget)
-        self.verticalLayout_19.setSpacing(1)
+        self.verticalLayout_19.setSpacing(0)
         self.verticalLayout_19.setObjectName(u"verticalLayout_19")
         self.verticalLayout_19.setContentsMargins(0, 0, 0, 0)
         self.panel_window = QWidget(self.attendanceWidget)
         self.panel_window.setObjectName(u"panel_window")
         self.panel_window.setMinimumSize(QSize(0, 40))
         self.panel_window.setMaximumSize(QSize(16777215, 40))
-        self.panel_window.setStyleSheet(u"background-color: rgb(59,89,152);\n"
+        self.panel_window.setStyleSheet(u"background-color: rgb(33, 37, 43);\n"
 "border-top-right-radius: 5px;\n"
 "border-top-left-radius: 5px;")
         self.horizontalLayout_2 = QHBoxLayout(self.panel_window)
@@ -43,7 +43,6 @@ class Ui_Attendance(object):
         self.icon_attendance.setObjectName(u"icon_attendance")
         self.icon_attendance.setMinimumSize(QSize(30, 30))
         self.icon_attendance.setMaximumSize(QSize(30, 30))
-        self.icon_attendance.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.icon_attendance.setPixmap(QPixmap(u":/icons/airplay.svg"))
         self.icon_attendance.setAlignment(Qt.AlignCenter)
 
@@ -106,16 +105,16 @@ class Ui_Attendance(object):
         self.container.setObjectName(u"container")
         self.container.setLayoutDirection(Qt.LeftToRight)
         self.container.setAutoFillBackground(False)
-        self.container.setStyleSheet(u"background-color: rgb(255,255,255);")
+        self.container.setStyleSheet(u"background-color: rgb(255, 255, 255);")
         self.horizontalLayout = QHBoxLayout(self.container)
-        self.horizontalLayout.setSpacing(0)
+        self.horizontalLayout.setSpacing(8)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout.setContentsMargins(4, 4, 4, 4)
         self.menu = QWidget(self.container)
         self.menu.setObjectName(u"menu")
         self.menu.setMinimumSize(QSize(50, 0))
         self.menu.setMaximumSize(QSize(500, 16777215))
-        self.menu.setStyleSheet(u"background-color: rgb(255,255,255);\n"
+        self.menu.setStyleSheet(u"background-color:rgb(223,229,219);\n"
 "border-radius: 9px;\n"
 "")
         self.verticalLayout_11 = QVBoxLayout(self.menu)
@@ -132,17 +131,17 @@ class Ui_Attendance(object):
         self.menu_btn.setMinimumSize(QSize(40, 50))
         font2 = QFont()
         font2.setFamily(u"Cascadia Code")
-        font2.setPointSize(13)
+        font2.setPointSize(12)
         self.menu_btn.setFont(font2)
         self.menu_btn.setLayoutDirection(Qt.LeftToRight)
-        self.menu_btn.setStyleSheet(u"background-color: rgb(59,89,152);\n"
-"border-top-right-radius: 9px;\n"
-"border-top-left-radius: 9px;\n"
-"border-bottom-right-radius: 9px;\n"
-"border-bottom-left-radius: 9px;\n"
-"margin: 1px 1px 1px 1px;")
+        self.menu_btn.setStyleSheet(u"margin: 4px 4px 4px 4px;\n"
+"background-color:rgb(188,203,234);\n"
+"border-radius:9px;\n"
+"border: 2px solid #000;\n"
+"font-size: 12pt;\n"
+"")
         icon3 = QIcon()
-        icon3.addFile(u":/icons/menu.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon3.addFile(u":/icons_dark/icon_dark/menu.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.menu_btn.setIcon(icon3)
         self.menu_btn.setIconSize(QSize(30, 30))
         self.menu_btn.setAutoRepeatDelay(300)
@@ -164,17 +163,15 @@ class Ui_Attendance(object):
         self.home_btn = QPushButton(self.remote_controllers)
         self.home_btn.setObjectName(u"home_btn")
         self.home_btn.setMinimumSize(QSize(0, 50))
-        font3 = QFont()
-        font3.setFamily(u"Cascadia Code")
-        self.home_btn.setFont(font3)
-        self.home_btn.setStyleSheet(u"background-color: rgb(59,89,152);\n"
-"border-top-right-radius: 9px;\n"
-"border-top-left-radius: 9px;\n"
-"border-bottom-right-radius: 9px;\n"
-"border-bottom-left-radius: 9px;\n"
-"margin: 1px 1px 1px 1px;")
+        self.home_btn.setFont(font2)
+        self.home_btn.setStyleSheet(u"margin: 4px 4px 4px 4px;\n"
+"background-color:rgb(188,203,234);\n"
+"border-radius:9px;\n"
+"border: 2px solid #000;\n"
+"font-size: 12pt;\n"
+"")
         icon4 = QIcon()
-        icon4.addFile(u":/icons/home.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon4.addFile(u":/icons_dark/icon_dark/home.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.home_btn.setIcon(icon4)
         self.home_btn.setIconSize(QSize(30, 30))
 
@@ -183,15 +180,15 @@ class Ui_Attendance(object):
         self.recognize_btn = QPushButton(self.remote_controllers)
         self.recognize_btn.setObjectName(u"recognize_btn")
         self.recognize_btn.setMinimumSize(QSize(0, 50))
-        self.recognize_btn.setFont(font3)
-        self.recognize_btn.setStyleSheet(u"background-color: rgb(59,89,152);\n"
-"border-top-right-radius: 9px;\n"
-"border-top-left-radius: 9px;\n"
-"border-bottom-right-radius: 9px;\n"
-"border-bottom-left-radius: 9px;\n"
-"margin: 1px 1px 1px 1px;")
+        self.recognize_btn.setFont(font2)
+        self.recognize_btn.setStyleSheet(u"margin: 4px 4px 4px 4px;\n"
+"background-color:rgb(188,203,234);\n"
+"border-radius:9px;\n"
+"border: 2px solid #000;\n"
+"font-size: 12pt;\n"
+"")
         icon5 = QIcon()
-        icon5.addFile(u":/icons/life-buoy.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon5.addFile(u":/icons_dark/icon_dark/user-check.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.recognize_btn.setIcon(icon5)
         self.recognize_btn.setIconSize(QSize(30, 30))
 
@@ -200,15 +197,15 @@ class Ui_Attendance(object):
         self.report_btn = QPushButton(self.remote_controllers)
         self.report_btn.setObjectName(u"report_btn")
         self.report_btn.setMinimumSize(QSize(0, 50))
-        self.report_btn.setFont(font3)
-        self.report_btn.setStyleSheet(u"background-color: rgb(59,89,152);\n"
-"border-top-right-radius: 9px;\n"
-"border-top-left-radius: 9px;\n"
-"border-bottom-right-radius: 9px;\n"
-"border-bottom-left-radius: 9px;\n"
-"margin: 1px 1px 1px 1px;")
+        self.report_btn.setFont(font2)
+        self.report_btn.setStyleSheet(u"margin: 4px 4px 4px 4px;\n"
+"background-color:rgb(188,203,234);\n"
+"border-radius:9px;\n"
+"border: 2px solid #000;\n"
+"font-size: 12pt;\n"
+"")
         icon6 = QIcon()
-        icon6.addFile(u":/icons/file-text.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon6.addFile(u":/icons_dark/icon_dark/file-text.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.report_btn.setIcon(icon6)
         self.report_btn.setIconSize(QSize(30, 30))
 
@@ -217,15 +214,15 @@ class Ui_Attendance(object):
         self.chart_btn = QPushButton(self.remote_controllers)
         self.chart_btn.setObjectName(u"chart_btn")
         self.chart_btn.setMinimumSize(QSize(0, 50))
-        self.chart_btn.setFont(font3)
-        self.chart_btn.setStyleSheet(u"background-color: rgb(59,89,152);\n"
-"border-top-right-radius: 9px;\n"
-"border-top-left-radius: 9px;\n"
-"border-bottom-right-radius: 9px;\n"
-"border-bottom-left-radius: 9px;\n"
-"margin: 1px 1px 1px 1px;")
+        self.chart_btn.setFont(font2)
+        self.chart_btn.setStyleSheet(u"margin: 4px 4px 4px 4px;\n"
+"background-color:rgb(188,203,234);\n"
+"border-radius:9px;\n"
+"border: 2px solid #000;\n"
+"font-size: 12pt;\n"
+"")
         icon7 = QIcon()
-        icon7.addFile(u":/icons/pie-chart.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon7.addFile(u":/icons_dark/icon_dark/pie-chart.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.chart_btn.setIcon(icon7)
         self.chart_btn.setIconSize(QSize(30, 30))
 
@@ -241,15 +238,15 @@ class Ui_Attendance(object):
         self.logout_btn = QPushButton(self.menu)
         self.logout_btn.setObjectName(u"logout_btn")
         self.logout_btn.setMinimumSize(QSize(0, 50))
-        self.logout_btn.setFont(font3)
-        self.logout_btn.setStyleSheet(u"background-color: rgb(59,89,152);\n"
-"border-top-right-radius: 9px;\n"
-"border-top-left-radius: 9px;\n"
-"border-bottom-right-radius: 9px;\n"
-"border-bottom-left-radius: 9px;\n"
-"margin: 1px 1px 1px 1px;")
+        self.logout_btn.setFont(font2)
+        self.logout_btn.setStyleSheet(u"margin: 4px 4px 4px 4px;\n"
+"background-color:rgb(188,203,234);\n"
+"border-radius:9px;\n"
+"border: 2px solid #000;\n"
+"font-size: 12pt;\n"
+"")
         icon8 = QIcon()
-        icon8.addFile(u":/icons/power.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon8.addFile(u":/icons_dark/icon_dark/log-out.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.logout_btn.setIcon(icon8)
         self.logout_btn.setIconSize(QSize(30, 30))
 
@@ -261,7 +258,7 @@ class Ui_Attendance(object):
         self.main = QWidget(self.container)
         self.main.setObjectName(u"main")
         self.main.setMaximumSize(QSize(16777215, 16777215))
-        self.main.setStyleSheet(u"background-color: rgb(255,255,255);\n"
+        self.main.setStyleSheet(u"background-color:rgb(223,228,219);\n"
 "border-radius: 9px;")
         self.verticalLayout_2 = QVBoxLayout(self.main)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
@@ -275,7 +272,7 @@ class Ui_Attendance(object):
         self.verticalLayout_4.setContentsMargins(1, 1, 1, 1)
         self.home_controllers = QWidget(self.home_page)
         self.home_controllers.setObjectName(u"home_controllers")
-        self.home_controllers.setStyleSheet(u"background-color: rgb(255, 0, 0);")
+        self.home_controllers.setAutoFillBackground(False)
         self.verticalLayout_12 = QVBoxLayout(self.home_controllers)
         self.verticalLayout_12.setSpacing(0)
         self.verticalLayout_12.setObjectName(u"verticalLayout_12")
@@ -283,18 +280,19 @@ class Ui_Attendance(object):
         self.home_name_label.setObjectName(u"home_name_label")
         self.home_name_label.setMinimumSize(QSize(0, 30))
         self.home_name_label.setMaximumSize(QSize(16777215, 30))
-        font4 = QFont()
-        font4.setFamily(u"Cascadia Mono SemiBold")
-        font4.setPointSize(15)
-        font4.setBold(True)
-        font4.setUnderline(False)
-        font4.setWeight(75)
-        font4.setStrikeOut(False)
-        self.home_name_label.setFont(font4)
+        font3 = QFont()
+        font3.setFamily(u"Cascadia Mono SemiBold")
+        font3.setPointSize(20)
+        font3.setBold(True)
+        font3.setUnderline(False)
+        font3.setWeight(75)
+        font3.setStrikeOut(False)
+        self.home_name_label.setFont(font3)
         self.home_name_label.setLayoutDirection(Qt.LeftToRight)
-        self.home_name_label.setStyleSheet(u"color: rgb(40, 44, 52);\n"
-"background-color: rgba(255, 255, 255, 0);\n"
-"padding-left: 10px;")
+        self.home_name_label.setStyleSheet(u"color: rgb(0, 0, 0);\n"
+"padding-left: 10px;\n"
+"font-weight: bold;\n"
+"font-size: 20pt;")
         self.home_name_label.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
         self.verticalLayout_12.addWidget(self.home_name_label)
@@ -302,12 +300,10 @@ class Ui_Attendance(object):
         self.widget_3 = QWidget(self.home_controllers)
         self.widget_3.setObjectName(u"widget_3")
         self.widget_3.setMinimumSize(QSize(0, 150))
-        self.widget_3.setStyleSheet(u"background-color: rgba(255, 255, 255, 0);")
         self.horizontalLayout_4 = QHBoxLayout(self.widget_3)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
         self.widget_2 = QWidget(self.widget_3)
         self.widget_2.setObjectName(u"widget_2")
-        self.widget_2.setStyleSheet(u"background-color: rgba(255, 255, 255, 0);")
         self.verticalLayout_13 = QVBoxLayout(self.widget_2)
         self.verticalLayout_13.setSpacing(5)
         self.verticalLayout_13.setObjectName(u"verticalLayout_13")
@@ -320,34 +316,19 @@ class Ui_Attendance(object):
         sizePolicy1.setHeightForWidth(self.home_class_input.sizePolicy().hasHeightForWidth())
         self.home_class_input.setSizePolicy(sizePolicy1)
         self.home_class_input.setMinimumSize(QSize(300, 30))
-        font5 = QFont()
-        font5.setFamily(u"Cascadia Code")
-        font5.setPointSize(10)
-        self.home_class_input.setFont(font5)
+        font4 = QFont()
+        font4.setFamily(u"Cascadia Code")
+        font4.setPointSize(10)
+        self.home_class_input.setFont(font4)
         self.home_class_input.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
-"border: 1px solid rgb(40, 44, 52);\n"
-"border-radius: 7px;")
+"border-radius: 7px;\n"
+"border: 2px solid #000;")
 
         self.verticalLayout_13.addWidget(self.home_class_input)
 
         self.verticalSpacer_3 = QSpacerItem(20, 46, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_13.addItem(self.verticalSpacer_3)
-
-        self.model_name_label = QLabel(self.widget_2)
-        self.model_name_label.setObjectName(u"model_name_label")
-        self.model_name_label.setMinimumSize(QSize(0, 30))
-        font6 = QFont()
-        font6.setFamily(u"Cascadia Code")
-        font6.setPointSize(11)
-        font6.setUnderline(True)
-        self.model_name_label.setFont(font6)
-        self.model_name_label.setLayoutDirection(Qt.LeftToRight)
-        self.model_name_label.setStyleSheet(u"color: rgb(40, 44, 52);\n"
-"background-color: rgba(255, 255, 255, 0);")
-        self.model_name_label.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-
-        self.verticalLayout_13.addWidget(self.model_name_label)
 
 
         self.horizontalLayout_4.addWidget(self.widget_2)
@@ -363,13 +344,18 @@ class Ui_Attendance(object):
         self.home_search_btn.setObjectName(u"home_search_btn")
         self.home_search_btn.setMinimumSize(QSize(150, 30))
         self.home_search_btn.setMaximumSize(QSize(10, 30))
-        self.home_search_btn.setFont(font3)
-        self.home_search_btn.setStyleSheet(u"background-color: rgb(40, 44, 52);\n"
-"color: rgb(255, 255, 255);\n"
-"border-radius: 5px;")
-        icon9 = QIcon()
-        icon9.addFile(u":/icons/search.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.home_search_btn.setIcon(icon9)
+        font5 = QFont()
+        font5.setFamily(u"Cascadia Code")
+        font5.setPointSize(12)
+        font5.setBold(True)
+        font5.setWeight(75)
+        self.home_search_btn.setFont(font5)
+        self.home_search_btn.setStyleSheet(u"background-color: rgb(190,207,187);\n"
+"color: rgb(0,0,0);\n"
+"border-radius: 5px;\n"
+"border: 2px solid #000;\n"
+"font-weight: bold;\n"
+"font-size: 12pt;")
         self.home_search_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_14.addWidget(self.home_search_btn)
@@ -380,13 +366,13 @@ class Ui_Attendance(object):
         self.home_get_data_btn.setSizePolicy(sizePolicy)
         self.home_get_data_btn.setMinimumSize(QSize(150, 30))
         self.home_get_data_btn.setMaximumSize(QSize(150, 30))
-        self.home_get_data_btn.setFont(font3)
-        self.home_get_data_btn.setStyleSheet(u"background-color: rgb(40, 44, 52);\n"
-"color: rgb(255, 255, 255);\n"
-"border-radius: 5px;")
-        icon10 = QIcon()
-        icon10.addFile(u":/icons/archive.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.home_get_data_btn.setIcon(icon10)
+        self.home_get_data_btn.setFont(font5)
+        self.home_get_data_btn.setStyleSheet(u"background-color: rgb(190,207,187);\n"
+"color: rgb(0,0,0);\n"
+"border-radius: 5px;\n"
+"border: 2px solid #000;\n"
+"font-weight: bold;\n"
+"font-size: 12pt;")
         self.home_get_data_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_14.addWidget(self.home_get_data_btn)
@@ -395,13 +381,16 @@ class Ui_Attendance(object):
         self.home_train_btn.setObjectName(u"home_train_btn")
         self.home_train_btn.setMinimumSize(QSize(150, 30))
         self.home_train_btn.setMaximumSize(QSize(150, 30))
-        self.home_train_btn.setFont(font3)
-        self.home_train_btn.setStyleSheet(u"background-color: rgb(40, 44, 52);\n"
-"color: rgb(255, 255, 255);\n"
-"border-radius: 5px;")
-        icon11 = QIcon()
-        icon11.addFile(u":/icons/zap.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.home_train_btn.setIcon(icon11)
+        self.home_train_btn.setFont(font5)
+        self.home_train_btn.setStyleSheet(u"background-color: rgb(190,207,187);\n"
+"color: rgb(0,0,0);\n"
+"border-radius: 5px;\n"
+"border: 2px solid #000;\n"
+"font-weight: bold;\n"
+"font-size: 12pt;")
+        icon9 = QIcon()
+        icon9.addFile(u":/icons/zap.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.home_train_btn.setIcon(icon9)
         self.home_train_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_14.addWidget(self.home_train_btn)
@@ -417,9 +406,14 @@ class Ui_Attendance(object):
 
         self.home_view = QWidget(self.home_page)
         self.home_view.setObjectName(u"home_view")
-        self.home_view.setFont(font3)
+        font6 = QFont()
+        font6.setFamily(u"Cascadia Code")
+        self.home_view.setFont(font6)
         self.home_view.setStyleSheet(u"border-radius: 5px;\n"
-"background-color: rgb(1,147,222);")
+"background-color:rgb(54, 71, 107); \n"
+"border-radius: 5px;\n"
+"border: 2px solid #000;\n"
+"")
         self.verticalLayout_3 = QVBoxLayout(self.home_view)
         self.verticalLayout_3.setSpacing(0)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
@@ -449,13 +443,30 @@ class Ui_Attendance(object):
         __qtablewidgetitem4.setFont(font1);
         self.home_table.setHorizontalHeaderItem(4, __qtablewidgetitem4)
         self.home_table.setObjectName(u"home_table")
-        self.home_table.setFont(font3)
+        self.home_table.setFont(font6)
         self.home_table.setStyleSheet(u"border-radius: 5px;\n"
 "background-color: rgb(255, 255, 255);")
         self.home_table.setVerticalScrollMode(QAbstractItemView.ScrollPerPixel)
         self.home_table.setHorizontalScrollMode(QAbstractItemView.ScrollPerPixel)
 
         self.verticalLayout_3.addWidget(self.home_table)
+
+        self.model_name_label = QLabel(self.home_view)
+        self.model_name_label.setObjectName(u"model_name_label")
+        self.model_name_label.setMinimumSize(QSize(0, 30))
+        font7 = QFont()
+        font7.setFamily(u"Cascadia Code")
+        font7.setPointSize(11)
+        font7.setUnderline(True)
+        self.model_name_label.setFont(font7)
+        self.model_name_label.setLayoutDirection(Qt.LeftToRight)
+        self.model_name_label.setStyleSheet(u"color: rgb(255,255,255);\n"
+"\n"
+"border-radius: 5px;\n"
+"border: 0px solid ;")
+        self.model_name_label.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.verticalLayout_3.addWidget(self.model_name_label)
 
 
         self.verticalLayout_4.addWidget(self.home_view)
@@ -479,11 +490,12 @@ class Ui_Attendance(object):
         self.recognize_name_label.setObjectName(u"recognize_name_label")
         self.recognize_name_label.setMinimumSize(QSize(0, 30))
         self.recognize_name_label.setMaximumSize(QSize(16777215, 30))
-        self.recognize_name_label.setFont(font4)
+        self.recognize_name_label.setFont(font3)
         self.recognize_name_label.setLayoutDirection(Qt.LeftToRight)
-        self.recognize_name_label.setStyleSheet(u"color: rgb(40, 44, 52);\n"
-"background-color: rgba(255, 255, 255, 0);\n"
-"padding-left: 10px;")
+        self.recognize_name_label.setStyleSheet(u"color: rgb(0, 0, 0);\n"
+"padding-left: 10px;\n"
+"font-weight: bold;\n"
+"font-size: 20pt;")
         self.recognize_name_label.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
         self.verticalLayout_15.addWidget(self.recognize_name_label)
@@ -502,11 +514,13 @@ class Ui_Attendance(object):
         self.recognize_img_path_input.setObjectName(u"recognize_img_path_input")
         self.recognize_img_path_input.setEnabled(False)
         self.recognize_img_path_input.setMinimumSize(QSize(0, 30))
-        self.recognize_img_path_input.setFont(font5)
-        self.recognize_img_path_input.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
-"border: 1px solid rgb(0,0,0);\n"
+        self.recognize_img_path_input.setFont(font4)
+        self.recognize_img_path_input.setStyleSheet(u"\n"
 "border-radius: 5px;\n"
-"padding-left: 5px;")
+"padding-left: 5px;\n"
+"background-color: rgb(255, 255, 255);\n"
+"border-radius: 7px;\n"
+"border: 2px solid #000;")
         self.recognize_img_path_input.setFrame(True)
         self.recognize_img_path_input.setEchoMode(QLineEdit.Normal)
 
@@ -515,14 +529,13 @@ class Ui_Attendance(object):
         self.recognize_models_box = QComboBox(self.widget_5)
         self.recognize_models_box.setObjectName(u"recognize_models_box")
         self.recognize_models_box.setMinimumSize(QSize(0, 30))
-        font7 = QFont()
-        font7.setFamily(u"Cascadia Code")
-        font7.setPointSize(9)
-        self.recognize_models_box.setFont(font7)
+        font8 = QFont()
+        font8.setFamily(u"Cascadia Code")
+        font8.setPointSize(9)
+        self.recognize_models_box.setFont(font8)
         self.recognize_models_box.setLayoutDirection(Qt.LeftToRight)
         self.recognize_models_box.setStyleSheet(u"color: rgb(255, 255, 255);\n"
-"padding-right: 20px;\n"
-"background-color: rgb(255, 66, 66);")
+"padding-right: 20px;")
 
         self.verticalLayout_17.addWidget(self.recognize_models_box)
 
@@ -575,13 +588,16 @@ class Ui_Attendance(object):
         self.recognize_open_img_btn = QPushButton(self.widget_6)
         self.recognize_open_img_btn.setObjectName(u"recognize_open_img_btn")
         self.recognize_open_img_btn.setMinimumSize(QSize(150, 30))
-        self.recognize_open_img_btn.setFont(font3)
-        self.recognize_open_img_btn.setStyleSheet(u"background-color: rgb(40, 44, 52);\n"
-"color: rgb(255, 255, 255);\n"
-"border-radius: 5px;")
-        icon12 = QIcon()
-        icon12.addFile(u":/icons/image.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.recognize_open_img_btn.setIcon(icon12)
+        self.recognize_open_img_btn.setFont(font5)
+        self.recognize_open_img_btn.setStyleSheet(u"background-color: rgb(190,207,187);\n"
+"color: rgb(0,0,0);\n"
+"border-radius: 5px;\n"
+"border: 2px solid #000;\n"
+"font-weight: bold;\n"
+"font-size: 12pt;")
+        icon10 = QIcon()
+        icon10.addFile(u":/icons/crosshair.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.recognize_open_img_btn.setIcon(icon10)
         self.recognize_open_img_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_16.addWidget(self.recognize_open_img_btn)
@@ -589,13 +605,16 @@ class Ui_Attendance(object):
         self.recognize_guess_btn = QPushButton(self.widget_6)
         self.recognize_guess_btn.setObjectName(u"recognize_guess_btn")
         self.recognize_guess_btn.setMinimumSize(QSize(150, 30))
-        self.recognize_guess_btn.setFont(font3)
-        self.recognize_guess_btn.setStyleSheet(u"background-color: rgb(40, 44, 52);\n"
-"color: rgb(255, 255, 255);\n"
-"border-radius: 5px;")
-        icon13 = QIcon()
-        icon13.addFile(u":/icons/user-check.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.recognize_guess_btn.setIcon(icon13)
+        self.recognize_guess_btn.setFont(font5)
+        self.recognize_guess_btn.setStyleSheet(u"background-color: rgb(190,207,187);\n"
+"color: rgb(0,0,0);\n"
+"border-radius: 5px;\n"
+"border: 2px solid #000;\n"
+"font-weight: bold;\n"
+"font-size: 12pt;")
+        icon11 = QIcon()
+        icon11.addFile(u":/icons/smile.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.recognize_guess_btn.setIcon(icon11)
         self.recognize_guess_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_16.addWidget(self.recognize_guess_btn)
@@ -603,13 +622,16 @@ class Ui_Attendance(object):
         self.recognize_export_btn = QPushButton(self.widget_6)
         self.recognize_export_btn.setObjectName(u"recognize_export_btn")
         self.recognize_export_btn.setMinimumSize(QSize(150, 30))
-        self.recognize_export_btn.setFont(font3)
-        self.recognize_export_btn.setStyleSheet(u"background-color: rgb(40, 44, 52);\n"
-"color: rgb(255, 255, 255);\n"
-"border-radius: 5px;")
-        icon14 = QIcon()
-        icon14.addFile(u":/icons/check-square.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.recognize_export_btn.setIcon(icon14)
+        self.recognize_export_btn.setFont(font5)
+        self.recognize_export_btn.setStyleSheet(u"background-color: rgb(190,207,187);\n"
+"color: rgb(0,0,0);\n"
+"border-radius: 5px;\n"
+"border: 2px solid #000;\n"
+"font-weight: bold;\n"
+"font-size: 12pt;")
+        icon12 = QIcon()
+        icon12.addFile(u":/icons/user-check.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.recognize_export_btn.setIcon(icon12)
         self.recognize_export_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_16.addWidget(self.recognize_export_btn)
@@ -629,9 +651,13 @@ class Ui_Attendance(object):
 
         self.recognize_view = QStackedWidget(self.recognize_page)
         self.recognize_view.setObjectName(u"recognize_view")
-        self.recognize_view.setFont(font3)
+        self.recognize_view.setFont(font6)
         self.recognize_view.setStyleSheet(u"border-radius: 5px;\n"
-"background-color: rgb(1,147,222);")
+"background-color:rgb(54, 71, 107); \n"
+"border-radius: 5px;\n"
+"border: 2px solid #000;\n"
+"\n"
+"")
         self.recognize_image = QWidget()
         self.recognize_image.setObjectName(u"recognize_image")
         self.recognize_image.setStyleSheet(u"border-radius: 5px;")
@@ -639,9 +665,9 @@ class Ui_Attendance(object):
         self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
         self.recognize_input_img_label = QLabel(self.recognize_image)
         self.recognize_input_img_label.setObjectName(u"recognize_input_img_label")
-        self.recognize_input_img_label.setFont(font3)
-        self.recognize_input_img_label.setStyleSheet(u"background-color: rgb(255, 255, 255);")
-        self.recognize_input_img_label.setPixmap(QPixmap(u"C:/Users/Duong/.designer/backup/resources/apps/no_data_found.png"))
+        self.recognize_input_img_label.setFont(font6)
+        self.recognize_input_img_label.setStyleSheet(u"background-color: rgb(238, 0, 255);")
+        self.recognize_input_img_label.setPixmap(QPixmap(u"../../../Duong/.designer/backup/resources/apps/no_data_found.png"))
         self.recognize_input_img_label.setScaledContents(True)
 
         self.horizontalLayout_9.addWidget(self.recognize_input_img_label)
@@ -654,9 +680,9 @@ class Ui_Attendance(object):
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
         self.recognize_output_img_label = QLabel(self.recognize_detect)
         self.recognize_output_img_label.setObjectName(u"recognize_output_img_label")
-        self.recognize_output_img_label.setFont(font3)
-        self.recognize_output_img_label.setStyleSheet(u"background-color: rgb(255,255,255);")
-        self.recognize_output_img_label.setPixmap(QPixmap(u"C:/Users/Duong/.designer/backup/resources/apps/no_data_found.png"))
+        self.recognize_output_img_label.setFont(font6)
+        self.recognize_output_img_label.setStyleSheet(u"background-color: rgb(127, 255, 29);")
+        self.recognize_output_img_label.setPixmap(QPixmap(u"../../../Duong/.designer/backup/resources/apps/no_data_found.png"))
         self.recognize_output_img_label.setScaledContents(True)
 
         self.horizontalLayout_8.addWidget(self.recognize_output_img_label)
@@ -664,7 +690,7 @@ class Ui_Attendance(object):
         self.recognize_view.addWidget(self.recognize_detect)
         self.recognize_report = QWidget()
         self.recognize_report.setObjectName(u"recognize_report")
-        self.recognize_report.setStyleSheet(u"background-color: rgb(1,147,222);\n"
+        self.recognize_report.setStyleSheet(u"background-color: rgb(44, 49, 58);\n"
 "border-radius: 5px;")
         self.verticalLayout_10 = QVBoxLayout(self.recognize_report)
         self.verticalLayout_10.setSpacing(0)
@@ -682,9 +708,9 @@ class Ui_Attendance(object):
         __qtablewidgetitem6.setFont(font1);
         self.recognize_table.setHorizontalHeaderItem(1, __qtablewidgetitem6)
         self.recognize_table.setObjectName(u"recognize_table")
-        self.recognize_table.setFont(font3)
+        self.recognize_table.setFont(font6)
         self.recognize_table.setStyleSheet(u"border-radius: 5px;\n"
-"background-color: rgb(255,255, 255);")
+"background-color: rgb(0, 170, 255);")
         self.recognize_table.setVerticalScrollMode(QAbstractItemView.ScrollPerPixel)
         self.recognize_table.setHorizontalScrollMode(QAbstractItemView.ScrollPerPixel)
         self.recognize_table.setGridStyle(Qt.SolidLine)
@@ -715,38 +741,43 @@ class Ui_Attendance(object):
         self.report_name_label = QLabel(self.report_controllers)
         self.report_name_label.setObjectName(u"report_name_label")
         self.report_name_label.setMaximumSize(QSize(16777215, 30))
-        self.report_name_label.setFont(font4)
+        self.report_name_label.setFont(font3)
         self.report_name_label.setLayoutDirection(Qt.LeftToRight)
-        self.report_name_label.setStyleSheet(u"color: rgb(40, 44, 52);\n"
-"background-color: rgba(255, 255, 255, 0);\n"
-"padding-left: 10px;")
+        self.report_name_label.setStyleSheet(u"color: rgb(0, 0, 0);\n"
+"padding-left: 10px;\n"
+"font-weight: bold;\n"
+"font-size: 20pt;")
         self.report_name_label.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
         self.verticalLayout_18.addWidget(self.report_name_label)
 
         self.widget_8 = QWidget(self.report_controllers)
         self.widget_8.setObjectName(u"widget_8")
-        self.widget_8.setStyleSheet(u"background-color: rgba(255, 255, 255, 0);")
         self.horizontalLayout_7 = QHBoxLayout(self.widget_8)
         self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
         self.report_class_input = QLineEdit(self.widget_8)
         self.report_class_input.setObjectName(u"report_class_input")
         self.report_class_input.setMinimumSize(QSize(0, 30))
-        self.report_class_input.setFont(font5)
+        self.report_class_input.setFont(font4)
         self.report_class_input.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
-"border: 1px solid rgb(0,0,0);\n"
-"border-radius: 5px;")
+"border-radius: 7px;\n"
+"border: 2px solid #000;")
 
         self.horizontalLayout_7.addWidget(self.report_class_input)
 
         self.report_search_btn = QPushButton(self.widget_8)
         self.report_search_btn.setObjectName(u"report_search_btn")
         self.report_search_btn.setMinimumSize(QSize(150, 30))
-        self.report_search_btn.setFont(font3)
-        self.report_search_btn.setStyleSheet(u"background-color: rgb(40, 44, 52);\n"
-"color: rgb(255, 255, 255);\n"
-"border-radius: 5px;")
-        self.report_search_btn.setIcon(icon9)
+        self.report_search_btn.setFont(font5)
+        self.report_search_btn.setStyleSheet(u"background-color: rgb(190,207,187);\n"
+"color: rgb(0,0,0);\n"
+"border-radius: 5px;\n"
+"border: 2px solid #000;\n"
+"font-weight: bold;\n"
+"font-size: 12pt;")
+        icon13 = QIcon()
+        icon13.addFile(u":/icons/search.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.report_search_btn.setIcon(icon13)
         self.report_search_btn.setIconSize(QSize(25, 25))
 
         self.horizontalLayout_7.addWidget(self.report_search_btn)
@@ -759,9 +790,11 @@ class Ui_Attendance(object):
 
         self.report_view = QWidget(self.report_page)
         self.report_view.setObjectName(u"report_view")
-        self.report_view.setFont(font3)
+        self.report_view.setFont(font6)
         self.report_view.setStyleSheet(u"border-radius: 5px;\n"
-"background-color: rgb(1,147,222);")
+"background-color:rgb(54, 71, 107); \n"
+"border-radius: 5px;\n"
+"border: 2px solid #000;")
         self.verticalLayout_6 = QVBoxLayout(self.report_view)
         self.verticalLayout_6.setSpacing(11)
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
@@ -791,7 +824,7 @@ class Ui_Attendance(object):
         __qtablewidgetitem11.setFont(font1);
         self.report_table.setHorizontalHeaderItem(4, __qtablewidgetitem11)
         self.report_table.setObjectName(u"report_table")
-        self.report_table.setFont(font3)
+        self.report_table.setFont(font6)
         self.report_table.setStyleSheet(u"border-radius: 5px;\n"
 "background-color: rgb(0, 255, 64);")
         self.report_table.setVerticalScrollMode(QAbstractItemView.ScrollPerPixel)
@@ -817,27 +850,27 @@ class Ui_Attendance(object):
         self.verticalLayout_8.setObjectName(u"verticalLayout_8")
         self.chart_name_label = QLabel(self.chart_controllers)
         self.chart_name_label.setObjectName(u"chart_name_label")
-        self.chart_name_label.setFont(font4)
+        self.chart_name_label.setFont(font3)
         self.chart_name_label.setLayoutDirection(Qt.LeftToRight)
-        self.chart_name_label.setStyleSheet(u"color: rgb(40, 44, 52);\n"
-"background-color: rgba(255, 255, 255, 0);\n"
-"padding-left: 10px;")
+        self.chart_name_label.setStyleSheet(u"color: rgb(0, 0, 0);\n"
+"padding-left: 10px;\n"
+"font-weight: bold;\n"
+"font-size: 20pt;")
         self.chart_name_label.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
         self.verticalLayout_8.addWidget(self.chart_name_label)
 
         self.search_panel = QWidget(self.chart_controllers)
         self.search_panel.setObjectName(u"search_panel")
-        self.search_panel.setStyleSheet(u"background-color: rgba(255, 255, 255, 0);")
         self.horizontalLayout_3 = QHBoxLayout(self.search_panel)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
         self.chart_model_name_input = QLineEdit(self.search_panel)
         self.chart_model_name_input.setObjectName(u"chart_model_name_input")
         self.chart_model_name_input.setMinimumSize(QSize(30, 30))
-        self.chart_model_name_input.setFont(font5)
+        self.chart_model_name_input.setFont(font4)
         self.chart_model_name_input.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
-"border: 1px solid rgb(0,0,0);\n"
-"border-radius: 5px;")
+"border-radius: 7px;\n"
+"border: 2px solid #000;")
 
         self.horizontalLayout_3.addWidget(self.chart_model_name_input)
 
@@ -849,13 +882,16 @@ class Ui_Attendance(object):
         sizePolicy2.setHeightForWidth(self.chart_show_btn.sizePolicy().hasHeightForWidth())
         self.chart_show_btn.setSizePolicy(sizePolicy2)
         self.chart_show_btn.setMinimumSize(QSize(150, 30))
-        self.chart_show_btn.setFont(font3)
-        self.chart_show_btn.setStyleSheet(u"background-color: rgb(40, 44, 52);\n"
-"color: rgb(255, 255, 255);\n"
-"border-radius: 5px;")
-        icon15 = QIcon()
-        icon15.addFile(u":/icons/codesandbox.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.chart_show_btn.setIcon(icon15)
+        self.chart_show_btn.setFont(font5)
+        self.chart_show_btn.setStyleSheet(u"background-color: rgb(190,207,187);\n"
+"color: rgb(0,0,0);\n"
+"border-radius: 5px;\n"
+"border: 2px solid #000;\n"
+"font-weight: bold;\n"
+"font-size: 12pt;")
+        icon14 = QIcon()
+        icon14.addFile(u":/icons/codesandbox.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.chart_show_btn.setIcon(icon14)
         self.chart_show_btn.setIconSize(QSize(25, 25))
 
         self.horizontalLayout_3.addWidget(self.chart_show_btn)
@@ -865,14 +901,13 @@ class Ui_Attendance(object):
 
         self.chart_result_text_label = QLabel(self.chart_controllers)
         self.chart_result_text_label.setObjectName(u"chart_result_text_label")
-        font8 = QFont()
-        font8.setFamily(u"Cascadia Code")
-        font8.setPointSize(11)
-        font8.setUnderline(False)
-        self.chart_result_text_label.setFont(font8)
+        font9 = QFont()
+        font9.setFamily(u"Cascadia Code")
+        font9.setPointSize(11)
+        font9.setUnderline(False)
+        self.chart_result_text_label.setFont(font9)
         self.chart_result_text_label.setLayoutDirection(Qt.LeftToRight)
-        self.chart_result_text_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
-"background-color: rgba(255, 255, 255, 0);\n"
+        self.chart_result_text_label.setStyleSheet(u"color: rgb(0, 0, 0);\n"
 "padding-left: 10px;")
         self.chart_result_text_label.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
 
@@ -886,18 +921,21 @@ class Ui_Attendance(object):
 
         self.chart_view = QWidget(self.chart_page)
         self.chart_view.setObjectName(u"chart_view")
-        self.chart_view.setFont(font3)
-        self.chart_view.setStyleSheet(u"background-color: rgb(1,147,222);")
+        self.chart_view.setFont(font6)
+        self.chart_view.setStyleSheet(u"border-radius: 5px;\n"
+"background-color:rgb(54, 71, 107); \n"
+"border-radius: 5px;\n"
+"border: 2px solid #000;")
         self.horizontalLayout_10 = QHBoxLayout(self.chart_view)
         self.horizontalLayout_10.setSpacing(0)
         self.horizontalLayout_10.setObjectName(u"horizontalLayout_10")
         self.chart_result_img_label = QLabel(self.chart_view)
         self.chart_result_img_label.setObjectName(u"chart_result_img_label")
         self.chart_result_img_label.setMaximumSize(QSize(50000, 50000))
-        self.chart_result_img_label.setFont(font3)
+        self.chart_result_img_label.setFont(font6)
         self.chart_result_img_label.setLayoutDirection(Qt.RightToLeft)
         self.chart_result_img_label.setStyleSheet(u"background-color: rgb(0, 255, 204);")
-        self.chart_result_img_label.setPixmap(QPixmap(u"C:/Users/Duong/.designer/backup/resources/apps/no_data_found.png"))
+        self.chart_result_img_label.setPixmap(QPixmap(u"../../../Duong/.designer/backup/resources/apps/no_data_found.png"))
         self.chart_result_img_label.setScaledContents(True)
         self.chart_result_img_label.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
@@ -923,7 +961,7 @@ class Ui_Attendance(object):
         self.retranslateUi(Attendance)
 
         self.main_pages.setCurrentIndex(1)
-        self.recognize_view.setCurrentIndex(1)
+        self.recognize_view.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(Attendance)
@@ -944,7 +982,6 @@ class Ui_Attendance(object):
         self.home_name_label.setText(QCoreApplication.translate("Attendance", u"TRANG CH\u1ee6", None))
         self.home_class_input.setInputMask("")
         self.home_class_input.setText("")
-        self.model_name_label.setText(QCoreApplication.translate("Attendance", u"model_name.keras", None))
         self.home_search_btn.setText(QCoreApplication.translate("Attendance", u"T\u00ecm ki\u1ebfm", None))
         self.home_get_data_btn.setText(QCoreApplication.translate("Attendance", u" D\u1eef li\u1ec7u", None))
         self.home_train_btn.setText(QCoreApplication.translate("Attendance", u" Hu\u1ea5n luy\u1ec7n", None))
@@ -958,25 +995,14 @@ class Ui_Attendance(object):
         ___qtablewidgetitem3.setText(QCoreApplication.translate("Attendance", u"Ng\u00e0y sinh", None));
         ___qtablewidgetitem4 = self.home_table.horizontalHeaderItem(4)
         ___qtablewidgetitem4.setText(QCoreApplication.translate("Attendance", u"S\u1ed1 \u0111i\u1ec7n tho\u1ea1i", None));
+        self.model_name_label.setText(QCoreApplication.translate("Attendance", u"model_name.keras", None))
         self.recognize_name_label.setText(QCoreApplication.translate("Attendance", u"\u0110I\u1ec2M DANH", None))
-        self.widget_7.setStyleSheet(QCoreApplication.translate("Attendance", u"color: rgb(255, 255, 255);\n"
-"background-color: rgba(255, 255, 255, 0);\n"
-"padding-left: 10px;", None))
-        self.widget_5.setStyleSheet(QCoreApplication.translate("Attendance", u"color: rgb(255, 255, 255);\n"
-"background-color: rgba(255, 255, 255, 0);\n"
-"padding-left: 10px;", None))
         self.recognize_img_path_input.setInputMask("")
         self.recognize_img_path_input.setText("")
         self.recognize_models_box.setCurrentText("")
-        self.widget_4.setStyleSheet(QCoreApplication.translate("Attendance", u"color: rgb(255, 255, 255);\n"
-"background-color: rgba(255, 255, 255, 0);\n"
-"padding-left: 10px;", None))
         self.recognize_tab_1_btn.setText("")
         self.recognize_tab_2_btn.setText("")
         self.recognize_tab_3_btn.setText("")
-        self.widget_6.setStyleSheet(QCoreApplication.translate("Attendance", u"color: rgb(255, 255, 255);\n"
-"background-color: rgba(255, 255, 255, 0);\n"
-"padding-left: 10px;", None))
         self.recognize_open_img_btn.setText(QCoreApplication.translate("Attendance", u" M\u1edf \u1ea3nh", None))
         self.recognize_guess_btn.setText(QCoreApplication.translate("Attendance", u" \u0110i\u1ec3m danh", None))
         self.recognize_export_btn.setText(QCoreApplication.translate("Attendance", u" K\u1ebft qu\u1ea3", None))

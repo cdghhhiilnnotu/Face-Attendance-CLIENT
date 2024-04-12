@@ -32,8 +32,11 @@ class HauSettings():
                     margin_left=0
                     ):
         return f"""
-        color: rgb(255,255,255);
-        background-color: rgb(59,89,152);
+        color: rgb(0,0,0);
+        background-color: rgb(188,203,234);
+        border: 2px solid #000;
+        font-weight: bold;
+        font-size: 12pt;
         border-top-right-radius: {border_top_right_radius}px;
         border-top-left-radius: {border_top_left_radius}px;
         border-bottom-right-radius: {border_bottom_right_radius}px;
