@@ -837,7 +837,7 @@ font-weight: bold;
 font-size: 12pt;</string>
                          </property>
                          <property name="text">
-                          <string> Huấn luyện</string>
+                          <string>Huấn luyện</string>
                          </property>
                          <property name="icon">
                           <iconset>
@@ -1340,7 +1340,7 @@ font-weight: bold;
 font-size: 12pt;</string>
                          </property>
                          <property name="text">
-                          <string> Mở ảnh</string>
+                          <string>Mở ảnh</string>
                          </property>
                          <property name="icon">
                           <iconset>
@@ -1379,7 +1379,7 @@ font-weight: bold;
 font-size: 12pt;</string>
                          </property>
                          <property name="text">
-                          <string> Điểm danh</string>
+                          <string>Điểm danh</string>
                          </property>
                          <property name="icon">
                           <iconset>
@@ -1418,7 +1418,7 @@ font-weight: bold;
 font-size: 12pt;</string>
                          </property>
                          <property name="text">
-                          <string> Kết quả</string>
+                          <string>Kết quả</string>
                          </property>
                          <property name="icon">
                           <iconset>
@@ -1643,7 +1643,7 @@ font-weight: bold;
 font-size: 12pt;</string>
                      </property>
                      <property name="text">
-                      <string>Giữ</string>
+                      <string>Lưu</string>
                      </property>
                      <property name="icon">
                       <iconset>
@@ -2044,7 +2044,7 @@ font-weight: bold;
 font-size: 12pt;</string>
                       </property>
                       <property name="text">
-                       <string> Mô hình</string>
+                       <string>Mô hình</string>
                       </property>
                       <property name="icon">
                        <iconset>
