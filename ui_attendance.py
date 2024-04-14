@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'attendanceLbwDZn.ui'
+## Form generated from reading UI file 'attendanceDJFEEF.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -990,7 +990,7 @@ class Ui_Attendance(object):
         self.home_class_input.setInputMask("")
         self.home_class_input.setText("")
         self.home_search_btn.setText(QCoreApplication.translate("Attendance", u"T\u00ecm ki\u1ebfm", None))
-        self.home_train_btn.setText(QCoreApplication.translate("Attendance", u" Hu\u1ea5n luy\u1ec7n", None))
+        self.home_train_btn.setText(QCoreApplication.translate("Attendance", u"Hu\u1ea5n luy\u1ec7n", None))
         ___qtablewidgetitem = self.home_table.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("Attendance", u"MSV", None));
         ___qtablewidgetitem1 = self.home_table.horizontalHeaderItem(1)
@@ -1009,16 +1009,16 @@ class Ui_Attendance(object):
         self.recognize_tab_1_btn.setText("")
         self.recognize_tab_2_btn.setText("")
         self.recognize_tab_3_btn.setText("")
-        self.recognize_open_img_btn.setText(QCoreApplication.translate("Attendance", u" M\u1edf \u1ea3nh", None))
-        self.recognize_guess_btn.setText(QCoreApplication.translate("Attendance", u" \u0110i\u1ec3m danh", None))
-        self.recognize_export_btn.setText(QCoreApplication.translate("Attendance", u" K\u1ebft qu\u1ea3", None))
+        self.recognize_open_img_btn.setText(QCoreApplication.translate("Attendance", u"M\u1edf \u1ea3nh", None))
+        self.recognize_guess_btn.setText(QCoreApplication.translate("Attendance", u"\u0110i\u1ec3m danh", None))
+        self.recognize_export_btn.setText(QCoreApplication.translate("Attendance", u"K\u1ebft qu\u1ea3", None))
         self.recognize_input_img_label.setText("")
         self.recognize_output_img_label.setText("")
         ___qtablewidgetitem5 = self.recognize_table.horizontalHeaderItem(0)
         ___qtablewidgetitem5.setText(QCoreApplication.translate("Attendance", u"Box Color", None));
         ___qtablewidgetitem6 = self.recognize_table.horizontalHeaderItem(1)
         ___qtablewidgetitem6.setText(QCoreApplication.translate("Attendance", u"M\u00e3 sinh vi\u00ean", None));
-        self.recognize_keep_btn.setText(QCoreApplication.translate("Attendance", u"Gi\u1eef", None))
+        self.recognize_keep_btn.setText(QCoreApplication.translate("Attendance", u"L\u01b0u", None))
         self.report_name_label.setText(QCoreApplication.translate("Attendance", u"B\u00c1O C\u00c1O", None))
         self.report_class_input.setInputMask("")
         self.report_class_input.setText("")
@@ -1036,7 +1036,7 @@ class Ui_Attendance(object):
         self.chart_name_label.setText(QCoreApplication.translate("Attendance", u"BI\u1ec2U \u0110\u1ed2 HU\u1ea4N LUY\u1ec6N M\u00d4 H\u00ccNH", None))
         self.chart_model_name_input.setInputMask("")
         self.chart_model_name_input.setText("")
-        self.chart_show_btn.setText(QCoreApplication.translate("Attendance", u" M\u00f4 h\u00ecnh", None))
+        self.chart_show_btn.setText(QCoreApplication.translate("Attendance", u"M\u00f4 h\u00ecnh", None))
         self.chart_result_text_label.setText(QCoreApplication.translate("Attendance", u"Model: ...", None))
         self.chart_result_img_label.setText("")
         pass
