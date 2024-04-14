@@ -1,7 +1,11 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
+<<<<<<< HEAD
 ## Form generated from reading UI file 'attendancezBMygb.ui'
+=======
+## Form generated from reading UI file 'attendanceDJFEEF.ui'
+>>>>>>> 21d62066e8deaec4a75b5f673663c02766886afd
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
