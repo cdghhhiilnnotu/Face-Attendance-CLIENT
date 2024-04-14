@@ -7,7 +7,7 @@ class HauSettings():
     OPEN_CAM = True
     UNKNOWN_IMAGE_PATH = "resources\\apps\\no_data_found.png"
     MODEL_FILE_EXTENSION = ".keras"
-    MODEL_HAAR = "haarcascade_frontalface_default.xml"
+    MODEL_HAAR = "haarcascade_frontalface_alt.xml"
     IMGS_DIR = "imgs"
 
     def check_cam():
