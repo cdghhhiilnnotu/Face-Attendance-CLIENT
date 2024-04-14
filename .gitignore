@@ -178,3 +178,5 @@ models/
 *.ui
 *.json
 *.qrc
+
+myenv/
