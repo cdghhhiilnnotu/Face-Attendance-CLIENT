@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1333</width>
-    <height>819</height>
+    <height>820</height>
    </rect>
   </property>
   <property name="font">
@@ -85,10 +85,7 @@ border-top-left-radius: 5px;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap resource="resources/resources.qrc">:/apps/apps/logo_app.png</pixmap>
-         </property>
-         <property name="scaledContents">
-          <bool>true</bool>
+          <pixmap>:/icons/airplay.svg</pixmap>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -147,8 +144,8 @@ border-top-left-radius: 5px;</string>
           <string/>
          </property>
          <property name="icon">
-          <iconset resource="resources/resources.qrc">
-           <normaloff>:/icon-EC8482/EC8482/minus-circle.svg</normaloff>:/icon-EC8482/EC8482/minus-circle.svg</iconset>
+          <iconset>
+           <normaloff>:/icons/divide-circle.svg</normaloff>:/icons/divide-circle.svg</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -176,8 +173,8 @@ border-top-left-radius: 5px;</string>
           <string/>
          </property>
          <property name="icon">
-          <iconset resource="resources/resources.qrc">
-           <normaloff>:/icon-EC8482/EC8482/octagon.svg</normaloff>:/icon-EC8482/EC8482/octagon.svg</iconset>
+          <iconset>
+           <normaloff>:/icons/circle.svg</normaloff>:/icons/circle.svg</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -205,8 +202,8 @@ border-top-left-radius: 5px;</string>
           <string/>
          </property>
          <property name="icon">
-          <iconset resource="resources/resources.qrc">
-           <normaloff>:/icon-EC8482/EC8482/x-octagon.svg</normaloff>:/icon-EC8482/EC8482/x-octagon.svg</iconset>
+          <iconset>
+           <normaloff>:/icons/x-circle.svg</normaloff>:/icons/x-circle.svg</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -317,7 +314,7 @@ font-size: 12pt;
             </property>
             <property name="icon">
              <iconset resource="resources/resources.qrc">
-              <normaloff>:/icon-dark/icon-dark/menu.svg</normaloff>:/icon-dark/icon-dark/menu.svg</iconset>
+              <normaloff>:/icons_dark/icon_dark/menu.svg</normaloff>:/icons_dark/icon_dark/menu.svg</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -400,7 +397,7 @@ font-size: 12pt;
                </property>
                <property name="icon">
                 <iconset resource="resources/resources.qrc">
-                 <normaloff>:/icon-dark/icon-dark/home.svg</normaloff>:/icon-dark/icon-dark/home.svg</iconset>
+                 <normaloff>:/icons_dark/icon_dark/home.svg</normaloff>:/icons_dark/icon_dark/home.svg</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -437,7 +434,7 @@ font-size: 12pt;
                </property>
                <property name="icon">
                 <iconset resource="resources/resources.qrc">
-                 <normaloff>:/icon-dark/icon-dark/user-check.svg</normaloff>:/icon-dark/icon-dark/user-check.svg</iconset>
+                 <normaloff>:/icons_dark/icon_dark/user-check.svg</normaloff>:/icons_dark/icon_dark/user-check.svg</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -474,7 +471,7 @@ font-size: 12pt;
                </property>
                <property name="icon">
                 <iconset resource="resources/resources.qrc">
-                 <normaloff>:/icon-dark/icon-dark/file-text.svg</normaloff>:/icon-dark/icon-dark/file-text.svg</iconset>
+                 <normaloff>:/icons_dark/icon_dark/file-text.svg</normaloff>:/icons_dark/icon_dark/file-text.svg</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -511,7 +508,7 @@ font-size: 12pt;
                </property>
                <property name="icon">
                 <iconset resource="resources/resources.qrc">
-                 <normaloff>:/icon-dark/icon-dark/pie-chart.svg</normaloff>:/icon-dark/icon-dark/pie-chart.svg</iconset>
+                 <normaloff>:/icons_dark/icon_dark/pie-chart.svg</normaloff>:/icons_dark/icon_dark/pie-chart.svg</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -567,7 +564,7 @@ font-size: 12pt;
             </property>
             <property name="icon">
              <iconset resource="resources/resources.qrc">
-              <normaloff>:/icon-dark/icon-dark/log-out.svg</normaloff>:/icon-dark/icon-dark/log-out.svg</iconset>
+              <normaloff>:/icons_dark/icon_dark/log-out.svg</normaloff>:/icons_dark/icon_dark/log-out.svg</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -596,7 +593,7 @@ border-radius: 9px;</string>
           <item>
            <widget class="QStackedWidget" name="main_pages">
             <property name="currentIndex">
-             <number>0</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="home_page">
              <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,3">
@@ -807,6 +804,53 @@ font-size: 12pt;</string>
                         </widget>
                        </item>
                        <item>
+                        <widget class="QPushButton" name="home_get_data_btn">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="minimumSize">
+                          <size>
+                           <width>150</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>150</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Cascadia Code</family>
+                           <pointsize>12</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(190,207,187);
+color: rgb(0,0,0);
+border-radius: 5px;
+border: 2px solid #000;
+font-weight: bold;
+font-size: 12pt;</string>
+                         </property>
+                         <property name="text">
+                          <string> Dữ liệu</string>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>25</width>
+                           <height>25</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
                         <widget class="QPushButton" name="home_train_btn">
                          <property name="minimumSize">
                           <size>
@@ -850,19 +894,6 @@ font-size: 12pt;</string>
                           </size>
                          </property>
                         </widget>
-                       </item>
-                       <item>
-                        <spacer name="verticalSpacer_5">
-                         <property name="orientation">
-                          <enum>Qt::Vertical</enum>
-                         </property>
-                         <property name="sizeHint" stdset="0">
-                          <size>
-                           <width>20</width>
-                           <height>40</height>
-                          </size>
-                         </property>
-                        </spacer>
                        </item>
                       </layout>
                      </widget>
@@ -912,7 +943,6 @@ border: 2px solid #000;
                    </property>
                    <property name="styleSheet">
                     <string notr="true">border-radius: 5px;
-border: 0px;
 background-color: rgb(255, 255, 255);</string>
                    </property>
                    <property name="verticalScrollMode">
@@ -1201,7 +1231,7 @@ border: 2px solid #000;</string>
                           <enum>Qt::LeftToRight</enum>
                          </property>
                          <property name="styleSheet">
-                          <string notr="true">color: rgb(0, 0, 0);
+                          <string notr="true">color: rgb(255, 255, 255);
 padding-right: 20px;</string>
                          </property>
                          <property name="currentText">
@@ -1534,6 +1564,21 @@ border: 2px solid #000;
 border-radius: 5px;</string>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_10">
+                  <property name="spacing">
+                   <number>0</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>11</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>11</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>11</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>11</number>
+                  </property>
                   <item>
                    <widget class="QTableWidget" name="recognize_table">
                     <property name="font">
@@ -1600,6 +1645,7 @@ background-color: rgb(0, 170, 255);</string>
                     </column>
                    </widget>
                   </item>
+<<<<<<< HEAD
                   <item>
                    <widget class="QWidget" name="widget_9" native="true">
                     <property name="minimumSize">
@@ -1658,6 +1704,8 @@ font-size: 12pt;</string>
                     </widget>
                    </widget>
                   </item>
+=======
+>>>>>>> ede4770855ddef72b0efe0986abadc0cb3bf2327
                  </layout>
                 </widget>
                </widget>
