@@ -137,33 +137,52 @@ class HauModel():
 
     def load_model(self, model_name):
         self.model.load_weights(f'{self.model_path}/{model_name}.keras')
-    
-    def real_time_predict(dataset_img, model, name, label):
-        haar_file = HauSettings.MODEL_HAAR
-        face_cascade = cv2.CascadeClassifier(haar_file)
 
-        webcam = cv2.VideoCapture(0)
-        while HauSettings.OPEN_CAM:
-            (_, im) = webcam.read()
-            gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
-            faces = face_cascade.detectMultiScale(gray, 1.3, 5)
-            for (x, y, w, h) in faces:
-                face = im[y:y + h, x:x + w]
-                face_resize = cv2.resize(face, (224, 224))
-                prediction = model.predict(np.expand_dims(face_resize, axis=0))
-                cv2.rectangle(im, (x, y), (x + w, y + h), (0, 255, 0), 3)
-                # if (prediction[1] < 800):
-                cv2.putText(im, '%s-%.0f' % (dataset_img[np.argmax(prediction)], np.max(prediction)), (x - 10, y - 10),
-                            cv2.FONT_HERSHEY_PLAIN, 2, (0, 0, 255))
-                # print(students[np.argmax(prediction)])
-            # cv2.imshow('frame', im)
-            cv2.imwrite(os.path.join("hau_results", f"{name}_result.png"), im)
-            HauSupportorA.display_image_func(label, os.path.join("hau_results", f"{name}_result.png"))
-            # key = cv2.waitKey(10)
-            # if key == 27:
-            #     break
-        webcam.release()
-        cv2.destroyAllWindows()
+    def tracking_face(self, img):
+        face_locs = []
+        img_faces = []
+        img = cv2.resize(img, (int(img.shape[1]/(img.shape[0]/512)),512), interpolation=cv2.INTER_AREA)
+        img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        face_detector = cv2.CascadeClassifier(HauSettings.MODEL_HAAR)
+        faces = []
+        for scale in range(2, 9):
+            for neighbor in range(2, 6):
+                for face in face_detector.detectMultiScale(img_gray, 1 + 0.1 * scale, neighbor):
+                    faces.append(face)
+
+        for (x, y, w, h) in faces:
+            img_faces.append(img[y:y+h, x:x+w])
+            face_locs.append((x,y,w,h))
+        return img_faces, face_locs
+    
+    def guessing_img(self, dataset_img, img_path, model, name, collector):
+        colors = []
+        img = cv2.imread(img_path)
+        data_x, face_loc = self.tracking_face(img)
+
+        for i in range(0,len(data_x)):
+            data_x[i] = cv2.resize(data_x[i], (224,224), interpolation=cv2.INTER_AREA)
+
+        data_x = np.array(data_x)
+        data_x = data_x.astype(np.float32)
+        guesses = model.model.predict(data_x)
+
+        for i in range(len(face_loc)):
+            x = face_loc[i][0]
+            y = face_loc[i][0]
+            w = face_loc[i][0]
+            h = face_loc[i][0]
+            if guesses[i][np.argmax(guesses[i])] > 0.9:
+                color = (random.randint(0, 255), random.randint(0, 255), 0)
+            elif guesses[i][np.argmax(guesses[i])] > 0.5 and guesses[i][np.argmax(guesses[i])] <= 0.9:
+                color = (0, 255, 255)
+            else:
+                color = (0, 0, 255)
+            cv2.rectangle(img, (x, y),(x+w, y+h), color, 3)
+            colors.append(color)
+        cv2.imwrite(os.path.join(collector.RESULTS_PATH, f"{name}_result.png"), img)
+
+        return os.path.join(collector.RESULTS_PATH, f"{name}_result.png"), colors, [np.argmax(guess) for guess in guesses]
 
     def plot_train_history(self, file_name_fig):
         plt.figure(figsize=(15,5))

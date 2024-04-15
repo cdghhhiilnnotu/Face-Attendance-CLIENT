@@ -45,6 +45,8 @@ class AttendanceWindow(QMainWindow):
         self.ui.report_search_btn.clicked.connect(self.repp_show_report_table_func)
         self.ui.chart_show_btn.clicked.connect(self.chp_show_chart_func)
         self.ui.attendance_exit_btn.clicked.connect(self.exit_func)
+        self.ui.recognize_keep_btn.clicked.connect(self.recp_save_results)
+        self.ui.recognize_refresh_btn.clicked.connect(self.recp_refresh_results)
         self.thread = {}
 
     def logout_func(self):
@@ -198,7 +200,7 @@ class AttendanceWindow(QMainWindow):
 
     # RECOGNITION PAGE
     def recp_init_func(self):
-        self.recp_show_recognition_table_func([])
+        self.recp_show_recognition_table_func1([])
         self.ui.recognize_img_path_input.setText("")
         if os.path.exists(self.collector.MODEL_DIR):
             self.ui.recognize_models_box.addItems([m.split(".keras")[0] for m in os.listdir(self.collector.MODEL_DIR)])
@@ -230,41 +232,54 @@ class AttendanceWindow(QMainWindow):
         except:
             pass
 
-    def recp_show_guess_func(self):
-        print("PRESS RECOGNIZE GUESS BUTTON")
-        try:
-            self.dataset_path = os.path.join(self.collector.DATASETS_PATH,self.ui.recognize_models_box.currentText())
-            self.model = HauModel(self.dataset_path, 1, self.class_id_name, model_dir=self.collector.MODEL_DIR) 
-            self.model.load_model(self.ui.recognize_models_box.currentText())
-            if not HauSettings.check_cam():
-                HauSettings.display_image_func(self.ui.recognize_output_img_label, "")
-                self.recp_switch_subpage_func(0)
-            else:
-                self.recp_switch_subpage_func(1)
-                self.model.real_time_predict(os.listdir(self.dataset_path), self.model, self.ui.recognize_models_box.currentText(), self.ui.recognize_output_img_label)
-        except:
-            pass
+    def recp_save_results(self):
+        for face_masv in self.face_guessed:
+            data = {}
+            data['masv'] = face_masv
+            data['malop'] = self.ui.recognize_models_box.currentText()
+            data['ghichu'] = ""
+            requests.post(HauSettings.BASE_URL + "/giaovien/baocao", data)
+        self.collector.user_api(self.collector.username_MGV)
+
+    def recp_refresh_results(self):
+        self.recp_show_recognition_table_func1([])
+        self.ui.recognize_img_path_input.setText("")
+        HauSettings.display_image_func(self.ui.recognize_output_img_label, HauSettings.UNKNOWN_IMAGE_PATH)
 
     # BEGIN DISPLAY CAMERA SECTION
     def closeEvent(self, event):
         self.stop_capture_video()
 
     def stop_capture_video(self):
-        self.thread[1].cam_enable = False
-        face_guessed = list(dict.fromkeys(self.thread[1].face_guessed))
-        self.recp_show_recognition_table_func(face_guessed)
-        self.thread[1].stop()
+        try:
+            self.thread[1].cam_enable = False
+            self.face_guessed = list(dict.fromkeys(self.thread[1].face_guessed))
+            self.recp_show_recognition_table_func1(self.face_guessed)
+            self.thread[1].stop()
+            self.recp_switch_subpage_func(2)
+        except:
+            pass
 
     def start_capture_video(self):
-        if not self.isRecording:
-            self.isRecording = True
+        if self.ui.recognize_img_path_input.text() == "":
+            if not self.isRecording:
+                self.isRecording = True
+                self.dataset_path = os.path.join(self.collector.DATASETS_PATH,self.ui.recognize_models_box.currentText())
+                self.model = HauModel(self.dataset_path, 1, self.class_id_name, model_dir=self.collector.MODEL_DIR) 
+                self.model.load_model(self.ui.recognize_models_box.currentText())
+                self.thread[1] = Thread_Video(1, os.listdir(self.dataset_path), self.model, self.ui.recognize_output_img_label)
+                self.thread[1].cam_enable = True
+                self.thread[1].start()
+                self.thread[1].signal.connect(self.show_wedcam)
+                self.recp_switch_subpage_func(1)
+        else:
             self.dataset_path = os.path.join(self.collector.DATASETS_PATH,self.ui.recognize_models_box.currentText())
             self.model = HauModel(self.dataset_path, 1, self.class_id_name, model_dir=self.collector.MODEL_DIR) 
             self.model.load_model(self.ui.recognize_models_box.currentText())
-            self.thread[1] = Thread_Video(1, os.listdir(self.dataset_path), self.model, self.ui.recognize_output_img_label)
-            self.thread[1].cam_enable = True
-            self.thread[1].start()
-            self.thread[1].signal.connect(self.show_wedcam)
+            file_name, colors, guessed = self.model.guessing_img(self.dataset_path, self.ui.recognize_img_path_input.text(), self.model, self.ui.recognize_models_box.currentText(), self.collector)
+            self.recp_show_recognition_table_func2(colors, guessed)
+            self.face_guessed = list(dict.fromkeys(guessed))
+            HauSettings.display_image_func(self.ui.recognize_output_img_label, file_name)
 
 
     def show_wedcam(self, cv_img):
@@ -282,21 +297,38 @@ class AttendanceWindow(QMainWindow):
         return QPixmap.fromImage(p)
     # END DISPLAY CAMERA SECTION
 
-    def recp_show_recognition_table_func(self, guesses_indexes):
+    def recp_show_recognition_table_func2(self, colors, guesses_indexes):
+        self.ui.recognize_table.horizontalHeader().setVisible(True)
+        self.ui.recognize_table.setRowCount(len(colors))
+        self.ui.recognize_table.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.ui.recognize_table.setStyleSheet(
+            "QTableView::item:selected { color:white; background:#000000; font-weight:900; }"
+            "QHeaderView::section { color:white; background-color:#232326;}"
+        )
+        self.ui.recognize_table.setColumnWidth(0, 200)
+        for idx, color in enumerate(colors):
+            itemColor = QTableWidgetItem()
+            itemColor.setBackground(QBrush(QColor(color[2], color[1], color[0])))
+            self.ui.recognize_table.setItem(idx, 0, itemColor)
+            itemMSV = QTableWidgetItem(str(os.listdir(self.dataset_path)[guesses_indexes[idx]]))
+            itemMSV.setBackground(QBrush(QColor(255, 255, 255)))
+            self.ui.recognize_table.setItem(idx, 1, itemMSV)
+
+    def recp_show_recognition_table_func1(self, guessed):
         try:
             self.ui.recognize_table.horizontalHeader().setVisible(True)
-            self.ui.recognize_table.setRowCount(len(guesses_indexes))
+            self.ui.recognize_table.setRowCount(len(guessed))
             self.ui.recognize_table.setSelectionBehavior(QAbstractItemView.SelectRows)
             self.ui.recognize_table.setStyleSheet(
                 "QTableView::item:selected { color:white; background:#000000; font-weight:900; }"
                 "QHeaderView::section { color:white; background-color:#232326;}"
             )
             self.ui.recognize_table.setColumnWidth(0, 200)
-            for idx, guess in enumerate(guesses_indexes):
+            for idx, guess in enumerate(guessed):
                 itemColor = QTableWidgetItem()
                 itemColor.setBackground(QBrush(QColor(255, 255, 255)))
                 self.ui.recognize_table.setItem(idx, 0, itemColor)
-                # itemMSV = QTableWidgetItem(str(os.listdir(self.ui.dataset_path)[guesses_indexes[idx]]))
+                # itemMSV = QTableWidgetItem(str(os.listdir(self.ui.dataset_path)[self.face_guessed[idx]]))
                 itemMSV = QTableWidgetItem(guess)
                 
                 itemMSV.setBackground(QBrush(QColor(255, 255, 255)))

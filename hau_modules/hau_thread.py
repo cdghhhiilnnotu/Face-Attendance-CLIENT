@@ -32,15 +32,7 @@ class Thread_Video(QThread):
                 pass
             if ret:
                 self.signal.emit(im)
-
-    # def run(self):
-    #     cap = cv2.VideoCapture(0)  # 'D:/8.Record video/My Video.mp4'
-    #     while True:
-    #         ret, cv_img = cap.read()
-    #         if ret:
-    #             self.signal.emit(cv_img)
     
     def stop(self):
         print("stop threading", self.index)
         self.exit()
-        # return self.face_guessed

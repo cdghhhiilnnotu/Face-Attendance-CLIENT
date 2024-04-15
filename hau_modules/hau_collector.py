@@ -6,11 +6,11 @@ class CollectData():
         self.user = user
         self.user_api(user['MaGV'])
         # print(user['MaGV'])
-        username_MGV = user['MaGV']
-        self.DATASETS_PATH = f'{username_MGV}_datasets'
-        self.RESULTS_PATH = f'{username_MGV}_results'
-        self.STATISTIC_PATH = f'{username_MGV}_statistics'
-        self.MODEL_DIR = f'{username_MGV}_models'
+        self.username_MGV = user['MaGV']
+        self.DATASETS_PATH = f'{self.username_MGV}_datasets'
+        self.RESULTS_PATH = f'{self.username_MGV}_results'
+        self.STATISTIC_PATH = f'{self.username_MGV}_statistics'
+        self.MODEL_DIR = f'{self.username_MGV}_models'
         self.init_folders()
 
     def init_folders(self):
@@ -36,14 +36,14 @@ class CollectData():
     def check_user(username, password):
         user_checked = {}
         try:
-            user_checked = requests.get(HauSettings.BASE_DIR + f"/giaovien/logging/{username}/{password}").json()
+            user_checked = requests.get(HauSettings.BASE_URL + f"/giaovien/logging/{username}/{password}").json()
             return CollectData(user_checked)
         except:
             print("No API or data found!")
         return None
     
     def user_api(self, username):
-        api = requests.get(HauSettings.BASE_DIR + f"/giaovien/login_success/{username}").json()
+        api = requests.get(HauSettings.BASE_URL + f"/giaovien/login_success/{username}").json()
         with open(HauSettings.API_SOURCE, "w", encoding='utf-8') as outfile:
             json.dump(api, outfile,ensure_ascii=False)
         self.collect_data(HauSettings.API_SOURCE)
@@ -109,8 +109,3 @@ class CollectData():
             print("No data found!")
             return {}
             
-
-def printLoveLinh():
-    print("yes i love her!")
-
-collector = CollectData.check_user("","")

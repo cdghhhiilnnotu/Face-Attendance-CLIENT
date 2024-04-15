@@ -1,11 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-<<<<<<< HEAD
-## Form generated from reading UI file 'attendancezBMygb.ui'
-=======
-## Form generated from reading UI file 'attendanceDJFEEF.ui'
->>>>>>> 21d62066e8deaec4a75b5f673663c02766886afd
+## Form generated from reading UI file 'attendancerZTkBI.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -22,7 +18,8 @@ class Ui_Attendance(object):
     def setupUi(self, Attendance):
         if not Attendance.objectName():
             Attendance.setObjectName(u"Attendance")
-        Attendance.resize(1333, 819)
+        Attendance.resize(1250, 720)
+        Attendance.setMaximumSize(QSize(1250, 720))
         font = QFont()
         font.setFamily(u"Cambria")
         Attendance.setFont(font)
@@ -279,7 +276,7 @@ class Ui_Attendance(object):
         self.home_controllers.setObjectName(u"home_controllers")
         self.home_controllers.setAutoFillBackground(False)
         self.verticalLayout_12 = QVBoxLayout(self.home_controllers)
-        self.verticalLayout_12.setSpacing(0)
+        self.verticalLayout_12.setSpacing(5)
         self.verticalLayout_12.setObjectName(u"verticalLayout_12")
         self.home_name_label = QLabel(self.home_controllers)
         self.home_name_label.setObjectName(u"home_name_label")
@@ -307,6 +304,7 @@ class Ui_Attendance(object):
         self.widget_3.setMinimumSize(QSize(0, 150))
         self.horizontalLayout_4 = QHBoxLayout(self.widget_3)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.horizontalLayout_4.setContentsMargins(1, 1, 1, 1)
         self.widget_2 = QWidget(self.widget_3)
         self.widget_2.setObjectName(u"widget_2")
         self.verticalLayout_13 = QVBoxLayout(self.widget_2)
@@ -464,8 +462,8 @@ class Ui_Attendance(object):
 
         self.verticalLayout_4.addWidget(self.home_view)
 
-        self.verticalLayout_4.setStretch(0, 1)
-        self.verticalLayout_4.setStretch(1, 3)
+        self.verticalLayout_4.setStretch(0, 3)
+        self.verticalLayout_4.setStretch(1, 7)
         self.main_pages.addWidget(self.home_page)
         self.recognize_page = QWidget()
         self.recognize_page.setObjectName(u"recognize_page")
@@ -495,6 +493,7 @@ class Ui_Attendance(object):
 
         self.widget_7 = QWidget(self.recognize_controllers)
         self.widget_7.setObjectName(u"widget_7")
+        self.widget_7.setMinimumSize(QSize(0, 150))
         self.horizontalLayout_5 = QHBoxLayout(self.widget_7)
         self.horizontalLayout_5.setSpacing(5)
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
@@ -656,8 +655,10 @@ class Ui_Attendance(object):
         self.recognize_image.setStyleSheet(u"border-radius: 5px;")
         self.horizontalLayout_9 = QHBoxLayout(self.recognize_image)
         self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
+        self.horizontalLayout_9.setContentsMargins(11, -1, 11, -1)
         self.recognize_input_img_label = QLabel(self.recognize_image)
         self.recognize_input_img_label.setObjectName(u"recognize_input_img_label")
+        self.recognize_input_img_label.setMaximumSize(QSize(720, 480))
         self.recognize_input_img_label.setFont(font6)
         self.recognize_input_img_label.setStyleSheet(u"background-color: rgb(238, 0, 255);")
         self.recognize_input_img_label.setPixmap(QPixmap(u"../../../Duong/.designer/backup/resources/apps/no_data_found.png"))
@@ -668,11 +669,14 @@ class Ui_Attendance(object):
         self.recognize_view.addWidget(self.recognize_image)
         self.recognize_detect = QWidget()
         self.recognize_detect.setObjectName(u"recognize_detect")
+        self.recognize_detect.setLayoutDirection(Qt.LeftToRight)
         self.recognize_detect.setStyleSheet(u"border-radius: 5px;")
         self.horizontalLayout_8 = QHBoxLayout(self.recognize_detect)
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
+        self.horizontalLayout_8.setContentsMargins(11, -1, 11, -1)
         self.recognize_output_img_label = QLabel(self.recognize_detect)
         self.recognize_output_img_label.setObjectName(u"recognize_output_img_label")
+        self.recognize_output_img_label.setMaximumSize(QSize(720, 480))
         self.recognize_output_img_label.setFont(font6)
         self.recognize_output_img_label.setStyleSheet(u"background-color: rgb(127, 255, 29);")
         self.recognize_output_img_label.setPixmap(QPixmap(u"../../../Duong/.designer/backup/resources/apps/no_data_found.png"))
@@ -716,9 +720,29 @@ class Ui_Attendance(object):
         self.widget_9.setObjectName(u"widget_9")
         self.widget_9.setMinimumSize(QSize(0, 70))
         self.widget_9.setStyleSheet(u"border: 0px")
+        self.horizontalLayout_11 = QHBoxLayout(self.widget_9)
+        self.horizontalLayout_11.setObjectName(u"horizontalLayout_11")
+        self.horizontalSpacer_3 = QSpacerItem(408, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_11.addItem(self.horizontalSpacer_3)
+
+        self.recognize_refresh_btn = QPushButton(self.widget_9)
+        self.recognize_refresh_btn.setObjectName(u"recognize_refresh_btn")
+        self.recognize_refresh_btn.setMinimumSize(QSize(150, 30))
+        self.recognize_refresh_btn.setFont(font5)
+        self.recognize_refresh_btn.setStyleSheet(u"background-color: rgb(190,207,187);\n"
+"color: rgb(0,0,0);\n"
+"border-radius: 5px;\n"
+"border: 2px solid #000;\n"
+"font-weight: bold;\n"
+"font-size: 12pt;")
+        self.recognize_refresh_btn.setIcon(icon12)
+        self.recognize_refresh_btn.setIconSize(QSize(25, 25))
+
+        self.horizontalLayout_11.addWidget(self.recognize_refresh_btn)
+
         self.recognize_keep_btn = QPushButton(self.widget_9)
         self.recognize_keep_btn.setObjectName(u"recognize_keep_btn")
-        self.recognize_keep_btn.setGeometry(QRect(1040, 20, 150, 30))
         self.recognize_keep_btn.setMinimumSize(QSize(150, 30))
         self.recognize_keep_btn.setFont(font5)
         self.recognize_keep_btn.setStyleSheet(u"background-color: rgb(190,207,187);\n"
@@ -729,6 +753,13 @@ class Ui_Attendance(object):
 "font-size: 12pt;")
         self.recognize_keep_btn.setIcon(icon12)
         self.recognize_keep_btn.setIconSize(QSize(25, 25))
+
+        self.horizontalLayout_11.addWidget(self.recognize_keep_btn)
+
+        self.horizontalSpacer_4 = QSpacerItem(407, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_11.addItem(self.horizontalSpacer_4)
+
 
         self.verticalLayout_10.addWidget(self.widget_9)
 
@@ -742,7 +773,7 @@ class Ui_Attendance(object):
         self.report_page = QWidget()
         self.report_page.setObjectName(u"report_page")
         self.verticalLayout_7 = QVBoxLayout(self.report_page)
-        self.verticalLayout_7.setSpacing(2)
+        self.verticalLayout_7.setSpacing(0)
         self.verticalLayout_7.setObjectName(u"verticalLayout_7")
         self.verticalLayout_7.setContentsMargins(1, 1, 1, 1)
         self.report_controllers = QWidget(self.report_page)
@@ -764,6 +795,7 @@ class Ui_Attendance(object):
 
         self.widget_8 = QWidget(self.report_controllers)
         self.widget_8.setObjectName(u"widget_8")
+        self.widget_8.setMinimumSize(QSize(0, 150))
         self.horizontalLayout_7 = QHBoxLayout(self.widget_8)
         self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
         self.report_class_input = QLineEdit(self.widget_8)
@@ -807,7 +839,7 @@ class Ui_Attendance(object):
 "border-radius: 5px;\n"
 "border: 2px solid #000;")
         self.verticalLayout_6 = QVBoxLayout(self.report_view)
-        self.verticalLayout_6.setSpacing(11)
+        self.verticalLayout_6.setSpacing(0)
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
         self.verticalLayout_6.setContentsMargins(11, 11, 11, 11)
         self.report_table = QTableWidget(self.report_view)
@@ -857,6 +889,7 @@ class Ui_Attendance(object):
         self.verticalLayout_9.setContentsMargins(1, 1, 1, 1)
         self.chart_controllers = QWidget(self.chart_page)
         self.chart_controllers.setObjectName(u"chart_controllers")
+        self.chart_controllers.setMinimumSize(QSize(0, 207))
         self.verticalLayout_8 = QVBoxLayout(self.chart_controllers)
         self.verticalLayout_8.setObjectName(u"verticalLayout_8")
         self.chart_name_label = QLabel(self.chart_controllers)
@@ -972,7 +1005,7 @@ class Ui_Attendance(object):
         self.retranslateUi(Attendance)
 
         self.main_pages.setCurrentIndex(0)
-        self.recognize_view.setCurrentIndex(2)
+        self.recognize_view.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(Attendance)
@@ -1022,6 +1055,7 @@ class Ui_Attendance(object):
         ___qtablewidgetitem5.setText(QCoreApplication.translate("Attendance", u"Box Color", None));
         ___qtablewidgetitem6 = self.recognize_table.horizontalHeaderItem(1)
         ___qtablewidgetitem6.setText(QCoreApplication.translate("Attendance", u"M\u00e3 sinh vi\u00ean", None));
+        self.recognize_refresh_btn.setText(QCoreApplication.translate("Attendance", u"L\u00e0m m\u1edbi", None))
         self.recognize_keep_btn.setText(QCoreApplication.translate("Attendance", u"L\u01b0u", None))
         self.report_name_label.setText(QCoreApplication.translate("Attendance", u"B\u00c1O C\u00c1O", None))
         self.report_class_input.setInputMask("")
@@ -1041,7 +1075,7 @@ class Ui_Attendance(object):
         self.chart_model_name_input.setInputMask("")
         self.chart_model_name_input.setText("")
         self.chart_show_btn.setText(QCoreApplication.translate("Attendance", u"M\u00f4 h\u00ecnh", None))
-        self.chart_result_text_label.setText(QCoreApplication.translate("Attendance", u"Model: ...", None))
+        self.chart_result_text_label.setText("")
         self.chart_result_img_label.setText("")
         pass
     # retranslateUi

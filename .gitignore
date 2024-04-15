@@ -170,13 +170,6 @@ back_ups/
 *.keras
 *_acc_loss.png
 *_result.png
-datasets/
-datasets - Copy/
-EC8482/
 logs/
-models/
-*.ui
-*.json
-*.qrc
-
-myenv/
+api_user.json
+*.exe

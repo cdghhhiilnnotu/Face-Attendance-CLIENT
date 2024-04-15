@@ -1,7 +1,7 @@
 from .hau_importer import *
 
 class HauSettings():
-    BASE_DIR = "http://127.0.0.1:5000/"
+    BASE_URL = "http://127.0.0.1:5000/"
     API_SOURCE = "api_user.json"
 
     OPEN_CAM = True
