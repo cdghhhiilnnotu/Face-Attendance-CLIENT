@@ -42,6 +42,9 @@ class CollectData():
             print("No API or data found!")
         return None
     
+    def update_api(self, malop):
+        requests.get(HauSettings.BASE_URL + f"/giaovien/baocao/{malop}")
+    
     def user_api(self, username):
         api = requests.get(HauSettings.BASE_URL + f"/giaovien/login_success/{username}").json()
         with open(HauSettings.API_SOURCE, "w", encoding='utf-8') as outfile:

@@ -137,10 +137,10 @@ class AttendanceWindow(QMainWindow):
     
     def hp_init_class_func(self, name_of_class):
         self.class_id_name = name_of_class
-        self.ui.home_controllers.setStyleSheet("QWidget#home_controllers{background-image: url(./resources/apps/bg_header.png)}")
-        self.ui.recognize_controllers.setStyleSheet("QWidget#recognize_controllers{background-image: url(./resources/apps/bg_header.png)}")
-        self.ui.report_controllers.setStyleSheet("QWidget#report_controllers{background-image: url(./resources/apps/bg_header.png)}")
-        self.ui.chart_controllers.setStyleSheet("QWidget#chart_controllers{background-image: url(./resources/apps/bg_header.png)}")
+        # self.ui.home_controllers.setStyleSheet("QWidget#home_controllers{background-image: url(./resources/apps/bg_header.png)}")
+        # self.ui.recognize_controllers.setStyleSheet("QWidget#recognize_controllers{background-image: url(./resources/apps/bg_header.png)}")
+        # self.ui.report_controllers.setStyleSheet("QWidget#report_controllers{background-image: url(./resources/apps/bg_header.png)}")
+        # self.ui.chart_controllers.setStyleSheet("QWidget#chart_controllers{background-image: url(./resources/apps/bg_header.png)}")
         self.ui.model_name_label.setText(self.class_id_name + HauSettings.MODEL_FILE_EXTENSION)
         self.model_name_text = self.ui.model_name_label.text()
 
@@ -240,6 +240,7 @@ class AttendanceWindow(QMainWindow):
             data['ghichu'] = ""
             requests.post(HauSettings.BASE_URL + "/giaovien/baocao", data)
         self.collector.user_api(self.collector.username_MGV)
+        self.collector.update_api(data['malop'])
 
     def recp_refresh_results(self):
         self.recp_show_recognition_table_func1([])
