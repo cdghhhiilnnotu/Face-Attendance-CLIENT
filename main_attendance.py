@@ -386,6 +386,7 @@ class AttendanceWindow(QMainWindow):
 
     # CHART PAGE
     def chp_init_func(self):
+        self.ui.chart_model_name_input.setText("")
         HauSettings.display_image_func(self.ui.chart_result_img_label, HauSettings.UNKNOWN_IMAGE_PATH)
 
     def chp_show_chart_func(self):
