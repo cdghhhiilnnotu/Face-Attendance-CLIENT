@@ -350,7 +350,7 @@ font-size: 12pt;
             <property name="sizeHint" stdset="0">
              <size>
               <width>20</width>
-              <height>160</height>
+              <height>90</height>
              </size>
             </property>
            </spacer>
@@ -1093,9 +1093,7 @@ border: 2px solid #000;
                     </font>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">border-radius: 5px;
-border: 0px;
-background-color: rgb(255, 255, 255);</string>
+                    <string notr="true">background-color: rgb(255, 255, 255);</string>
                    </property>
                    <property name="verticalScrollMode">
                     <enum>QAbstractItemView::ScrollPerPixel</enum>
@@ -1103,6 +1101,54 @@ background-color: rgb(255, 255, 255);</string>
                    <property name="horizontalScrollMode">
                     <enum>QAbstractItemView::ScrollPerPixel</enum>
                    </property>
+                   <column>
+                    <property name="text">
+                     <string>Mã Quản trị viên</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Tài khoản</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Mật khẩu</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
                   </widget>
                  </item>
                 </layout>
@@ -1525,9 +1571,7 @@ border: 2px solid #000;
                     </font>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">border-radius: 5px;
-border: 0px;
-background-color: rgb(255, 255, 255);</string>
+                    <string notr="true">background-color: rgb(255, 255, 255);</string>
                    </property>
                    <property name="verticalScrollMode">
                     <enum>QAbstractItemView::ScrollPerPixel</enum>
@@ -1535,6 +1579,102 @@ background-color: rgb(255, 255, 255);</string>
                    <property name="horizontalScrollMode">
                     <enum>QAbstractItemView::ScrollPerPixel</enum>
                    </property>
+                   <column>
+                    <property name="text">
+                     <string>Mã Giảng viên</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Tên Giảng viên</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Ngày sinh</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Địa chỉ</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Mật khẩu</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Số điện thoại</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
                   </widget>
                  </item>
                 </layout>
@@ -1957,9 +2097,7 @@ border: 2px solid #000;
                     </font>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">border-radius: 5px;
-border: 0px;
-background-color: rgb(255, 255, 255);</string>
+                    <string notr="true">background-color: rgb(255, 255, 255);</string>
                    </property>
                    <property name="verticalScrollMode">
                     <enum>QAbstractItemView::ScrollPerPixel</enum>
@@ -1967,6 +2105,118 @@ background-color: rgb(255, 255, 255);</string>
                    <property name="horizontalScrollMode">
                     <enum>QAbstractItemView::ScrollPerPixel</enum>
                    </property>
+                   <column>
+                    <property name="text">
+                     <string>Mã Sinh viên</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Tên Sinh viên</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Ngày sinh</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Lớp quản lý</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Địa chỉ</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>URL ảnh</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Số điện thoại</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
                   </widget>
                  </item>
                 </layout>
@@ -2389,9 +2639,7 @@ border: 2px solid #000;
                     </font>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">border-radius: 5px;
-border: 0px;
-background-color: rgb(255, 255, 255);</string>
+                    <string notr="true">background-color: rgb(255, 255, 255);</string>
                    </property>
                    <property name="verticalScrollMode">
                     <enum>QAbstractItemView::ScrollPerPixel</enum>
@@ -2399,6 +2647,118 @@ background-color: rgb(255, 255, 255);</string>
                    <property name="horizontalScrollMode">
                     <enum>QAbstractItemView::ScrollPerPixel</enum>
                    </property>
+                   <column>
+                    <property name="text">
+                     <string>Mã Lớp</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Tên Học phần</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Mã Giáo viên</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Lịch học</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Phòng học</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Số lượng Sinh viên</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Số buổi</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
                   </widget>
                  </item>
                 </layout>
@@ -2821,9 +3181,7 @@ border: 2px solid #000;
                     </font>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">border-radius: 5px;
-border: 0px;
-background-color: rgb(255, 255, 255);</string>
+                    <string notr="true">background-color: rgb(255, 255, 255);</string>
                    </property>
                    <property name="verticalScrollMode">
                     <enum>QAbstractItemView::ScrollPerPixel</enum>
@@ -2831,6 +3189,102 @@ background-color: rgb(255, 255, 255);</string>
                    <property name="horizontalScrollMode">
                     <enum>QAbstractItemView::ScrollPerPixel</enum>
                    </property>
+                   <column>
+                    <property name="text">
+                     <string>Mã Báo cáo</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Ngày Báo cáo</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Mã Sinh viên</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Mã Lớp</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Điểm danh</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Ghi chú</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
                   </widget>
                  </item>
                 </layout>
@@ -3253,9 +3707,7 @@ border: 2px solid #000;
                     </font>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">border-radius: 5px;
-border: 0px;
-background-color: rgb(255, 255, 255);</string>
+                    <string notr="true">background-color: rgb(255, 255, 255);</string>
                    </property>
                    <property name="verticalScrollMode">
                     <enum>QAbstractItemView::ScrollPerPixel</enum>
@@ -3263,6 +3715,70 @@ background-color: rgb(255, 255, 255);</string>
                    <property name="horizontalScrollMode">
                     <enum>QAbstractItemView::ScrollPerPixel</enum>
                    </property>
+                   <column>
+                    <property name="text">
+                     <string>Mã Danh sách</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Mã Lớp</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Mã Sinh viên</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Tính điểm danh</string>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cascadia Code</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
                   </widget>
                  </item>
                 </layout>
@@ -3321,7 +3837,7 @@ background-color: rgb(54, 71, 107);
 border-radius: 3px;</string>
          </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>5</number>
          </property>
          <widget class="QWidget" name="admins_popup">
           <property name="styleSheet">
@@ -3399,7 +3915,7 @@ border-radius: 3px;</string>
                </spacer>
               </item>
               <item>
-               <widget class="QPushButton" name="pushButton">
+               <widget class="QPushButton" name="admins_exit_btn">
                 <property name="maximumSize">
                  <size>
                   <width>30</width>
@@ -3609,7 +4125,7 @@ border-radius: 3px;</string>
          <widget class="QWidget" name="teachers_popup">
           <layout class="QVBoxLayout" name="verticalLayout_10">
            <item>
-            <widget class="QWidget" name="head_admins_2" native="true">
+            <widget class="QWidget" name="head_teachers" native="true">
              <property name="maximumSize">
               <size>
                <width>16777215</width>
@@ -3636,7 +4152,7 @@ border-radius: 3px;</string>
                <number>0</number>
               </property>
               <item>
-               <widget class="QLabel" name="admin_label_2">
+               <widget class="QLabel" name="teachers_label">
                 <property name="font">
                  <font>
                   <family>Cascadia Code</family>
@@ -3664,7 +4180,7 @@ border-radius: 3px;</string>
                </spacer>
               </item>
               <item>
-               <widget class="QPushButton" name="pushButton_2">
+               <widget class="QPushButton" name="teachers_exit_btn">
                 <property name="maximumSize">
                  <size>
                   <width>30</width>
@@ -3694,7 +4210,7 @@ border-radius: 3px;</string>
              <property name="styleSheet">
               <string notr="true"/>
              </property>
-             <widget class="QLineEdit" name="teachers_id_text">
+             <widget class="QLineEdit" name="teacher_id_text">
               <property name="enabled">
                <bool>false</bool>
               </property>
@@ -3718,7 +4234,7 @@ border-radius: 3px;</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
-             <widget class="QLineEdit" name="admin_username_text_2">
+             <widget class="QLineEdit" name="teacher_name_text">
               <property name="geometry">
                <rect>
                 <x>20</x>
@@ -3739,7 +4255,7 @@ border-radius: 3px;</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
-             <widget class="QLineEdit" name="teachers_password_text">
+             <widget class="QLineEdit" name="teacher_address_text">
               <property name="geometry">
                <rect>
                 <x>20</x>
@@ -3760,7 +4276,7 @@ border-radius: 3px;</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
-             <widget class="QLabel" name="teachers_id_label">
+             <widget class="QLabel" name="teacher_id_label">
               <property name="geometry">
                <rect>
                 <x>30</x>
@@ -3781,7 +4297,7 @@ border-radius: 3px;</string>
                <string>Mã giảng viên</string>
               </property>
              </widget>
-             <widget class="QLabel" name="admin_username_label_2">
+             <widget class="QLabel" name="teacher_name_label">
               <property name="geometry">
                <rect>
                 <x>30</x>
@@ -3802,7 +4318,7 @@ border-radius: 3px;</string>
                <string>Tên giảng viên</string>
               </property>
              </widget>
-             <widget class="QLabel" name="teachers_password_label">
+             <widget class="QLabel" name="teacher_address_label">
               <property name="geometry">
                <rect>
                 <x>30</x>
@@ -3823,7 +4339,7 @@ border-radius: 3px;</string>
                <string>Địa chỉ</string>
               </property>
              </widget>
-             <widget class="QPushButton" name="admin_save_btn_2">
+             <widget class="QPushButton" name="teacher_save_btn">
               <property name="geometry">
                <rect>
                 <x>520</x>
@@ -3845,7 +4361,7 @@ border-radius: 3px;</string>
                <string>Lưu</string>
               </property>
              </widget>
-             <widget class="QPushButton" name="admin_refesh_btn_2">
+             <widget class="QPushButton" name="teacher_refesh_btn">
               <property name="geometry">
                <rect>
                 <x>650</x>
@@ -3867,7 +4383,7 @@ border-radius: 3px;</string>
                <string>Làm mới</string>
               </property>
              </widget>
-             <widget class="QLabel" name="teachers_password_label_2">
+             <widget class="QLabel" name="teacher_password_label">
               <property name="geometry">
                <rect>
                 <x>410</x>
@@ -3888,7 +4404,7 @@ border-radius: 3px;</string>
                <string>Mật khẩu</string>
               </property>
              </widget>
-             <widget class="QLineEdit" name="admin_password_text_3">
+             <widget class="QLineEdit" name="teacher_password_text">
               <property name="geometry">
                <rect>
                 <x>400</x>
@@ -3909,7 +4425,7 @@ border-radius: 3px;</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
-             <widget class="QLabel" name="teachers_password_label_3">
+             <widget class="QLabel" name="teacher_phone_label">
               <property name="geometry">
                <rect>
                 <x>410</x>
@@ -3930,7 +4446,7 @@ border-radius: 3px;</string>
                <string>Số điện thoại</string>
               </property>
              </widget>
-             <widget class="QLineEdit" name="admin_password_text_4">
+             <widget class="QLineEdit" name="teacher_phone_text">
               <property name="geometry">
                <rect>
                 <x>400</x>
@@ -3961,7 +4477,7 @@ border-radius: 3px;</string>
          <widget class="QWidget" name="students_popup">
           <layout class="QVBoxLayout" name="verticalLayout_12">
            <item>
-            <widget class="QWidget" name="head_admins_3" native="true">
+            <widget class="QWidget" name="head_student" native="true">
              <property name="maximumSize">
               <size>
                <width>16777215</width>
@@ -3988,7 +4504,7 @@ border-radius: 3px;</string>
                <number>0</number>
               </property>
               <item>
-               <widget class="QLabel" name="admin_label_3">
+               <widget class="QLabel" name="students_label">
                 <property name="font">
                  <font>
                   <family>Cascadia Code</family>
@@ -4016,7 +4532,7 @@ border-radius: 3px;</string>
                </spacer>
               </item>
               <item>
-               <widget class="QPushButton" name="pushButton_3">
+               <widget class="QPushButton" name="students_exit_btn">
                 <property name="maximumSize">
                  <size>
                   <width>30</width>
@@ -4042,11 +4558,11 @@ border-radius: 3px;</string>
             </widget>
            </item>
            <item>
-            <widget class="QWidget" name="body_admins_3" native="true">
+            <widget class="QWidget" name="body_student" native="true">
              <property name="styleSheet">
               <string notr="true"/>
              </property>
-             <widget class="QLineEdit" name="admin_id_text_3">
+             <widget class="QLineEdit" name="student_id_text">
               <property name="enabled">
                <bool>false</bool>
               </property>
@@ -4070,7 +4586,7 @@ border-radius: 3px;</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
-             <widget class="QLineEdit" name="admin_username_text_3">
+             <widget class="QLineEdit" name="student_name_text">
               <property name="geometry">
                <rect>
                 <x>20</x>
@@ -4091,7 +4607,7 @@ border-radius: 3px;</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
-             <widget class="QLineEdit" name="admin_password_text_5">
+             <widget class="QLineEdit" name="student_class_text">
               <property name="geometry">
                <rect>
                 <x>20</x>
@@ -4112,7 +4628,7 @@ border-radius: 3px;</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
-             <widget class="QLabel" name="admin_id_label_3">
+             <widget class="QLabel" name="student_id_label">
               <property name="geometry">
                <rect>
                 <x>30</x>
@@ -4133,7 +4649,7 @@ border-radius: 3px;</string>
                <string>Mã sinh viên</string>
               </property>
              </widget>
-             <widget class="QLabel" name="admin_username_label_3">
+             <widget class="QLabel" name="student_name_label">
               <property name="geometry">
                <rect>
                 <x>30</x>
@@ -4154,7 +4670,7 @@ border-radius: 3px;</string>
                <string>Tên sinh viên</string>
               </property>
              </widget>
-             <widget class="QLabel" name="admin_password_label_5">
+             <widget class="QLabel" name="student_class_label">
               <property name="geometry">
                <rect>
                 <x>30</x>
@@ -4175,7 +4691,7 @@ border-radius: 3px;</string>
                <string>Lớp quản lý</string>
               </property>
              </widget>
-             <widget class="QPushButton" name="admin_save_btn_3">
+             <widget class="QPushButton" name="student_save_btn">
               <property name="geometry">
                <rect>
                 <x>520</x>
@@ -4197,7 +4713,7 @@ border-radius: 3px;</string>
                <string>Lưu</string>
               </property>
              </widget>
-             <widget class="QPushButton" name="admin_refesh_btn_3">
+             <widget class="QPushButton" name="student_refesh_btn">
               <property name="geometry">
                <rect>
                 <x>650</x>
@@ -4219,7 +4735,7 @@ border-radius: 3px;</string>
                <string>Làm mới</string>
               </property>
              </widget>
-             <widget class="QLabel" name="admin_password_label_6">
+             <widget class="QLabel" name="student_phone_label">
               <property name="geometry">
                <rect>
                 <x>410</x>
@@ -4240,7 +4756,7 @@ border-radius: 3px;</string>
                <string>Số điện thoại</string>
               </property>
              </widget>
-             <widget class="QLineEdit" name="admin_password_text_6">
+             <widget class="QLineEdit" name="student_phone_text">
               <property name="geometry">
                <rect>
                 <x>400</x>
@@ -4261,7 +4777,7 @@ border-radius: 3px;</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
-             <widget class="QLabel" name="admin_password_label_7">
+             <widget class="QLabel" name="student_address_label">
               <property name="geometry">
                <rect>
                 <x>410</x>
@@ -4282,7 +4798,7 @@ border-radius: 3px;</string>
                <string>Địa chỉ</string>
               </property>
              </widget>
-             <widget class="QLineEdit" name="admin_password_text_7">
+             <widget class="QLineEdit" name="student_address_text">
               <property name="geometry">
                <rect>
                 <x>400</x>
@@ -4306,7 +4822,7 @@ border-radius: 3px;</string>
                <string/>
               </property>
              </widget>
-             <widget class="QLineEdit" name="admin_password_text_8">
+             <widget class="QLineEdit" name="student_url_text">
               <property name="geometry">
                <rect>
                 <x>400</x>
@@ -4327,7 +4843,7 @@ border-radius: 3px;</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
-             <widget class="QLabel" name="admin_password_label_8">
+             <widget class="QLabel" name="student_url_label">
               <property name="geometry">
                <rect>
                 <x>410</x>
@@ -4355,7 +4871,7 @@ border-radius: 3px;</string>
          <widget class="QWidget" name="rooms_popup">
           <layout class="QVBoxLayout" name="verticalLayout_13">
            <item>
-            <widget class="QWidget" name="head_admins_4" native="true">
+            <widget class="QWidget" name="head_rooms" native="true">
              <property name="maximumSize">
               <size>
                <width>16777215</width>
@@ -4382,7 +4898,7 @@ border-radius: 3px;</string>
                <number>0</number>
               </property>
               <item>
-               <widget class="QLabel" name="admin_label_4">
+               <widget class="QLabel" name="rooms_label">
                 <property name="font">
                  <font>
                   <family>Cascadia Code</family>
@@ -4410,7 +4926,7 @@ border-radius: 3px;</string>
                </spacer>
               </item>
               <item>
-               <widget class="QPushButton" name="pushButton_4">
+               <widget class="QPushButton" name="rooms_exit_btn">
                 <property name="maximumSize">
                  <size>
                   <width>30</width>
@@ -4436,11 +4952,11 @@ border-radius: 3px;</string>
             </widget>
            </item>
            <item>
-            <widget class="QWidget" name="body_admins_4" native="true">
+            <widget class="QWidget" name="body_rooms" native="true">
              <property name="styleSheet">
               <string notr="true"/>
              </property>
-             <widget class="QLineEdit" name="admin_id_text_4">
+             <widget class="QLineEdit" name="room_id_text">
               <property name="enabled">
                <bool>false</bool>
               </property>
@@ -4464,7 +4980,7 @@ border-radius: 3px;</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
-             <widget class="QLineEdit" name="admin_username_text_4">
+             <widget class="QLineEdit" name="room_teacher_text">
               <property name="geometry">
                <rect>
                 <x>20</x>
@@ -4485,7 +5001,7 @@ border-radius: 3px;</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
-             <widget class="QLineEdit" name="admin_password_text_9">
+             <widget class="QLineEdit" name="room_sche_text">
               <property name="geometry">
                <rect>
                 <x>20</x>
@@ -4506,7 +5022,7 @@ border-radius: 3px;</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
-             <widget class="QLabel" name="admin_id_label_4">
+             <widget class="QLabel" name="room_id_label">
               <property name="geometry">
                <rect>
                 <x>30</x>
@@ -4527,7 +5043,7 @@ border-radius: 3px;</string>
                <string>Mã lớp</string>
               </property>
              </widget>
-             <widget class="QLabel" name="admin_username_label_4">
+             <widget class="QLabel" name="room_teacher_label">
               <property name="geometry">
                <rect>
                 <x>30</x>
@@ -4548,7 +5064,7 @@ border-radius: 3px;</string>
                <string>Mã giáo viên</string>
               </property>
              </widget>
-             <widget class="QLabel" name="admin_password_label_9">
+             <widget class="QLabel" name="room_sche_label">
               <property name="geometry">
                <rect>
                 <x>30</x>
@@ -4569,7 +5085,7 @@ border-radius: 3px;</string>
                <string>Lịch học</string>
               </property>
              </widget>
-             <widget class="QPushButton" name="admin_save_btn_4">
+             <widget class="QPushButton" name="room_save_btn">
               <property name="geometry">
                <rect>
                 <x>520</x>
@@ -4591,7 +5107,7 @@ border-radius: 3px;</string>
                <string>Lưu</string>
               </property>
              </widget>
-             <widget class="QPushButton" name="admin_refesh_btn_4">
+             <widget class="QPushButton" name="room_refesh_btn">
               <property name="geometry">
                <rect>
                 <x>650</x>
@@ -4613,7 +5129,7 @@ border-radius: 3px;</string>
                <string>Làm mới</string>
               </property>
              </widget>
-             <widget class="QLabel" name="admin_password_label_10">
+             <widget class="QLabel" name="room_class_label">
               <property name="geometry">
                <rect>
                 <x>410</x>
@@ -4634,7 +5150,7 @@ border-radius: 3px;</string>
                <string>Phòng học</string>
               </property>
              </widget>
-             <widget class="QLineEdit" name="admin_password_text_10">
+             <widget class="QLineEdit" name="room_class_text">
               <property name="geometry">
                <rect>
                 <x>400</x>
@@ -4655,7 +5171,7 @@ border-radius: 3px;</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
-             <widget class="QLabel" name="admin_password_label_11">
+             <widget class="QLabel" name="room_student_num_label">
               <property name="geometry">
                <rect>
                 <x>410</x>
@@ -4676,7 +5192,7 @@ border-radius: 3px;</string>
                <string>Số lượng sinh viên</string>
               </property>
              </widget>
-             <widget class="QLineEdit" name="admin_password_text_11">
+             <widget class="QLineEdit" name="room_student_num_text">
               <property name="geometry">
                <rect>
                 <x>400</x>
@@ -4700,7 +5216,7 @@ border-radius: 3px;</string>
                <string/>
               </property>
              </widget>
-             <widget class="QLineEdit" name="admin_password_text_12">
+             <widget class="QLineEdit" name="room_days_text">
               <property name="geometry">
                <rect>
                 <x>400</x>
@@ -4721,7 +5237,7 @@ border-radius: 3px;</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
-             <widget class="QLabel" name="admin_password_label_12">
+             <widget class="QLabel" name="room_days_label">
               <property name="geometry">
                <rect>
                 <x>410</x>
@@ -4742,7 +5258,7 @@ border-radius: 3px;</string>
                <string>Số buổi</string>
               </property>
              </widget>
-             <widget class="QLineEdit" name="admin_password_text_13">
+             <widget class="QLineEdit" name="room_name_text">
               <property name="geometry">
                <rect>
                 <x>400</x>
@@ -4763,7 +5279,7 @@ border-radius: 3px;</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
-             <widget class="QLabel" name="admin_password_label_13">
+             <widget class="QLabel" name="room_name_label">
               <property name="geometry">
                <rect>
                 <x>410</x>
@@ -4791,7 +5307,7 @@ border-radius: 3px;</string>
          <widget class="QWidget" name="reports_popup">
           <layout class="QVBoxLayout" name="verticalLayout_14">
            <item>
-            <widget class="QWidget" name="head_admins_5" native="true">
+            <widget class="QWidget" name="head_reports" native="true">
              <property name="maximumSize">
               <size>
                <width>16777215</width>
@@ -4818,7 +5334,7 @@ border-radius: 3px;</string>
                <number>0</number>
               </property>
               <item>
-               <widget class="QLabel" name="admin_label_5">
+               <widget class="QLabel" name="reports_label">
                 <property name="font">
                  <font>
                   <family>Cascadia Code</family>
@@ -4846,7 +5362,7 @@ border-radius: 3px;</string>
                </spacer>
               </item>
               <item>
-               <widget class="QPushButton" name="pushButton_5">
+               <widget class="QPushButton" name="reports_exit_btn">
                 <property name="maximumSize">
                  <size>
                   <width>30</width>
@@ -4872,11 +5388,11 @@ border-radius: 3px;</string>
             </widget>
            </item>
            <item>
-            <widget class="QWidget" name="body_admins_5" native="true">
+            <widget class="QWidget" name="body_reports" native="true">
              <property name="styleSheet">
               <string notr="true"/>
              </property>
-             <widget class="QLineEdit" name="admin_id_text_5">
+             <widget class="QLineEdit" name="reports_id_text">
               <property name="enabled">
                <bool>false</bool>
               </property>
@@ -4900,7 +5416,7 @@ border-radius: 3px;</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
-             <widget class="QLineEdit" name="admin_username_text_5">
+             <widget class="QLineEdit" name="reports_student_text">
               <property name="geometry">
                <rect>
                 <x>30</x>
@@ -4921,7 +5437,7 @@ border-radius: 3px;</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
-             <widget class="QLineEdit" name="admin_password_text_14">
+             <widget class="QLineEdit" name="reports_attend_text">
               <property name="geometry">
                <rect>
                 <x>30</x>
@@ -4942,7 +5458,7 @@ border-radius: 3px;</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
-             <widget class="QLabel" name="admin_id_label_5">
+             <widget class="QLabel" name="reports_id_label">
               <property name="geometry">
                <rect>
                 <x>40</x>
@@ -4963,7 +5479,7 @@ border-radius: 3px;</string>
                <string>Mã Báo cáo</string>
               </property>
              </widget>
-             <widget class="QLabel" name="admin_username_label_5">
+             <widget class="QLabel" name="reports_student_label">
               <property name="geometry">
                <rect>
                 <x>40</x>
@@ -4984,7 +5500,7 @@ border-radius: 3px;</string>
                <string>Mã sinh viên</string>
               </property>
              </widget>
-             <widget class="QLabel" name="admin_password_label_14">
+             <widget class="QLabel" name="reports_attend_label">
               <property name="geometry">
                <rect>
                 <x>40</x>
@@ -5005,7 +5521,7 @@ border-radius: 3px;</string>
                <string>Điểm danh</string>
               </property>
              </widget>
-             <widget class="QPushButton" name="admin_save_btn_5">
+             <widget class="QPushButton" name="reports_save_btn">
               <property name="geometry">
                <rect>
                 <x>520</x>
@@ -5027,7 +5543,7 @@ border-radius: 3px;</string>
                <string>Lưu</string>
               </property>
              </widget>
-             <widget class="QPushButton" name="admin_refesh_btn_5">
+             <widget class="QPushButton" name="reports_refesh_btn">
               <property name="geometry">
                <rect>
                 <x>650</x>
@@ -5049,7 +5565,7 @@ border-radius: 3px;</string>
                <string>Làm mới</string>
               </property>
              </widget>
-             <widget class="QLineEdit" name="admin_username_text_6">
+             <widget class="QLineEdit" name="reports_room_text">
               <property name="geometry">
                <rect>
                 <x>400</x>
@@ -5070,7 +5586,7 @@ border-radius: 3px;</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
-             <widget class="QLabel" name="admin_id_label_6">
+             <widget class="QLabel" name="reports_date_label">
               <property name="geometry">
                <rect>
                 <x>410</x>
@@ -5091,7 +5607,7 @@ border-radius: 3px;</string>
                <string>Ngày Báo cáo</string>
               </property>
              </widget>
-             <widget class="QLabel" name="admin_username_label_6">
+             <widget class="QLabel" name="reports_room_label">
               <property name="geometry">
                <rect>
                 <x>410</x>
@@ -5112,7 +5628,7 @@ border-radius: 3px;</string>
                <string>Mã lớp</string>
               </property>
              </widget>
-             <widget class="QLabel" name="admin_password_label_15">
+             <widget class="QLabel" name="reports_note_label">
               <property name="geometry">
                <rect>
                 <x>410</x>
@@ -5133,7 +5649,7 @@ border-radius: 3px;</string>
                <string>Ghi chu</string>
               </property>
              </widget>
-             <widget class="QLineEdit" name="admin_id_text_6">
+             <widget class="QLineEdit" name="reports_date_text">
               <property name="enabled">
                <bool>false</bool>
               </property>
@@ -5157,7 +5673,7 @@ border-radius: 3px;</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
-             <widget class="QLineEdit" name="admin_password_text_15">
+             <widget class="QLineEdit" name="reports_note_text">
               <property name="geometry">
                <rect>
                 <x>400</x>
@@ -5185,7 +5701,7 @@ border-radius: 3px;</string>
          <widget class="QWidget" name="reports_list_popup">
           <layout class="QVBoxLayout" name="verticalLayout_15">
            <item>
-            <widget class="QWidget" name="head_admins_6" native="true">
+            <widget class="QWidget" name="head_reports_list" native="true">
              <property name="maximumSize">
               <size>
                <width>16777215</width>
@@ -5212,7 +5728,7 @@ border-radius: 3px;</string>
                <number>0</number>
               </property>
               <item>
-               <widget class="QLabel" name="admin_label_6">
+               <widget class="QLabel" name="reports_list_label">
                 <property name="font">
                  <font>
                   <family>Cascadia Code</family>
@@ -5240,7 +5756,7 @@ border-radius: 3px;</string>
                </spacer>
               </item>
               <item>
-               <widget class="QPushButton" name="pushButton_6">
+               <widget class="QPushButton" name="reports_list_exit_btn">
                 <property name="maximumSize">
                  <size>
                   <width>30</width>
@@ -5266,11 +5782,11 @@ border-radius: 3px;</string>
             </widget>
            </item>
            <item>
-            <widget class="QWidget" name="body_admins_6" native="true">
+            <widget class="QWidget" name="body_reports_list" native="true">
              <property name="styleSheet">
               <string notr="true"/>
              </property>
-             <widget class="QLineEdit" name="admin_id_text_7">
+             <widget class="QLineEdit" name="reports_list_id_text">
               <property name="enabled">
                <bool>false</bool>
               </property>
@@ -5294,7 +5810,7 @@ border-radius: 3px;</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
-             <widget class="QLineEdit" name="admin_username_text_7">
+             <widget class="QLineEdit" name="reports_list_class_text">
               <property name="geometry">
                <rect>
                 <x>390</x>
@@ -5315,7 +5831,7 @@ border-radius: 3px;</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
-             <widget class="QLabel" name="admin_id_label_7">
+             <widget class="QLabel" name="reports_list_id_label">
               <property name="geometry">
                <rect>
                 <x>30</x>
@@ -5336,7 +5852,7 @@ border-radius: 3px;</string>
                <string>Mã báo cáo điểm danh</string>
               </property>
              </widget>
-             <widget class="QLabel" name="admin_username_label_7">
+             <widget class="QLabel" name="reports_list_class_label">
               <property name="geometry">
                <rect>
                 <x>400</x>
@@ -5357,7 +5873,7 @@ border-radius: 3px;</string>
                <string>Mã lớp</string>
               </property>
              </widget>
-             <widget class="QPushButton" name="admin_save_btn_6">
+             <widget class="QPushButton" name="reports_list_save_btn">
               <property name="geometry">
                <rect>
                 <x>520</x>
@@ -5379,7 +5895,7 @@ border-radius: 3px;</string>
                <string>Lưu</string>
               </property>
              </widget>
-             <widget class="QPushButton" name="admin_refesh_btn_6">
+             <widget class="QPushButton" name="reports_list_refesh_btn">
               <property name="geometry">
                <rect>
                 <x>650</x>
@@ -5401,7 +5917,7 @@ border-radius: 3px;</string>
                <string>Làm mới</string>
               </property>
              </widget>
-             <widget class="QLineEdit" name="admin_username_text_8">
+             <widget class="QLineEdit" name="reports_list_student_text">
               <property name="geometry">
                <rect>
                 <x>390</x>
@@ -5422,7 +5938,7 @@ border-radius: 3px;</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
-             <widget class="QLabel" name="admin_id_label_8">
+             <widget class="QLabel" name="reports_list_count_label">
               <property name="geometry">
                <rect>
                 <x>30</x>
@@ -5443,7 +5959,7 @@ border-radius: 3px;</string>
                <string>Số lần điểm danh</string>
               </property>
              </widget>
-             <widget class="QLabel" name="admin_username_label_8">
+             <widget class="QLabel" name="reports_list_student_label">
               <property name="geometry">
                <rect>
                 <x>400</x>
@@ -5464,7 +5980,7 @@ border-radius: 3px;</string>
                <string>Mã sinh viên</string>
               </property>
              </widget>
-             <widget class="QLineEdit" name="admin_id_text_8">
+             <widget class="QLineEdit" name="reports_list_count_text">
               <property name="enabled">
                <bool>false</bool>
               </property>

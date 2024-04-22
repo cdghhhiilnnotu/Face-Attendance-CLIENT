@@ -11,6 +11,11 @@ class AdminWindow(QMainWindow):
         self.ui.setupUi(self)
         loadJsonStyle(self, self.ui)
         self.widget = widget
+        self.admin_api = {}
+        try:
+            self.admin_api = requests.get(HauSettings.BASE_URL + f"/").json()
+        except:
+            print("No API or data found!")
 
         self.ui.menu_btn.clicked.connect(self.menu_func)
         self.ui.admins_btn.clicked.connect(lambda: self.swtich_page_func(0))
@@ -19,8 +24,14 @@ class AdminWindow(QMainWindow):
         self.ui.rooms_btn.clicked.connect(lambda: self.swtich_page_func(3))
         self.ui.reports_btn.clicked.connect(lambda: self.swtich_page_func(4))
         self.ui.reports_list_btn.clicked.connect(lambda: self.swtich_page_func(5))
-        self.collapse_menu()
+        self.ui.admins_search_btn.clicked.connect(lambda: self.adp_show_table(self.ui.admins_input.text()))
+        self.ui.teachers_search_btn.clicked.connect(lambda: self.tp_show_table(self.ui.teachers_input.text()))
+        self.ui.students_search_btn.clicked.connect(lambda: self.sp_show_table(self.ui.students_input.text()))
+        self.ui.rooms_search_btn.clicked.connect(lambda: self.roop_show_table(self.ui.rooms_input.text()))
+        self.ui.reports_search_btn.clicked.connect(lambda: self.repp_show_table(self.ui.reports_input.text()))
+        self.ui.reports_list_search_btn.clicked.connect(lambda: self.relp_show_table(self.ui.reports_list_input.text()))
         
+        self.init_admin()
 
     def logout_func(self):
         pass
@@ -84,27 +95,252 @@ class AdminWindow(QMainWindow):
         # print("MENU")
         self.sync_btn_page()
 
+    def init_searching(self):
+        suggestion_list = ["apple", "banana", "cherry", "grape", "orange", "pear", "pineapple"]
+
+        completer = QCompleter(suggestion_list, self.ui.admins_input)
+        self.ui.admins_input.setCompleter(completer)
+
+    def init_admin(self):
+        self.collapse_menu()
+        self.init_searching()
+        self.adp_init()
+        self.tp_init()
+        self.sp_init()
+        self.roop_init()
+        self.repp_init()
+        self.relp_init()
     
     # ADMIN PAGE
     def adp_init(self):
+        self.adp_init_table()
+        self.adp_show_table("")
         
-        pass
+    def adp_init_table(self):
+        self.ui.admins_table.setColumnWidth(0, 400)
+        self.ui.admins_table.setColumnWidth(1, 400)
+        self.ui.admins_table.setColumnWidth(2, 400)
+        self.ui.admins_table.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.ui.admins_table.setStyleSheet(
+            "QTableView::item:selected { color:white; background:#000000; font-weight:900; }"
+            "QTableView::item { color:black; background:#fff;}"
+            "QHeaderView::section { color:white; background-color:#232326;}"
+        )
+
+    def adp_show_table(self, search_str):
+        data_admin = self.admin_api['admin']
+        if search_str != "":
+            specific_data = [admin for admin in data_admin if admin['MaAD'] == search_str]
+            self.ui.admins_table.setRowCount(len(specific_data))
+            row = 0
+            for e in specific_data:
+                self.ui.admins_table.setItem(row, 0, QTableWidgetItem(e['MaAD']))
+                self.ui.admins_table.setItem(row, 1, QTableWidgetItem(e['TenDN']))
+                self.ui.admins_table.setItem(row, 2, QTableWidgetItem(e['MatKhau']))
+                row += 1
+        else:
+            self.ui.admins_table.setRowCount(len(data_admin))
+            row = 0
+            for e in data_admin:
+                self.ui.admins_table.setItem(row, 0, QTableWidgetItem(e['MaAD']))
+                self.ui.admins_table.setItem(row, 1, QTableWidgetItem(e['TenDN']))
+                self.ui.admins_table.setItem(row, 2, QTableWidgetItem(e['MatKhau']))
+                row += 1
+
 
     # TEACHER PAGE
+    def tp_init(self):
+        self.tp_init_table()
+        self.tp_show_table("")
+        
+    def tp_init_table(self):
+        self.ui.teachers_table.setColumnWidth(0, 400)
+        self.ui.teachers_table.setColumnWidth(1, 600)
+        self.ui.teachers_table.setColumnWidth(2, 300)
+        self.ui.teachers_table.setColumnWidth(3, 400)
+        self.ui.teachers_table.setColumnWidth(4, 400)
+        self.ui.teachers_table.setColumnWidth(5, 400)
+        self.ui.teachers_table.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.ui.teachers_table.setStyleSheet(
+            "QTableView::item:selected { color:white; background:#000000; font-weight:900; }"
+            "QTableView::item { color:black; background:#fff;}"
+            "QHeaderView::section { color:white; background-color:#232326;}"
+        )
+
+    def tp_show_table(self, search_str):
+        data_teacher = self.admin_api['giaovien']
+        if search_str != "":
+            specific_data = [teacher for teacher in data_teacher if teacher['MaGV'] == search_str]
+            self.ui.teachers_table.setRowCount(len(specific_data))
+            
+        else:
+            specific_data = data_teacher
+            self.ui.teachers_table.setRowCount(len(data_teacher))
+        row = 0
+        for e in specific_data:
+                self.ui.teachers_table.setItem(row, 0, QTableWidgetItem(e['MaGV']))
+                self.ui.teachers_table.setItem(row, 1, QTableWidgetItem(e['TenGV']))
+                self.ui.teachers_table.setItem(row, 2, QTableWidgetItem(e['NgSinh']))
+                self.ui.teachers_table.setItem(row, 3, QTableWidgetItem(e['DiaChi']))
+                self.ui.teachers_table.setItem(row, 4, QTableWidgetItem(e['MatKhau']))
+                self.ui.teachers_table.setItem(row, 5, QTableWidgetItem(e['SDT']))
+                row += 1
 
 
     # STUDENT PAGE
+    def sp_init(self):
+        self.sp_init_table()
+        self.sp_show_table("")
+        
+    def sp_init_table(self):
+        self.ui.students_table.setColumnWidth(0, 400)
+        self.ui.students_table.setColumnWidth(1, 600)
+        self.ui.students_table.setColumnWidth(2, 300)
+        self.ui.students_table.setColumnWidth(3, 300)
+        self.ui.students_table.setColumnWidth(4, 400)
+        self.ui.students_table.setColumnWidth(5, 400)
+        self.ui.students_table.setColumnWidth(6, 400)
+        self.ui.students_table.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.ui.students_table.setStyleSheet(
+            "QTableView::item:selected { color:white; background:#000000; font-weight:900; }"
+            "QTableView::item { color:black; background:#fff;}"
+            "QHeaderView::section { color:white; background-color:#232326;}"
+        )
 
+    def sp_show_table(self, search_str):
+        data_student = self.admin_api['sinhvien']
+        if search_str != "":
+            specific_data = [student for student in data_student if student['MaSV'] == search_str]
+            self.ui.students_table.setRowCount(len(specific_data))
+            
+        else:
+            specific_data = data_student
+            self.ui.students_table.setRowCount(len(data_student))
+        row = 0
+        for e in specific_data:
+                self.ui.students_table.setItem(row, 0, QTableWidgetItem(e['MaSV']))
+                self.ui.students_table.setItem(row, 1, QTableWidgetItem(e['TenSV']))
+                self.ui.students_table.setItem(row, 2, QTableWidgetItem(e['NgSinh']))
+                self.ui.students_table.setItem(row, 3, QTableWidgetItem(e['LopQL']))
+                self.ui.students_table.setItem(row, 4, QTableWidgetItem(e['DiaChi']))
+                self.ui.students_table.setItem(row, 5, QTableWidgetItem(e['LinkAnh']))
+                self.ui.students_table.setItem(row, 6, QTableWidgetItem(e['SDT']))
+                row += 1
+    
 
     # ROOM PAGE
+    def roop_init(self):
+        self.roop_init_table()
+        self.roop_show_table("")
+    
+    def roop_init_table(self):
+        self.ui.rooms_table.setColumnWidth(0, 400)
+        self.ui.rooms_table.setColumnWidth(1, 700)
+        self.ui.rooms_table.setColumnWidth(2, 400)
+        self.ui.rooms_table.setColumnWidth(3, 600)
+        self.ui.rooms_table.setColumnWidth(4, 300)
+        self.ui.rooms_table.setColumnWidth(5, 200)
+        self.ui.rooms_table.setColumnWidth(6, 200)
+        self.ui.rooms_table.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.ui.rooms_table.setStyleSheet(
+            "QTableView::item:selected { color:white; background:#000000; font-weight:900; }"
+            "QTableView::item { color:black; background:#fff;}"
+            "QHeaderView::section { color:white; background-color:#232326;}"
+        )
+
+    def roop_show_table(self, search_str):
+        data_room = self.admin_api['lophoc']
+        if search_str != "":
+            specific_data = [room for room in data_room if room['MaLop'] == search_str]
+            self.ui.rooms_table.setRowCount(len(specific_data))
+            
+        else:
+            specific_data = data_room
+            self.ui.rooms_table.setRowCount(len(data_room))
+        row = 0
+        for e in specific_data:
+                self.ui.rooms_table.setItem(row, 0, QTableWidgetItem(e['MaLop']))
+                self.ui.rooms_table.setItem(row, 1, QTableWidgetItem(e['TenMon']))
+                self.ui.rooms_table.setItem(row, 2, QTableWidgetItem(e['MaGV']))
+                self.ui.rooms_table.setItem(row, 3, QTableWidgetItem(e['LichHoc']))
+                self.ui.rooms_table.setItem(row, 4, QTableWidgetItem(e['PhongHoc']))
+                self.ui.rooms_table.setItem(row, 5, QTableWidgetItem(e['SoluongSV']))
+                self.ui.rooms_table.setItem(row, 6, QTableWidgetItem(e['SoNgay']))
+                row += 1
 
 
     # REPORT PAGE
+    def repp_init(self):
+        self.repp_init_table()
+        self.repp_show_table("")
+
+    def repp_init_table(self):
+        self.ui.reports_table.setColumnWidth(0, 400)
+        self.ui.reports_table.setColumnWidth(1, 400)
+        self.ui.reports_table.setColumnWidth(2, 400)
+        self.ui.reports_table.setColumnWidth(3, 400)
+        self.ui.reports_table.setColumnWidth(4, 400)
+        self.ui.reports_table.setColumnWidth(5, 500)
+        self.ui.reports_table.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.ui.reports_table.setStyleSheet(
+            "QTableView::item:selected { color:white; background:#000000; font-weight:900; }"
+            "QTableView::item { color:black; background:#fff;}"
+            "QHeaderView::section { color:white; background-color:#232326;}"
+        )
+
+    def repp_show_table(self, search_str):
+        data_report = self.admin_api['baocao']
+        if search_str != "":
+            specific_data = [report for report in data_report if report['MaLop'] == search_str or report['MaSV'] == search_str]
+            self.ui.reports_table.setRowCount(len(specific_data))
+            
+        else:
+            specific_data = data_report
+            self.ui.reports_table.setRowCount(len(data_report))
+        row = 0
+        for e in specific_data:
+                self.ui.reports_table.setItem(row, 0, QTableWidgetItem(e['MaBC']))
+                self.ui.reports_table.setItem(row, 1, QTableWidgetItem(e['NgayBC']))
+                self.ui.reports_table.setItem(row, 2, QTableWidgetItem(e['MaSV']))
+                self.ui.reports_table.setItem(row, 3, QTableWidgetItem(e['MaLop']))
+                self.ui.reports_table.setItem(row, 4, QTableWidgetItem(e['DiemDanh']))
+                self.ui.reports_table.setItem(row, 5, QTableWidgetItem(e['GhiChu']))
+                row += 1
+
 
     # REPORT LIST PAGE
+    def relp_init(self):
+        self.relp_init_table()
+        self.relp_show_table("")
+        
+    def relp_init_table(self):
+        self.ui.reports_list_table.setColumnWidth(0, 400)
+        self.ui.reports_list_table.setColumnWidth(1, 400)
+        self.ui.reports_list_table.setColumnWidth(2, 400)
+        self.ui.reports_list_table.setColumnWidth(3, 200)
+        self.ui.reports_list_table.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.ui.reports_list_table.setStyleSheet(
+            "QTableView::item:selected { color:white; background:#000000; font-weight:900; }"
+            "QTableView::item { color:black; background:#fff;}"
+            "QHeaderView::section { color:white; background-color:#232326;}"
+        )
 
-
-
+    def relp_show_table(self, search_str):
+        data_reports_list = self.admin_api['dslop']
+        if search_str != "":
+            specific_data = [reports_list for reports_list in data_reports_list if reports_list['MaLop'] == search_str or reports_list['MaSV'] == search_str]
+            self.ui.reports_list_table.setRowCount(len(specific_data))
+            
+        else:
+            specific_data = data_reports_list
+            self.ui.reports_list_table.setRowCount(len(data_reports_list))
+        row = 0
+        for e in specific_data:
+                self.ui.reports_list_table.setItem(row, 0, QTableWidgetItem(e['MaDS']))
+                self.ui.reports_list_table.setItem(row, 1, QTableWidgetItem(e['MaLop']))
+                self.ui.reports_list_table.setItem(row, 2, QTableWidgetItem(e['MaSV']))
+                self.ui.reports_list_table.setItem(row, 3, QTableWidgetItem(e['SoDD']))
+                row += 1
         
 
     # HOME PAGE
