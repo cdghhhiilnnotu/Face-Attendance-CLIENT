@@ -2,7 +2,7 @@ from main_importer import *
 
 from main_attendance import AttendanceWindow
 from main_login import LoginWindow
-import resources.resources
+# import resources.resources
 
 app = QApplication(sys.argv)
 widget = QtWidgets.QStackedWidget()

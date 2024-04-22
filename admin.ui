@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Attendance</class>
- <widget class="QMainWindow" name="Attendance">
+ <class>Admin</class>
+ <widget class="QMainWindow" name="Admin">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>1280</width>
-    <height>820</height>
+    <height>720</height>
    </rect>
   </property>
   <property name="font">
@@ -262,7 +262,7 @@ border-top-left-radius: 5px;</string>
          </property>
          <property name="maximumSize">
           <size>
-           <width>500</width>
+           <width>200</width>
            <height>16777215</height>
           </size>
          </property>
@@ -297,7 +297,7 @@ border-radius: 9px;
             </property>
             <property name="minimumSize">
              <size>
-              <width>40</width>
+              <width>0</width>
               <height>50</height>
              </size>
             </property>
@@ -327,8 +327,8 @@ font-size: 12pt;
             </property>
             <property name="iconSize">
              <size>
-              <width>30</width>
-              <height>30</height>
+              <width>25</width>
+              <height>25</height>
              </size>
             </property>
             <property name="autoRepeatDelay">
@@ -360,7 +360,7 @@ font-size: 12pt;
             <property name="minimumSize">
              <size>
               <width>0</width>
-              <height>210</height>
+              <height>300</height>
              </size>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout">
@@ -390,7 +390,7 @@ font-size: 12pt;
                <property name="font">
                 <font>
                  <family>Cascadia Code</family>
-                 <pointsize>12</pointsize>
+                 <pointsize>10</pointsize>
                 </font>
                </property>
                <property name="styleSheet">
@@ -398,7 +398,7 @@ font-size: 12pt;
 background-color:rgb(188,203,234);
 border-radius:9px;
 border: 2px solid #000;
-font-size: 12pt;
+font-size: 10pt;
 </string>
                </property>
                <property name="text">
@@ -410,8 +410,8 @@ font-size: 12pt;
                </property>
                <property name="iconSize">
                 <size>
-                 <width>30</width>
-                 <height>30</height>
+                 <width>25</width>
+                 <height>25</height>
                 </size>
                </property>
               </widget>
@@ -427,7 +427,7 @@ font-size: 12pt;
                <property name="font">
                 <font>
                  <family>Cascadia Code</family>
-                 <pointsize>12</pointsize>
+                 <pointsize>10</pointsize>
                 </font>
                </property>
                <property name="styleSheet">
@@ -435,7 +435,7 @@ font-size: 12pt;
 background-color:rgb(188,203,234);
 border-radius:9px;
 border: 2px solid #000;
-font-size: 12pt;
+font-size: 10pt;
 </string>
                </property>
                <property name="text">
@@ -447,8 +447,8 @@ font-size: 12pt;
                </property>
                <property name="iconSize">
                 <size>
-                 <width>30</width>
-                 <height>30</height>
+                 <width>25</width>
+                 <height>25</height>
                 </size>
                </property>
               </widget>
@@ -464,7 +464,7 @@ font-size: 12pt;
                <property name="font">
                 <font>
                  <family>Cascadia Code</family>
-                 <pointsize>12</pointsize>
+                 <pointsize>10</pointsize>
                 </font>
                </property>
                <property name="styleSheet">
@@ -472,7 +472,7 @@ font-size: 12pt;
 background-color:rgb(188,203,234);
 border-radius:9px;
 border: 2px solid #000;
-font-size: 12pt;
+font-size: 10pt;
 </string>
                </property>
                <property name="text">
@@ -484,8 +484,8 @@ font-size: 12pt;
                </property>
                <property name="iconSize">
                 <size>
-                 <width>30</width>
-                 <height>30</height>
+                 <width>25</width>
+                 <height>25</height>
                 </size>
                </property>
               </widget>
@@ -501,7 +501,7 @@ font-size: 12pt;
                <property name="font">
                 <font>
                  <family>Cascadia Code</family>
-                 <pointsize>12</pointsize>
+                 <pointsize>10</pointsize>
                 </font>
                </property>
                <property name="styleSheet">
@@ -509,7 +509,7 @@ font-size: 12pt;
 background-color:rgb(188,203,234);
 border-radius:9px;
 border: 2px solid #000;
-font-size: 12pt;
+font-size: 10pt;
 </string>
                </property>
                <property name="text">
@@ -521,8 +521,8 @@ font-size: 12pt;
                </property>
                <property name="iconSize">
                 <size>
-                 <width>30</width>
-                 <height>30</height>
+                 <width>25</width>
+                 <height>25</height>
                 </size>
                </property>
               </widget>
@@ -538,7 +538,7 @@ font-size: 12pt;
                <property name="font">
                 <font>
                  <family>Cascadia Code</family>
-                 <pointsize>12</pointsize>
+                 <pointsize>10</pointsize>
                 </font>
                </property>
                <property name="styleSheet">
@@ -546,7 +546,7 @@ font-size: 12pt;
 background-color:rgb(188,203,234);
 border-radius:9px;
 border: 2px solid #000;
-font-size: 12pt;
+font-size: 10pt;
 </string>
                </property>
                <property name="text">
@@ -558,8 +558,8 @@ font-size: 12pt;
                </property>
                <property name="iconSize">
                 <size>
-                 <width>30</width>
-                 <height>30</height>
+                 <width>25</width>
+                 <height>25</height>
                 </size>
                </property>
               </widget>
@@ -575,7 +575,7 @@ font-size: 12pt;
                <property name="font">
                 <font>
                  <family>Cascadia Code</family>
-                 <pointsize>12</pointsize>
+                 <pointsize>10</pointsize>
                 </font>
                </property>
                <property name="styleSheet">
@@ -583,7 +583,7 @@ font-size: 12pt;
 background-color:rgb(188,203,234);
 border-radius:9px;
 border: 2px solid #000;
-font-size: 12pt;
+font-size: 10pt;
 </string>
                </property>
                <property name="text">
@@ -595,8 +595,8 @@ font-size: 12pt;
                </property>
                <property name="iconSize">
                 <size>
-                 <width>30</width>
-                 <height>30</height>
+                 <width>25</width>
+                 <height>25</height>
                 </size>
                </property>
               </widget>
@@ -651,8 +651,8 @@ font-size: 12pt;
             </property>
             <property name="iconSize">
              <size>
-              <width>30</width>
-              <height>30</height>
+              <width>25</width>
+              <height>25</height>
              </size>
             </property>
            </widget>
@@ -676,7 +676,7 @@ border-radius: 9px;</string>
           <item>
            <widget class="QStackedWidget" name="main_pages">
             <property name="currentIndex">
-             <number>0</number>
+             <number>4</number>
             </property>
             <widget class="QWidget" name="admins_page">
              <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -2475,7 +2475,7 @@ font-weight: bold;
 font-size: 15pt;</string>
                    </property>
                    <property name="text">
-                    <string>BÁO CÁO ĐIỂM DANH</string>
+                    <string>BÁO CÁO SINH VIÊN</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>

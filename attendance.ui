@@ -754,16 +754,16 @@ border: 2px solid #000;</string>
                         <number>5</number>
                        </property>
                        <property name="leftMargin">
-                        <number>1</number>
+                        <number>7</number>
                        </property>
                        <property name="topMargin">
-                        <number>1</number>
+                        <number>7</number>
                        </property>
                        <property name="rightMargin">
-                        <number>1</number>
+                        <number>7</number>
                        </property>
                        <property name="bottomMargin">
-                        <number>1</number>
+                        <number>7</number>
                        </property>
                        <item>
                         <widget class="QPushButton" name="home_search_btn">
@@ -1212,23 +1212,11 @@ padding-right: 20px;</string>
                        <item>
                         <widget class="QWidget" name="widget_4" native="true">
                          <layout class="QHBoxLayout" name="horizontalLayout_6">
-                          <property name="leftMargin">
-                           <number>0</number>
-                          </property>
-                          <property name="topMargin">
-                           <number>0</number>
-                          </property>
-                          <property name="rightMargin">
-                           <number>0</number>
-                          </property>
-                          <property name="bottomMargin">
-                           <number>0</number>
-                          </property>
                           <item>
                            <widget class="QPushButton" name="recognize_tab_1_btn">
                             <property name="maximumSize">
                              <size>
-                              <width>50</width>
+                              <width>150</width>
                               <height>16777215</height>
                              </size>
                             </property>
@@ -1250,7 +1238,7 @@ border-radius: 5px;</string>
                            <widget class="QPushButton" name="recognize_tab_2_btn">
                             <property name="maximumSize">
                              <size>
-                              <width>50</width>
+                              <width>150</width>
                               <height>16777215</height>
                              </size>
                             </property>
@@ -1272,7 +1260,7 @@ border-radius: 5px;</string>
                            <widget class="QPushButton" name="recognize_tab_3_btn">
                             <property name="maximumSize">
                              <size>
-                              <width>50</width>
+                              <width>150</width>
                               <height>16777215</height>
                              </size>
                             </property>
@@ -1305,6 +1293,22 @@ border-radius: 5px;</string>
                              </size>
                             </property>
                            </spacer>
+                          </item>
+                          <item>
+                           <widget class="QRadioButton" name="radioButton">
+                            <property name="font">
+                             <font>
+                              <family>Cascadia Code</family>
+                              <pointsize>11</pointsize>
+                             </font>
+                            </property>
+                            <property name="layoutDirection">
+                             <enum>Qt::RightToLeft</enum>
+                            </property>
+                            <property name="text">
+                             <string>Điểm danh</string>
+                            </property>
+                           </widget>
                           </item>
                          </layout>
                         </widget>
@@ -1614,7 +1618,7 @@ background-color: rgb(0, 170, 255);</string>
                     <widget class="QPushButton" name="recognize_keep_btn">
                      <property name="geometry">
                       <rect>
-                       <x>1040</x>
+                       <x>680</x>
                        <y>20</y>
                        <width>150</width>
                        <height>30</height>
@@ -1644,6 +1648,51 @@ font-size: 12pt;</string>
                      </property>
                      <property name="text">
                       <string>Lưu</string>
+                     </property>
+                     <property name="icon">
+                      <iconset>
+                       <normaloff>:/icons/user-check.svg</normaloff>:/icons/user-check.svg</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>25</width>
+                       <height>25</height>
+                      </size>
+                     </property>
+                    </widget>
+                    <widget class="QPushButton" name="recognize_refresh_btn">
+                     <property name="geometry">
+                      <rect>
+                       <x>470</x>
+                       <y>20</y>
+                       <width>150</width>
+                       <height>30</height>
+                      </rect>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>150</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Cascadia Code</family>
+                       <pointsize>12</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">background-color: rgb(190,207,187);
+color: rgb(0,0,0);
+border-radius: 5px;
+border: 2px solid #000;
+font-weight: bold;
+font-size: 12pt;</string>
+                     </property>
+                     <property name="text">
+                      <string>Làm mới</string>
                      </property>
                      <property name="icon">
                       <iconset>

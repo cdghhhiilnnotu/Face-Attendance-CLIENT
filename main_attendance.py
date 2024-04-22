@@ -202,7 +202,9 @@ class AttendanceWindow(QMainWindow):
     def recp_init_func(self):
         self.recp_show_recognition_table_func1([])
         self.ui.recognize_img_path_input.setText("")
+        self.ui.recognize_models_box.clear()
         if os.path.exists(self.collector.MODEL_DIR):
+            print(self.collector.MODEL_DIR)
             self.ui.recognize_models_box.addItems([m.split(".keras")[0] for m in os.listdir(self.collector.MODEL_DIR)])
 
         if self.ui.recognize_models_box.count() > 0:
@@ -237,7 +239,7 @@ class AttendanceWindow(QMainWindow):
             data = {}
             data['masv'] = face_masv
             data['malop'] = self.ui.recognize_models_box.currentText()
-            data['ghichu'] = ""
+            data['ghichu'] = "M"
             requests.post(HauSettings.BASE_URL + "/giaovien/baocao", data)
         self.collector.user_api(self.collector.username_MGV)
         self.collector.update_api(data['malop'])
