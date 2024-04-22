@@ -610,12 +610,12 @@ font-size: 10pt;
              <enum>Qt::Vertical</enum>
             </property>
             <property name="sizeType">
-             <enum>QSizePolicy::Expanding</enum>
+             <enum>QSizePolicy::Preferred</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
               <width>20</width>
-              <height>200</height>
+              <height>10</height>
              </size>
             </property>
            </spacer>
@@ -676,7 +676,7 @@ border-radius: 9px;</string>
           <item>
            <widget class="QStackedWidget" name="main_pages">
             <property name="currentIndex">
-             <number>4</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="admins_page">
              <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -1992,7 +1992,7 @@ background-color: rgb(255, 255, 255);</string>
                <number>1</number>
               </property>
               <item>
-               <widget class="QWidget" name="reports_list_controllers_5" native="true">
+               <widget class="QWidget" name="rooms_controllers" native="true">
                 <property name="maximumSize">
                  <size>
                   <width>16777215</width>
@@ -2010,7 +2010,7 @@ background-color: rgb(255, 255, 255);</string>
                   <number>0</number>
                  </property>
                  <item>
-                  <widget class="QLabel" name="reports_list_name_label_5">
+                  <widget class="QLabel" name="rooms_name_label">
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -2081,7 +2081,7 @@ font-size: 15pt;</string>
                         <number>7</number>
                        </property>
                        <item>
-                        <widget class="QLineEdit" name="reports_list_input_5">
+                        <widget class="QLineEdit" name="rooms_input">
                          <property name="sizePolicy">
                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                            <horstretch>0</horstretch>
@@ -2154,7 +2154,7 @@ border: 2px solid #000;</string>
                         <number>7</number>
                        </property>
                        <item>
-                        <widget class="QPushButton" name="reports_list_search_btn_5">
+                        <widget class="QPushButton" name="rooms_search_btn">
                          <property name="minimumSize">
                           <size>
                            <width>150</width>
@@ -2195,7 +2195,7 @@ font-size: 12pt;</string>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QPushButton" name="reports_list_add_btn_5">
+                        <widget class="QPushButton" name="rooms_add_btn">
                          <property name="minimumSize">
                           <size>
                            <width>150</width>
@@ -2240,7 +2240,7 @@ font-size: 12pt;</string>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QPushButton" name="reports_list_edit_btn_5">
+                        <widget class="QPushButton" name="rooms_edit_btn">
                          <property name="minimumSize">
                           <size>
                            <width>150</width>
@@ -2285,7 +2285,7 @@ font-size: 12pt;</string>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QPushButton" name="reports_list_del_btn_5">
+                        <widget class="QPushButton" name="rooms_del_btn">
                          <property name="minimumSize">
                           <size>
                            <width>150</width>
@@ -2352,7 +2352,7 @@ font-size: 12pt;</string>
                </widget>
               </item>
               <item>
-               <widget class="QWidget" name="reports_list_view_5" native="true">
+               <widget class="QWidget" name="rooms_view" native="true">
                 <property name="font">
                  <font>
                   <family>Cascadia Code</family>
@@ -2382,7 +2382,7 @@ border: 2px solid #000;
                   <number>11</number>
                  </property>
                  <item>
-                  <widget class="QTableWidget" name="reports_list_table_5">
+                  <widget class="QTableWidget" name="rooms_table">
                    <property name="font">
                     <font>
                      <family>Cascadia Code</family>
@@ -2424,7 +2424,7 @@ background-color: rgb(255, 255, 255);</string>
                <number>1</number>
               </property>
               <item>
-               <widget class="QWidget" name="reports_list_controllers_6" native="true">
+               <widget class="QWidget" name="reports_controllers" native="true">
                 <property name="maximumSize">
                  <size>
                   <width>16777215</width>
@@ -2442,7 +2442,7 @@ background-color: rgb(255, 255, 255);</string>
                   <number>0</number>
                  </property>
                  <item>
-                  <widget class="QLabel" name="reports_list_name_label_6">
+                  <widget class="QLabel" name="reports_name_label">
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -2513,7 +2513,7 @@ font-size: 15pt;</string>
                         <number>7</number>
                        </property>
                        <item>
-                        <widget class="QLineEdit" name="reports_list_input_6">
+                        <widget class="QLineEdit" name="reports_input">
                          <property name="sizePolicy">
                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                            <horstretch>0</horstretch>
@@ -2586,7 +2586,7 @@ border: 2px solid #000;</string>
                         <number>7</number>
                        </property>
                        <item>
-                        <widget class="QPushButton" name="reports_list_search_btn_6">
+                        <widget class="QPushButton" name="reports_search_btn">
                          <property name="minimumSize">
                           <size>
                            <width>150</width>
@@ -2627,7 +2627,7 @@ font-size: 12pt;</string>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QPushButton" name="reports_list_add_btn_6">
+                        <widget class="QPushButton" name="reports_add_btn">
                          <property name="minimumSize">
                           <size>
                            <width>150</width>
@@ -2672,7 +2672,7 @@ font-size: 12pt;</string>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QPushButton" name="reports_list_edit_btn_6">
+                        <widget class="QPushButton" name="reports_edit_btn">
                          <property name="minimumSize">
                           <size>
                            <width>150</width>
@@ -2717,7 +2717,7 @@ font-size: 12pt;</string>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QPushButton" name="reports_list_del_btn_6">
+                        <widget class="QPushButton" name="reports_del_btn">
                          <property name="minimumSize">
                           <size>
                            <width>150</width>
@@ -2784,7 +2784,7 @@ font-size: 12pt;</string>
                </widget>
               </item>
               <item>
-               <widget class="QWidget" name="reports_list_view_6" native="true">
+               <widget class="QWidget" name="reports_view" native="true">
                 <property name="font">
                  <font>
                   <family>Cascadia Code</family>
@@ -2814,7 +2814,7 @@ border: 2px solid #000;
                   <number>11</number>
                  </property>
                  <item>
-                  <widget class="QTableWidget" name="reports_list_table_6">
+                  <widget class="QTableWidget" name="reports_table">
                    <property name="font">
                     <font>
                      <family>Cascadia Code</family>
@@ -3321,7 +3321,7 @@ background-color: rgb(54, 71, 107);
 border-radius: 3px;</string>
          </property>
          <property name="currentIndex">
-          <number>5</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="admins_popup">
           <property name="styleSheet">
@@ -3690,11 +3690,11 @@ border-radius: 3px;</string>
             </widget>
            </item>
            <item>
-            <widget class="QWidget" name="body_admins_2" native="true">
+            <widget class="QWidget" name="body_teachers" native="true">
              <property name="styleSheet">
               <string notr="true"/>
              </property>
-             <widget class="QLineEdit" name="admin_id_text_2">
+             <widget class="QLineEdit" name="teachers_id_text">
               <property name="enabled">
                <bool>false</bool>
               </property>
@@ -3739,7 +3739,7 @@ border-radius: 3px;</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
-             <widget class="QLineEdit" name="admin_password_text_2">
+             <widget class="QLineEdit" name="teachers_password_text">
               <property name="geometry">
                <rect>
                 <x>20</x>
@@ -3760,7 +3760,7 @@ border-radius: 3px;</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
-             <widget class="QLabel" name="admin_id_label_2">
+             <widget class="QLabel" name="teachers_id_label">
               <property name="geometry">
                <rect>
                 <x>30</x>
@@ -3802,7 +3802,7 @@ border-radius: 3px;</string>
                <string>Tên giảng viên</string>
               </property>
              </widget>
-             <widget class="QLabel" name="admin_password_label_2">
+             <widget class="QLabel" name="teachers_password_label">
               <property name="geometry">
                <rect>
                 <x>30</x>
@@ -3867,7 +3867,7 @@ border-radius: 3px;</string>
                <string>Làm mới</string>
               </property>
              </widget>
-             <widget class="QLabel" name="admin_password_label_3">
+             <widget class="QLabel" name="teachers_password_label_2">
               <property name="geometry">
                <rect>
                 <x>410</x>
@@ -3909,7 +3909,7 @@ border-radius: 3px;</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
-             <widget class="QLabel" name="admin_password_label_4">
+             <widget class="QLabel" name="teachers_password_label_3">
               <property name="geometry">
                <rect>
                 <x>410</x>

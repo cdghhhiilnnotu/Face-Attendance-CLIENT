@@ -34,16 +34,16 @@ class AdminWindow(QMainWindow):
             else:
                 list_btns[i].setStyleSheet(HauSettings.menu_btns_style(9,9,9,9,1,1,1,1))
 
-    def attendance_init(self):
+    def admin_init(self):
         pass
     
 
-    # TITLE ATTENDANCE
+    # TITLE ADMIN
     def exit_func(self):
         QApplication.quit()
 
 
-    # MAIN ATTENDANCE
+    # MAIN ADMIN
     def sync_btn_page(self):
         list_btns = [self.ui.admins_btn,self.ui.teachers_btn,self.ui.students_btn,self.ui.rooms_btn,self.ui.reports_btn,self.ui.reports_list_btn]
         list_pages = [self.ui.admins_page,self.ui.teachers_page,self.ui.students_page,self.ui.rooms_page,self.ui.reports_page,self.ui.reports_list_page]
@@ -83,6 +83,28 @@ class AdminWindow(QMainWindow):
             self.collapse_menu()
         # print("MENU")
         self.sync_btn_page()
+
+    
+    # ADMIN PAGE
+    def adp_init(self):
+        
+        pass
+
+    # TEACHER PAGE
+
+
+    # STUDENT PAGE
+
+
+    # ROOM PAGE
+
+
+    # REPORT PAGE
+
+    # REPORT LIST PAGE
+
+
+
         
 
     # HOME PAGE
