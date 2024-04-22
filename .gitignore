@@ -172,4 +172,4 @@ back_ups/
 *_result.png
 logs/
 api_user.json
-*.exe
+# *.exe
