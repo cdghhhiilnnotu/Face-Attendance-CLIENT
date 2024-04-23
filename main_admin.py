@@ -12,10 +12,13 @@ class AdminWindow(QMainWindow):
         loadJsonStyle(self, self.ui)
         self.widget = widget
         self.admin_api = {}
-        try:
-            self.admin_api = requests.get(HauSettings.BASE_URL + f"/").json()
-        except:
-            print("No API or data found!")
+        self.reset_api()
+        self.admin_save_mode = ""
+        self.teacher_save_mode = ""
+        self.student_save_mode = ""
+        self.room_save_mode = ""
+        self.report_save_mode = ""
+        self.report_list_save_mode = ""
 
         self.ui.menu_btn.clicked.connect(self.menu_func)
         self.ui.admins_btn.clicked.connect(lambda: self.swtich_page_func(0))
@@ -30,8 +33,21 @@ class AdminWindow(QMainWindow):
         self.ui.rooms_search_btn.clicked.connect(lambda: self.roop_show_table(self.ui.rooms_input.text()))
         self.ui.reports_search_btn.clicked.connect(lambda: self.repp_show_table(self.ui.reports_input.text()))
         self.ui.reports_list_search_btn.clicked.connect(lambda: self.relp_show_table(self.ui.reports_list_input.text()))
+
+        self.ui.admins_del_btn.clicked.connect(self.adp_delete_func)
+        self.ui.teachers_del_btn.clicked.connect(self.tp_delete_func)
+        self.ui.students_del_btn.clicked.connect(self.sp_delete_func)
+        self.ui.rooms_del_btn.clicked.connect(self.roop_delete_func)
+        self.ui.reports_del_btn.clicked.connect(self.repp_delete_func)
+        self.ui.reports_list_del_btn.clicked.connect(self.relp_delete_func)
         
         self.init_admin()
+
+    def reset_api(self):
+        try:
+            self.admin_api = requests.get(HauSettings.BASE_URL + f"/").json()
+        except:
+            print("No API or data found!")
 
     def logout_func(self):
         pass
@@ -45,25 +61,36 @@ class AdminWindow(QMainWindow):
             else:
                 list_btns[i].setStyleSheet(HauSettings.menu_btns_style(9,9,9,9,1,1,1,1))
 
-    def init_buttons(self):
-        self.ui.admins_add_btn.clicked.connect(self.adp_expand_popup)
-        self.ui.admins_edit_btn.clicked.connect(self.adp_expand_popup)
-        self.ui.admins_exit_btn.clicked.connect(self.adp_collapse_popup)
-        self.ui.teachers_add_btn.clicked.connect(self.tp_expand_popup)
-        self.ui.teachers_edit_btn.clicked.connect(self.tp_expand_popup)
-        self.ui.teachers_exit_btn.clicked.connect(self.tp_collapse_popup)
-        self.ui.students_add_btn.clicked.connect(self.sp_expand_popup)
-        self.ui.students_edit_btn.clicked.connect(self.sp_expand_popup)
-        self.ui.students_exit_btn.clicked.connect(self.sp_collapse_popup)
-        self.ui.rooms_add_btn.clicked.connect(self.roop_expand_popup)
-        self.ui.rooms_edit_btn.clicked.connect(self.roop_expand_popup)
-        self.ui.rooms_exit_btn.clicked.connect(self.roop_collapse_popup)
-        self.ui.reports_add_btn.clicked.connect(self.repp_expand_popup)
-        self.ui.reports_edit_btn.clicked.connect(self.repp_expand_popup)
-        self.ui.reports_exit_btn.clicked.connect(self.repp_collapse_popup)
-        self.ui.reports_list_add_btn.clicked.connect(self.relp_expand_popup)
-        self.ui.reports_list_edit_btn.clicked.connect(self.relp_expand_popup)
-        self.ui.reports_list_exit_btn.clicked.connect(self.relp_collapse_popup)
+    def init_popup_buttons(self):
+        self.ui.admins_add_btn.clicked.connect(lambda: self.adp_expand_popup('add'))
+        self.ui.admins_edit_btn.clicked.connect(lambda: self.adp_expand_popup('edit'))
+        self.ui.admins_exit_btn.clicked.connect(lambda: self.adp_collapse_popup('exit'))
+        self.ui.admin_save_btn.clicked.connect(lambda: self.adp_collapse_popup('save'))
+
+        self.ui.teachers_add_btn.clicked.connect(lambda: self.tp_expand_popup('add'))
+        self.ui.teachers_edit_btn.clicked.connect(lambda: self.tp_expand_popup('edit'))
+        self.ui.teachers_exit_btn.clicked.connect(lambda: self.tp_collapse_popup('exit'))
+        self.ui.teacher_save_btn.clicked.connect(lambda: self.tp_collapse_popup('save'))
+
+        self.ui.students_add_btn.clicked.connect(lambda: self.sp_expand_popup('add'))
+        self.ui.students_edit_btn.clicked.connect(lambda: self.sp_expand_popup('edit'))
+        self.ui.students_exit_btn.clicked.connect(lambda: self.sp_collapse_popup('exit'))
+        self.ui.student_save_btn.clicked.connect(lambda: self.sp_collapse_popup('save'))
+        
+        self.ui.rooms_add_btn.clicked.connect(lambda: self.roop_expand_popup('add'))
+        self.ui.rooms_edit_btn.clicked.connect(lambda: self.roop_expand_popup('edit'))
+        self.ui.rooms_exit_btn.clicked.connect(lambda: self.roop_collapse_popup('exit'))
+        self.ui.room_save_btn.clicked.connect(lambda: self.roop_collapse_popup('save'))
+
+        self.ui.reports_add_btn.clicked.connect(lambda: self.repp_expand_popup('add'))
+        self.ui.reports_edit_btn.clicked.connect(lambda: self.repp_expand_popup('edit'))
+        self.ui.reports_exit_btn.clicked.connect(lambda: self.repp_collapse_popup('exit'))
+        self.ui.reports_save_btn.clicked.connect(lambda: self.repp_collapse_popup('save'))
+
+        self.ui.reports_list_add_btn.clicked.connect(lambda: self.relp_expand_popup('add'))
+        self.ui.reports_list_edit_btn.clicked.connect(lambda: self.relp_expand_popup('edit'))
+        self.ui.reports_list_exit_btn.clicked.connect(lambda: self.relp_collapse_popup('exit'))
+        self.ui.reports_list_save_btn.clicked.connect(lambda: self.relp_collapse_popup('save'))
 
     
 
@@ -131,7 +158,7 @@ class AdminWindow(QMainWindow):
         self.roop_init()
         self.repp_init()
         self.relp_init()
-        self.init_buttons()
+        self.init_popup_buttons()
     
     # ADMIN PAGE
     def adp_init(self):
@@ -169,13 +196,58 @@ class AdminWindow(QMainWindow):
                 self.ui.admins_table.setItem(row, 2, QTableWidgetItem(e['MatKhau']))
                 row += 1
 
-    def adp_expand_popup(self):
+    def adp_expand_popup(self, mode=""):
         self.ui.popupWidget.expandMenu()
         self.ui.popupPages.setCurrentIndex(0)
+        if mode == 'edit':
+            admin_idx = self.ui.admins_table.currentRow()
+            admin_info = self.admin_api['admin'][admin_idx]
+            self.ui.admin_id_text.setText(admin_info['MaAD'])
+            self.ui.admin_username_text.setText(admin_info['TenDN'])
+            self.ui.admin_password_text.setText(admin_info['MatKhau'])
+            self.admin_save_mode = "edit"
+        elif mode == 'add':
+            self.ui.admin_id_text.setText("")
+            self.ui.admin_username_text.setText("")
+            self.ui.admin_password_text.setText("")
+            self.admin_save_mode = "add"
 
-    def adp_collapse_popup(self):
+    def adp_collapse_popup(self, mode=""):
         self.ui.popupWidget.collapseMenu()
+        self.adp_save_func()
 
+    def adp_delete_func(self):
+        admin_idx = self.ui.admins_table.currentRow()
+        if admin_idx != -1:
+            admin_info = self.admin_api['admin'][admin_idx]
+            try:
+                requests.delete(HauSettings.BASE_URL + f'admin/{admin_info["MaAD"]}')
+                self.reset_api()
+                self.init_admin()
+            except:
+                print("No Connect SERVER!")
+
+    def adp_save_func(self):
+        data_admin = {}
+        data_admin['TenDN'] = self.ui.admin_username_text.text()
+        data_admin['MatKhau'] = self.ui.admin_password_text.text()
+        if self.admin_save_mode == "add":
+            try:
+                requests.post(HauSettings.BASE_URL + f'admin/post', data=data_admin)
+                self.reset_api()
+                self.init_admin()
+            except:
+                print("No Connect SERVER!")
+        elif self.admin_save_mode == "edit":
+            data_admin['MaAD'] = self.ui.admin_id_text.text()
+            try:
+                requests.put(HauSettings.BASE_URL + f'admin/put', data=data_admin)
+                self.reset_api()
+                self.init_admin()
+            except:
+                print("No Connect SERVER!")
+            
+        
 
 
     # TEACHER PAGE
@@ -216,12 +288,69 @@ class AdminWindow(QMainWindow):
                 self.ui.teachers_table.setItem(row, 5, QTableWidgetItem(e['SDT']))
                 row += 1
 
-    def tp_expand_popup(self):
+    def tp_expand_popup(self, mode=""):
         self.ui.popupWidget.expandMenu()
         self.ui.popupPages.setCurrentIndex(1)
+        if mode == 'edit':
+            teacher_idx = self.ui.teachers_table.currentRow()
+            if teacher_idx != -1:
+                teacher_info = self.admin_api['giaovien'][teacher_idx]
+                self.ui.teacher_id_text.setText(teacher_info['MaGV'])
+                self.ui.teacher_name_text.setText(teacher_info['TenGV'])
+                self.ui.teacher_birth_text.setText(teacher_info['NgSinh'])
+                self.ui.teacher_address_text.setText(teacher_info['DiaChi'])
+                self.ui.teacher_password_text.setText(teacher_info['MatKhau'])
+                self.ui.teacher_phone_text.setText(teacher_info['SDT'])
+                self.teacher_save_mode = "edit"
+        elif mode == 'add':
+            self.ui.teacher_id_text.setText("")
+            self.ui.teacher_name_text.setText("")
+            self.ui.teacher_password_text.setText("")
+            self.ui.teacher_address_text.setText("")
+            self.ui.teacher_password_text.setText("")
+            self.ui.teacher_phone_text.setText("")
+            self.teacher_save_mode = "add"
 
-    def tp_collapse_popup(self):
+    def tp_collapse_popup(self, mode=""):
         self.ui.popupWidget.collapseMenu()
+        # self.teacher_save_mode = mode
+        self.tp_save_func()
+
+
+    def tp_delete_func(self):
+        teacher_idx = self.ui.teachers_table.currentRow()
+        if teacher_idx != -1:
+            teacher_info = self.admin_api['giaovien'][teacher_idx]
+            try:
+                requests.delete(HauSettings.BASE_URL + f'giaovien/{teacher_info["MaGV"]}')
+                self.reset_api()
+                self.init_admin()
+            except:
+                print("No Connect SERVER!")
+
+    def tp_save_func(self):
+        data_teacher = {}
+        data_teacher['MaGV'] = self.ui.teacher_id_text.text()
+        data_teacher['NgSinh'] = self.ui.teacher_birth_text.text()
+        data_teacher['DiaChi'] = self.ui.teacher_address_text.text()
+        data_teacher['MatKhau'] = self.ui.teacher_password_text.text()
+        data_teacher['TenGV'] = self.ui.teacher_name_text.text()
+        data_teacher['SDT'] = self.ui.teacher_phone_text.text()
+        print(self.teacher_save_mode)
+        if self.teacher_save_mode == "add":
+            try:
+                requests.post(HauSettings.BASE_URL + f'teacher/post', data=data_teacher)
+                self.reset_api()
+                self.init_admin()
+            except:
+                print("No Connect SERVER!")
+        elif self.teacher_save_mode == "edit":
+            try:
+                requests.put(HauSettings.BASE_URL + f'teacher/put', data=data_teacher)
+                self.reset_api()
+                self.init_admin()
+            except:
+                print("No Connect SERVER!")
 
 
     # STUDENT PAGE
@@ -264,13 +393,70 @@ class AdminWindow(QMainWindow):
                 self.ui.students_table.setItem(row, 6, QTableWidgetItem(e['SDT']))
                 row += 1
             
-    def sp_expand_popup(self):
+    def sp_expand_popup(self, mode=""):
         self.ui.popupWidget.expandMenu()
         self.ui.popupPages.setCurrentIndex(2)
+        if mode == 'edit':
+            student_idx = self.ui.students_table.currentRow()
+            student_info = self.admin_api['sinhvien'][student_idx]
+            self.ui.student_id_text.setText(student_info['MaSV'])
+            self.ui.student_name_text.setText(student_info['TenSV'])
+            self.ui.student_birth_text.setText(student_info['NgSinh'])
+            self.ui.student_class_text.setText(student_info['LopQL'])
+            self.ui.student_address_text.setText(student_info['DiaChi'])
+            self.ui.student_url_text.setText(student_info['LinkAnh'])
+            self.ui.student_phone_text.setText(student_info['SDT'])
+            self.student_save_mode = 'edit'
+        elif mode == 'add':
+            self.ui.student_id_text.setText("")
+            self.ui.student_name_text.setText("")
+            self.ui.student_birth_text.setText("")
+            self.ui.student_class_text.setText("")
+            self.ui.student_address_text.setText("")
+            self.ui.student_url_text.setText("")
+            self.ui.student_phone_text.setText("")
+            self.student_save_mode = 'add'
 
-    def sp_collapse_popup(self):
+    def sp_collapse_popup(self, mode=""):
         self.ui.popupWidget.collapseMenu()
+        self.sp_save_func()
+
+    def sp_delete_func(self):
+        student_idx = self.ui.students_table.currentRow()
+        if student_idx != -1:
+            student_info = self.admin_api['sinhvien'][student_idx]
+            try:
+                requests.delete(HauSettings.BASE_URL + f'sinhvien/{student_info["MaSV"]}')
+                self.reset_api()
+                self.init_admin()
+            except:
+                print("No Connect SERVER!")
     
+    def sp_save_func(self):
+        data_student = {}
+        data_student['MaSV'] = self.ui.student_id_text.text()
+        data_student['NgSinh'] = self.ui.student_birth_text.text()
+        data_student['DiaChi'] = self.ui.student_address_text.text()
+        data_student['LopQL'] = self.ui.student_class_text.text()
+        data_student['LinkAnh'] = self.ui.student_url_text.text()
+        data_student['TenSV'] = self.ui.student_name_text.text()
+        data_student['SDT'] = self.ui.student_phone_text.text()
+        print(self.student_save_mode)
+        if self.student_save_mode == "add":
+            try:
+                requests.post(HauSettings.BASE_URL + f'student/post', data=data_student)
+                self.reset_api()
+                self.init_admin()
+            except:
+                print("No Connect SERVER!")
+        elif self.student_save_mode == "edit":
+            try:
+                requests.put(HauSettings.BASE_URL + f'student/put', data=data_student)
+                self.reset_api()
+                self.init_admin()
+            except:
+                print("No Connect SERVER!")
+
 
     # ROOM PAGE
     def roop_init(self):
@@ -312,12 +498,69 @@ class AdminWindow(QMainWindow):
                 self.ui.rooms_table.setItem(row, 6, QTableWidgetItem(e['SoNgay']))
                 row += 1
     
-    def roop_expand_popup(self):
+    def roop_expand_popup(self, mode=""):
         self.ui.popupWidget.expandMenu()
         self.ui.popupPages.setCurrentIndex(3)
+        if mode == 'edit':
+            room_idx = self.ui.rooms_table.currentRow()
+            room_info = self.admin_api['lophoc'][room_idx]
+            self.ui.room_id_text.setText(room_info['MaLop'])
+            self.ui.room_name_text.setText(room_info['TenMon'])
+            self.ui.room_teacher_text.setText(room_info['MaGV'])
+            self.ui.room_sche_text.setText(room_info['LichHoc'])
+            self.ui.room_class_text.setText(room_info['PhongHoc'])
+            self.ui.room_student_num_text.setText(str(room_info['SoluongSV']))
+            self.ui.room_days_text.setText(str(room_info['SoNgay']))
+            self.room_save_mode = "edit"
+        elif mode == 'add':
+            self.ui.room_id_text.setText("")
+            self.ui.room_name_text.setText("")
+            self.ui.room_teacher_text.setText("")
+            self.ui.room_sche_text.setText("")
+            self.ui.room_class_text.setText("")
+            self.ui.room_student_num_text.setText("")
+            self.ui.room_days_text.setText("")
+            self.room_save_mode = "add"
 
-    def roop_collapse_popup(self):
+    def roop_collapse_popup(self, mode=""):
         self.ui.popupWidget.collapseMenu()
+        self.roop_save_func()
+
+    def roop_delete_func(self):
+        room_idx = self.ui.rooms_table.currentRow()
+        if room_idx != -1:
+            room_info = self.admin_api['lophoc'][room_idx]
+            try:
+                requests.delete(HauSettings.BASE_URL + f'lophoc/{room_info["MaLop"]}')
+                self.reset_api()
+                self.init_admin()
+            except:
+                print("No Connect SERVER!")
+
+    def roop_save_func(self):
+        data_room = {}
+        data_room['MaLop'] = self.ui.room_id_text.text()
+        data_room['TenMon'] = self.ui.room_name_text.text()
+        data_room['MaGV'] = self.ui.room_teacher_text.text()
+        data_room['LichHoc'] = self.ui.room_sche_text.text()
+        data_room['PhongHoc'] = self.ui.room_class_text.text()
+        data_room['SoluongSV'] = self.ui.room_student_num_text.text()
+        data_room['SoNgay'] = self.ui.room_days_text.text()
+        print(self.room_save_mode)
+        if self.room_save_mode == "add":
+            try:
+                requests.post(HauSettings.BASE_URL + f'lophoc/post', data=data_room)
+                self.reset_api()
+                self.init_admin()
+            except:
+                print("No Connect SERVER!")
+        elif self.room_save_mode == "edit":
+            try:
+                requests.put(HauSettings.BASE_URL + f'lophoc/put', data=data_room)
+                self.reset_api()
+                self.init_admin()
+            except:
+                print("No Connect SERVER!")
 
 
     # REPORT PAGE
@@ -358,12 +601,66 @@ class AdminWindow(QMainWindow):
                 self.ui.reports_table.setItem(row, 5, QTableWidgetItem(e['GhiChu']))
                 row += 1
 
-    def repp_expand_popup(self):
+    def repp_expand_popup(self, mode=""):
         self.ui.popupWidget.expandMenu()
         self.ui.popupPages.setCurrentIndex(4)
+        if mode == 'edit':
+            reports_idx = self.ui.reports_table.currentRow()
+            reports_info = self.admin_api['baocao'][reports_idx]
+            self.ui.reports_id_text.setText(reports_info['MaBC'])
+            self.ui.reports_date_text.setText(reports_info['NgayBC'])
+            self.ui.reports_student_text.setText(reports_info['MaSV'])
+            self.ui.reports_room_text.setText(reports_info['MaLop'])
+            self.ui.reports_attend_text.setText(reports_info['DiemDanh'])
+            self.ui.reports_note_text.setText(reports_info['GhiChu'])
+            self.report_save_mode = 'edit'
+        elif mode == 'add':
+            self.ui.reports_id_text.setText("")
+            self.ui.reports_date_text.setText("")
+            self.ui.reports_student_text.setText("")
+            self.ui.reports_room_text.setText("")
+            self.ui.reports_attend_text.setText("")
+            self.ui.reports_note_text.setText("")
+            self.report_save_mode = 'add'
 
-    def repp_collapse_popup(self):
+    def repp_collapse_popup(self, mode=""):
         self.ui.popupWidget.collapseMenu()
+        self.repp_save_func()
+
+    def repp_delete_func(self):
+        report_idx = self.ui.reports_table.currentRow()
+        if report_idx != -1:
+            report_info = self.admin_api['baocao'][report_idx]
+            try:
+                requests.delete(HauSettings.BASE_URL + f'baocao/{report_info["MaBC"]}')
+                self.reset_api()
+                self.init_admin()
+            except:
+                print("No Connect SERVER!")
+
+    def repp_save_func(self):
+        data_report = {}
+        data_report['MaBC'] = self.ui.reports_id_text.text()
+        data_report['NgayBC'] = self.ui.reports_date_text.text()
+        data_report['MaSV'] = self.ui.reports_student_text.text()
+        data_report['MaLop'] = self.ui.reports_room_text.text()
+        data_report['DiemDanh'] = self.ui.reports_attend_text.text()
+        data_report['GhiChu'] = self.ui.reports_note_text.text()
+        print(self.report_save_mode)
+        if self.report_save_mode == "add":
+            try:
+                requests.post(HauSettings.BASE_URL + f'baocao/post', data=data_report)
+                self.reset_api()
+                self.init_admin()
+            except:
+                print("No Connect SERVER!")
+        elif self.report_save_mode == "edit":
+            try:
+                requests.put(HauSettings.BASE_URL + f'baocao/put', data=data_report)
+                self.reset_api()
+                self.init_admin()
+            except:
+                print("No Connect SERVER!")
 
 
     # REPORT LIST PAGE
@@ -400,12 +697,59 @@ class AdminWindow(QMainWindow):
                 self.ui.reports_list_table.setItem(row, 3, QTableWidgetItem(e['SoDD']))
                 row += 1
 
-    def relp_expand_popup(self):
+    def relp_expand_popup(self, mode=""):
         self.ui.popupWidget.expandMenu()
         self.ui.popupPages.setCurrentIndex(5)
+        if mode == 'edit':
+            reports_list_idx = self.ui.reports_lists_table.currentRow()
+            reports_list_info = self.admin_api['reports_list'][reports_list_idx]
+            self.ui.reports_list_id_text.setText(reports_list_info['MaDS'])
+            self.ui.reports_list_class_text.setText(reports_list_info['MaLop'])
+            self.ui.reports_student_text.setText(reports_list_info['MaSV'])
+            self.ui.reports_list_count_text.setText(str(reports_list_info['SoDD']))
+            self.reports_list_save_mode = 'edit'
+        elif mode == 'add':
+            self.ui.reports_list_id_text.setText("")
+            self.ui.reports_list_class_text.setText("")
+            self.ui.reports_student_text.setText("")
+            self.ui.reports_list_count_text.setText("")
+            self.reports_list_save_mode = 'add'
 
-    def relp_collapse_popup(self):
+    def relp_collapse_popup(self, mode=""):
         self.ui.popupWidget.collapseMenu()
+
+    def relp_delete_func(self):
+        reports_list_idx = self.ui.reports_list_table.currentRow()
+        if reports_list_idx != -1:
+            reports_list_info = self.admin_api['dslop'][reports_list_idx]
+            try:
+                requests.delete(HauSettings.BASE_URL + f'dslop/{reports_list_info["MaDS"]}')
+                self.reset_api()
+                self.init_admin()
+            except:
+                print("No Connect SERVER!")
+
+    def repp_save_func(self):
+        data_reports_list = {}
+        data_reports_list['MaDS'] = self.ui.reports_list_id_text.text()
+        data_reports_list['MaLop'] = self.ui.reports_list_class_text.text()
+        data_reports_list['MaSV'] = self.ui.reports_list_student_text.text()
+        data_reports_list['SoDD'] = self.ui.reports_list_count_text.text()
+        print(self.report_save_mode)
+        if self.reports_list_save_mode == "add":
+            try:
+                requests.post(HauSettings.BASE_URL + f'dslop/post', data=data_reports_list)
+                self.reset_api()
+                self.init_admin()
+            except:
+                print("No Connect SERVER!")
+        elif self.reports_list_save_mode == "edit":
+            try:
+                requests.put(HauSettings.BASE_URL + f'dslop/put', data=data_reports_list)
+                self.reset_api()
+                self.init_admin()
+            except:
+                print("No Connect SERVER!")
         
 
     # HOME PAGE

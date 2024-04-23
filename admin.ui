@@ -28,7 +28,7 @@
    <property name="maximumSize">
     <size>
      <width>16777215</width>
-     <height>720</height>
+     <height>2000</height>
     </size>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_16">
@@ -3866,16 +3866,16 @@ border-radius: 3px;</string>
             <number>5</number>
            </property>
            <property name="leftMargin">
-            <number>1</number>
+            <number>10</number>
            </property>
            <property name="topMargin">
-            <number>1</number>
+            <number>10</number>
            </property>
            <property name="rightMargin">
-            <number>1</number>
+            <number>10</number>
            </property>
            <property name="bottomMargin">
-            <number>1</number>
+            <number>10</number>
            </property>
            <item>
             <widget class="QWidget" name="head_admins" native="true">
@@ -4142,6 +4142,21 @@ border-radius: 3px;</string>
          </widget>
          <widget class="QWidget" name="teachers_popup">
           <layout class="QVBoxLayout" name="verticalLayout_10">
+           <property name="spacing">
+            <number>5</number>
+           </property>
+           <property name="leftMargin">
+            <number>10</number>
+           </property>
+           <property name="topMargin">
+            <number>10</number>
+           </property>
+           <property name="rightMargin">
+            <number>10</number>
+           </property>
+           <property name="bottomMargin">
+            <number>10</number>
+           </property>
            <item>
             <widget class="QWidget" name="head_teachers" native="true">
              <property name="maximumSize">
@@ -4230,7 +4245,7 @@ border-radius: 3px;</string>
              </property>
              <widget class="QLineEdit" name="teacher_id_text">
               <property name="enabled">
-               <bool>false</bool>
+               <bool>true</bool>
               </property>
               <property name="geometry">
                <rect>
@@ -4443,11 +4458,56 @@ border-radius: 3px;</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
              </widget>
-             <widget class="QLabel" name="teacher_phone_label">
+             <widget class="QLabel" name="teacher_birth_label">
               <property name="geometry">
                <rect>
                 <x>410</x>
                 <y>160</y>
+                <width>201</width>
+                <height>31</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Cascadia Code</family>
+                <pointsize>11</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Ngày sinh</string>
+              </property>
+             </widget>
+             <widget class="QLineEdit" name="teacher_birth_text">
+              <property name="geometry">
+               <rect>
+                <x>400</x>
+                <y>200</y>
+                <width>351</width>
+                <height>31</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Cascadia Code</family>
+                <pointsize>11</pointsize>
+                <weight>50</weight>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(255, 255, 255);</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+             <widget class="QLabel" name="teacher_phone_label">
+              <property name="geometry">
+               <rect>
+                <x>410</x>
+                <y>260</y>
                 <width>201</width>
                 <height>31</height>
                </rect>
@@ -4468,7 +4528,7 @@ border-radius: 3px;</string>
               <property name="geometry">
                <rect>
                 <x>400</x>
-                <y>200</y>
+                <y>300</y>
                 <width>351</width>
                 <height>31</height>
                </rect>
@@ -4494,6 +4554,21 @@ border-radius: 3px;</string>
          </widget>
          <widget class="QWidget" name="students_popup">
           <layout class="QVBoxLayout" name="verticalLayout_12">
+           <property name="spacing">
+            <number>5</number>
+           </property>
+           <property name="leftMargin">
+            <number>10</number>
+           </property>
+           <property name="topMargin">
+            <number>10</number>
+           </property>
+           <property name="rightMargin">
+            <number>10</number>
+           </property>
+           <property name="bottomMargin">
+            <number>10</number>
+           </property>
            <item>
             <widget class="QWidget" name="head_student" native="true">
              <property name="maximumSize">
@@ -4582,12 +4657,12 @@ border-radius: 3px;</string>
              </property>
              <widget class="QLineEdit" name="student_id_text">
               <property name="enabled">
-               <bool>false</bool>
+               <bool>true</bool>
               </property>
               <property name="geometry">
                <rect>
                 <x>20</x>
-                <y>100</y>
+                <y>60</y>
                 <width>351</width>
                 <height>31</height>
                </rect>
@@ -4608,7 +4683,7 @@ border-radius: 3px;</string>
               <property name="geometry">
                <rect>
                 <x>20</x>
-                <y>200</y>
+                <y>160</y>
                 <width>351</width>
                 <height>31</height>
                </rect>
@@ -4629,7 +4704,7 @@ border-radius: 3px;</string>
               <property name="geometry">
                <rect>
                 <x>20</x>
-                <y>300</y>
+                <y>360</y>
                 <width>351</width>
                 <height>31</height>
                </rect>
@@ -4650,7 +4725,7 @@ border-radius: 3px;</string>
               <property name="geometry">
                <rect>
                 <x>30</x>
-                <y>60</y>
+                <y>20</y>
                 <width>201</width>
                 <height>31</height>
                </rect>
@@ -4671,7 +4746,7 @@ border-radius: 3px;</string>
               <property name="geometry">
                <rect>
                 <x>30</x>
-                <y>160</y>
+                <y>120</y>
                 <width>201</width>
                 <height>31</height>
                </rect>
@@ -4692,7 +4767,7 @@ border-radius: 3px;</string>
               <property name="geometry">
                <rect>
                 <x>30</x>
-                <y>260</y>
+                <y>320</y>
                 <width>201</width>
                 <height>31</height>
                </rect>
@@ -4757,7 +4832,7 @@ border-radius: 3px;</string>
               <property name="geometry">
                <rect>
                 <x>410</x>
-                <y>60</y>
+                <y>20</y>
                 <width>201</width>
                 <height>31</height>
                </rect>
@@ -4778,7 +4853,7 @@ border-radius: 3px;</string>
               <property name="geometry">
                <rect>
                 <x>400</x>
-                <y>100</y>
+                <y>60</y>
                 <width>351</width>
                 <height>31</height>
                </rect>
@@ -4799,7 +4874,7 @@ border-radius: 3px;</string>
               <property name="geometry">
                <rect>
                 <x>410</x>
-                <y>160</y>
+                <y>120</y>
                 <width>201</width>
                 <height>31</height>
                </rect>
@@ -4820,7 +4895,7 @@ border-radius: 3px;</string>
               <property name="geometry">
                <rect>
                 <x>400</x>
-                <y>200</y>
+                <y>160</y>
                 <width>351</width>
                 <height>31</height>
                </rect>
@@ -4844,7 +4919,7 @@ border-radius: 3px;</string>
               <property name="geometry">
                <rect>
                 <x>400</x>
-                <y>300</y>
+                <y>260</y>
                 <width>351</width>
                 <height>31</height>
                </rect>
@@ -4865,7 +4940,7 @@ border-radius: 3px;</string>
               <property name="geometry">
                <rect>
                 <x>410</x>
-                <y>260</y>
+                <y>220</y>
                 <width>201</width>
                 <height>31</height>
                </rect>
@@ -4882,12 +4957,69 @@ border-radius: 3px;</string>
                <string>URL Ảnh</string>
               </property>
              </widget>
+             <widget class="QLabel" name="student_birth_label">
+              <property name="geometry">
+               <rect>
+                <x>30</x>
+                <y>220</y>
+                <width>201</width>
+                <height>31</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Cascadia Code</family>
+                <pointsize>11</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Ngày sinh</string>
+              </property>
+             </widget>
+             <widget class="QLineEdit" name="student_birth_text">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>260</y>
+                <width>351</width>
+                <height>31</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Cascadia Code</family>
+                <pointsize>11</pointsize>
+                <weight>50</weight>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(255, 255, 255);</string>
+              </property>
+             </widget>
             </widget>
            </item>
           </layout>
          </widget>
          <widget class="QWidget" name="rooms_popup">
           <layout class="QVBoxLayout" name="verticalLayout_13">
+           <property name="spacing">
+            <number>5</number>
+           </property>
+           <property name="leftMargin">
+            <number>10</number>
+           </property>
+           <property name="topMargin">
+            <number>10</number>
+           </property>
+           <property name="rightMargin">
+            <number>10</number>
+           </property>
+           <property name="bottomMargin">
+            <number>10</number>
+           </property>
            <item>
             <widget class="QWidget" name="head_rooms" native="true">
              <property name="maximumSize">
@@ -4976,7 +5108,7 @@ border-radius: 3px;</string>
              </property>
              <widget class="QLineEdit" name="room_id_text">
               <property name="enabled">
-               <bool>false</bool>
+               <bool>true</bool>
               </property>
               <property name="geometry">
                <rect>
@@ -5324,6 +5456,21 @@ border-radius: 3px;</string>
          </widget>
          <widget class="QWidget" name="reports_popup">
           <layout class="QVBoxLayout" name="verticalLayout_14">
+           <property name="spacing">
+            <number>5</number>
+           </property>
+           <property name="leftMargin">
+            <number>10</number>
+           </property>
+           <property name="topMargin">
+            <number>10</number>
+           </property>
+           <property name="rightMargin">
+            <number>10</number>
+           </property>
+           <property name="bottomMargin">
+            <number>10</number>
+           </property>
            <item>
             <widget class="QWidget" name="head_reports" native="true">
              <property name="maximumSize">
@@ -5412,7 +5559,7 @@ border-radius: 3px;</string>
              </property>
              <widget class="QLineEdit" name="reports_id_text">
               <property name="enabled">
-               <bool>false</bool>
+               <bool>true</bool>
               </property>
               <property name="geometry">
                <rect>
@@ -5718,6 +5865,21 @@ border-radius: 3px;</string>
          </widget>
          <widget class="QWidget" name="reports_list_popup">
           <layout class="QVBoxLayout" name="verticalLayout_15">
+           <property name="spacing">
+            <number>5</number>
+           </property>
+           <property name="leftMargin">
+            <number>10</number>
+           </property>
+           <property name="topMargin">
+            <number>10</number>
+           </property>
+           <property name="rightMargin">
+            <number>10</number>
+           </property>
+           <property name="bottomMargin">
+            <number>10</number>
+           </property>
            <item>
             <widget class="QWidget" name="head_reports_list" native="true">
              <property name="maximumSize">
@@ -5806,7 +5968,7 @@ border-radius: 3px;</string>
              </property>
              <widget class="QLineEdit" name="reports_list_id_text">
               <property name="enabled">
-               <bool>false</bool>
+               <bool>true</bool>
               </property>
               <property name="geometry">
                <rect>
