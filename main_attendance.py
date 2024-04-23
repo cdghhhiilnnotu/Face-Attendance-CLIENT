@@ -243,7 +243,11 @@ class AttendanceWindow(QMainWindow):
             data = {}
             data['masv'] = face_masv
             data['malop'] = self.ui.recognize_models_box.currentText()
-            data['ghichu'] = "M"
+            if self.ui.recognize_late_btn.isChecked():
+                data['ghichu'] = "M"
+            else:
+                data['ghichu'] = ""
+
             requests.post(HauSettings.BASE_URL + "/giaovien/baocao", data)
         self.collector.user_api(self.collector.username_MGV)
         self.collector.update_api(data['malop'])

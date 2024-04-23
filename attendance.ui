@@ -596,7 +596,7 @@ border-radius: 9px;</string>
           <item>
            <widget class="QStackedWidget" name="main_pages">
             <property name="currentIndex">
-             <number>0</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="home_page">
              <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,3">
@@ -1295,7 +1295,7 @@ border-radius: 5px;</string>
                            </spacer>
                           </item>
                           <item>
-                           <widget class="QRadioButton" name="radioButton">
+                           <widget class="QRadioButton" name="recognize_late_btn">
                             <property name="font">
                              <font>
                               <family>Cascadia Code</family>

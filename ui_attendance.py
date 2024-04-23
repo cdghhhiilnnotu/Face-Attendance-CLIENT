@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'attendanceVcAwQc.ui'
+## Form generated from reading UI file 'attendancerowqFz.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -563,15 +563,15 @@ class Ui_Attendance(object):
 
         self.horizontalLayout_6.addItem(self.horizontalSpacer)
 
-        self.radioButton = QRadioButton(self.widget_4)
-        self.radioButton.setObjectName(u"radioButton")
+        self.recognize_late_btn = QRadioButton(self.widget_4)
+        self.recognize_late_btn.setObjectName(u"recognize_late_btn")
         font9 = QFont()
         font9.setFamily(u"Cascadia Code")
         font9.setPointSize(11)
-        self.radioButton.setFont(font9)
-        self.radioButton.setLayoutDirection(Qt.RightToLeft)
+        self.recognize_late_btn.setFont(font9)
+        self.recognize_late_btn.setLayoutDirection(Qt.RightToLeft)
 
-        self.horizontalLayout_6.addWidget(self.radioButton)
+        self.horizontalLayout_6.addWidget(self.recognize_late_btn)
 
 
         self.verticalLayout_17.addWidget(self.widget_4)
@@ -989,7 +989,7 @@ class Ui_Attendance(object):
 
         self.retranslateUi(Attendance)
 
-        self.main_pages.setCurrentIndex(0)
+        self.main_pages.setCurrentIndex(1)
         self.recognize_view.setCurrentIndex(2)
 
 
@@ -1031,7 +1031,7 @@ class Ui_Attendance(object):
         self.recognize_tab_1_btn.setText("")
         self.recognize_tab_2_btn.setText("")
         self.recognize_tab_3_btn.setText("")
-        self.radioButton.setText(QCoreApplication.translate("Attendance", u"\u0110i\u1ec3m danh", None))
+        self.recognize_late_btn.setText(QCoreApplication.translate("Attendance", u"\u0110i\u1ec3m danh", None))
         self.recognize_open_img_btn.setText(QCoreApplication.translate("Attendance", u"M\u1edf \u1ea3nh", None))
         self.recognize_guess_btn.setText(QCoreApplication.translate("Attendance", u"\u0110i\u1ec3m danh", None))
         self.recognize_export_btn.setText(QCoreApplication.translate("Attendance", u"K\u1ebft qu\u1ea3", None))
