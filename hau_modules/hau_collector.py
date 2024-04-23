@@ -111,4 +111,10 @@ class CollectData():
         except:
             print("No data found!")
             return {}
+        
+    def get_ds_malop(self):
+        ds_malop = []
+        for lop in self.data['lophoc']:
+            ds_malop.append(lop['MaLop'])
+        return ds_malop
             

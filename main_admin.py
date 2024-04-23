@@ -45,8 +45,26 @@ class AdminWindow(QMainWindow):
             else:
                 list_btns[i].setStyleSheet(HauSettings.menu_btns_style(9,9,9,9,1,1,1,1))
 
-    def admin_init(self):
-        pass
+    def init_buttons(self):
+        self.ui.admins_add_btn.clicked.connect(self.adp_expand_popup)
+        self.ui.admins_edit_btn.clicked.connect(self.adp_expand_popup)
+        self.ui.admins_exit_btn.clicked.connect(self.adp_collapse_popup)
+        self.ui.teachers_add_btn.clicked.connect(self.tp_expand_popup)
+        self.ui.teachers_edit_btn.clicked.connect(self.tp_expand_popup)
+        self.ui.teachers_exit_btn.clicked.connect(self.tp_collapse_popup)
+        self.ui.students_add_btn.clicked.connect(self.sp_expand_popup)
+        self.ui.students_edit_btn.clicked.connect(self.sp_expand_popup)
+        self.ui.students_exit_btn.clicked.connect(self.sp_collapse_popup)
+        self.ui.rooms_add_btn.clicked.connect(self.roop_expand_popup)
+        self.ui.rooms_edit_btn.clicked.connect(self.roop_expand_popup)
+        self.ui.rooms_exit_btn.clicked.connect(self.roop_collapse_popup)
+        self.ui.reports_add_btn.clicked.connect(self.repp_expand_popup)
+        self.ui.reports_edit_btn.clicked.connect(self.repp_expand_popup)
+        self.ui.reports_exit_btn.clicked.connect(self.repp_collapse_popup)
+        self.ui.reports_list_add_btn.clicked.connect(self.relp_expand_popup)
+        self.ui.reports_list_edit_btn.clicked.connect(self.relp_expand_popup)
+        self.ui.reports_list_exit_btn.clicked.connect(self.relp_collapse_popup)
+
     
 
     # TITLE ADMIN
@@ -102,6 +120,9 @@ class AdminWindow(QMainWindow):
         self.ui.admins_input.setCompleter(completer)
 
     def init_admin(self):
+        self.ui.popupWidget.collapseMenu()
+        self.setFixedWidth(1280)
+        self.setFixedHeight(720)
         self.collapse_menu()
         self.init_searching()
         self.adp_init()
@@ -110,6 +131,7 @@ class AdminWindow(QMainWindow):
         self.roop_init()
         self.repp_init()
         self.relp_init()
+        self.init_buttons()
     
     # ADMIN PAGE
     def adp_init(self):
@@ -146,6 +168,14 @@ class AdminWindow(QMainWindow):
                 self.ui.admins_table.setItem(row, 1, QTableWidgetItem(e['TenDN']))
                 self.ui.admins_table.setItem(row, 2, QTableWidgetItem(e['MatKhau']))
                 row += 1
+
+    def adp_expand_popup(self):
+        self.ui.popupWidget.expandMenu()
+        self.ui.popupPages.setCurrentIndex(0)
+
+    def adp_collapse_popup(self):
+        self.ui.popupWidget.collapseMenu()
+
 
 
     # TEACHER PAGE
@@ -185,6 +215,13 @@ class AdminWindow(QMainWindow):
                 self.ui.teachers_table.setItem(row, 4, QTableWidgetItem(e['MatKhau']))
                 self.ui.teachers_table.setItem(row, 5, QTableWidgetItem(e['SDT']))
                 row += 1
+
+    def tp_expand_popup(self):
+        self.ui.popupWidget.expandMenu()
+        self.ui.popupPages.setCurrentIndex(1)
+
+    def tp_collapse_popup(self):
+        self.ui.popupWidget.collapseMenu()
 
 
     # STUDENT PAGE
@@ -226,6 +263,13 @@ class AdminWindow(QMainWindow):
                 self.ui.students_table.setItem(row, 5, QTableWidgetItem(e['LinkAnh']))
                 self.ui.students_table.setItem(row, 6, QTableWidgetItem(e['SDT']))
                 row += 1
+            
+    def sp_expand_popup(self):
+        self.ui.popupWidget.expandMenu()
+        self.ui.popupPages.setCurrentIndex(2)
+
+    def sp_collapse_popup(self):
+        self.ui.popupWidget.collapseMenu()
     
 
     # ROOM PAGE
@@ -267,6 +311,13 @@ class AdminWindow(QMainWindow):
                 self.ui.rooms_table.setItem(row, 5, QTableWidgetItem(e['SoluongSV']))
                 self.ui.rooms_table.setItem(row, 6, QTableWidgetItem(e['SoNgay']))
                 row += 1
+    
+    def roop_expand_popup(self):
+        self.ui.popupWidget.expandMenu()
+        self.ui.popupPages.setCurrentIndex(3)
+
+    def roop_collapse_popup(self):
+        self.ui.popupWidget.collapseMenu()
 
 
     # REPORT PAGE
@@ -307,6 +358,13 @@ class AdminWindow(QMainWindow):
                 self.ui.reports_table.setItem(row, 5, QTableWidgetItem(e['GhiChu']))
                 row += 1
 
+    def repp_expand_popup(self):
+        self.ui.popupWidget.expandMenu()
+        self.ui.popupPages.setCurrentIndex(4)
+
+    def repp_collapse_popup(self):
+        self.ui.popupWidget.collapseMenu()
+
 
     # REPORT LIST PAGE
     def relp_init(self):
@@ -341,6 +399,13 @@ class AdminWindow(QMainWindow):
                 self.ui.reports_list_table.setItem(row, 2, QTableWidgetItem(e['MaSV']))
                 self.ui.reports_list_table.setItem(row, 3, QTableWidgetItem(e['SoDD']))
                 row += 1
+
+    def relp_expand_popup(self):
+        self.ui.popupWidget.expandMenu()
+        self.ui.popupPages.setCurrentIndex(5)
+
+    def relp_collapse_popup(self):
+        self.ui.popupWidget.collapseMenu()
         
 
     # HOME PAGE

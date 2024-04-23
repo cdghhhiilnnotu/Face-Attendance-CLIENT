@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'adminQrIYMf.ui'
+## Form generated from reading UI file 'adminQPvQAs.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -14,6 +14,8 @@ from PyQt5.QtWidgets import *
 
 import resources.resources
 
+from Custom_Widgets.Widgets import QCustomSlideMenu
+
 class Ui_Admin(object):
     def setupUi(self, Admin):
         if not Admin.objectName():
@@ -25,7 +27,8 @@ class Ui_Admin(object):
         Admin.setWindowTitle(u"Attendance")
         self.adminWidget = QWidget(Admin)
         self.adminWidget.setObjectName(u"adminWidget")
-        self.adminWidget.setMaximumSize(QSize(16777215, 820))
+        self.adminWidget.setMinimumSize(QSize(0, 720))
+        self.adminWidget.setMaximumSize(QSize(16777215, 720))
         self.verticalLayout_16 = QVBoxLayout(self.adminWidget)
         self.verticalLayout_16.setSpacing(0)
         self.verticalLayout_16.setObjectName(u"verticalLayout_16")
@@ -105,6 +108,7 @@ class Ui_Admin(object):
 
         self.container = QWidget(self.adminWidget)
         self.container.setObjectName(u"container")
+        self.container.setMaximumSize(QSize(16777215, 16777215))
         self.container.setLayoutDirection(Qt.LeftToRight)
         self.container.setAutoFillBackground(False)
         self.container.setStyleSheet(u"background-color: rgb(255, 255, 255);")
@@ -151,13 +155,14 @@ class Ui_Admin(object):
 
         self.verticalLayout_11.addWidget(self.menu_btn)
 
-        self.verticalSpacer = QSpacerItem(20, 90, QSizePolicy.Minimum, QSizePolicy.Fixed)
+        self.verticalSpacer = QSpacerItem(20, 160, QSizePolicy.Minimum, QSizePolicy.Fixed)
 
         self.verticalLayout_11.addItem(self.verticalSpacer)
 
         self.remote_controllers = QWidget(self.menu)
         self.remote_controllers.setObjectName(u"remote_controllers")
         self.remote_controllers.setMinimumSize(QSize(0, 300))
+        self.remote_controllers.setMaximumSize(QSize(16777215, 305))
         self.verticalLayout = QVBoxLayout(self.remote_controllers)
         self.verticalLayout.setSpacing(1)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -270,7 +275,7 @@ class Ui_Admin(object):
 
         self.verticalLayout_11.addWidget(self.remote_controllers)
 
-        self.verticalSpacer_2 = QSpacerItem(20, 10, QSizePolicy.Minimum, QSizePolicy.Preferred)
+        self.verticalSpacer_2 = QSpacerItem(20, 300, QSizePolicy.Minimum, QSizePolicy.Preferred)
 
         self.verticalLayout_11.addItem(self.verticalSpacer_2)
 
@@ -1477,10 +1482,10 @@ class Ui_Admin(object):
 
         self.verticalLayout_16.addWidget(self.container)
 
-        self.popupWidget = QWidget(self.adminWidget)
+        self.popupWidget = QCustomSlideMenu(self.adminWidget)
         self.popupWidget.setObjectName(u"popupWidget")
         self.popupWidget.setMinimumSize(QSize(800, 0))
-        self.popupWidget.setMaximumSize(QSize(800, 0))
+        self.popupWidget.setMaximumSize(QSize(800, 500))
         self.popupWidget.setStyleSheet(u"border: 3px solid rgb(0,0,0);\n"
 "border-radius: 5px;\n"
 "background-color: rgb(223, 228, 219);")

@@ -33,9 +33,7 @@ class AttendanceWindow(QMainWindow):
         self.ui.chart_btn.clicked.connect(lambda: self.swtich_page_func(3))
         
         self.ui.home_search_btn.clicked.connect(self.hp_search_func)
-        # self.ui.home_get_data_btn.clicked.connect(lambda: background_func(self.ui.hp_get_data_func, ()))
         self.ui.home_train_btn.clicked.connect(lambda: background_func(self.hp_training_func, ()))
-        # self.ui.recognize_guess_btn.clicked.connect(self.ui.recp_show_guess_func)
         self.ui.recognize_guess_btn.clicked.connect(self.start_capture_video)
         self.ui.recognize_export_btn.clicked.connect(self.stop_capture_video)
         self.ui.recognize_open_img_btn.clicked.connect(self.recp_open_image_to_guess_func)
@@ -65,13 +63,10 @@ class AttendanceWindow(QMainWindow):
                 list_btns[i].setStyleSheet(HauSettings.menu_btns_style(9,9,9,9,1,1,1,1))
 
     def attendance_init(self):
-        # self.ui.widget.setWindowFlag(Qt.Window)
-        # self.ui.widget.setAttribute(Qt.WA_TranslucentBackground)
         self.ui.attendance_expand_btn.hide()
         self.ui.attendance_minimize_btn.hide()
         self.setFixedWidth(1280)
         self.setFixedHeight(720)
-        # self.widget.move(109, 109)
         self.widget.setWindowTitle(self.widget.currentWidget().objectName())
         self.hp_init_func()
         self.recp_init_func()
@@ -80,6 +75,15 @@ class AttendanceWindow(QMainWindow):
         self.swtich_page_func(0)
         self.collapse_menu()
         self.sync_btn_page()
+        self.ds_malop = self.collector.get_ds_malop()
+        self.init_searching(self.ds_malop)
+
+    def init_searching(self, suggestion_list):
+        completer = QCompleter(suggestion_list, self.ui.home_class_input)
+        self.ui.home_class_input.setCompleter(completer)
+
+        completer = QCompleter(suggestion_list, self.ui.report_class_input)
+        self.ui.report_class_input.setCompleter(completer)
     
 
     # TITLE ATTENDANCE

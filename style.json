@@ -30,5 +30,39 @@
 				}
 			]
 		}
-	]
+	],
+	"QCustomSlideMenu": [
+        {
+            "name": "popupWidget",
+            "defaultSize": [{
+                "width": 800,
+                "height": 0
+            }],
+            "collapsedSize": [{
+                "width": 800,
+                "height": 0
+            }],
+            "expandedSize": [{
+                "width": 800,
+                "height": 500
+            }],
+            "menuTransitionAnimation": [{
+                "animationDuration": 100,
+                "animationEasingCurve": "Linear"
+            }],
+            "floatPosition": [
+                {
+                    "relativeTo": "container",
+                    "position": "top-center",
+                    "shadow":[
+                        {
+                            "blurRadius": 20,
+                            "xOffset": 0,
+                            "yOffset": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }
