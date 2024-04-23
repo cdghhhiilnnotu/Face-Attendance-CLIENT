@@ -93,7 +93,6 @@ class AdminWindow(QMainWindow):
         self.ui.reports_list_save_btn.clicked.connect(lambda: self.relp_collapse_popup('save'))
 
     
-
     # TITLE ADMIN
     def exit_func(self):
         QApplication.quit()
@@ -160,6 +159,53 @@ class AdminWindow(QMainWindow):
         self.relp_init()
         self.init_popup_buttons()
     
+    def reset_popup(self):
+        self.ui.admin_id_text.setText("")
+        self.ui.admin_username_text.setText("")
+        self.ui.admin_password_text.setText("")
+
+        self.ui.teacher_id_text.setText("")
+        self.ui.teacher_name_text.setText("")
+        self.ui.teacher_password_text.setText("")
+        self.ui.teacher_address_text.setText("")
+        self.ui.teacher_password_text.setText("")
+        self.ui.teacher_phone_text.setText("")
+
+        self.ui.student_id_text.setText("")
+        self.ui.student_name_text.setText("")
+        self.ui.student_birth_text.setText("")
+        self.ui.student_class_text.setText("")
+        self.ui.student_address_text.setText("")
+        self.ui.student_url_text.setText("")
+        self.ui.student_phone_text.setText("")
+
+        self.ui.room_id_text.setText("")
+        self.ui.room_name_text.setText("")
+        self.ui.room_teacher_text.setText("")
+        self.ui.room_sche_text.setText("")
+        self.ui.room_class_text.setText("")
+        self.ui.room_student_num_text.setText("")
+        self.ui.room_days_text.setText("")
+
+        self.ui.reports_id_text.setText("")
+        self.ui.reports_date_text.setText("")
+        self.ui.reports_student_text.setText("")
+        self.ui.reports_room_text.setText("")
+        self.ui.reports_attend_text.setText("")
+        self.ui.reports_note_text.setText("")
+
+        self.ui.reports_list_id_text.setText("")
+        self.ui.reports_list_class_text.setText("")
+        self.ui.reports_list_student_text.setText("")
+        self.ui.reports_list_count_text.setText("")
+
+        self.admin_save_mode = ""
+        self.teacher_save_mode = ""
+        self.student_save_mode = ""
+        self.room_save_mode = ""
+        self.report_save_mode = ""
+        self.report_list_save_mode = ""
+
     # ADMIN PAGE
     def adp_init(self):
         self.adp_init_table()
@@ -214,7 +260,9 @@ class AdminWindow(QMainWindow):
 
     def adp_collapse_popup(self, mode=""):
         self.ui.popupWidget.collapseMenu()
-        self.adp_save_func()
+        if mode == "save":
+            self.adp_save_func()
+        self.reset_popup()
 
     def adp_delete_func(self):
         admin_idx = self.ui.admins_table.currentRow()
@@ -248,8 +296,6 @@ class AdminWindow(QMainWindow):
                 print("No Connect SERVER!")
             
         
-
-
     # TEACHER PAGE
     def tp_init(self):
         self.tp_init_table()
@@ -314,7 +360,9 @@ class AdminWindow(QMainWindow):
     def tp_collapse_popup(self, mode=""):
         self.ui.popupWidget.collapseMenu()
         # self.teacher_save_mode = mode
-        self.tp_save_func()
+        if mode == "save":
+            self.tp_save_func()
+        self.reset_popup()
 
 
     def tp_delete_func(self):
@@ -419,7 +467,9 @@ class AdminWindow(QMainWindow):
 
     def sp_collapse_popup(self, mode=""):
         self.ui.popupWidget.collapseMenu()
-        self.sp_save_func()
+        if mode == "save":
+            self.sp_save_func()
+        self.reset_popup()
 
     def sp_delete_func(self):
         student_idx = self.ui.students_table.currentRow()
@@ -524,7 +574,9 @@ class AdminWindow(QMainWindow):
 
     def roop_collapse_popup(self, mode=""):
         self.ui.popupWidget.collapseMenu()
-        self.roop_save_func()
+        if mode == "save":
+            self.roop_save_func()
+        self.reset_popup()
 
     def roop_delete_func(self):
         room_idx = self.ui.rooms_table.currentRow()
@@ -625,7 +677,9 @@ class AdminWindow(QMainWindow):
 
     def repp_collapse_popup(self, mode=""):
         self.ui.popupWidget.collapseMenu()
-        self.repp_save_func()
+        if mode == "save":
+            self.repp_save_func()
+        self.reset_popup()
 
     def repp_delete_func(self):
         report_idx = self.ui.reports_table.currentRow()
@@ -646,7 +700,7 @@ class AdminWindow(QMainWindow):
         data_report['MaLop'] = self.ui.reports_room_text.text()
         data_report['DiemDanh'] = self.ui.reports_attend_text.text()
         data_report['GhiChu'] = self.ui.reports_note_text.text()
-        print(self.report_save_mode)
+        print("report")
         if self.report_save_mode == "add":
             try:
                 requests.post(HauSettings.BASE_URL + f'baocao/post', data=data_report)
@@ -701,22 +755,25 @@ class AdminWindow(QMainWindow):
         self.ui.popupWidget.expandMenu()
         self.ui.popupPages.setCurrentIndex(5)
         if mode == 'edit':
-            reports_list_idx = self.ui.reports_lists_table.currentRow()
-            reports_list_info = self.admin_api['reports_list'][reports_list_idx]
+            reports_list_idx = self.ui.reports_list_table.currentRow()
+            reports_list_info = self.admin_api['dslop'][reports_list_idx]
             self.ui.reports_list_id_text.setText(reports_list_info['MaDS'])
             self.ui.reports_list_class_text.setText(reports_list_info['MaLop'])
-            self.ui.reports_student_text.setText(reports_list_info['MaSV'])
+            self.ui.reports_list_student_text.setText(reports_list_info['MaSV'])
             self.ui.reports_list_count_text.setText(str(reports_list_info['SoDD']))
-            self.reports_list_save_mode = 'edit'
+            self.report_list_save_mode = 'edit'
         elif mode == 'add':
             self.ui.reports_list_id_text.setText("")
             self.ui.reports_list_class_text.setText("")
-            self.ui.reports_student_text.setText("")
+            self.ui.reports_list_student_text.setText("")
             self.ui.reports_list_count_text.setText("")
-            self.reports_list_save_mode = 'add'
+            self.report_list_save_mode = 'add'
 
     def relp_collapse_popup(self, mode=""):
         self.ui.popupWidget.collapseMenu()
+        if mode == "save":
+            self.relp_save_func()
+        self.reset_popup()
 
     def relp_delete_func(self):
         reports_list_idx = self.ui.reports_list_table.currentRow()
@@ -729,21 +786,20 @@ class AdminWindow(QMainWindow):
             except:
                 print("No Connect SERVER!")
 
-    def repp_save_func(self):
+    def relp_save_func(self):
         data_reports_list = {}
         data_reports_list['MaDS'] = self.ui.reports_list_id_text.text()
         data_reports_list['MaLop'] = self.ui.reports_list_class_text.text()
         data_reports_list['MaSV'] = self.ui.reports_list_student_text.text()
         data_reports_list['SoDD'] = self.ui.reports_list_count_text.text()
-        print(self.report_save_mode)
-        if self.reports_list_save_mode == "add":
+        if self.report_list_save_mode == "add":
             try:
                 requests.post(HauSettings.BASE_URL + f'dslop/post', data=data_reports_list)
                 self.reset_api()
                 self.init_admin()
             except:
                 print("No Connect SERVER!")
-        elif self.reports_list_save_mode == "edit":
+        elif self.report_list_save_mode == "edit":
             try:
                 requests.put(HauSettings.BASE_URL + f'dslop/put', data=data_reports_list)
                 self.reset_api()

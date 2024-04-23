@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'adminQCfPjY.ui'
+## Form generated from reading UI file 'adminVfEkFN.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -2021,7 +2021,7 @@ class Ui_Admin(object):
         self.reports_note_label.setFont(font1)
         self.reports_date_text = QLineEdit(self.body_reports)
         self.reports_date_text.setObjectName(u"reports_date_text")
-        self.reports_date_text.setEnabled(False)
+        self.reports_date_text.setEnabled(True)
         self.reports_date_text.setGeometry(QRect(400, 100, 351, 31))
         self.reports_date_text.setFont(font7)
         self.reports_date_text.setStyleSheet(u"background-color: rgb(255, 255, 255);")
@@ -2116,7 +2116,7 @@ class Ui_Admin(object):
         self.reports_list_student_label.setFont(font1)
         self.reports_list_count_text = QLineEdit(self.body_reports_list)
         self.reports_list_count_text.setObjectName(u"reports_list_count_text")
-        self.reports_list_count_text.setEnabled(False)
+        self.reports_list_count_text.setEnabled(True)
         self.reports_list_count_text.setGeometry(QRect(20, 240, 350, 30))
         self.reports_list_count_text.setFont(font7)
         self.reports_list_count_text.setStyleSheet(u"background-color: rgb(255, 255, 255);")

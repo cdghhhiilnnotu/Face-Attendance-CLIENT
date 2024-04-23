@@ -5816,7 +5816,7 @@ border-radius: 3px;</string>
              </widget>
              <widget class="QLineEdit" name="reports_date_text">
               <property name="enabled">
-               <bool>false</bool>
+               <bool>true</bool>
               </property>
               <property name="geometry">
                <rect>
@@ -6162,7 +6162,7 @@ border-radius: 3px;</string>
              </widget>
              <widget class="QLineEdit" name="reports_list_count_text">
               <property name="enabled">
-               <bool>false</bool>
+               <bool>true</bool>
               </property>
               <property name="geometry">
                <rect>
