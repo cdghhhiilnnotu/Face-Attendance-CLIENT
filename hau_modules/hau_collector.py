@@ -59,6 +59,15 @@ class CollectData():
         except:
             print("No data found!")
         return list_sv
+    
+    def get_msv(self):
+        list_sv = []
+        try:
+            for s in self.data['sinhvien']:
+                list_sv.append(s['MaSV'])
+        except:
+            print("No data found!")
+        return list_sv
 
     def get_msv_by_class_id(self, class_id):
         list_msv = []

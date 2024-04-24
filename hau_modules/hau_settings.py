@@ -21,6 +21,22 @@ class HauSettings():
         pixmap = QPixmap(f"{this_img_path}")
         this_label.setPixmap(pixmap)
 
+    def custom_table(table, len_row, mode=0):
+        table.horizontalHeader().setVisible(True)
+        table.setRowCount(len_row)
+        table.setSelectionBehavior(QAbstractItemView.SelectRows)
+        if mode == 0:
+            table.setStyleSheet(
+                "QTableView::item:selected { color:white; background:#000000; font-weight:900; }"
+                "QTableView::item { color:black; background:#fff; }"
+                "QHeaderView::section { color:white; background-color:#232326; }"
+            )
+        else:
+            table.setStyleSheet(
+                "QTableView::item:selected { color:white; background:#000000; font-weight:900; }"
+                "QHeaderView::section { color:white; background-color:#232326; }"
+            )
+
     def menu_btns_style(
                     border_top_right_radius=0,
                     border_top_left_radius=0,

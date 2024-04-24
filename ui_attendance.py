@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'attendancexwXNEk.ui'
+## Form generated from reading UI file 'attendanceXzPQAP.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -18,7 +18,8 @@ class Ui_Attendance(object):
     def setupUi(self, Attendance):
         if not Attendance.objectName():
             Attendance.setObjectName(u"Attendance")
-        Attendance.resize(1333, 819)
+        Attendance.resize(1280, 720)
+        Attendance.setMaximumSize(QSize(1280, 720))
         font = QFont()
         font.setFamily(u"Cambria")
         Attendance.setFont(font)
@@ -66,35 +67,13 @@ class Ui_Attendance(object):
 
         self.horizontalLayout_2.addItem(self.horizontalSpacer_2)
 
-        self.attendance_minimize_btn = QPushButton(self.panel_window)
-        self.attendance_minimize_btn.setObjectName(u"attendance_minimize_btn")
-        self.attendance_minimize_btn.setMinimumSize(QSize(25, 25))
-        self.attendance_minimize_btn.setMaximumSize(QSize(25, 25))
-        icon = QIcon()
-        icon.addFile(u":/icon-EC8482/EC8482/minus-circle.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.attendance_minimize_btn.setIcon(icon)
-        self.attendance_minimize_btn.setIconSize(QSize(25, 25))
-
-        self.horizontalLayout_2.addWidget(self.attendance_minimize_btn)
-
-        self.attendance_expand_btn = QPushButton(self.panel_window)
-        self.attendance_expand_btn.setObjectName(u"attendance_expand_btn")
-        self.attendance_expand_btn.setMinimumSize(QSize(25, 25))
-        self.attendance_expand_btn.setMaximumSize(QSize(25, 25))
-        icon1 = QIcon()
-        icon1.addFile(u":/icon-EC8482/EC8482/octagon.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.attendance_expand_btn.setIcon(icon1)
-        self.attendance_expand_btn.setIconSize(QSize(25, 25))
-
-        self.horizontalLayout_2.addWidget(self.attendance_expand_btn)
-
         self.attendance_exit_btn = QPushButton(self.panel_window)
         self.attendance_exit_btn.setObjectName(u"attendance_exit_btn")
         self.attendance_exit_btn.setMinimumSize(QSize(25, 25))
         self.attendance_exit_btn.setMaximumSize(QSize(25, 25))
-        icon2 = QIcon()
-        icon2.addFile(u":/icon-EC8482/EC8482/x-octagon.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.attendance_exit_btn.setIcon(icon2)
+        icon = QIcon()
+        icon.addFile(u":/icon-EC8482/EC8482/x-octagon.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.attendance_exit_btn.setIcon(icon)
         self.attendance_exit_btn.setIconSize(QSize(25, 25))
 
         self.horizontalLayout_2.addWidget(self.attendance_exit_btn)
@@ -141,9 +120,9 @@ class Ui_Attendance(object):
 "border: 2px solid #000;\n"
 "font-size: 12pt;\n"
 "")
-        icon3 = QIcon()
-        icon3.addFile(u":/icon-dark/icon-dark/menu.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.menu_btn.setIcon(icon3)
+        icon1 = QIcon()
+        icon1.addFile(u":/icon-dark/icon-dark/menu.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.menu_btn.setIcon(icon1)
         self.menu_btn.setIconSize(QSize(30, 30))
         self.menu_btn.setAutoRepeatDelay(300)
         self.menu_btn.setAutoRepeatInterval(100)
@@ -171,9 +150,9 @@ class Ui_Attendance(object):
 "border: 2px solid #000;\n"
 "font-size: 12pt;\n"
 "")
-        icon4 = QIcon()
-        icon4.addFile(u":/icon-dark/icon-dark/home.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.home_btn.setIcon(icon4)
+        icon2 = QIcon()
+        icon2.addFile(u":/icon-dark/icon-dark/home.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.home_btn.setIcon(icon2)
         self.home_btn.setIconSize(QSize(30, 30))
 
         self.verticalLayout.addWidget(self.home_btn)
@@ -188,9 +167,9 @@ class Ui_Attendance(object):
 "border: 2px solid #000;\n"
 "font-size: 12pt;\n"
 "")
-        icon5 = QIcon()
-        icon5.addFile(u":/icon-dark/icon-dark/user-check.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.recognize_btn.setIcon(icon5)
+        icon3 = QIcon()
+        icon3.addFile(u":/icon-dark/icon-dark/user-check.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.recognize_btn.setIcon(icon3)
         self.recognize_btn.setIconSize(QSize(30, 30))
 
         self.verticalLayout.addWidget(self.recognize_btn)
@@ -205,29 +184,12 @@ class Ui_Attendance(object):
 "border: 2px solid #000;\n"
 "font-size: 12pt;\n"
 "")
-        icon6 = QIcon()
-        icon6.addFile(u":/icon-dark/icon-dark/file-text.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.report_btn.setIcon(icon6)
+        icon4 = QIcon()
+        icon4.addFile(u":/icon-dark/icon-dark/file-text.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.report_btn.setIcon(icon4)
         self.report_btn.setIconSize(QSize(30, 30))
 
         self.verticalLayout.addWidget(self.report_btn)
-
-        self.chart_btn = QPushButton(self.remote_controllers)
-        self.chart_btn.setObjectName(u"chart_btn")
-        self.chart_btn.setMinimumSize(QSize(0, 50))
-        self.chart_btn.setFont(font2)
-        self.chart_btn.setStyleSheet(u"margin: 4px 4px 4px 4px;\n"
-"background-color:rgb(188,203,234);\n"
-"border-radius:9px;\n"
-"border: 2px solid #000;\n"
-"font-size: 12pt;\n"
-"")
-        icon7 = QIcon()
-        icon7.addFile(u":/icon-dark/icon-dark/pie-chart.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.chart_btn.setIcon(icon7)
-        self.chart_btn.setIconSize(QSize(30, 30))
-
-        self.verticalLayout.addWidget(self.chart_btn)
 
 
         self.verticalLayout_11.addWidget(self.remote_controllers)
@@ -246,9 +208,9 @@ class Ui_Attendance(object):
 "border: 2px solid #000;\n"
 "font-size: 12pt;\n"
 "")
-        icon8 = QIcon()
-        icon8.addFile(u":/icon-dark/icon-dark/log-out.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.logout_btn.setIcon(icon8)
+        icon5 = QIcon()
+        icon5.addFile(u":/icon-dark/icon-dark/log-out.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.logout_btn.setIcon(icon5)
         self.logout_btn.setIconSize(QSize(30, 30))
 
         self.verticalLayout_11.addWidget(self.logout_btn)
@@ -372,9 +334,6 @@ class Ui_Attendance(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        icon9 = QIcon()
-        icon9.addFile(u":/icons/zap.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.home_train_btn.setIcon(icon9)
         self.home_train_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_14.addWidget(self.home_train_btn)
@@ -440,22 +399,22 @@ class Ui_Attendance(object):
 
         self.verticalLayout_3.addWidget(self.home_table)
 
-        self.model_name_label = QLabel(self.home_view)
-        self.model_name_label.setObjectName(u"model_name_label")
-        self.model_name_label.setMinimumSize(QSize(0, 30))
+        self.model_model_label = QLabel(self.home_view)
+        self.model_model_label.setObjectName(u"model_model_label")
+        self.model_model_label.setMinimumSize(QSize(0, 30))
         font7 = QFont()
         font7.setFamily(u"Cascadia Code")
         font7.setPointSize(11)
         font7.setUnderline(True)
-        self.model_name_label.setFont(font7)
-        self.model_name_label.setLayoutDirection(Qt.LeftToRight)
-        self.model_name_label.setStyleSheet(u"color: rgb(255,255,255);\n"
+        self.model_model_label.setFont(font7)
+        self.model_model_label.setLayoutDirection(Qt.LeftToRight)
+        self.model_model_label.setStyleSheet(u"color: rgb(255,255,255);\n"
 "\n"
 "border-radius: 5px;\n"
 "border: 0px solid ;")
-        self.model_name_label.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.model_model_label.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
-        self.verticalLayout_3.addWidget(self.model_name_label)
+        self.verticalLayout_3.addWidget(self.model_model_label)
 
 
         self.verticalLayout_4.addWidget(self.home_view)
@@ -593,9 +552,6 @@ class Ui_Attendance(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        icon10 = QIcon()
-        icon10.addFile(u":/icons/crosshair.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.recognize_open_img_btn.setIcon(icon10)
         self.recognize_open_img_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_16.addWidget(self.recognize_open_img_btn)
@@ -610,9 +566,6 @@ class Ui_Attendance(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        icon11 = QIcon()
-        icon11.addFile(u":/icons/smile.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.recognize_guess_btn.setIcon(icon11)
         self.recognize_guess_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_16.addWidget(self.recognize_guess_btn)
@@ -627,9 +580,6 @@ class Ui_Attendance(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        icon12 = QIcon()
-        icon12.addFile(u":/icons/user-check.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.recognize_export_btn.setIcon(icon12)
         self.recognize_export_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_16.addWidget(self.recognize_export_btn)
@@ -665,7 +615,7 @@ class Ui_Attendance(object):
         self.recognize_input_img_label.setObjectName(u"recognize_input_img_label")
         self.recognize_input_img_label.setFont(font6)
         self.recognize_input_img_label.setStyleSheet(u"background-color: rgb(238, 0, 255);")
-        self.recognize_input_img_label.setPixmap(QPixmap(u"../../../Duong/.designer/backup/resources/apps/no_data_found.png"))
+        self.recognize_input_img_label.setPixmap(QPixmap(u"../../Duong/.designer/backup/resources/apps/no_data_found.png"))
         self.recognize_input_img_label.setScaledContents(True)
 
         self.horizontalLayout_9.addWidget(self.recognize_input_img_label)
@@ -680,7 +630,7 @@ class Ui_Attendance(object):
         self.recognize_output_img_label.setObjectName(u"recognize_output_img_label")
         self.recognize_output_img_label.setFont(font6)
         self.recognize_output_img_label.setStyleSheet(u"background-color: rgb(127, 255, 29);")
-        self.recognize_output_img_label.setPixmap(QPixmap(u"../../../Duong/.designer/backup/resources/apps/no_data_found.png"))
+        self.recognize_output_img_label.setPixmap(QPixmap(u"../../Duong/.designer/backup/resources/apps/no_data_found.png"))
         self.recognize_output_img_label.setScaledContents(True)
 
         self.horizontalLayout_8.addWidget(self.recognize_output_img_label)
@@ -732,7 +682,6 @@ class Ui_Attendance(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.recognize_keep_btn.setIcon(icon12)
         self.recognize_keep_btn.setIconSize(QSize(25, 25))
         self.recognize_refresh_btn = QPushButton(self.widget_9)
         self.recognize_refresh_btn.setObjectName(u"recognize_refresh_btn")
@@ -745,7 +694,6 @@ class Ui_Attendance(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.recognize_refresh_btn.setIcon(icon12)
         self.recognize_refresh_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_10.addWidget(self.widget_9)
@@ -782,8 +730,8 @@ class Ui_Attendance(object):
 
         self.widget_8 = QWidget(self.report_controllers)
         self.widget_8.setObjectName(u"widget_8")
-        self.gridLayout_2 = QGridLayout(self.widget_8)
-        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.gridLayout = QGridLayout(self.widget_8)
+        self.gridLayout.setObjectName(u"gridLayout")
         self.report_class_input = QLineEdit(self.widget_8)
         self.report_class_input.setObjectName(u"report_class_input")
         self.report_class_input.setMinimumSize(QSize(0, 30))
@@ -792,7 +740,7 @@ class Ui_Attendance(object):
 "border-radius: 7px;\n"
 "border: 2px solid #000;")
 
-        self.gridLayout_2.addWidget(self.report_class_input, 0, 0, 1, 1)
+        self.gridLayout.addWidget(self.report_class_input, 0, 0, 1, 1)
 
         self.report_search_btn = QPushButton(self.widget_8)
         self.report_search_btn.setObjectName(u"report_search_btn")
@@ -804,12 +752,9 @@ class Ui_Attendance(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        icon13 = QIcon()
-        icon13.addFile(u":/icons/search.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.report_search_btn.setIcon(icon13)
         self.report_search_btn.setIconSize(QSize(25, 25))
 
-        self.gridLayout_2.addWidget(self.report_search_btn, 0, 1, 1, 1)
+        self.gridLayout.addWidget(self.report_search_btn, 0, 1, 2, 1)
 
         self.report_student_input = QLineEdit(self.widget_8)
         self.report_student_input.setObjectName(u"report_student_input")
@@ -822,7 +767,14 @@ class Ui_Attendance(object):
 "padding-bottom:7px;\n"
 "")
 
-        self.gridLayout_2.addWidget(self.report_student_input, 1, 0, 1, 1)
+        self.gridLayout.addWidget(self.report_student_input, 1, 0, 1, 1)
+
+        self.report_wrong_label = QLabel(self.widget_8)
+        self.report_wrong_label.setObjectName(u"report_wrong_label")
+        self.report_wrong_label.setFont(font9)
+        self.report_wrong_label.setStyleSheet(u"color: rgb(255, 0, 0);")
+
+        self.gridLayout.addWidget(self.report_wrong_label, 2, 0, 1, 1)
 
 
         self.verticalLayout_18.addWidget(self.widget_8)
@@ -880,115 +832,6 @@ class Ui_Attendance(object):
         self.verticalLayout_7.setStretch(0, 3)
         self.verticalLayout_7.setStretch(1, 7)
         self.main_pages.addWidget(self.report_page)
-        self.chart_page = QWidget()
-        self.chart_page.setObjectName(u"chart_page")
-        self.verticalLayout_9 = QVBoxLayout(self.chart_page)
-        self.verticalLayout_9.setSpacing(2)
-        self.verticalLayout_9.setObjectName(u"verticalLayout_9")
-        self.verticalLayout_9.setContentsMargins(1, 1, 1, 1)
-        self.chart_controllers = QWidget(self.chart_page)
-        self.chart_controllers.setObjectName(u"chart_controllers")
-        self.verticalLayout_8 = QVBoxLayout(self.chart_controllers)
-        self.verticalLayout_8.setObjectName(u"verticalLayout_8")
-        self.chart_name_label = QLabel(self.chart_controllers)
-        self.chart_name_label.setObjectName(u"chart_name_label")
-        self.chart_name_label.setFont(font3)
-        self.chart_name_label.setLayoutDirection(Qt.LeftToRight)
-        self.chart_name_label.setStyleSheet(u"color: rgb(0, 0, 0);\n"
-"padding-left: 10px;\n"
-"font-weight: bold;\n"
-"font-size: 20pt;")
-        self.chart_name_label.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.verticalLayout_8.addWidget(self.chart_name_label)
-
-        self.search_panel = QWidget(self.chart_controllers)
-        self.search_panel.setObjectName(u"search_panel")
-        self.horizontalLayout_3 = QHBoxLayout(self.search_panel)
-        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
-        self.chart_model_name_input = QLineEdit(self.search_panel)
-        self.chart_model_name_input.setObjectName(u"chart_model_name_input")
-        self.chart_model_name_input.setMinimumSize(QSize(30, 30))
-        self.chart_model_name_input.setFont(font4)
-        self.chart_model_name_input.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
-"border-radius: 7px;\n"
-"border: 2px solid #000;")
-
-        self.horizontalLayout_3.addWidget(self.chart_model_name_input)
-
-        self.chart_show_btn = QPushButton(self.search_panel)
-        self.chart_show_btn.setObjectName(u"chart_show_btn")
-        sizePolicy2 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
-        sizePolicy2.setHorizontalStretch(0)
-        sizePolicy2.setVerticalStretch(0)
-        sizePolicy2.setHeightForWidth(self.chart_show_btn.sizePolicy().hasHeightForWidth())
-        self.chart_show_btn.setSizePolicy(sizePolicy2)
-        self.chart_show_btn.setMinimumSize(QSize(150, 30))
-        self.chart_show_btn.setFont(font5)
-        self.chart_show_btn.setStyleSheet(u"background-color: rgb(190,207,187);\n"
-"color: rgb(0,0,0);\n"
-"border-radius: 5px;\n"
-"border: 2px solid #000;\n"
-"font-weight: bold;\n"
-"font-size: 12pt;")
-        icon14 = QIcon()
-        icon14.addFile(u":/icons/codesandbox.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.chart_show_btn.setIcon(icon14)
-        self.chart_show_btn.setIconSize(QSize(25, 25))
-
-        self.horizontalLayout_3.addWidget(self.chart_show_btn)
-
-
-        self.verticalLayout_8.addWidget(self.search_panel)
-
-        self.chart_result_text_label = QLabel(self.chart_controllers)
-        self.chart_result_text_label.setObjectName(u"chart_result_text_label")
-        font10 = QFont()
-        font10.setFamily(u"Cascadia Code")
-        font10.setPointSize(11)
-        font10.setUnderline(False)
-        self.chart_result_text_label.setFont(font10)
-        self.chart_result_text_label.setLayoutDirection(Qt.LeftToRight)
-        self.chart_result_text_label.setStyleSheet(u"color: rgb(0, 0, 0);\n"
-"padding-left: 10px;")
-        self.chart_result_text_label.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
-
-        self.verticalLayout_8.addWidget(self.chart_result_text_label)
-
-        self.verticalLayout_8.setStretch(0, 1)
-        self.verticalLayout_8.setStretch(1, 1)
-        self.verticalLayout_8.setStretch(2, 3)
-
-        self.verticalLayout_9.addWidget(self.chart_controllers)
-
-        self.chart_view = QWidget(self.chart_page)
-        self.chart_view.setObjectName(u"chart_view")
-        self.chart_view.setFont(font6)
-        self.chart_view.setStyleSheet(u"border-radius: 5px;\n"
-"background-color:rgb(54, 71, 107); \n"
-"border-radius: 5px;\n"
-"border: 2px solid #000;")
-        self.horizontalLayout_10 = QHBoxLayout(self.chart_view)
-        self.horizontalLayout_10.setSpacing(0)
-        self.horizontalLayout_10.setObjectName(u"horizontalLayout_10")
-        self.chart_result_img_label = QLabel(self.chart_view)
-        self.chart_result_img_label.setObjectName(u"chart_result_img_label")
-        self.chart_result_img_label.setMaximumSize(QSize(50000, 50000))
-        self.chart_result_img_label.setFont(font6)
-        self.chart_result_img_label.setLayoutDirection(Qt.RightToLeft)
-        self.chart_result_img_label.setStyleSheet(u"background-color: rgb(0, 255, 204);")
-        self.chart_result_img_label.setPixmap(QPixmap(u"../../../Duong/.designer/backup/resources/apps/no_data_found.png"))
-        self.chart_result_img_label.setScaledContents(True)
-        self.chart_result_img_label.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.horizontalLayout_10.addWidget(self.chart_result_img_label)
-
-
-        self.verticalLayout_9.addWidget(self.chart_view)
-
-        self.verticalLayout_9.setStretch(0, 3)
-        self.verticalLayout_9.setStretch(1, 7)
-        self.main_pages.addWidget(self.chart_page)
 
         self.verticalLayout_2.addWidget(self.main_pages)
 
@@ -1012,14 +855,11 @@ class Ui_Attendance(object):
     def retranslateUi(self, Attendance):
         self.icon_attendance.setText("")
         self.name_attendance.setText(QCoreApplication.translate("Attendance", u"\u0110i\u1ec3m danh sinh vi\u00ean", None))
-        self.attendance_minimize_btn.setText("")
-        self.attendance_expand_btn.setText("")
         self.attendance_exit_btn.setText("")
         self.menu_btn.setText("")
         self.home_btn.setText("")
         self.recognize_btn.setText("")
         self.report_btn.setText("")
-        self.chart_btn.setText("")
         self.logout_btn.setText("")
         self.home_name_label.setText(QCoreApplication.translate("Attendance", u"TRANG CH\u1ee6", None))
         self.home_class_input.setInputMask("")
@@ -1036,7 +876,7 @@ class Ui_Attendance(object):
         ___qtablewidgetitem3.setText(QCoreApplication.translate("Attendance", u"Ng\u00e0y sinh", None));
         ___qtablewidgetitem4 = self.home_table.horizontalHeaderItem(4)
         ___qtablewidgetitem4.setText(QCoreApplication.translate("Attendance", u"S\u1ed1 \u0111i\u1ec7n tho\u1ea1i", None));
-        self.model_name_label.setText(QCoreApplication.translate("Attendance", u"model_name.keras", None))
+        self.model_model_label.setText(QCoreApplication.translate("Attendance", u"model_name.keras", None))
         self.recognize_name_label.setText(QCoreApplication.translate("Attendance", u"\u0110I\u1ec2M DANH", None))
         self.recognize_img_path_input.setInputMask("")
         self.recognize_img_path_input.setText("")
@@ -1063,6 +903,7 @@ class Ui_Attendance(object):
         self.report_student_input.setInputMask("")
         self.report_student_input.setText("")
         self.report_student_input.setPlaceholderText(QCoreApplication.translate("Attendance", u"Nh\u1eadp v\u00e0o m\u00e3 sinh vi\u00ean c\u1ea7n xem chi ti\u1ebft", None))
+        self.report_wrong_label.setText(QCoreApplication.translate("Attendance", u"Sai th\u00f4ng tin l\u1edbp ho\u1eb7c sinh vi\u00ean", None))
         ___qtablewidgetitem7 = self.report_table.horizontalHeaderItem(0)
         ___qtablewidgetitem7.setText(QCoreApplication.translate("Attendance", u"MSV", None));
         ___qtablewidgetitem8 = self.report_table.horizontalHeaderItem(1)
@@ -1073,12 +914,6 @@ class Ui_Attendance(object):
         ___qtablewidgetitem10.setText(QCoreApplication.translate("Attendance", u"M\u00e3 l\u1edbp", None));
         ___qtablewidgetitem11 = self.report_table.horizontalHeaderItem(4)
         ___qtablewidgetitem11.setText(QCoreApplication.translate("Attendance", u"\u0110i\u1ec3m danh", None));
-        self.chart_name_label.setText(QCoreApplication.translate("Attendance", u"BI\u1ec2U \u0110\u1ed2 HU\u1ea4N LUY\u1ec6N M\u00d4 H\u00ccNH", None))
-        self.chart_model_name_input.setInputMask("")
-        self.chart_model_name_input.setText("")
-        self.chart_show_btn.setText(QCoreApplication.translate("Attendance", u"M\u00f4 h\u00ecnh", None))
-        self.chart_result_text_label.setText(QCoreApplication.translate("Attendance", u"Model: ...", None))
-        self.chart_result_img_label.setText("")
         pass
     # retranslateUi
 

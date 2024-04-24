@@ -19,6 +19,7 @@ from PyQt5.QtCore import QThread, pyqtSignal, Qt
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.QtGui import QIcon, QPixmap, QBrush, QColor
 from keras.callbacks import ModelCheckpoint, EarlyStopping, ReduceLROnPlateau
+from PyQt5.QtWidgets import QMainWindow, QApplication, QTableWidgetItem, QAbstractItemView, QFileDialog, QLineEdit
 
 from keras.preprocessing.image import ImageDataGenerator, load_img, img_to_array
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
@@ -44,12 +45,6 @@ except:
 try:
     from .hau_model import *
     print("hau_model")
-except:
-    pass
-
-try:
-    from .hau_support_a import *
-    print("hau_support_a")
 except:
     pass
 

@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1333</width>
-    <height>819</height>
+    <width>1280</width>
+    <height>720</height>
    </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1280</width>
+    <height>720</height>
+   </size>
   </property>
   <property name="font">
    <font>
@@ -128,64 +134,6 @@ border-top-left-radius: 5px;</string>
           </size>
          </property>
         </spacer>
-       </item>
-       <item>
-        <widget class="QPushButton" name="attendance_minimize_btn">
-         <property name="minimumSize">
-          <size>
-           <width>25</width>
-           <height>25</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>25</width>
-           <height>25</height>
-          </size>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="resources/resources.qrc">
-           <normaloff>:/icon-EC8482/EC8482/minus-circle.svg</normaloff>:/icon-EC8482/EC8482/minus-circle.svg</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>25</width>
-           <height>25</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="attendance_expand_btn">
-         <property name="minimumSize">
-          <size>
-           <width>25</width>
-           <height>25</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>25</width>
-           <height>25</height>
-          </size>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="resources/resources.qrc">
-           <normaloff>:/icon-EC8482/EC8482/octagon.svg</normaloff>:/icon-EC8482/EC8482/octagon.svg</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>25</width>
-           <height>25</height>
-          </size>
-         </property>
-        </widget>
        </item>
        <item>
         <widget class="QPushButton" name="attendance_exit_btn">
@@ -475,43 +423,6 @@ font-size: 12pt;
                <property name="icon">
                 <iconset resource="resources/resources.qrc">
                  <normaloff>:/icon-dark/icon-dark/file-text.svg</normaloff>:/icon-dark/icon-dark/file-text.svg</iconset>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>30</width>
-                 <height>30</height>
-                </size>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="chart_btn">
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>50</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <family>Cascadia Code</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">margin: 4px 4px 4px 4px;
-background-color:rgb(188,203,234);
-border-radius:9px;
-border: 2px solid #000;
-font-size: 12pt;
-</string>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="icon">
-                <iconset resource="resources/resources.qrc">
-                 <normaloff>:/icon-dark/icon-dark/pie-chart.svg</normaloff>:/icon-dark/icon-dark/pie-chart.svg</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -839,10 +750,6 @@ font-size: 12pt;</string>
                          <property name="text">
                           <string>Huấn luyện</string>
                          </property>
-                         <property name="icon">
-                          <iconset>
-                           <normaloff>:/icons/zap.svg</normaloff>:/icons/zap.svg</iconset>
-                         </property>
                          <property name="iconSize">
                           <size>
                            <width>25</width>
@@ -1011,7 +918,7 @@ background-color: rgb(255, 255, 255);</string>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLabel" name="model_name_label">
+                  <widget class="QLabel" name="model_model_label">
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -1346,10 +1253,6 @@ font-size: 12pt;</string>
                          <property name="text">
                           <string>Mở ảnh</string>
                          </property>
-                         <property name="icon">
-                          <iconset>
-                           <normaloff>:/icons/crosshair.svg</normaloff>:/icons/crosshair.svg</iconset>
-                         </property>
                          <property name="iconSize">
                           <size>
                            <width>25</width>
@@ -1385,10 +1288,6 @@ font-size: 12pt;</string>
                          <property name="text">
                           <string>Điểm danh</string>
                          </property>
-                         <property name="icon">
-                          <iconset>
-                           <normaloff>:/icons/smile.svg</normaloff>:/icons/smile.svg</iconset>
-                         </property>
                          <property name="iconSize">
                           <size>
                            <width>25</width>
@@ -1423,10 +1322,6 @@ font-size: 12pt;</string>
                          </property>
                          <property name="text">
                           <string>Kết quả</string>
-                         </property>
-                         <property name="icon">
-                          <iconset>
-                           <normaloff>:/icons/user-check.svg</normaloff>:/icons/user-check.svg</iconset>
                          </property>
                          <property name="iconSize">
                           <size>
@@ -1495,7 +1390,7 @@ border: 2px solid #000;
                      <string/>
                     </property>
                     <property name="pixmap">
-                     <pixmap>../../../Duong/.designer/backup/resources/apps/no_data_found.png</pixmap>
+                     <pixmap>../../Duong/.designer/backup/resources/apps/no_data_found.png</pixmap>
                     </property>
                     <property name="scaledContents">
                      <bool>true</bool>
@@ -1523,7 +1418,7 @@ border: 2px solid #000;
                      <string/>
                     </property>
                     <property name="pixmap">
-                     <pixmap>../../../Duong/.designer/backup/resources/apps/no_data_found.png</pixmap>
+                     <pixmap>../../Duong/.designer/backup/resources/apps/no_data_found.png</pixmap>
                     </property>
                     <property name="scaledContents">
                      <bool>true</bool>
@@ -1649,10 +1544,6 @@ font-size: 12pt;</string>
                      <property name="text">
                       <string>Lưu</string>
                      </property>
-                     <property name="icon">
-                      <iconset>
-                       <normaloff>:/icons/user-check.svg</normaloff>:/icons/user-check.svg</iconset>
-                     </property>
                      <property name="iconSize">
                       <size>
                        <width>25</width>
@@ -1693,10 +1584,6 @@ font-size: 12pt;</string>
                      </property>
                      <property name="text">
                       <string>Làm mới</string>
-                     </property>
-                     <property name="icon">
-                      <iconset>
-                       <normaloff>:/icons/user-check.svg</normaloff>:/icons/user-check.svg</iconset>
                      </property>
                      <property name="iconSize">
                       <size>
@@ -1770,7 +1657,7 @@ font-size: 20pt;</string>
                  </item>
                  <item>
                   <widget class="QWidget" name="widget_8" native="true">
-                   <layout class="QGridLayout" name="gridLayout_2">
+                   <layout class="QGridLayout" name="gridLayout">
                     <item row="0" column="0">
                      <widget class="QLineEdit" name="report_class_input">
                       <property name="minimumSize">
@@ -1798,7 +1685,7 @@ border: 2px solid #000;</string>
                       </property>
                      </widget>
                     </item>
-                    <item row="0" column="1">
+                    <item row="0" column="1" rowspan="2">
                      <widget class="QPushButton" name="report_search_btn">
                       <property name="minimumSize">
                        <size>
@@ -1824,10 +1711,6 @@ font-size: 12pt;</string>
                       </property>
                       <property name="text">
                        <string>Tìm kiếm</string>
-                      </property>
-                      <property name="icon">
-                       <iconset>
-                        <normaloff>:/icons/search.svg</normaloff>:/icons/search.svg</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -1867,6 +1750,22 @@ padding-bottom:7px;
                       </property>
                       <property name="placeholderText">
                        <string>Nhập vào mã sinh viên cần xem chi tiết</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="0">
+                     <widget class="QLabel" name="report_wrong_label">
+                      <property name="font">
+                       <font>
+                        <family>Cascadia Code</family>
+                        <pointsize>11</pointsize>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">color: rgb(255, 0, 0);</string>
+                      </property>
+                      <property name="text">
+                       <string>Sai thông tin lớp hoặc sinh viên</string>
                       </property>
                      </widget>
                     </item>
@@ -2009,215 +1908,6 @@ background-color: rgb(0, 255, 64);</string>
                      <set>AlignCenter</set>
                     </property>
                    </column>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QWidget" name="chart_page">
-             <layout class="QVBoxLayout" name="verticalLayout_9" stretch="3,7">
-              <property name="spacing">
-               <number>2</number>
-              </property>
-              <property name="leftMargin">
-               <number>1</number>
-              </property>
-              <property name="topMargin">
-               <number>1</number>
-              </property>
-              <property name="rightMargin">
-               <number>1</number>
-              </property>
-              <property name="bottomMargin">
-               <number>1</number>
-              </property>
-              <item>
-               <widget class="QWidget" name="chart_controllers" native="true">
-                <layout class="QVBoxLayout" name="verticalLayout_8" stretch="1,1,3">
-                 <item>
-                  <widget class="QLabel" name="chart_name_label">
-                   <property name="font">
-                    <font>
-                     <family>Cascadia Mono SemiBold</family>
-                     <pointsize>20</pointsize>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                     <underline>false</underline>
-                     <strikeout>false</strikeout>
-                    </font>
-                   </property>
-                   <property name="layoutDirection">
-                    <enum>Qt::LeftToRight</enum>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">color: rgb(0, 0, 0);
-padding-left: 10px;
-font-weight: bold;
-font-size: 20pt;</string>
-                   </property>
-                   <property name="text">
-                    <string>BIỂU ĐỒ HUẤN LUYỆN MÔ HÌNH</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QWidget" name="search_panel" native="true">
-                   <layout class="QHBoxLayout" name="horizontalLayout_3">
-                    <item>
-                     <widget class="QLineEdit" name="chart_model_name_input">
-                      <property name="minimumSize">
-                       <size>
-                        <width>30</width>
-                        <height>30</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Cascadia Code</family>
-                        <pointsize>10</pointsize>
-                       </font>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">background-color: rgb(255, 255, 255);
-border-radius: 7px;
-border: 2px solid #000;</string>
-                      </property>
-                      <property name="inputMask">
-                       <string/>
-                      </property>
-                      <property name="text">
-                       <string/>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QPushButton" name="chart_show_btn">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>150</width>
-                        <height>30</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Cascadia Code</family>
-                        <pointsize>12</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">background-color: rgb(190,207,187);
-color: rgb(0,0,0);
-border-radius: 5px;
-border: 2px solid #000;
-font-weight: bold;
-font-size: 12pt;</string>
-                      </property>
-                      <property name="text">
-                       <string>Mô hình</string>
-                      </property>
-                      <property name="icon">
-                       <iconset>
-                        <normaloff>:/icons/codesandbox.svg</normaloff>:/icons/codesandbox.svg</iconset>
-                      </property>
-                      <property name="iconSize">
-                       <size>
-                        <width>25</width>
-                        <height>25</height>
-                       </size>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLabel" name="chart_result_text_label">
-                   <property name="font">
-                    <font>
-                     <family>Cascadia Code</family>
-                     <pointsize>11</pointsize>
-                     <underline>false</underline>
-                    </font>
-                   </property>
-                   <property name="layoutDirection">
-                    <enum>Qt::LeftToRight</enum>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">color: rgb(0, 0, 0);
-padding-left: 10px;</string>
-                   </property>
-                   <property name="text">
-                    <string>Model: ...</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QWidget" name="chart_view" native="true">
-                <property name="font">
-                 <font>
-                  <family>Cascadia Code</family>
-                 </font>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">border-radius: 5px;
-background-color:rgb(54, 71, 107); 
-border-radius: 5px;
-border: 2px solid #000;</string>
-                </property>
-                <layout class="QHBoxLayout" name="horizontalLayout_10">
-                 <property name="spacing">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QLabel" name="chart_result_img_label">
-                   <property name="maximumSize">
-                    <size>
-                     <width>50000</width>
-                     <height>50000</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <family>Cascadia Code</family>
-                    </font>
-                   </property>
-                   <property name="layoutDirection">
-                    <enum>Qt::RightToLeft</enum>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">background-color: rgb(0, 255, 204);</string>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="pixmap">
-                    <pixmap>../../../Duong/.designer/backup/resources/apps/no_data_found.png</pixmap>
-                   </property>
-                   <property name="scaledContents">
-                    <bool>true</bool>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                   </property>
                   </widget>
                  </item>
                 </layout>
