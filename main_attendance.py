@@ -13,7 +13,7 @@ class AttendanceWindow(QMainWindow):
         # loadUi("attendance.ui", self)
         self.ui = Ui_Attendance()
         self.ui.setupUi(self)
-        loadJsonStyle(self, self.ui)
+        loadJsonStyle(self, self.ui, jsonFiles={'style-client.json'})
         self.widget = widget
         self.dataset_path = ""
         self.img_path = HauSettings.IMGS_DIR
@@ -374,7 +374,11 @@ class AttendanceWindow(QMainWindow):
         print("PRESS REPORT TABLE BUTTON")
         try:
             self.ui.report_table.horizontalHeader().setVisible(True)
-            datasv = self.collector.get_baocao_by_class_id(self.ui.report_class_input.text())
+            datasv = []
+            if self.ui.report_student_input.text() == "":
+                datasv = self.collector.get_baocao_by_class_id(self.ui.report_class_input.text())
+            else:
+                datasv = self.collector.get_baocao_detail(self.ui.report_class_input.text(),self.ui.report_student_input.text())
             row = 0
             self.ui.report_table.setRowCount(len(datasv))
             self.ui.report_table.setSelectionBehavior(QAbstractItemView.SelectRows)

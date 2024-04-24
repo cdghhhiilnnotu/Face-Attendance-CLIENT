@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'attendancerowqFz.ui'
+## Form generated from reading UI file 'attendancexwXNEk.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -782,8 +782,8 @@ class Ui_Attendance(object):
 
         self.widget_8 = QWidget(self.report_controllers)
         self.widget_8.setObjectName(u"widget_8")
-        self.horizontalLayout_7 = QHBoxLayout(self.widget_8)
-        self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
+        self.gridLayout_2 = QGridLayout(self.widget_8)
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
         self.report_class_input = QLineEdit(self.widget_8)
         self.report_class_input.setObjectName(u"report_class_input")
         self.report_class_input.setMinimumSize(QSize(0, 30))
@@ -792,7 +792,7 @@ class Ui_Attendance(object):
 "border-radius: 7px;\n"
 "border: 2px solid #000;")
 
-        self.horizontalLayout_7.addWidget(self.report_class_input)
+        self.gridLayout_2.addWidget(self.report_class_input, 0, 0, 1, 1)
 
         self.report_search_btn = QPushButton(self.widget_8)
         self.report_search_btn.setObjectName(u"report_search_btn")
@@ -809,7 +809,20 @@ class Ui_Attendance(object):
         self.report_search_btn.setIcon(icon13)
         self.report_search_btn.setIconSize(QSize(25, 25))
 
-        self.horizontalLayout_7.addWidget(self.report_search_btn)
+        self.gridLayout_2.addWidget(self.report_search_btn, 0, 1, 1, 1)
+
+        self.report_student_input = QLineEdit(self.widget_8)
+        self.report_student_input.setObjectName(u"report_student_input")
+        self.report_student_input.setMinimumSize(QSize(0, 30))
+        self.report_student_input.setFont(font4)
+        self.report_student_input.setStyleSheet(u"background-color: rgba(0,0,0,0);\n"
+"border: 2px solid rgba(0,0,0,0);\n"
+"border-bottom-color: rgba(46, 82, 101, 200);\n"
+"color: rgb(0,0,0);\n"
+"padding-bottom:7px;\n"
+"")
+
+        self.gridLayout_2.addWidget(self.report_student_input, 1, 0, 1, 1)
 
 
         self.verticalLayout_18.addWidget(self.widget_8)
@@ -989,7 +1002,7 @@ class Ui_Attendance(object):
 
         self.retranslateUi(Attendance)
 
-        self.main_pages.setCurrentIndex(1)
+        self.main_pages.setCurrentIndex(2)
         self.recognize_view.setCurrentIndex(2)
 
 
@@ -1047,6 +1060,9 @@ class Ui_Attendance(object):
         self.report_class_input.setInputMask("")
         self.report_class_input.setText("")
         self.report_search_btn.setText(QCoreApplication.translate("Attendance", u"T\u00ecm ki\u1ebfm", None))
+        self.report_student_input.setInputMask("")
+        self.report_student_input.setText("")
+        self.report_student_input.setPlaceholderText(QCoreApplication.translate("Attendance", u"Nh\u1eadp v\u00e0o m\u00e3 sinh vi\u00ean c\u1ea7n xem chi ti\u1ebft", None))
         ___qtablewidgetitem7 = self.report_table.horizontalHeaderItem(0)
         ___qtablewidgetitem7.setText(QCoreApplication.translate("Attendance", u"MSV", None));
         ___qtablewidgetitem8 = self.report_table.horizontalHeaderItem(1)

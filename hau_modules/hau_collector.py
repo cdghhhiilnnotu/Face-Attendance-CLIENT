@@ -102,6 +102,16 @@ class CollectData():
         except:
             print("No data found!")
         return dssv
+    
+    def get_baocao_detail(self, class_id, student_id):
+        dssv = []
+        try:
+            for item in self.data['baocao_detail']:
+                if item['MaLop'] == class_id and item['MaSV'] == student_id:
+                    dssv.append(item)
+        except:
+            print("No data found!")
+        return dssv
 
     def get_sv_by_msv(self, msv):
         try:

@@ -1,0 +1,34 @@
+{
+	"QMainWindow":[
+		{
+			"frameless": true,
+			"transluscentBg": true,
+			"navigation":[
+				{
+					"minimize":"attendance_minimize_btn",
+					"close": "attendance_exit_btn",
+					"restore":[
+						{	
+							"buttonName": "attendance_expand_btn",
+							"normalIcon": ":/icon-EC8482/EC8482/octagon.svg",
+							"maximizedIcon": ":/icon-EC8482/EC8482/copy.svg"
+						}
+					],
+					"moveWindow": "panel_window",
+					"tittleBar": "panel_window"
+				}
+			]
+		},
+		{
+			"frameless": true,
+			"transluscentBg": true,
+			"navigation":[
+				{
+					"close": "signin_exit_btn",
+					"moveWindow": "decor_side",
+					"tittleBar": "decor_side"
+				}
+			]
+		}
+	]
+}

@@ -9,7 +9,7 @@ class AdminWindow(QMainWindow):
         # loadUi("attendance.ui", self)
         self.ui = Ui_Admin()
         self.ui.setupUi(self)
-        loadJsonStyle(self, self.ui)
+        loadJsonStyle(self, self.ui, jsonFiles={'style-admin.json'})
         self.widget = widget
         self.admin_api = {}
         self.reset_api()
@@ -140,10 +140,59 @@ class AdminWindow(QMainWindow):
         self.sync_btn_page()
 
     def init_searching(self):
-        suggestion_list = ["apple", "banana", "cherry", "grape", "orange", "pear", "pineapple"]
+        # admin_list = []
+        # for item in self.admin_api['admin']:
+        #     admin_list.append(item['MaAD'])
+        #         # admin_list.append(val)
+        # print(admin_list)
 
-        completer = QCompleter(suggestion_list, self.ui.admins_input)
-        self.ui.admins_input.setCompleter(completer)
+        # admin_completer = QCompleter(admin_list, self.ui.admins_input)
+        # self.ui.admins_input.setCompleter(admin_completer)
+
+        giaovien_list = []
+        for item in self.admin_api['giaovien']:
+            giaovien_list.append(item['MaGV'])
+                # giaovien_list.append(val)
+        print(giaovien_list)
+
+        giaovien_completer = QCompleter(giaovien_list, self.ui.teachers_input)
+        self.ui.teachers_input.setCompleter(giaovien_completer)
+
+        sinhvien_list = []
+        for item in self.admin_api['sinhvien']:
+            sinhvien_list.append(item['MaSV'])
+                # sinhvien_list.append(val)
+        print(sinhvien_list)
+
+        sinhvien_completer = QCompleter(sinhvien_list, self.ui.students_input)
+        self.ui.students_input.setCompleter(sinhvien_completer)
+
+        lophoc_list = []
+        for item in self.admin_api['lophoc']:
+            lophoc_list.append(item['MaLop'])
+                # lophoc_list.append(val)
+        print(lophoc_list)
+
+        lophoc_completer = QCompleter(lophoc_list, self.ui.rooms_input)
+        self.ui.rooms_input.setCompleter(lophoc_completer)
+
+        baocao_list = []
+        for item in self.admin_api['baocao']:
+            baocao_list.append(item['MaSV'])
+                # baocao_list.append(val)
+        print(baocao_list)
+
+        baocao_completer = QCompleter(baocao_list, self.ui.reports_input)
+        self.ui.reports_input.setCompleter(baocao_completer)
+
+        dslop_list = []
+        for item in self.admin_api['dslop']:
+            dslop_list.append(item['MaLop'])
+                # dslop_list.append(val)
+        print(dslop_list)
+
+        dslop_completer = QCompleter(dslop_list, self.ui.reports_list_input)
+        self.ui.teachers_input.setCompleter(dslop_completer)
 
     def init_admin(self):
         self.ui.popupWidget.collapseMenu()
@@ -158,6 +207,7 @@ class AdminWindow(QMainWindow):
         self.repp_init()
         self.relp_init()
         self.init_popup_buttons()
+        self.sync_btn_page()
     
     def reset_popup(self):
         self.ui.admin_id_text.setText("")
@@ -544,8 +594,8 @@ class AdminWindow(QMainWindow):
                 self.ui.rooms_table.setItem(row, 2, QTableWidgetItem(e['MaGV']))
                 self.ui.rooms_table.setItem(row, 3, QTableWidgetItem(e['LichHoc']))
                 self.ui.rooms_table.setItem(row, 4, QTableWidgetItem(e['PhongHoc']))
-                self.ui.rooms_table.setItem(row, 5, QTableWidgetItem(e['SoluongSV']))
-                self.ui.rooms_table.setItem(row, 6, QTableWidgetItem(e['SoNgay']))
+                self.ui.rooms_table.setItem(row, 5, QTableWidgetItem(str(e['SoluongSV'])))
+                self.ui.rooms_table.setItem(row, 6, QTableWidgetItem(str(e['SoNgay'])))
                 row += 1
     
     def roop_expand_popup(self, mode=""):

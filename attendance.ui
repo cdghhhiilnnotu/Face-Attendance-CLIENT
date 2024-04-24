@@ -596,7 +596,7 @@ border-radius: 9px;</string>
           <item>
            <widget class="QStackedWidget" name="main_pages">
             <property name="currentIndex">
-             <number>1</number>
+             <number>2</number>
             </property>
             <widget class="QWidget" name="home_page">
              <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,3">
@@ -1770,8 +1770,8 @@ font-size: 20pt;</string>
                  </item>
                  <item>
                   <widget class="QWidget" name="widget_8" native="true">
-                   <layout class="QHBoxLayout" name="horizontalLayout_7">
-                    <item>
+                   <layout class="QGridLayout" name="gridLayout_2">
+                    <item row="0" column="0">
                      <widget class="QLineEdit" name="report_class_input">
                       <property name="minimumSize">
                        <size>
@@ -1798,7 +1798,7 @@ border: 2px solid #000;</string>
                       </property>
                      </widget>
                     </item>
-                    <item>
+                    <item row="0" column="1">
                      <widget class="QPushButton" name="report_search_btn">
                       <property name="minimumSize">
                        <size>
@@ -1834,6 +1834,39 @@ font-size: 12pt;</string>
                         <width>25</width>
                         <height>25</height>
                        </size>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QLineEdit" name="report_student_input">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Cascadia Code</family>
+                        <pointsize>10</pointsize>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgba(0,0,0,0);
+border: 2px solid rgba(0,0,0,0);
+border-bottom-color: rgba(46, 82, 101, 200);
+color: rgb(0,0,0);
+padding-bottom:7px;
+</string>
+                      </property>
+                      <property name="inputMask">
+                       <string/>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="placeholderText">
+                       <string>Nhập vào mã sinh viên cần xem chi tiết</string>
                       </property>
                      </widget>
                     </item>

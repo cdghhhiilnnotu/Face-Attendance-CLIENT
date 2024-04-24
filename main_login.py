@@ -11,7 +11,7 @@ class LoginWindow(QMainWindow):
         self.passwordIsHide = True
         self.ui = Ui_Login()
         self.ui.setupUi(self)
-        loadJsonStyle(self, self.ui)
+        loadJsonStyle(self, self.ui, jsonFiles={'style-client.json'})
         
         self.ui.signin_btn.clicked.connect(self.signin_func)
         self.ui.hide_password_btn.clicked.connect(self.hiding_password)
