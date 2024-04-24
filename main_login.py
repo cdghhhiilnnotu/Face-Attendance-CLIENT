@@ -7,7 +7,6 @@ class LoginWindow(QMainWindow):
     def __init__(self, widget):
         self.widget = widget
         super(LoginWindow, self).__init__()
-        # loadUi("login.ui", self)
         self.passwordIsHide = True
         self.ui = Ui_Login()
         self.ui.setupUi(self)
@@ -36,15 +35,25 @@ class LoginWindow(QMainWindow):
         self.ui.wrong_pass_label.hide()
 
     def signin_func(self):
-        if CollectData.check_user(self.ui.signin_username_input.text(),self.ui.signin_password_input.text()):
-            self.signin_success()
+        if not self.ui.admin_btn.isChecked():
+            if CollectData.check_user(self.ui.signin_username_input.text(),self.ui.signin_password_input.text()):
+                self.signin_user_success()
+            else:
+                self.signin_fail()
         else:
-            self.signin_fail()
+            if CollectData.check_admin(self.ui.signin_username_input.text(),self.ui.signin_password_input.text()):
+                self.signin_admin_success()
+            else:
+                self.signin_fail()
         
-    def signin_success(self):
-        self.widget.setCurrentIndex(self.widget.currentIndex() + 1)
+    def signin_user_success(self):
+        self.widget.setCurrentIndex(1)
         self.widget.currentWidget().collector = CollectData.check_user(self.ui.signin_username_input.text(),self.ui.signin_password_input.text())
-        self.widget.currentWidget().attendance_init()
+        self.widget.currentWidget().init_attendance()
+
+    def signin_admin_success(self):
+        self.widget.setCurrentIndex(2)
+        self.widget.currentWidget().init_admin()
 
     def signin_fail(self):
         self.login_init()

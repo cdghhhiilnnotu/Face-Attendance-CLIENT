@@ -42,6 +42,15 @@ class CollectData():
             print("No API or data found!")
         return None
     
+    def check_admin(username, password):
+        user_checked = {}
+        try:
+            user_checked = requests.get(HauSettings.BASE_URL + f"/admin/logging/{username}/{password}").json()
+            return user_checked
+        except:
+            print("No API or data found!")
+        return None
+    
     def update_api(self, malop):
         requests.get(HauSettings.BASE_URL + f"/giaovien/baocao/{malop}")
     

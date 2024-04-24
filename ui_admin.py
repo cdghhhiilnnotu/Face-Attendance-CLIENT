@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'adminVfEkFN.ui'
+## Form generated from reading UI file 'adminbaUkIv.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -15,7 +15,6 @@ from PyQt5.QtWidgets import *
 import resources.resources
 
 from Custom_Widgets.Widgets import QCustomSlideMenu
-
 class Ui_Admin(object):
     def setupUi(self, Admin):
         if not Admin.objectName():
@@ -70,35 +69,13 @@ class Ui_Admin(object):
 
         self.horizontalLayout_2.addItem(self.horizontalSpacer_2)
 
-        self.admin_minimize_btn = QPushButton(self.panel_window)
-        self.admin_minimize_btn.setObjectName(u"admin_minimize_btn")
-        self.admin_minimize_btn.setMinimumSize(QSize(25, 25))
-        self.admin_minimize_btn.setMaximumSize(QSize(25, 25))
-        icon = QIcon()
-        icon.addFile(u":/icon-EC8482/EC8482/minus-circle.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.admin_minimize_btn.setIcon(icon)
-        self.admin_minimize_btn.setIconSize(QSize(25, 25))
-
-        self.horizontalLayout_2.addWidget(self.admin_minimize_btn)
-
-        self.admin_expand_btn = QPushButton(self.panel_window)
-        self.admin_expand_btn.setObjectName(u"admin_expand_btn")
-        self.admin_expand_btn.setMinimumSize(QSize(25, 25))
-        self.admin_expand_btn.setMaximumSize(QSize(25, 25))
-        icon1 = QIcon()
-        icon1.addFile(u":/icon-EC8482/EC8482/octagon.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.admin_expand_btn.setIcon(icon1)
-        self.admin_expand_btn.setIconSize(QSize(25, 25))
-
-        self.horizontalLayout_2.addWidget(self.admin_expand_btn)
-
         self.admin_exit_btn = QPushButton(self.panel_window)
         self.admin_exit_btn.setObjectName(u"admin_exit_btn")
         self.admin_exit_btn.setMinimumSize(QSize(25, 25))
         self.admin_exit_btn.setMaximumSize(QSize(25, 25))
-        icon2 = QIcon()
-        icon2.addFile(u":/icon-EC8482/EC8482/x-octagon.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.admin_exit_btn.setIcon(icon2)
+        icon = QIcon()
+        icon.addFile(u":/icon-EC8482/EC8482/x-octagon.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.admin_exit_btn.setIcon(icon)
         self.admin_exit_btn.setIconSize(QSize(25, 25))
 
         self.horizontalLayout_2.addWidget(self.admin_exit_btn)
@@ -146,9 +123,9 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-size: 12pt;\n"
 "")
-        icon3 = QIcon()
-        icon3.addFile(u":/icon-dark/icon-dark/menu.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.menu_btn.setIcon(icon3)
+        icon1 = QIcon()
+        icon1.addFile(u":/icon-dark/icon-dark/menu.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.menu_btn.setIcon(icon1)
         self.menu_btn.setIconSize(QSize(25, 25))
         self.menu_btn.setAutoRepeatDelay(300)
         self.menu_btn.setAutoRepeatInterval(100)
@@ -180,9 +157,9 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-size: 10pt;\n"
 "")
-        icon4 = QIcon()
-        icon4.addFile(u":/icon-dark/icon-dark/award.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.admins_btn.setIcon(icon4)
+        icon2 = QIcon()
+        icon2.addFile(u":/icon-dark/icon-dark/award.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.admins_btn.setIcon(icon2)
         self.admins_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout.addWidget(self.admins_btn)
@@ -197,9 +174,9 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-size: 10pt;\n"
 "")
-        icon5 = QIcon()
-        icon5.addFile(u":/icon-dark/icon-dark/user.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.teachers_btn.setIcon(icon5)
+        icon3 = QIcon()
+        icon3.addFile(u":/icon-dark/icon-dark/user.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.teachers_btn.setIcon(icon3)
         self.teachers_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout.addWidget(self.teachers_btn)
@@ -214,9 +191,9 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-size: 10pt;\n"
 "")
-        icon6 = QIcon()
-        icon6.addFile(u":/icon-dark/icon-dark/users.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.students_btn.setIcon(icon6)
+        icon4 = QIcon()
+        icon4.addFile(u":/icon-dark/icon-dark/users.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.students_btn.setIcon(icon4)
         self.students_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout.addWidget(self.students_btn)
@@ -231,9 +208,9 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-size: 10pt;\n"
 "")
-        icon7 = QIcon()
-        icon7.addFile(u":/icon-dark/icon-dark/folder.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.rooms_btn.setIcon(icon7)
+        icon5 = QIcon()
+        icon5.addFile(u":/icon-dark/icon-dark/folder.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.rooms_btn.setIcon(icon5)
         self.rooms_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout.addWidget(self.rooms_btn)
@@ -248,9 +225,9 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-size: 10pt;\n"
 "")
-        icon8 = QIcon()
-        icon8.addFile(u":/icon-dark/icon-dark/message-square.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.reports_btn.setIcon(icon8)
+        icon6 = QIcon()
+        icon6.addFile(u":/icon-dark/icon-dark/message-square.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.reports_btn.setIcon(icon6)
         self.reports_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout.addWidget(self.reports_btn)
@@ -265,9 +242,9 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-size: 10pt;\n"
 "")
-        icon9 = QIcon()
-        icon9.addFile(u":/icon-dark/icon-dark/file-text.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.reports_list_btn.setIcon(icon9)
+        icon7 = QIcon()
+        icon7.addFile(u":/icon-dark/icon-dark/file-text.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.reports_list_btn.setIcon(icon7)
         self.reports_list_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout.addWidget(self.reports_list_btn)
@@ -289,9 +266,9 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-size: 12pt;\n"
 "")
-        icon10 = QIcon()
-        icon10.addFile(u":/icon-dark/icon-dark/log-out.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.logout_btn.setIcon(icon10)
+        icon8 = QIcon()
+        icon8.addFile(u":/icon-dark/icon-dark/log-out.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.logout_btn.setIcon(icon8)
         self.logout_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_11.addWidget(self.logout_btn)
@@ -415,9 +392,9 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        icon11 = QIcon()
-        icon11.addFile(u":/icons/zap.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.admins_add_btn.setIcon(icon11)
+        icon9 = QIcon()
+        icon9.addFile(u":/icons/zap.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.admins_add_btn.setIcon(icon9)
         self.admins_add_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_31.addWidget(self.admins_add_btn)
@@ -433,7 +410,7 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.admins_edit_btn.setIcon(icon11)
+        self.admins_edit_btn.setIcon(icon9)
         self.admins_edit_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_31.addWidget(self.admins_edit_btn)
@@ -449,7 +426,7 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.admins_del_btn.setIcon(icon11)
+        self.admins_del_btn.setIcon(icon9)
         self.admins_del_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_31.addWidget(self.admins_del_btn)
@@ -600,7 +577,7 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.teachers_add_btn.setIcon(icon11)
+        self.teachers_add_btn.setIcon(icon9)
         self.teachers_add_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_35.addWidget(self.teachers_add_btn)
@@ -616,7 +593,7 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.teachers_edit_btn.setIcon(icon11)
+        self.teachers_edit_btn.setIcon(icon9)
         self.teachers_edit_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_35.addWidget(self.teachers_edit_btn)
@@ -632,7 +609,7 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.teachers_del_btn.setIcon(icon11)
+        self.teachers_del_btn.setIcon(icon9)
         self.teachers_del_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_35.addWidget(self.teachers_del_btn)
@@ -793,7 +770,7 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.students_add_btn.setIcon(icon11)
+        self.students_add_btn.setIcon(icon9)
         self.students_add_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_39.addWidget(self.students_add_btn)
@@ -809,7 +786,7 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.students_edit_btn.setIcon(icon11)
+        self.students_edit_btn.setIcon(icon9)
         self.students_edit_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_39.addWidget(self.students_edit_btn)
@@ -825,7 +802,7 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.students_del_btn.setIcon(icon11)
+        self.students_del_btn.setIcon(icon9)
         self.students_del_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_39.addWidget(self.students_del_btn)
@@ -990,7 +967,7 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.rooms_add_btn.setIcon(icon11)
+        self.rooms_add_btn.setIcon(icon9)
         self.rooms_add_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_43.addWidget(self.rooms_add_btn)
@@ -1006,7 +983,7 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.rooms_edit_btn.setIcon(icon11)
+        self.rooms_edit_btn.setIcon(icon9)
         self.rooms_edit_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_43.addWidget(self.rooms_edit_btn)
@@ -1022,7 +999,7 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.rooms_del_btn.setIcon(icon11)
+        self.rooms_del_btn.setIcon(icon9)
         self.rooms_del_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_43.addWidget(self.rooms_del_btn)
@@ -1187,7 +1164,7 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.reports_add_btn.setIcon(icon11)
+        self.reports_add_btn.setIcon(icon9)
         self.reports_add_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_47.addWidget(self.reports_add_btn)
@@ -1203,7 +1180,7 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.reports_edit_btn.setIcon(icon11)
+        self.reports_edit_btn.setIcon(icon9)
         self.reports_edit_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_47.addWidget(self.reports_edit_btn)
@@ -1219,7 +1196,7 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.reports_del_btn.setIcon(icon11)
+        self.reports_del_btn.setIcon(icon9)
         self.reports_del_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_47.addWidget(self.reports_del_btn)
@@ -1380,7 +1357,7 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.reports_list_add_btn.setIcon(icon11)
+        self.reports_list_add_btn.setIcon(icon9)
         self.reports_list_add_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_27.addWidget(self.reports_list_add_btn)
@@ -1396,7 +1373,7 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.reports_list_edit_btn.setIcon(icon11)
+        self.reports_list_edit_btn.setIcon(icon9)
         self.reports_list_edit_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_27.addWidget(self.reports_list_edit_btn)
@@ -1412,7 +1389,7 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.reports_list_del_btn.setIcon(icon11)
+        self.reports_list_del_btn.setIcon(icon9)
         self.reports_list_del_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_27.addWidget(self.reports_list_del_btn)
@@ -1526,7 +1503,7 @@ class Ui_Admin(object):
         self.admins_exit_btn = QPushButton(self.head_admins)
         self.admins_exit_btn.setObjectName(u"admins_exit_btn")
         self.admins_exit_btn.setMaximumSize(QSize(30, 30))
-        self.admins_exit_btn.setIcon(icon2)
+        self.admins_exit_btn.setIcon(icon)
         self.admins_exit_btn.setIconSize(QSize(30, 30))
 
         self.horizontalLayout_3.addWidget(self.admins_exit_btn)
@@ -1614,7 +1591,7 @@ class Ui_Admin(object):
         self.teachers_exit_btn = QPushButton(self.head_teachers)
         self.teachers_exit_btn.setObjectName(u"teachers_exit_btn")
         self.teachers_exit_btn.setMaximumSize(QSize(30, 30))
-        self.teachers_exit_btn.setIcon(icon2)
+        self.teachers_exit_btn.setIcon(icon)
         self.teachers_exit_btn.setIconSize(QSize(30, 30))
 
         self.horizontalLayout_4.addWidget(self.teachers_exit_btn)
@@ -1721,7 +1698,7 @@ class Ui_Admin(object):
         self.students_exit_btn = QPushButton(self.head_student)
         self.students_exit_btn.setObjectName(u"students_exit_btn")
         self.students_exit_btn.setMaximumSize(QSize(30, 30))
-        self.students_exit_btn.setIcon(icon2)
+        self.students_exit_btn.setIcon(icon)
         self.students_exit_btn.setIconSize(QSize(30, 30))
 
         self.horizontalLayout_5.addWidget(self.students_exit_btn)
@@ -1837,7 +1814,7 @@ class Ui_Admin(object):
         self.rooms_exit_btn = QPushButton(self.head_rooms)
         self.rooms_exit_btn.setObjectName(u"rooms_exit_btn")
         self.rooms_exit_btn.setMaximumSize(QSize(30, 30))
-        self.rooms_exit_btn.setIcon(icon2)
+        self.rooms_exit_btn.setIcon(icon)
         self.rooms_exit_btn.setIconSize(QSize(30, 30))
 
         self.horizontalLayout_6.addWidget(self.rooms_exit_btn)
@@ -1953,7 +1930,7 @@ class Ui_Admin(object):
         self.reports_exit_btn = QPushButton(self.head_reports)
         self.reports_exit_btn.setObjectName(u"reports_exit_btn")
         self.reports_exit_btn.setMaximumSize(QSize(30, 30))
-        self.reports_exit_btn.setIcon(icon2)
+        self.reports_exit_btn.setIcon(icon)
         self.reports_exit_btn.setIconSize(QSize(30, 30))
 
         self.horizontalLayout_7.addWidget(self.reports_exit_btn)
@@ -2061,7 +2038,7 @@ class Ui_Admin(object):
         self.reports_list_exit_btn = QPushButton(self.head_reports_list)
         self.reports_list_exit_btn.setObjectName(u"reports_list_exit_btn")
         self.reports_list_exit_btn.setMaximumSize(QSize(30, 30))
-        self.reports_list_exit_btn.setIcon(icon2)
+        self.reports_list_exit_btn.setIcon(icon)
         self.reports_list_exit_btn.setIconSize(QSize(30, 30))
 
         self.horizontalLayout_8.addWidget(self.reports_list_exit_btn)
@@ -2144,8 +2121,6 @@ class Ui_Admin(object):
     def retranslateUi(self, Admin):
         self.icon_admin.setText("")
         self.name_admin.setText(QCoreApplication.translate("Admin", u"\u0110i\u1ec3m danh sinh vi\u00ean", None))
-        self.admin_minimize_btn.setText("")
-        self.admin_expand_btn.setText("")
         self.admin_exit_btn.setText("")
         self.menu_btn.setText("")
         self.admins_btn.setText("")

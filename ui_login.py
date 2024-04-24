@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'loginaaVOND.ui'
+## Form generated from reading UI file 'loginlHzCat.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -73,7 +73,7 @@ class Ui_Login(object):
         self.sign_in_title.setAlignment(Qt.AlignCenter)
         self.signin_username_input = QLineEdit(self.window)
         self.signin_username_input.setObjectName(u"signin_username_input")
-        self.signin_username_input.setGeometry(QRect(322, 120, 190, 31))
+        self.signin_username_input.setGeometry(QRect(322, 145, 190, 31))
         font2 = QFont()
         font2.setFamily(u"Cascadia Code")
         font2.setPointSize(9)
@@ -86,7 +86,7 @@ class Ui_Login(object):
 "")
         self.signin_password_input = QLineEdit(self.window)
         self.signin_password_input.setObjectName(u"signin_password_input")
-        self.signin_password_input.setGeometry(QRect(320, 190, 191, 31))
+        self.signin_password_input.setGeometry(QRect(320, 215, 191, 31))
         self.signin_password_input.setFont(font2)
         self.signin_password_input.setStyleSheet(u"background-color: rgba(0,0,0,0);\n"
 "border: 2px solid rgba(0,0,0,0);\n"
@@ -97,7 +97,7 @@ class Ui_Login(object):
         self.signin_password_input.setEchoMode(QLineEdit.Password)
         self.signin_btn = QPushButton(self.window)
         self.signin_btn.setObjectName(u"signin_btn")
-        self.signin_btn.setGeometry(QRect(390, 270, 93, 28))
+        self.signin_btn.setGeometry(QRect(390, 310, 93, 28))
         font3 = QFont()
         font3.setFamily(u"Cascadia Code")
         font3.setPointSize(8)
@@ -107,7 +107,7 @@ class Ui_Login(object):
         self.signin_btn.setStyleSheet(u"")
         self.wrong_pass_label = QLabel(self.window)
         self.wrong_pass_label.setObjectName(u"wrong_pass_label")
-        self.wrong_pass_label.setGeometry(QRect(380, 230, 131, 16))
+        self.wrong_pass_label.setGeometry(QRect(380, 255, 131, 16))
         font4 = QFont()
         font4.setFamily(u"Cascadia Mono SemiBold")
         self.wrong_pass_label.setFont(font4)
@@ -134,7 +134,7 @@ class Ui_Login(object):
         self.signin_exit_btn.setIcon(icon)
         self.hide_password_btn = QPushButton(self.window)
         self.hide_password_btn.setObjectName(u"hide_password_btn")
-        self.hide_password_btn.setGeometry(QRect(517, 195, 25, 25))
+        self.hide_password_btn.setGeometry(QRect(517, 220, 25, 25))
         self.hide_password_btn.setFont(font3)
         self.hide_password_btn.setCursor(QCursor(Qt.PointingHandCursor))
         self.hide_password_btn.setLayoutDirection(Qt.LeftToRight)
@@ -144,6 +144,10 @@ class Ui_Login(object):
         icon1 = QIcon()
         icon1.addFile(u":/icons/EC8482/alert-circle.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.hide_password_btn.setIcon(icon1)
+        self.admin_btn = QRadioButton(self.window)
+        self.admin_btn.setObjectName(u"admin_btn")
+        self.admin_btn.setGeometry(QRect(400, 110, 131, 20))
+        self.admin_btn.setFont(font2)
         Login.setCentralWidget(self.login_window)
 
         self.retranslateUi(Login)
@@ -162,5 +166,6 @@ class Ui_Login(object):
         self.wrong_pass_label.setText(QCoreApplication.translate("Login", u"Sai m\u1eadt kh\u1ea9u!", None))
         self.signin_exit_btn.setText("")
         self.hide_password_btn.setText("")
+        self.admin_btn.setText(QCoreApplication.translate("Login", u"Admin LogIn", None))
     # retranslateUi
 

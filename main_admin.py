@@ -50,7 +50,8 @@ class AdminWindow(QMainWindow):
             print("No API or data found!")
 
     def logout_func(self):
-        pass
+        self.widget.setCurrentIndex(0)
+        self.widget.currentWidget().login_init() 
         
     def swtich_page_func(self, index):
         self.ui.main_pages.setCurrentIndex(index)
@@ -92,6 +93,9 @@ class AdminWindow(QMainWindow):
         self.ui.reports_list_exit_btn.clicked.connect(lambda: self.relp_collapse_popup('exit'))
         self.ui.reports_list_save_btn.clicked.connect(lambda: self.relp_collapse_popup('save'))
 
+        self.ui.logout_btn.clicked.connect(self.logout_func)
+        self.ui.admin_exit_btn.clicked.connect(self.exit_func)
+
     
     # TITLE ADMIN
     def exit_func(self):
@@ -123,37 +127,23 @@ class AdminWindow(QMainWindow):
         pass
         
     def collapse_menu(self):
-        # print("COLLAPSE")
         self.ui.menu.setMinimumWidth(50)
         list_btns = [self.ui.admins_btn,self.ui.teachers_btn,self.ui.students_btn,self.ui.rooms_btn,self.ui.reports_btn,self.ui.reports_list_btn,self.ui.menu_btn,self.ui.logout_btn]
         for i in range(len(list_btns)):
             list_btns[i].setStyleSheet(HauSettings.menu_btns_style(9,9,9,9,1,1,1,1))
             list_btns[i].setText("")
-        # pass
         
     def menu_func(self):
         if self.ui.menu.size().width() < 200:
             self.expand_menu()
         else:
             self.collapse_menu()
-        # print("MENU")
         self.sync_btn_page()
 
     def init_searching(self):
-        # admin_list = []
-        # for item in self.admin_api['admin']:
-        #     admin_list.append(item['MaAD'])
-        #         # admin_list.append(val)
-        # print(admin_list)
-
-        # admin_completer = QCompleter(admin_list, self.ui.admins_input)
-        # self.ui.admins_input.setCompleter(admin_completer)
-
         giaovien_list = []
         for item in self.admin_api['giaovien']:
             giaovien_list.append(item['MaGV'])
-                # giaovien_list.append(val)
-        print(giaovien_list)
 
         giaovien_completer = QCompleter(giaovien_list, self.ui.teachers_input)
         self.ui.teachers_input.setCompleter(giaovien_completer)
@@ -161,8 +151,6 @@ class AdminWindow(QMainWindow):
         sinhvien_list = []
         for item in self.admin_api['sinhvien']:
             sinhvien_list.append(item['MaSV'])
-                # sinhvien_list.append(val)
-        print(sinhvien_list)
 
         sinhvien_completer = QCompleter(sinhvien_list, self.ui.students_input)
         self.ui.students_input.setCompleter(sinhvien_completer)
@@ -170,8 +158,6 @@ class AdminWindow(QMainWindow):
         lophoc_list = []
         for item in self.admin_api['lophoc']:
             lophoc_list.append(item['MaLop'])
-                # lophoc_list.append(val)
-        print(lophoc_list)
 
         lophoc_completer = QCompleter(lophoc_list, self.ui.rooms_input)
         self.ui.rooms_input.setCompleter(lophoc_completer)
@@ -179,8 +165,6 @@ class AdminWindow(QMainWindow):
         baocao_list = []
         for item in self.admin_api['baocao']:
             baocao_list.append(item['MaSV'])
-                # baocao_list.append(val)
-        print(baocao_list)
 
         baocao_completer = QCompleter(baocao_list, self.ui.reports_input)
         self.ui.reports_input.setCompleter(baocao_completer)
@@ -188,8 +172,6 @@ class AdminWindow(QMainWindow):
         dslop_list = []
         for item in self.admin_api['dslop']:
             dslop_list.append(item['MaLop'])
-                # dslop_list.append(val)
-        print(dslop_list)
 
         dslop_completer = QCompleter(dslop_list, self.ui.reports_list_input)
         self.ui.teachers_input.setCompleter(dslop_completer)
