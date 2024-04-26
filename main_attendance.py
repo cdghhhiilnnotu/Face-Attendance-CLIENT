@@ -52,7 +52,7 @@ class AttendanceWindow(QMainWindow):
         self.ui.recognize_refresh_btn.clicked.connect(self.recp_refresh_results)
 
     def logout_func(self):
-        self.attendance_init()
+        self.init_attendance()
         self.widget.setCurrentIndex(0)
         self.widget.currentWidget().login_init() 
 

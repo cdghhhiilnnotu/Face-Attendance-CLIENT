@@ -31,7 +31,7 @@ class LoginWindow(QMainWindow):
         self.setFixedWidth(590)
         self.setFixedHeight(410)
         self.passwordIsHide = False
-        self.isAdmin = False
+        self.isAdmin = True
         self.hiding_password()
         self.ui.signin_username_input.setText("")
         self.ui.signin_password_input.setText("")
