@@ -11,10 +11,12 @@ class LoginWindow(QMainWindow):
         self.ui = Ui_Login()
         self.ui.setupUi(self)
         loadJsonStyle(self, self.ui, jsonFiles={'style-client.json'})
+        self.isAdmin = True
         
         self.ui.signin_btn.clicked.connect(self.signin_func)
         self.ui.hide_password_btn.clicked.connect(self.hiding_password)
         self.ui.signin_exit_btn.clicked.connect(lambda: QApplication.quit())
+        self.ui.admin_btn.clicked.connect(self.switch_admin)
         self.login_init()
     
     def hiding_password(self):
@@ -29,13 +31,22 @@ class LoginWindow(QMainWindow):
         self.setFixedWidth(590)
         self.setFixedHeight(410)
         self.passwordIsHide = False
+        self.isAdmin = False
         self.hiding_password()
         self.ui.signin_username_input.setText("")
         self.ui.signin_password_input.setText("")
         self.ui.wrong_pass_label.hide()
 
+    def switch_admin(self):
+        if self.isAdmin:
+            self.isAdmin = False
+            self.ui.admin_btn.setText("Giảng viên")
+        else:
+            self.isAdmin = True
+            self.ui.admin_btn.setText("Quản trị viên")
+
     def signin_func(self):
-        if not self.ui.admin_btn.isChecked():
+        if not self.isAdmin:
             if CollectData.check_user(self.ui.signin_username_input.text(),self.ui.signin_password_input.text()):
                 self.signin_user_success()
             else:

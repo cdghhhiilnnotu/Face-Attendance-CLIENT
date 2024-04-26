@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'attendanceXzPQAP.ui'
+## Form generated from reading UI file 'attendanceeskbgh.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -326,7 +326,7 @@ class Ui_Attendance(object):
         self.home_train_btn = QPushButton(self.widget)
         self.home_train_btn.setObjectName(u"home_train_btn")
         self.home_train_btn.setMinimumSize(QSize(150, 30))
-        self.home_train_btn.setMaximumSize(QSize(150, 30))
+        self.home_train_btn.setMaximumSize(QSize(150, 60))
         self.home_train_btn.setFont(font5)
         self.home_train_btn.setStyleSheet(u"background-color: rgb(190,207,187);\n"
 "color: rgb(0,0,0);\n"
@@ -732,13 +732,16 @@ class Ui_Attendance(object):
         self.widget_8.setObjectName(u"widget_8")
         self.gridLayout = QGridLayout(self.widget_8)
         self.gridLayout.setObjectName(u"gridLayout")
+        self.gridLayout.setContentsMargins(4, -1, -1, -1)
         self.report_class_input = QLineEdit(self.widget_8)
         self.report_class_input.setObjectName(u"report_class_input")
         self.report_class_input.setMinimumSize(QSize(0, 30))
         self.report_class_input.setFont(font4)
         self.report_class_input.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
 "border-radius: 7px;\n"
-"border: 2px solid #000;")
+"border: 2px solid #000;\n"
+"padding-left: 4px;\n"
+"")
 
         self.gridLayout.addWidget(self.report_class_input, 0, 0, 1, 1)
 
@@ -765,16 +768,24 @@ class Ui_Attendance(object):
 "border-bottom-color: rgba(46, 82, 101, 200);\n"
 "color: rgb(0,0,0);\n"
 "padding-bottom:7px;\n"
-"")
+"padding-left:4px;")
 
-        self.gridLayout.addWidget(self.report_student_input, 1, 0, 1, 1)
+        self.gridLayout.addWidget(self.report_student_input, 1, 0, 2, 1)
+
+        self.verticalSpacer_7 = QSpacerItem(20, 18, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.gridLayout.addItem(self.verticalSpacer_7, 2, 1, 2, 1)
 
         self.report_wrong_label = QLabel(self.widget_8)
         self.report_wrong_label.setObjectName(u"report_wrong_label")
         self.report_wrong_label.setFont(font9)
         self.report_wrong_label.setStyleSheet(u"color: rgb(255, 0, 0);")
 
-        self.gridLayout.addWidget(self.report_wrong_label, 2, 0, 1, 1)
+        self.gridLayout.addWidget(self.report_wrong_label, 3, 0, 2, 1)
+
+        self.verticalSpacer_6 = QSpacerItem(20, 24, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.gridLayout.addItem(self.verticalSpacer_6, 4, 1, 1, 1)
 
 
         self.verticalLayout_18.addWidget(self.widget_8)
@@ -845,7 +856,7 @@ class Ui_Attendance(object):
 
         self.retranslateUi(Attendance)
 
-        self.main_pages.setCurrentIndex(2)
+        self.main_pages.setCurrentIndex(0)
         self.recognize_view.setCurrentIndex(2)
 
 
@@ -865,7 +876,7 @@ class Ui_Attendance(object):
         self.home_class_input.setInputMask("")
         self.home_class_input.setText("")
         self.home_search_btn.setText(QCoreApplication.translate("Attendance", u"T\u00ecm ki\u1ebfm", None))
-        self.home_train_btn.setText(QCoreApplication.translate("Attendance", u"Hu\u1ea5n luy\u1ec7n", None))
+        self.home_train_btn.setText(QCoreApplication.translate("Attendance", u"H\u1ecdc \u1ea3nh", None))
         ___qtablewidgetitem = self.home_table.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("Attendance", u"MSV", None));
         ___qtablewidgetitem1 = self.home_table.horizontalHeaderItem(1)
@@ -884,7 +895,7 @@ class Ui_Attendance(object):
         self.recognize_tab_1_btn.setText("")
         self.recognize_tab_2_btn.setText("")
         self.recognize_tab_3_btn.setText("")
-        self.recognize_late_btn.setText(QCoreApplication.translate("Attendance", u"\u0110i\u1ec3m danh", None))
+        self.recognize_late_btn.setText(QCoreApplication.translate("Attendance", u"\u0110i\u1ec3m danh mu\u1ed9n", None))
         self.recognize_open_img_btn.setText(QCoreApplication.translate("Attendance", u"M\u1edf \u1ea3nh", None))
         self.recognize_guess_btn.setText(QCoreApplication.translate("Attendance", u"\u0110i\u1ec3m danh", None))
         self.recognize_export_btn.setText(QCoreApplication.translate("Attendance", u"K\u1ebft qu\u1ea3", None))
@@ -899,10 +910,11 @@ class Ui_Attendance(object):
         self.report_name_label.setText(QCoreApplication.translate("Attendance", u"B\u00c1O C\u00c1O", None))
         self.report_class_input.setInputMask("")
         self.report_class_input.setText("")
+        self.report_class_input.setPlaceholderText(QCoreApplication.translate("Attendance", u"Nh\u1eadp v\u00e0o m\u00e3 l\u1edbp", None))
         self.report_search_btn.setText(QCoreApplication.translate("Attendance", u"T\u00ecm ki\u1ebfm", None))
         self.report_student_input.setInputMask("")
         self.report_student_input.setText("")
-        self.report_student_input.setPlaceholderText(QCoreApplication.translate("Attendance", u"Nh\u1eadp v\u00e0o m\u00e3 sinh vi\u00ean c\u1ea7n xem chi ti\u1ebft", None))
+        self.report_student_input.setPlaceholderText(QCoreApplication.translate("Attendance", u"Nh\u1eadp v\u00e0o m\u00e3 sinh vi\u00ean", None))
         self.report_wrong_label.setText(QCoreApplication.translate("Attendance", u"Sai th\u00f4ng tin l\u1edbp ho\u1eb7c sinh vi\u00ean", None))
         ___qtablewidgetitem7 = self.report_table.horizontalHeaderItem(0)
         ___qtablewidgetitem7.setText(QCoreApplication.translate("Attendance", u"MSV", None));

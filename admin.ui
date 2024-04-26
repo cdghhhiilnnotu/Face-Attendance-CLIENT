@@ -121,7 +121,7 @@ border-top-left-radius: 5px;</string>
           <string notr="true">color: rgb(255, 255, 255);</string>
          </property>
          <property name="text">
-          <string>Điểm danh sinh viên</string>
+          <string>Quản trị viên</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>

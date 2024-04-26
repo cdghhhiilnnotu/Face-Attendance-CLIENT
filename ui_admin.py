@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'adminbaUkIv.ui'
+## Form generated from reading UI file 'adminFziLFg.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -15,6 +15,8 @@ from PyQt5.QtWidgets import *
 import resources.resources
 
 from Custom_Widgets.Widgets import QCustomSlideMenu
+
+
 class Ui_Admin(object):
     def setupUi(self, Admin):
         if not Admin.objectName():
@@ -2120,7 +2122,7 @@ class Ui_Admin(object):
 
     def retranslateUi(self, Admin):
         self.icon_admin.setText("")
-        self.name_admin.setText(QCoreApplication.translate("Admin", u"\u0110i\u1ec3m danh sinh vi\u00ean", None))
+        self.name_admin.setText(QCoreApplication.translate("Admin", u"Qu\u1ea3n tr\u1ecb vi\u00ean", None))
         self.admin_exit_btn.setText("")
         self.menu_btn.setText("")
         self.admins_btn.setText("")

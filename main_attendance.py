@@ -21,8 +21,7 @@ class AttendanceWindow(QMainWindow):
         self.collector = CollectData.check_user(gv_name, gv_pass)
         self.thread = {}
         
-        self.init_attendance()
-        self.init_buttons()
+        # self.init_attendance()
 
     # COMMONS
     def init_attendance(self):
@@ -31,6 +30,7 @@ class AttendanceWindow(QMainWindow):
         self.recp_init_page()
         self.swtich_page_func(0)
         self.init_suggesting_search()
+        self.init_buttons()
 
     def init_buttons(self):
         self.ui.menu_btn.clicked.connect(self.menu_func)
