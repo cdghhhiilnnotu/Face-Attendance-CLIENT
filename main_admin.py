@@ -43,6 +43,11 @@ class AdminWindow(QMainWindow):
         
         self.init_admin()
 
+        
+    # TITLE ADMIN
+    def exit_func(self):
+        QApplication.quit()
+
     def reset_api(self):
         try:
             self.admin_api = requests.get(HauSettings.BASE_URL + f"/").json()
@@ -95,11 +100,6 @@ class AdminWindow(QMainWindow):
 
         self.ui.logout_btn.clicked.connect(self.logout_func)
         self.ui.admin_exit_btn.clicked.connect(self.exit_func)
-
-    
-    # TITLE ADMIN
-    def exit_func(self):
-        QApplication.quit()
 
 
     # MAIN ADMIN
@@ -238,6 +238,7 @@ class AdminWindow(QMainWindow):
         self.report_save_mode = ""
         self.report_list_save_mode = ""
 
+
     # ADMIN PAGE
     def adp_init(self):
         self.adp_init_table()
@@ -289,7 +290,8 @@ class AdminWindow(QMainWindow):
             self.ui.admin_username_text.setText("")
             self.ui.admin_password_text.setText("")
             self.admin_save_mode = "add"
-
+        # admin_idx = self.ui.admins_table.selectRow(-1)
+        
     def adp_collapse_popup(self, mode=""):
         self.ui.popupWidget.collapseMenu()
         if mode == "save":
@@ -306,6 +308,7 @@ class AdminWindow(QMainWindow):
                 self.init_admin()
             except:
                 print("No Connect SERVER!")
+        # admin_idx = self.ui.admins_table.selectRow(-1)
 
     def adp_save_func(self):
         data_admin = {}
@@ -388,14 +391,14 @@ class AdminWindow(QMainWindow):
             self.ui.teacher_password_text.setText("")
             self.ui.teacher_phone_text.setText("")
             self.teacher_save_mode = "add"
-
+        # teacher_idx = self.ui.teachers_table.selectRow(-1)
+        
     def tp_collapse_popup(self, mode=""):
         self.ui.popupWidget.collapseMenu()
         # self.teacher_save_mode = mode
         if mode == "save":
             self.tp_save_func()
         self.reset_popup()
-
 
     def tp_delete_func(self):
         teacher_idx = self.ui.teachers_table.currentRow()

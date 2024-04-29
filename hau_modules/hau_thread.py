@@ -23,10 +23,14 @@ class Thread_Video(QThread):
                     face = im[y:y + h, x:x + w]
                     face_resize = cv2.resize(face, (224, 224))
                     prediction = self.model.model.predict(np.expand_dims(face_resize, axis=0))
-                    cv2.rectangle(im, (x, y), (x + w, y + h), (0, 255, 0), 3)
-                    # if (prediction[1] < 800):
-                    cv2.putText(im, '%s-%.0f' % (self.dataset_img[np.argmax(prediction)], np.max(prediction)), (x - 10, y - 10),
-                                cv2.FONT_HERSHEY_PLAIN, 2, (0, 0, 255))
+                    if (np.max(prediction) > 0.98):
+                        cv2.rectangle(im, (x, y), (x + w, y + h), (0, 255, 0), 3)
+                        cv2.putText(im, '%s-%.0f' % (self.dataset_img[np.argmax(prediction)], np.max(prediction)), (x - 10, y - 10),
+                                    cv2.FONT_HERSHEY_PLAIN, 2, (0, 0, 255))
+                    else:
+                        cv2.rectangle(im, (x, y), (x + w, y + h), (255, 0, 0), 3)
+                        cv2.putText(im, 'UNKNOWN', (x - 10, y - 10),
+                                    cv2.FONT_HERSHEY_PLAIN, 2, (0, 0, 255))
                     self.face_guessed.append(self.dataset_img[np.argmax(prediction)])
             except:
                 pass

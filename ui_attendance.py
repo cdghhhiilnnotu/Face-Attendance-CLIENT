@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'attendanceeskbgh.ui'
+## Form generated from reading UI file 'attendanceHyKwDL.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -613,6 +613,7 @@ class Ui_Attendance(object):
         self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
         self.recognize_input_img_label = QLabel(self.recognize_image)
         self.recognize_input_img_label.setObjectName(u"recognize_input_img_label")
+        self.recognize_input_img_label.setMaximumSize(QSize(800, 16777215))
         self.recognize_input_img_label.setFont(font6)
         self.recognize_input_img_label.setStyleSheet(u"background-color: rgb(238, 0, 255);")
         self.recognize_input_img_label.setPixmap(QPixmap(u"../../Duong/.designer/backup/resources/apps/no_data_found.png"))
@@ -628,6 +629,7 @@ class Ui_Attendance(object):
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
         self.recognize_output_img_label = QLabel(self.recognize_detect)
         self.recognize_output_img_label.setObjectName(u"recognize_output_img_label")
+        self.recognize_output_img_label.setMaximumSize(QSize(800, 16777215))
         self.recognize_output_img_label.setFont(font6)
         self.recognize_output_img_label.setStyleSheet(u"background-color: rgb(127, 255, 29);")
         self.recognize_output_img_label.setPixmap(QPixmap(u"../../Duong/.designer/backup/resources/apps/no_data_found.png"))
@@ -685,7 +687,7 @@ class Ui_Attendance(object):
         self.recognize_keep_btn.setIconSize(QSize(25, 25))
         self.recognize_refresh_btn = QPushButton(self.widget_9)
         self.recognize_refresh_btn.setObjectName(u"recognize_refresh_btn")
-        self.recognize_refresh_btn.setGeometry(QRect(470, 20, 150, 30))
+        self.recognize_refresh_btn.setGeometry(QRect(310, 20, 150, 30))
         self.recognize_refresh_btn.setMinimumSize(QSize(150, 30))
         self.recognize_refresh_btn.setFont(font5)
         self.recognize_refresh_btn.setStyleSheet(u"background-color: rgb(190,207,187);\n"
@@ -695,6 +697,18 @@ class Ui_Attendance(object):
 "font-weight: bold;\n"
 "font-size: 12pt;")
         self.recognize_refresh_btn.setIconSize(QSize(25, 25))
+        self.recognize_delete_btn = QPushButton(self.widget_9)
+        self.recognize_delete_btn.setObjectName(u"recognize_delete_btn")
+        self.recognize_delete_btn.setGeometry(QRect(500, 20, 150, 30))
+        self.recognize_delete_btn.setMinimumSize(QSize(150, 30))
+        self.recognize_delete_btn.setFont(font5)
+        self.recognize_delete_btn.setStyleSheet(u"background-color: rgb(190,207,187);\n"
+"color: rgb(0,0,0);\n"
+"border-radius: 5px;\n"
+"border: 2px solid #000;\n"
+"font-weight: bold;\n"
+"font-size: 12pt;")
+        self.recognize_delete_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_10.addWidget(self.widget_9)
 
@@ -805,8 +819,8 @@ class Ui_Attendance(object):
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
         self.verticalLayout_6.setContentsMargins(11, 11, 11, 11)
         self.report_table = QTableWidget(self.report_view)
-        if (self.report_table.columnCount() < 5):
-            self.report_table.setColumnCount(5)
+        if (self.report_table.columnCount() < 6):
+            self.report_table.setColumnCount(6)
         __qtablewidgetitem7 = QTableWidgetItem()
         __qtablewidgetitem7.setTextAlignment(Qt.AlignCenter);
         __qtablewidgetitem7.setFont(font1);
@@ -828,6 +842,10 @@ class Ui_Attendance(object):
         __qtablewidgetitem11.setTextAlignment(Qt.AlignCenter);
         __qtablewidgetitem11.setFont(font1);
         self.report_table.setHorizontalHeaderItem(4, __qtablewidgetitem11)
+        __qtablewidgetitem12 = QTableWidgetItem()
+        __qtablewidgetitem12.setTextAlignment(Qt.AlignCenter);
+        __qtablewidgetitem12.setFont(font1);
+        self.report_table.setHorizontalHeaderItem(5, __qtablewidgetitem12)
         self.report_table.setObjectName(u"report_table")
         self.report_table.setFont(font6)
         self.report_table.setStyleSheet(u"border-radius: 5px;\n"
@@ -856,7 +874,7 @@ class Ui_Attendance(object):
 
         self.retranslateUi(Attendance)
 
-        self.main_pages.setCurrentIndex(0)
+        self.main_pages.setCurrentIndex(1)
         self.recognize_view.setCurrentIndex(2)
 
 
@@ -907,6 +925,7 @@ class Ui_Attendance(object):
         ___qtablewidgetitem6.setText(QCoreApplication.translate("Attendance", u"M\u00e3 sinh vi\u00ean", None));
         self.recognize_keep_btn.setText(QCoreApplication.translate("Attendance", u"L\u01b0u", None))
         self.recognize_refresh_btn.setText(QCoreApplication.translate("Attendance", u"L\u00e0m m\u1edbi", None))
+        self.recognize_delete_btn.setText(QCoreApplication.translate("Attendance", u"X\u00f3a", None))
         self.report_name_label.setText(QCoreApplication.translate("Attendance", u"B\u00c1O C\u00c1O", None))
         self.report_class_input.setInputMask("")
         self.report_class_input.setText("")
@@ -926,6 +945,8 @@ class Ui_Attendance(object):
         ___qtablewidgetitem10.setText(QCoreApplication.translate("Attendance", u"M\u00e3 l\u1edbp", None));
         ___qtablewidgetitem11 = self.report_table.horizontalHeaderItem(4)
         ___qtablewidgetitem11.setText(QCoreApplication.translate("Attendance", u"\u0110i\u1ec3m danh", None));
+        ___qtablewidgetitem12 = self.report_table.horizontalHeaderItem(5)
+        ___qtablewidgetitem12.setText(QCoreApplication.translate("Attendance", u"Ghi ch\u00fa", None));
         pass
     # retranslateUi
 

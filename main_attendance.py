@@ -15,6 +15,7 @@ class AttendanceWindow(QMainWindow):
         self.ui.setupUi(self)
         loadJsonStyle(self, self.ui, jsonFiles={'style-client.json'})
         self.widget = widget
+        self.isRecording = False
 
         # ATTEDANCE ATTRIBUTE
         self.class_id = ""
@@ -44,6 +45,7 @@ class AttendanceWindow(QMainWindow):
         self.ui.recognize_guess_btn.clicked.connect(self.start_capture_video)
         self.ui.recognize_export_btn.clicked.connect(self.stop_capture_video)
         self.ui.recognize_open_img_btn.clicked.connect(self.recp_open_image_to_guess_func)
+        self.ui.recognize_delete_btn.clicked.connect(self.recp_delete_guess_func)
         self.ui.recognize_tab_1_btn.clicked.connect(lambda: self.recp_switch_subpage_func(0))
         self.ui.recognize_tab_2_btn.clicked.connect(lambda: self.recp_switch_subpage_func(1))
         self.ui.recognize_tab_3_btn.clicked.connect(lambda: self.recp_switch_subpage_func(2))
@@ -149,6 +151,15 @@ class AttendanceWindow(QMainWindow):
         self.model = HauModel(self.dataset_path, 1, self.class_id, model_dir=self.collector.MODEL_DIR)
         self.model.training()
         self.model.evaluating()
+        self.recp_init_page()
+
+        dlg = QMessageBox(self)
+        dlg.setWindowTitle("I have a question!")
+        dlg.setText("This is a simple dialog")
+        button = dlg.exec()
+
+        if button == QMessageBox.Ok:
+            print("OK!")
 
 
     # RECOGNIZE
@@ -217,6 +228,7 @@ class AttendanceWindow(QMainWindow):
             self.recp_show_recognition_table_func1(self.face_guessed)
             self.thread[1].stop()
             self.recp_switch_subpage_func(2)
+            self.isRecording = False
         except:
             pass
 
@@ -240,7 +252,6 @@ class AttendanceWindow(QMainWindow):
             self.recp_show_recognition_table_func2(colors, guessed)
             self.face_guessed = list(dict.fromkeys(guessed))
             HauSettings.display_image_func(self.ui.recognize_output_img_label, file_name)
-
 
     def show_wedcam(self, cv_img):
         """Updates the image_label with a new opencv image"""
@@ -283,6 +294,10 @@ class AttendanceWindow(QMainWindow):
         except:
             pass
 
+    def recp_delete_guess_func(self):
+        del self.face_guessed[self.ui.recognize_table.currentRow()]
+        self.recp_show_recognition_table_func1(self.face_guessed)
+
     def recp_open_image_to_guess_func(self):
         print("PRESS RECOGNIZE OPEN FILE BUTTON")
         try:
@@ -311,6 +326,7 @@ class AttendanceWindow(QMainWindow):
         self.ui.report_table.setColumnWidth(2, 200)
         self.ui.report_table.setColumnWidth(3, 200)
         self.ui.report_table.setColumnWidth(4, 200)
+        self.ui.report_table.setColumnWidth(5, 200)
         
         datasv = []
         if search_student == "":
@@ -332,6 +348,10 @@ class AttendanceWindow(QMainWindow):
                 self.ui.report_table.setItem(row, 2, QTableWidgetItem(e['LopQL']))
                 self.ui.report_table.setItem(row, 3, QTableWidgetItem(e['MaLop']))
                 self.ui.report_table.setItem(row, 4, QTableWidgetItem(str(e['DiemDanh'])))
+                if search_student == "":
+                    self.ui.report_table.setItem(row, 5, QTableWidgetItem(""))
+                else:
+                    self.ui.report_table.setItem(row, 5, QTableWidgetItem(str(e['GhiChu'])))
                 row += 1
 
 
