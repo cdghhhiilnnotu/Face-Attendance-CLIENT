@@ -32,6 +32,7 @@ class LoginWindow(QMainWindow):
         self.setFixedHeight(410)
         self.passwordIsHide = False
         self.isAdmin = True
+        self.ui.admin_btn.setText("Quản trị viên")
         self.hiding_password()
         self.ui.signin_username_input.setText("")
         self.ui.signin_password_input.setText("")

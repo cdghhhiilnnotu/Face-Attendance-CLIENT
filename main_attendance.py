@@ -3,18 +3,18 @@ from ui_attendance import *
 from Custom_Widgets.Widgets import * 
 
 
-gv_name, gv_pass = "GV00000002","teacher456"
+gv_name, gv_pass = "",""
 def background_func(func, args):
     th = threading.Thread(target=func, args=args)
     th.start()
 
 class AttendanceWindow(QMainWindow):
     def __init__(self, widget):
+        self.widget = widget
         super(AttendanceWindow, self).__init__()
         self.ui = Ui_Attendance()
         self.ui.setupUi(self)
         loadJsonStyle(self, self.ui, jsonFiles={'style-client.json'})
-        self.widget = widget
         self.isRecording = False
 
         # ATTEDANCE ATTRIBUTE
@@ -26,6 +26,9 @@ class AttendanceWindow(QMainWindow):
 
     # COMMONS
     def init_attendance(self):
+        self.widget.setWindowFlag(Qt.FramelessWindowHint)
+        # self.setFixedWidth(590)
+        # self.setFixedHeight(410)
         self.hp_init_page()
         self.repp_init_page()
         self.recp_init_page()

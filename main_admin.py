@@ -7,10 +7,10 @@ class AdminWindow(QMainWindow):
     def __init__(self, widget):
         super(AdminWindow, self).__init__()
         # loadUi("attendance.ui", self)
+        self.widget = widget
         self.ui = Ui_Admin()
         self.ui.setupUi(self)
         loadJsonStyle(self, self.ui, jsonFiles={'style-admin.json'})
-        self.widget = widget
         self.admin_api = {}
         self.reset_api()
         self.admin_save_mode = ""
@@ -177,9 +177,10 @@ class AdminWindow(QMainWindow):
         self.ui.teachers_input.setCompleter(dslop_completer)
 
     def init_admin(self):
+        self.widget.setWindowFlag(Qt.FramelessWindowHint)
         self.ui.popupWidget.collapseMenu()
-        self.setFixedWidth(1280)
-        self.setFixedHeight(720)
+        # self.setFixedWidth(1280)
+        # self.setFixedHeight(720)
         self.collapse_menu()
         self.init_searching()
         self.adp_init()
