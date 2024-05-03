@@ -8,7 +8,7 @@ class HauModel():
         self.imgs_path = imgs
         self.epochs = epoch
         self.name = name
-        self.model = self.init_model()
+        self.model = self.init_model_tl()
         self.model_path = model_dir
         self.guessed_students = []
 
@@ -92,7 +92,26 @@ class HauModel():
             class_mode='categorical',
             shuffle=False)
 
-    def init_model(self):
+    def init_model_nor(self):
+        inputs = keras.Input(self.input_shape)
+        x = keras.layers.Conv2D(128,(5,5),activation='relu', kernel_regularizer=l2(0.001 * 4))(inputs)
+        x = keras.layers.MaxPooling2D(pool_size=(2,2))(x)
+        x = keras.layers.Conv2D(64,(5,5),activation='relu', kernel_regularizer=l2(0.001 * 4))(inputs)
+        x = keras.layers.MaxPooling2D(pool_size=(3,3))(x)
+        x = keras.layers.Conv2D(32,(5,5),activation='relu', kernel_regularizer=l2(0.001 * 1))(x)
+        x = keras.layers.MaxPooling2D(pool_size=(3,3))(x)
+
+        x = keras.layers.Flatten()(x)
+        x = keras.layers.Dense(256, activation='relu')(x)
+        x = keras.layers.Dropout(0.25)(x)
+        x = keras.layers.Dense(128, activation='relu')(x)
+        x = keras.layers.Dense(len(os.listdir(self.datasets_path)), activation='softmax')(x)
+        model = keras.Model(inputs, x)
+
+        return model
+
+
+    def init_model_tl(self):
         densenet = DenseNet169(weights="imagenet", include_top=False, input_shape=self.input_shape)
         densenet.trainable = False
         inputs = keras.Input(self.input_shape)

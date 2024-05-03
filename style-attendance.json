@@ -33,36 +33,23 @@
 	],
 	"QCustomSlideMenu": [
         {
-            "name": "popupWidget",
+            "name": "trainning_popup",
             "defaultSize": [{
-                "width": 800,
-                "height": 0
+                "width": 1000,
+                "height": 100
             }],
             "collapsedSize": [{
-                "width": 800,
+                "width": 1000,
                 "height": 0
             }],
             "expandedSize": [{
-                "width": 800,
-                "height": 500
+                "width": 1000,
+                "height": 680
             }],
             "menuTransitionAnimation": [{
                 "animationDuration": 100,
                 "animationEasingCurve": "Linear"
-            }],
-            "floatPosition": [
-                {
-                    "relativeTo": "adminWidget",
-                    "position": "top-center",
-                    "shadow":[
-                        {
-                            "blurRadius": 20,
-                            "xOffset": 0,
-                            "yOffset": 0
-                        }
-                    ]
-                }
-            ]
+            }]
         }
     ]
 }

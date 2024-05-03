@@ -1,7 +1,6 @@
 from main_importer import *
 from ui_admin import *
-from Custom_Widgets.Widgets import * 
-from PyQt5 import QtWidgets
+from Custom_Widgets.Widgets import *
 
 class AdminWindow(QMainWindow):
     def __init__(self, widget):
@@ -177,10 +176,9 @@ class AdminWindow(QMainWindow):
         self.ui.teachers_input.setCompleter(dslop_completer)
 
     def init_admin(self):
-        self.widget.setWindowFlag(Qt.FramelessWindowHint)
         self.ui.popupWidget.collapseMenu()
-        # self.setFixedWidth(1280)
-        # self.setFixedHeight(720)
+        self.setFixedWidth(1280)
+        self.setFixedHeight(720)
         self.collapse_menu()
         self.init_searching()
         self.adp_init()
@@ -843,18 +841,18 @@ class AdminWindow(QMainWindow):
             except:
                 print("No Connect SERVER!")
         
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    widget = QtWidgets.QStackedWidget()
-    adminWin = AdminWindow(widget)
+# if __name__ == '__main__':
+#     app = QApplication(sys.argv)
+#     widget = QtWidgets.QStackedWidget()
+#     adminWin = AdminWindow(widget)
 
-    widget.addWidget(adminWin)
+#     widget.addWidget(adminWin)
 
-    widget.show()
-    try:
-        sys.exit(app.exec_())
-    except:
-        print("Exiting")
+#     widget.show()
+#     try:
+#         sys.exit(app.exec_())
+#     except:
+#         print("Exiting")
 
 
 

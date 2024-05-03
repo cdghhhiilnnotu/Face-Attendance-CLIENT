@@ -21,14 +21,14 @@ class AttendanceWindow(QMainWindow):
         self.class_id = ""
         self.collector = CollectData.check_user(gv_name, gv_pass)
         self.thread = {}
+        # self.ui.trainning_popup.expandMenu()
         
         # self.init_attendance()
 
     # COMMONS
     def init_attendance(self):
-        self.widget.setWindowFlag(Qt.FramelessWindowHint)
-        # self.setFixedWidth(590)
-        # self.setFixedHeight(410)
+        self.setFixedWidth(1280)
+        self.setFixedHeight(720)
         self.hp_init_page()
         self.repp_init_page()
         self.recp_init_page()
@@ -150,19 +150,23 @@ class AttendanceWindow(QMainWindow):
         self.ui.model_model_label.setText(self.class_id + ".keras")
 
     def hp_train_func(self):
+        # print("hELO")
+        # self.ui.trainning_popup.expandMenu()
+        # return
+        
         DatasetSupport.download_datasets_by_class_id(self.class_id, self.dataset_path, self.collector)
         self.model = HauModel(self.dataset_path, 1, self.class_id, model_dir=self.collector.MODEL_DIR)
         self.model.training()
         self.model.evaluating()
         self.recp_init_page()
 
-        dlg = QMessageBox(self)
-        dlg.setWindowTitle("I have a question!")
-        dlg.setText("This is a simple dialog")
-        button = dlg.exec()
+        # dlg = QMessageBox(self)
+        # dlg.setWindowTitle("I have a question!")
+        # dlg.setText("This is a simple dialog")
+        # button = dlg.exec()
 
-        if button == QMessageBox.Ok:
-            print("OK!")
+        # if button == QMessageBox.Ok:
+        #     print("OK!")
 
 
     # RECOGNIZE

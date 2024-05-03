@@ -1,7 +1,6 @@
 from main_importer import *
 from ui_login import *
 from Custom_Widgets.Widgets import * 
-from PyQt5 import QtWidgets
 
 class LoginWindow(QMainWindow):
     def __init__(self, widget):

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'adminFziLFg.ui'
+## Form generated from reading UI file 'adminMznsdr.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -16,12 +16,12 @@ import resources.resources
 
 from Custom_Widgets.Widgets import QCustomSlideMenu
 
-
 class Ui_Admin(object):
     def setupUi(self, Admin):
         if not Admin.objectName():
             Admin.setObjectName(u"Admin")
         Admin.resize(1280, 720)
+        Admin.setMinimumSize(QSize(0, 720))
         font = QFont()
         font.setFamily(u"Cambria")
         Admin.setFont(font)
@@ -87,6 +87,7 @@ class Ui_Admin(object):
 
         self.container = QWidget(self.adminWidget)
         self.container.setObjectName(u"container")
+        self.container.setMinimumSize(QSize(0, 680))
         self.container.setMaximumSize(QSize(16777215, 16777215))
         self.container.setLayoutDirection(Qt.LeftToRight)
         self.container.setAutoFillBackground(False)
