@@ -53,12 +53,12 @@
             "floatPosition": [
                 {
                     "relativeTo": "adminWidget",
-                    "position": "top-center",
+                    "position": "top-left",
                     "shadow":[
                         {
                             "blurRadius": 20,
-                            "xOffset": 0,
-                            "yOffset": 0
+                            "xOffset": 320,
+                            "yOffset": 180
                         }
                     ]
                 }

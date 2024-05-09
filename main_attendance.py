@@ -1,6 +1,7 @@
 from main_importer import *
 from ui_attendance import *
 from Custom_Widgets.Widgets import * 
+import time
 
 
 gv_name, gv_pass = "",""
@@ -153,12 +154,15 @@ class AttendanceWindow(QMainWindow):
         # print("hELO")
         # self.ui.trainning_popup.expandMenu()
         # return
-        
+        start = time.time()
         DatasetSupport.download_datasets_by_class_id(self.class_id, self.dataset_path, self.collector)
-        self.model = HauModel(self.dataset_path, 1, self.class_id, model_dir=self.collector.MODEL_DIR)
+        self.model = HauModel(self.dataset_path, 100, self.class_id, model_dir=self.collector.MODEL_DIR)
+        print(f"Download: {time.time() - start}")
+        start = time.time()
         self.model.training()
         self.model.evaluating()
         self.recp_init_page()
+        print(f"Training: {time.time() - start}")
 
         # dlg = QMessageBox(self)
         # dlg.setWindowTitle("I have a question!")

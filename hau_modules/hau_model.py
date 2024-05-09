@@ -1,14 +1,14 @@
 from .hau_importer import *
 
 class HauModel():
-    def __init__(self, datasets='datasets', epoch=1, name='', imgs='imgs', model_dir='models'):
+    def __init__(self, datasets='datasets', epoch=100, name='', imgs='imgs', model_dir='models'):
         self.datasets_path = datasets
         self.img_height, self.img_width = 224,224
         self.input_shape = (self.img_height, self.img_width, 3)
         self.imgs_path = imgs
         self.epochs = epoch
         self.name = name
-        self.model = self.init_model_tl()
+        self.model = self.init_model_nor()
         self.model_path = model_dir
         self.guessed_students = []
 
@@ -60,7 +60,7 @@ class HauModel():
                         break
 
     def augmentation_dataset(self):
-        batch_size = 64
+        batch_size = 10
         
         datagen = ImageDataGenerator(
             rescale=1./255

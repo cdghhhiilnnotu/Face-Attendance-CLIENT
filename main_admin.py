@@ -19,6 +19,13 @@ class AdminWindow(QMainWindow):
         self.report_save_mode = ""
         self.report_list_save_mode = ""
 
+        self.admin_table = {}
+        self.teacher_table = {}
+        self.student_table = {}
+        self.room_table = {}
+        self.report_table = {}
+        self.report_list_table = {}        
+
         self.ui.menu_btn.clicked.connect(self.menu_func)
         self.ui.admins_btn.clicked.connect(lambda: self.swtich_page_func(0))
         self.ui.teachers_btn.clicked.connect(lambda: self.swtich_page_func(1))
@@ -197,7 +204,7 @@ class AdminWindow(QMainWindow):
 
         self.ui.teacher_id_text.setText("")
         self.ui.teacher_name_text.setText("")
-        self.ui.teacher_password_text.setText("")
+        self.ui.teacher_birth_text.setText("")
         self.ui.teacher_address_text.setText("")
         self.ui.teacher_password_text.setText("")
         self.ui.teacher_phone_text.setText("")
@@ -265,6 +272,7 @@ class AdminWindow(QMainWindow):
                 self.ui.admins_table.setItem(row, 1, QTableWidgetItem(e['TenDN']))
                 self.ui.admins_table.setItem(row, 2, QTableWidgetItem(e['MatKhau']))
                 row += 1
+            self.admin_table = specific_data
         else:
             self.ui.admins_table.setRowCount(len(data_admin))
             row = 0
@@ -273,13 +281,14 @@ class AdminWindow(QMainWindow):
                 self.ui.admins_table.setItem(row, 1, QTableWidgetItem(e['TenDN']))
                 self.ui.admins_table.setItem(row, 2, QTableWidgetItem(e['MatKhau']))
                 row += 1
+            self.admin_table = data_admin
 
     def adp_expand_popup(self, mode=""):
         self.ui.popupWidget.expandMenu()
         self.ui.popupPages.setCurrentIndex(0)
         if mode == 'edit':
             admin_idx = self.ui.admins_table.currentRow()
-            admin_info = self.admin_api['admin'][admin_idx]
+            admin_info = self.admin_table[admin_idx]
             self.ui.admin_id_text.setText(admin_info['MaAD'])
             self.ui.admin_username_text.setText(admin_info['TenDN'])
             self.ui.admin_password_text.setText(admin_info['MatKhau'])
@@ -300,7 +309,7 @@ class AdminWindow(QMainWindow):
     def adp_delete_func(self):
         admin_idx = self.ui.admins_table.currentRow()
         if admin_idx != -1:
-            admin_info = self.admin_api['admin'][admin_idx]
+            admin_info = self.admin_table[admin_idx]
             try:
                 requests.delete(HauSettings.BASE_URL + f'admin/{admin_info["MaAD"]}')
                 self.reset_api()
@@ -358,6 +367,7 @@ class AdminWindow(QMainWindow):
         else:
             specific_data = data_teacher
             self.ui.teachers_table.setRowCount(len(data_teacher))
+        self.teacher_table = specific_data
         row = 0
         for e in specific_data:
                 self.ui.teachers_table.setItem(row, 0, QTableWidgetItem(e['MaGV']))
@@ -374,7 +384,7 @@ class AdminWindow(QMainWindow):
         if mode == 'edit':
             teacher_idx = self.ui.teachers_table.currentRow()
             if teacher_idx != -1:
-                teacher_info = self.admin_api['giaovien'][teacher_idx]
+                teacher_info = self.teacher_table[teacher_idx]
                 self.ui.teacher_id_text.setText(teacher_info['MaGV'])
                 self.ui.teacher_name_text.setText(teacher_info['TenGV'])
                 self.ui.teacher_birth_text.setText(teacher_info['NgSinh'])
@@ -402,7 +412,7 @@ class AdminWindow(QMainWindow):
     def tp_delete_func(self):
         teacher_idx = self.ui.teachers_table.currentRow()
         if teacher_idx != -1:
-            teacher_info = self.admin_api['giaovien'][teacher_idx]
+            teacher_info = self.teacher_table[teacher_idx]
             try:
                 requests.delete(HauSettings.BASE_URL + f'giaovien/{teacher_info["MaGV"]}')
                 self.reset_api()
@@ -464,6 +474,7 @@ class AdminWindow(QMainWindow):
         else:
             specific_data = data_student
             self.ui.students_table.setRowCount(len(data_student))
+        self.student_table = specific_data
         row = 0
         for e in specific_data:
                 self.ui.students_table.setItem(row, 0, QTableWidgetItem(e['MaSV']))
@@ -480,7 +491,7 @@ class AdminWindow(QMainWindow):
         self.ui.popupPages.setCurrentIndex(2)
         if mode == 'edit':
             student_idx = self.ui.students_table.currentRow()
-            student_info = self.admin_api['sinhvien'][student_idx]
+            student_info = self.student_table[student_idx]
             self.ui.student_id_text.setText(student_info['MaSV'])
             self.ui.student_name_text.setText(student_info['TenSV'])
             self.ui.student_birth_text.setText(student_info['NgSinh'])
@@ -508,7 +519,7 @@ class AdminWindow(QMainWindow):
     def sp_delete_func(self):
         student_idx = self.ui.students_table.currentRow()
         if student_idx != -1:
-            student_info = self.admin_api['sinhvien'][student_idx]
+            student_info = self.student_table[student_idx]
             try:
                 requests.delete(HauSettings.BASE_URL + f'sinhvien/{student_info["MaSV"]}')
                 self.reset_api()
@@ -571,6 +582,7 @@ class AdminWindow(QMainWindow):
         else:
             specific_data = data_room
             self.ui.rooms_table.setRowCount(len(data_room))
+        self.room_table = specific_data
         row = 0
         for e in specific_data:
                 self.ui.rooms_table.setItem(row, 0, QTableWidgetItem(e['MaLop']))
@@ -587,7 +599,7 @@ class AdminWindow(QMainWindow):
         self.ui.popupPages.setCurrentIndex(3)
         if mode == 'edit':
             room_idx = self.ui.rooms_table.currentRow()
-            room_info = self.admin_api['lophoc'][room_idx]
+            room_info = self.room_table[room_idx]
             self.ui.room_id_text.setText(room_info['MaLop'])
             self.ui.room_name_text.setText(room_info['TenMon'])
             self.ui.room_teacher_text.setText(room_info['MaGV'])
@@ -615,7 +627,7 @@ class AdminWindow(QMainWindow):
     def roop_delete_func(self):
         room_idx = self.ui.rooms_table.currentRow()
         if room_idx != -1:
-            room_info = self.admin_api['lophoc'][room_idx]
+            room_info = self.room_table[room_idx]
             try:
                 requests.delete(HauSettings.BASE_URL + f'lophoc/{room_info["MaLop"]}')
                 self.reset_api()
@@ -677,6 +689,7 @@ class AdminWindow(QMainWindow):
         else:
             specific_data = data_report
             self.ui.reports_table.setRowCount(len(data_report))
+        self.report_table = specific_data
         row = 0
         for e in specific_data:
                 self.ui.reports_table.setItem(row, 0, QTableWidgetItem(e['MaBC']))
@@ -692,7 +705,7 @@ class AdminWindow(QMainWindow):
         self.ui.popupPages.setCurrentIndex(4)
         if mode == 'edit':
             reports_idx = self.ui.reports_table.currentRow()
-            reports_info = self.admin_api['baocao'][reports_idx]
+            reports_info = self.report_table[reports_idx]
             self.ui.reports_id_text.setText(reports_info['MaBC'])
             self.ui.reports_date_text.setText(reports_info['NgayBC'])
             self.ui.reports_student_text.setText(reports_info['MaSV'])
@@ -718,7 +731,7 @@ class AdminWindow(QMainWindow):
     def repp_delete_func(self):
         report_idx = self.ui.reports_table.currentRow()
         if report_idx != -1:
-            report_info = self.admin_api['baocao'][report_idx]
+            report_info = self.report_table[report_idx]
             try:
                 requests.delete(HauSettings.BASE_URL + f'baocao/{report_info["MaBC"]}')
                 self.reset_api()
@@ -777,6 +790,7 @@ class AdminWindow(QMainWindow):
         else:
             specific_data = data_reports_list
             self.ui.reports_list_table.setRowCount(len(data_reports_list))
+        self.report_list_table = specific_data
         row = 0
         for e in specific_data:
                 self.ui.reports_list_table.setItem(row, 0, QTableWidgetItem(e['MaDS']))
@@ -790,7 +804,7 @@ class AdminWindow(QMainWindow):
         self.ui.popupPages.setCurrentIndex(5)
         if mode == 'edit':
             reports_list_idx = self.ui.reports_list_table.currentRow()
-            reports_list_info = self.admin_api['dslop'][reports_list_idx]
+            reports_list_info = self.report_list_table[reports_list_idx]
             self.ui.reports_list_id_text.setText(reports_list_info['MaDS'])
             self.ui.reports_list_class_text.setText(reports_list_info['MaLop'])
             self.ui.reports_list_student_text.setText(reports_list_info['MaSV'])
@@ -812,7 +826,7 @@ class AdminWindow(QMainWindow):
     def relp_delete_func(self):
         reports_list_idx = self.ui.reports_list_table.currentRow()
         if reports_list_idx != -1:
-            reports_list_info = self.admin_api['dslop'][reports_list_idx]
+            reports_list_info = self.report_list_table[reports_list_idx]
             try:
                 requests.delete(HauSettings.BASE_URL + f'dslop/{reports_list_info["MaDS"]}')
                 self.reset_api()

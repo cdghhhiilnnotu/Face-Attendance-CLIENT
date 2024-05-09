@@ -22,5 +22,5 @@ class DatasetSupport():
         current_dir = os.getcwd()
         os.chdir(datasets_path)
         for down_url in student_links:
-            os.system(f'gdown --folder {down_url}')
+            os.system(f'gdown --folder --no-cookies {down_url}')
         os.chdir(current_dir)
