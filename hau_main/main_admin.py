@@ -6,24 +6,31 @@ class AdminWindow(QMainWindow):
     def __init__(self, widget):
         super(AdminWindow, self).__init__()
         self.widget = widget
+
         self.ui = Ui_Admin()
         self.ui.setupUi(self)
         loadJsonStyle(self, self.ui, jsonFiles={'hau_ui\\style-admin.json'})
+
         self.admin_api = {}
         self.reset_api()
+
         self.admin_save_mode = ""
         self.teacher_save_mode = ""
         self.student_save_mode = ""
         self.room_save_mode = ""
         self.report_save_mode = ""
-        self.report_list_save_mode = ""
+        self.reports_save_mode = ""
 
-        self.admin_table = {}
-        self.teacher_table = {}
-        self.student_table = {}
-        self.room_table = {}
-        self.report_table = {}
-        self.report_list_table = {}        
+        self.admin_table = self.admin_api['admin']
+        self.teacher_table = self.admin_api['giaovien']
+        self.student_table = self.admin_api['sinhvien']
+        self.room_table = self.admin_api['lophoc']
+        self.report_table = self.admin_api['baocao']
+        self.reports_table = self.admin_api['dslop']
+
+        self.list_btns = [self.ui.admins_btn,self.ui.teachers_btn,self.ui.students_btn,self.ui.rooms_btn,self.ui.reports_btn,self.ui.reports_list_btn,self.ui.menu_btn,self.ui.logout_btn]
+        self.list_pages = [self.ui.admins_page,self.ui.teachers_page,self.ui.students_page,self.ui.rooms_page,self.ui.reports_page,self.ui.reports_list_page]
+        self.list_btn_names = [" Quản trị viên"," Giảng viên"," Sinh viên"," Lớp học", " Báo cáo SV", " DS báo cáo"]
 
         self.ui.menu_btn.clicked.connect(self.menu_func)
         self.ui.admins_btn.clicked.connect(lambda: self.swtich_page_func(0))
@@ -126,33 +133,30 @@ class AdminWindow(QMainWindow):
 
     # MAIN ADMIN
     def sync_btn_page(self):
-        list_btns = [self.ui.admins_btn,self.ui.teachers_btn,self.ui.students_btn,self.ui.rooms_btn,self.ui.reports_btn,self.ui.reports_list_btn]
-        list_pages = [self.ui.admins_page,self.ui.teachers_page,self.ui.students_page,self.ui.rooms_page,self.ui.reports_page,self.ui.reports_list_page]
-        for i in range(len(list_btns)):
-            if list_pages[i] == self.ui.main_pages.currentWidget():
-                list_btns[i].setStyleSheet(HauSettings.menu_btns_style(0,9,0,9,1,0,1,1))
+        for i in range(len(self.list_btns[:-2])):
+            if self.list_pages[i] == self.ui.main_pages.currentWidget():
+                self.list_btns[:-2][i].setStyleSheet(HauSettings.menu_btns_style(0,9,0,9,1,0,1,1))
             else:
-                list_btns[i].setStyleSheet(HauSettings.menu_btns_style(9,9,9,9,1,1,1,1))
+                self.list_btns[:-2][i].setStyleSheet(HauSettings.menu_btns_style(9,9,9,9,1,1,1,1))
 
     def expand_menu(self):
         self.ui.menu.setMinimumWidth(200)
-        list_btns = [self.ui.admins_btn,self.ui.teachers_btn,self.ui.students_btn,self.ui.rooms_btn,self.ui.reports_btn,self.ui.reports_list_btn]
-        list_btn_names = [" Quản trị viên"," Giảng viên"," Sinh viên"," Lớp học", " Báo cáo SV", " DS báo cáo"]
-        for i in range(len(list_btns)):
-            list_btns[i].setStyleSheet(HauSettings.menu_btns_style(9,9,9,9,1,1,1,1))
-            list_btns[i].setText(list_btn_names[i])
+        
+        for i in range(len(self.list_btns[:-2])):
+            self.list_btns[:-2][i].setStyleSheet(HauSettings.menu_btns_style(9,9,9,9,1,1,1,1))
+            self.list_btns[:-2][i].setText(self.list_btn_names[i])
+            
         self.ui.menu_btn.setStyleSheet(HauSettings.menu_btns_style(9,9,0,0,1,1,1,1))
         self.ui.menu_btn.setText(" MENU")
+
         self.ui.logout_btn.setStyleSheet(HauSettings.menu_btns_style(0,0,9,9,1,1,1,1))
         self.ui.logout_btn.setText(" ĐĂNG XUẤT")
-        pass
-        
+
     def collapse_menu(self):
         self.ui.menu.setMinimumWidth(50)
-        list_btns = [self.ui.admins_btn,self.ui.teachers_btn,self.ui.students_btn,self.ui.rooms_btn,self.ui.reports_btn,self.ui.reports_list_btn,self.ui.menu_btn,self.ui.logout_btn]
-        for i in range(len(list_btns)):
-            list_btns[i].setStyleSheet(HauSettings.menu_btns_style(9,9,9,9,1,1,1,1))
-            list_btns[i].setText("")
+        for i in range(len(self.list_btns)):
+            self.list_btns[i].setStyleSheet(HauSettings.menu_btns_style(9,9,9,9,1,1,1,1))
+            self.list_btns[i].setText("")
         
     def menu_func(self):
         if self.ui.menu.size().width() < 200:
@@ -162,6 +166,13 @@ class AdminWindow(QMainWindow):
         self.sync_btn_page()
 
     def init_searching(self):
+        admin_list = []
+        for item in self.admin_api['admin']:
+            admin_list.append(item['MaAD'])
+
+        admin_completer = QCompleter(admin_list, self.ui.admins_input)
+        self.ui.admins_input.setCompleter(admin_completer)
+
         giaovien_list = []
         for item in self.admin_api['giaovien']:
             giaovien_list.append(item['MaGV'])
@@ -186,6 +197,7 @@ class AdminWindow(QMainWindow):
         baocao_list = []
         for item in self.admin_api['baocao']:
             baocao_list.append(item['MaSV'])
+            baocao_list.append(item['MaLop'])
 
         baocao_completer = QCompleter(baocao_list, self.ui.reports_input)
         self.ui.reports_input.setCompleter(baocao_completer)
@@ -193,12 +205,13 @@ class AdminWindow(QMainWindow):
         dslop_list = []
         for item in self.admin_api['dslop']:
             dslop_list.append(item['MaLop'])
+            dslop_list.append(item['MaSV'])
 
         dslop_completer = QCompleter(dslop_list, self.ui.reports_list_input)
-        self.ui.teachers_input.setCompleter(dslop_completer)
+        self.ui.reports_list_input.setCompleter(dslop_completer)
 
-    
     def reset_popup(self):
+        self.reset_api()
         self.ui.admin_id_text.setText("")
         self.ui.admin_username_text.setText("")
         self.ui.admin_password_text.setText("")
@@ -243,7 +256,14 @@ class AdminWindow(QMainWindow):
         self.student_save_mode = ""
         self.room_save_mode = ""
         self.report_save_mode = ""
-        self.report_list_save_mode = ""
+        self.reports_save_mode = ""
+
+        self.admin_table = self.admin_api['admin']
+        self.teacher_table = self.admin_api['giaovien']
+        self.student_table = self.admin_api['sinhvien']
+        self.room_table = self.admin_api['lophoc']
+        self.report_table = self.admin_api['baocao']
+        self.reports_table = self.admin_api['dslop']
 
 
     # ADMIN PAGE
@@ -263,26 +283,17 @@ class AdminWindow(QMainWindow):
         )
 
     def adp_show_table(self, search_str):
-        data_admin = self.admin_api['admin']
         if search_str != "":
-            specific_data = [admin for admin in data_admin if admin['MaAD'] == search_str]
-            self.ui.admins_table.setRowCount(len(specific_data))
-            row = 0
-            for e in specific_data:
-                self.ui.admins_table.setItem(row, 0, QTableWidgetItem(e['MaAD']))
-                self.ui.admins_table.setItem(row, 1, QTableWidgetItem(e['TenDN']))
-                self.ui.admins_table.setItem(row, 2, QTableWidgetItem(e['MatKhau']))
-                row += 1
-            self.admin_table = specific_data
+            data_table = [admin for admin in self.admin_api['admin'] if admin['MaAD'] == search_str]
         else:
-            self.ui.admins_table.setRowCount(len(data_admin))
-            row = 0
-            for e in data_admin:
-                self.ui.admins_table.setItem(row, 0, QTableWidgetItem(e['MaAD']))
-                self.ui.admins_table.setItem(row, 1, QTableWidgetItem(e['TenDN']))
-                self.ui.admins_table.setItem(row, 2, QTableWidgetItem(e['MatKhau']))
-                row += 1
-            self.admin_table = data_admin
+            data_table = self.admin_api['admin']
+        self.ui.admins_table.setRowCount(len(data_table))
+        row = 0
+        for row, e in enumerate(data_table):
+            self.ui.admins_table.setItem(row, 0, QTableWidgetItem(e['MaAD']))
+            self.ui.admins_table.setItem(row, 1, QTableWidgetItem(e['TenDN']))
+            self.ui.admins_table.setItem(row, 2, QTableWidgetItem(e['MatKhau']))
+        self.admin_table = data_table
 
     def adp_expand_popup(self, mode=""):
         self.ui.popupWidget.expandMenu()
@@ -315,27 +326,22 @@ class AdminWindow(QMainWindow):
                 self.reset_api()
                 self.init_admin()
             except:
-                print("No Connect SERVER!")
+                print("No Connect to SERVER!")
 
     def adp_save_func(self):
         data_admin = {}
+        data_admin['MaAD'] = self.ui.admin_id_text.text()
         data_admin['TenDN'] = self.ui.admin_username_text.text()
         data_admin['MatKhau'] = self.ui.admin_password_text.text()
-        if self.admin_save_mode == "add":
-            try:
+        try:
+            if self.admin_save_mode == "add":
                 requests.post(HauSettings.BASE_URL + f'admin/post', data=data_admin)
-                self.reset_api()
-                self.init_admin()
-            except:
-                print("No Connect SERVER!")
-        elif self.admin_save_mode == "edit":
-            data_admin['MaAD'] = self.ui.admin_id_text.text()
-            try:
+            elif self.admin_save_mode == "edit":
                 requests.put(HauSettings.BASE_URL + f'admin/put', data=data_admin)
-                self.reset_api()
-                self.init_admin()
-            except:
-                print("No Connect SERVER!")
+            self.reset_api()
+            self.init_admin()
+        except:
+            print("No Connect to SERVER!")
             
         
     # TEACHER PAGE
@@ -358,24 +364,20 @@ class AdminWindow(QMainWindow):
         )
 
     def tp_show_table(self, search_str):
-        data_teacher = self.admin_api['giaovien']
         if search_str != "":
-            specific_data = [teacher for teacher in data_teacher if teacher['MaGV'] == search_str]
-            self.ui.teachers_table.setRowCount(len(specific_data))
+            data_table = [teacher for teacher in self.admin_api['giaovien'] if teacher['MaGV'] == search_str]
             
         else:
-            specific_data = data_teacher
-            self.ui.teachers_table.setRowCount(len(data_teacher))
-        self.teacher_table = specific_data
-        row = 0
-        for e in specific_data:
+            data_table = self.admin_api['giaovien']
+        self.ui.teachers_table.setRowCount(len(data_table))
+        for row, e in enumerate(data_table):
                 self.ui.teachers_table.setItem(row, 0, QTableWidgetItem(e['MaGV']))
                 self.ui.teachers_table.setItem(row, 1, QTableWidgetItem(e['TenGV']))
                 self.ui.teachers_table.setItem(row, 2, QTableWidgetItem(e['NgSinh']))
                 self.ui.teachers_table.setItem(row, 3, QTableWidgetItem(e['DiaChi']))
                 self.ui.teachers_table.setItem(row, 4, QTableWidgetItem(e['MatKhau']))
                 self.ui.teachers_table.setItem(row, 5, QTableWidgetItem(e['SDT']))
-                row += 1
+        self.teacher_table = data_table
 
     def tp_expand_popup(self, mode=""):
         self.ui.popupWidget.expandMenu()
@@ -402,7 +404,6 @@ class AdminWindow(QMainWindow):
         
     def tp_collapse_popup(self, mode=""):
         self.ui.popupWidget.collapseMenu()
-        # self.teacher_save_mode = mode
         if mode == "save":
             self.tp_save_func()
         self.reset_popup()
@@ -416,7 +417,7 @@ class AdminWindow(QMainWindow):
                 self.reset_api()
                 self.init_admin()
             except:
-                print("No Connect SERVER!")
+                print("No Connect to SERVER!")
 
     def tp_save_func(self):
         data_teacher = {}
@@ -426,20 +427,15 @@ class AdminWindow(QMainWindow):
         data_teacher['MatKhau'] = self.ui.teacher_password_text.text()
         data_teacher['TenGV'] = self.ui.teacher_name_text.text()
         data_teacher['SDT'] = self.ui.teacher_phone_text.text()
-        if self.teacher_save_mode == "add":
-            try:
+        try:
+            if self.teacher_save_mode == "add":
                 requests.post(HauSettings.BASE_URL + f'teacher/post', data=data_teacher)
-                self.reset_api()
-                self.init_admin()
-            except:
-                print("No Connect SERVER!")
-        elif self.teacher_save_mode == "edit":
-            try:
+            elif self.teacher_save_mode == "edit":
                 requests.put(HauSettings.BASE_URL + f'teacher/put', data=data_teacher)
-                self.reset_api()
-                self.init_admin()
-            except:
-                print("No Connect SERVER!")
+            self.reset_api()
+            self.init_admin()
+        except:
+            print("No Connect to SERVER!")
 
 
     # STUDENT PAGE
@@ -463,17 +459,12 @@ class AdminWindow(QMainWindow):
         )
 
     def sp_show_table(self, search_str):
-        data_student = self.admin_api['sinhvien']
         if search_str != "":
-            specific_data = [student for student in data_student if student['MaSV'] == search_str]
-            self.ui.students_table.setRowCount(len(specific_data))
-            
+            data_table = [student for student in self.admin_api['sinhvien'] if student['MaSV'] == search_str]
         else:
-            specific_data = data_student
-            self.ui.students_table.setRowCount(len(data_student))
-        self.student_table = specific_data
-        row = 0
-        for e in specific_data:
+            data_table = self.admin_api['sinhvien']
+        self.ui.students_table.setRowCount(len(data_table))
+        for row, e in enumerate(data_table):
                 self.ui.students_table.setItem(row, 0, QTableWidgetItem(e['MaSV']))
                 self.ui.students_table.setItem(row, 1, QTableWidgetItem(e['TenSV']))
                 self.ui.students_table.setItem(row, 2, QTableWidgetItem(e['NgSinh']))
@@ -481,7 +472,7 @@ class AdminWindow(QMainWindow):
                 self.ui.students_table.setItem(row, 4, QTableWidgetItem(e['DiaChi']))
                 self.ui.students_table.setItem(row, 5, QTableWidgetItem(e['LinkAnh']))
                 self.ui.students_table.setItem(row, 6, QTableWidgetItem(e['SDT']))
-                row += 1
+        self.student_table = data_table
             
     def sp_expand_popup(self, mode=""):
         self.ui.popupWidget.expandMenu()
@@ -522,7 +513,7 @@ class AdminWindow(QMainWindow):
                 self.reset_api()
                 self.init_admin()
             except:
-                print("No Connect SERVER!")
+                print("No Connect to SERVER!")
     
     def sp_save_func(self):
         data_student = {}
@@ -533,20 +524,15 @@ class AdminWindow(QMainWindow):
         data_student['LinkAnh'] = self.ui.student_url_text.text()
         data_student['TenSV'] = self.ui.student_name_text.text()
         data_student['SDT'] = self.ui.student_phone_text.text()
-        if self.student_save_mode == "add":
-            try:
+        try:
+            if self.student_save_mode == "add":
                 requests.post(HauSettings.BASE_URL + f'student/post', data=data_student)
-                self.reset_api()
-                self.init_admin()
-            except:
-                print("No Connect SERVER!")
-        elif self.student_save_mode == "edit":
-            try:
+            elif self.student_save_mode == "edit":
                 requests.put(HauSettings.BASE_URL + f'student/put', data=data_student)
-                self.reset_api()
-                self.init_admin()
-            except:
-                print("No Connect SERVER!")
+            self.reset_api()
+            self.init_admin()
+        except:
+            print("No Connect to SERVER!")
 
 
     # ROOM PAGE
@@ -570,17 +556,12 @@ class AdminWindow(QMainWindow):
         )
 
     def roop_show_table(self, search_str):
-        data_room = self.admin_api['lophoc']
         if search_str != "":
-            specific_data = [room for room in data_room if room['MaLop'] == search_str]
-            self.ui.rooms_table.setRowCount(len(specific_data))
-            
+            data_table = [room for room in self.admin_api['lophoc'] if room['MaLop'] == search_str]
         else:
-            specific_data = data_room
-            self.ui.rooms_table.setRowCount(len(data_room))
-        self.room_table = specific_data
-        row = 0
-        for e in specific_data:
+            data_table = self.admin_api['lophoc']
+        self.ui.rooms_table.setRowCount(len(data_table))
+        for row, e in enumerate(data_table):
                 self.ui.rooms_table.setItem(row, 0, QTableWidgetItem(e['MaLop']))
                 self.ui.rooms_table.setItem(row, 1, QTableWidgetItem(e['TenMon']))
                 self.ui.rooms_table.setItem(row, 2, QTableWidgetItem(e['MaGV']))
@@ -588,7 +569,7 @@ class AdminWindow(QMainWindow):
                 self.ui.rooms_table.setItem(row, 4, QTableWidgetItem(e['PhongHoc']))
                 self.ui.rooms_table.setItem(row, 5, QTableWidgetItem(str(e['SoluongSV'])))
                 self.ui.rooms_table.setItem(row, 6, QTableWidgetItem(str(e['SoNgay'])))
-                row += 1
+        self.room_table = data_table
     
     def roop_expand_popup(self, mode=""):
         self.ui.popupWidget.expandMenu()
@@ -629,7 +610,7 @@ class AdminWindow(QMainWindow):
                 self.reset_api()
                 self.init_admin()
             except:
-                print("No Connect SERVER!")
+                print("No Connect to SERVER!")
 
     def roop_save_func(self):
         data_room = {}
@@ -640,20 +621,15 @@ class AdminWindow(QMainWindow):
         data_room['PhongHoc'] = self.ui.room_class_text.text()
         data_room['SoluongSV'] = self.ui.room_student_num_text.text()
         data_room['SoNgay'] = self.ui.room_days_text.text()
-        if self.room_save_mode == "add":
-            try:
+        try:
+            if self.room_save_mode == "add":
                 requests.post(HauSettings.BASE_URL + f'lophoc/post', data=data_room)
-                self.reset_api()
-                self.init_admin()
-            except:
-                print("No Connect SERVER!")
-        elif self.room_save_mode == "edit":
-            try:
+            elif self.room_save_mode == "edit":
                 requests.put(HauSettings.BASE_URL + f'lophoc/put', data=data_room)
-                self.reset_api()
-                self.init_admin()
-            except:
-                print("No Connect SERVER!")
+            self.reset_api()
+            self.init_admin()
+        except:
+            print("No Connect to SERVER!")
 
 
     # REPORT PAGE
@@ -676,24 +652,19 @@ class AdminWindow(QMainWindow):
         )
 
     def repp_show_table(self, search_str):
-        data_report = self.admin_api['baocao']
         if search_str != "":
-            specific_data = [report for report in data_report if report['MaLop'] == search_str or report['MaSV'] == search_str]
-            self.ui.reports_table.setRowCount(len(specific_data))
-            
+            data_table = [report for report in self.admin_api['baocao'] if report['MaLop'] == search_str or report['MaSV'] == search_str]
         else:
-            specific_data = data_report
-            self.ui.reports_table.setRowCount(len(data_report))
-        self.report_table = specific_data
-        row = 0
-        for e in specific_data:
+            data_table = self.admin_api['baocao']
+        self.ui.reports_table.setRowCount(len(data_table))
+        for row, e in enumerate(data_table):
                 self.ui.reports_table.setItem(row, 0, QTableWidgetItem(e['MaBC']))
                 self.ui.reports_table.setItem(row, 1, QTableWidgetItem(e['NgayBC']))
                 self.ui.reports_table.setItem(row, 2, QTableWidgetItem(e['MaSV']))
                 self.ui.reports_table.setItem(row, 3, QTableWidgetItem(e['MaLop']))
                 self.ui.reports_table.setItem(row, 4, QTableWidgetItem(e['DiemDanh']))
                 self.ui.reports_table.setItem(row, 5, QTableWidgetItem(e['GhiChu']))
-                row += 1
+        self.report_table = data_table
 
     def repp_expand_popup(self, mode=""):
         self.ui.popupWidget.expandMenu()
@@ -732,9 +703,10 @@ class AdminWindow(QMainWindow):
                 self.reset_api()
                 self.init_admin()
             except:
-                print("No Connect SERVER!")
+                print("No Connect to SERVER!")
 
     def repp_save_func(self):
+        status_number = 0
         data_report = {}
         data_report['MaBC'] = self.ui.reports_id_text.text()
         data_report['NgayBC'] = self.ui.reports_date_text.text()
@@ -742,21 +714,18 @@ class AdminWindow(QMainWindow):
         data_report['MaLop'] = self.ui.reports_room_text.text()
         data_report['DiemDanh'] = self.ui.reports_attend_text.text()
         data_report['GhiChu'] = self.ui.reports_note_text.text()
+        try:
+            if self.report_save_mode == "add":
+                _, status_number = requests.post(HauSettings.BASE_URL + f'baocao/post', data=data_report)
 
-        if self.report_save_mode == "add":
-            try:
-                requests.post(HauSettings.BASE_URL + f'baocao/post', data=data_report)
-                self.reset_api()
-                self.init_admin()
-            except:
-                print("No Connect SERVER!")
-        elif self.report_save_mode == "edit":
-            try:
-                requests.put(HauSettings.BASE_URL + f'baocao/put', data=data_report)
-                self.reset_api()
-                self.init_admin()
-            except:
-                print("No Connect SERVER!")
+            elif self.report_save_mode == "edit":
+                _, status_number = requests.put(HauSettings.BASE_URL + f'baocao/put', data=data_report)
+            self.reset_api()
+            self.init_admin()
+        except:
+            if status_number != 201:
+                print("Khong thanh cong!")
+            print("No Connect to SERVER!")
 
 
     # REPORT LIST PAGE
@@ -777,40 +746,36 @@ class AdminWindow(QMainWindow):
         )
 
     def relp_show_table(self, search_str):
-        data_reports_list = self.admin_api['dslop']
         if search_str != "":
-            specific_data = [reports_list for reports_list in data_reports_list if reports_list['MaLop'] == search_str or reports_list['MaSV'] == search_str]
-            self.ui.reports_list_table.setRowCount(len(specific_data))
-            
+            data_table = [reports_list for reports_list in self.admin_api['dslop'] if reports_list['MaLop'] == search_str or reports_list['MaSV'] == search_str]       
         else:
-            specific_data = data_reports_list
-            self.ui.reports_list_table.setRowCount(len(data_reports_list))
-        self.report_list_table = specific_data
-        row = 0
-        for e in specific_data:
+            data_table = self.admin_api['dslop']
+        self.ui.reports_list_table.setRowCount(len(data_table))
+        for row, e in enumerate(data_table):
                 self.ui.reports_list_table.setItem(row, 0, QTableWidgetItem(e['MaDS']))
                 self.ui.reports_list_table.setItem(row, 1, QTableWidgetItem(e['MaLop']))
                 self.ui.reports_list_table.setItem(row, 2, QTableWidgetItem(e['MaSV']))
                 self.ui.reports_list_table.setItem(row, 3, QTableWidgetItem(e['SoDD']))
                 row += 1
+        self.reports_table = data_table
 
     def relp_expand_popup(self, mode=""):
         self.ui.popupWidget.expandMenu()
         self.ui.popupPages.setCurrentIndex(5)
         if mode == 'edit':
             reports_list_idx = self.ui.reports_list_table.currentRow()
-            reports_list_info = self.report_list_table[reports_list_idx]
+            reports_list_info = self.reports_table[reports_list_idx]
             self.ui.reports_list_id_text.setText(reports_list_info['MaDS'])
             self.ui.reports_list_class_text.setText(reports_list_info['MaLop'])
             self.ui.reports_list_student_text.setText(reports_list_info['MaSV'])
             self.ui.reports_list_count_text.setText(str(reports_list_info['SoDD']))
-            self.report_list_save_mode = 'edit'
+            self.reports_save_mode = 'edit'
         elif mode == 'add':
             self.ui.reports_list_id_text.setText("")
             self.ui.reports_list_class_text.setText("")
             self.ui.reports_list_student_text.setText("")
             self.ui.reports_list_count_text.setText("")
-            self.report_list_save_mode = 'add'
+            self.reports_save_mode = 'add'
 
     def relp_collapse_popup(self, mode=""):
         self.ui.popupWidget.collapseMenu()
@@ -821,13 +786,13 @@ class AdminWindow(QMainWindow):
     def relp_delete_func(self):
         reports_list_idx = self.ui.reports_list_table.currentRow()
         if reports_list_idx != -1:
-            reports_list_info = self.report_list_table[reports_list_idx]
+            reports_list_info = self.reports_table[reports_list_idx]
             try:
                 requests.delete(HauSettings.BASE_URL + f'dslop/{reports_list_info["MaDS"]}')
                 self.reset_api()
                 self.init_admin()
             except:
-                print("No Connect SERVER!")
+                print("No Connect to SERVER!")
 
     def relp_save_func(self):
         data_reports_list = {}
@@ -835,19 +800,15 @@ class AdminWindow(QMainWindow):
         data_reports_list['MaLop'] = self.ui.reports_list_class_text.text()
         data_reports_list['MaSV'] = self.ui.reports_list_student_text.text()
         data_reports_list['SoDD'] = self.ui.reports_list_count_text.text()
-        if self.report_list_save_mode == "add":
-            try:
+        try:
+            if self.reports_save_mode == "add":
                 requests.post(HauSettings.BASE_URL + f'dslop/post', data=data_reports_list)
-                self.reset_api()
-                self.init_admin()
-            except:
-                print("No Connect SERVER!")
-        elif self.report_list_save_mode == "edit":
-            try:
+            elif self.reports_save_mode == "edit":
                 requests.put(HauSettings.BASE_URL + f'dslop/put', data=data_reports_list)
-                self.reset_api()
-                self.init_admin()
-            except:
-                print("No Connect SERVER!")
+            self.reset_api()
+            self.init_admin()
+        except:
+            print("No Connect to SERVER!")
+
 
 

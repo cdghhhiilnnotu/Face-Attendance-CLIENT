@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'adminxncWhr.ui'
+## Form generated from reading UI file 'adminFqbBzZ.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -1476,6 +1476,7 @@ class Ui_Admin(object):
         self.admin_label = QLabel(self.head_admins)
         self.admin_label.setObjectName(u"admin_label")
         self.admin_label.setFont(font1)
+        self.admin_label.setStyleSheet(u"color: rgb(255, 255, 255);")
 
         self.horizontalLayout_3.addWidget(self.admin_label)
 
@@ -1564,6 +1565,7 @@ class Ui_Admin(object):
         self.teachers_label = QLabel(self.head_teachers)
         self.teachers_label.setObjectName(u"teachers_label")
         self.teachers_label.setFont(font1)
+        self.teachers_label.setStyleSheet(u"color: rgb(255, 255, 255);")
 
         self.horizontalLayout_4.addWidget(self.teachers_label)
 
@@ -1587,7 +1589,7 @@ class Ui_Admin(object):
         self.body_teachers.setStyleSheet(u"")
         self.teacher_id_text = QLineEdit(self.body_teachers)
         self.teacher_id_text.setObjectName(u"teacher_id_text")
-        self.teacher_id_text.setEnabled(True)
+        self.teacher_id_text.setEnabled(False)
         self.teacher_id_text.setGeometry(QRect(20, 100, 351, 31))
         self.teacher_id_text.setFont(font7)
         self.teacher_id_text.setStyleSheet(u"background-color: rgb(255, 255, 255);")
@@ -1671,6 +1673,7 @@ class Ui_Admin(object):
         self.students_label = QLabel(self.head_student)
         self.students_label.setObjectName(u"students_label")
         self.students_label.setFont(font1)
+        self.students_label.setStyleSheet(u"color: rgb(255, 255, 255);")
 
         self.horizontalLayout_5.addWidget(self.students_label)
 
@@ -1787,6 +1790,7 @@ class Ui_Admin(object):
         self.rooms_label = QLabel(self.head_rooms)
         self.rooms_label.setObjectName(u"rooms_label")
         self.rooms_label.setFont(font1)
+        self.rooms_label.setStyleSheet(u"color: rgb(255, 255, 255);")
 
         self.horizontalLayout_6.addWidget(self.rooms_label)
 
@@ -1903,6 +1907,7 @@ class Ui_Admin(object):
         self.reports_label = QLabel(self.head_reports)
         self.reports_label.setObjectName(u"reports_label")
         self.reports_label.setFont(font1)
+        self.reports_label.setStyleSheet(u"color: rgb(255, 255, 255);")
 
         self.horizontalLayout_7.addWidget(self.reports_label)
 
@@ -1926,7 +1931,7 @@ class Ui_Admin(object):
         self.body_reports.setStyleSheet(u"")
         self.reports_id_text = QLineEdit(self.body_reports)
         self.reports_id_text.setObjectName(u"reports_id_text")
-        self.reports_id_text.setEnabled(True)
+        self.reports_id_text.setEnabled(False)
         self.reports_id_text.setGeometry(QRect(30, 100, 351, 31))
         self.reports_id_text.setFont(font7)
         self.reports_id_text.setStyleSheet(u"background-color: rgb(255, 255, 255);")
@@ -2003,7 +2008,7 @@ class Ui_Admin(object):
         self.head_reports_list = QWidget(self.reports_list_popup)
         self.head_reports_list.setObjectName(u"head_reports_list")
         self.head_reports_list.setMaximumSize(QSize(16777215, 35))
-        self.head_reports_list.setStyleSheet(u"")
+        self.head_reports_list.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.horizontalLayout_8 = QHBoxLayout(self.head_reports_list)
         self.horizontalLayout_8.setSpacing(5)
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
@@ -2034,7 +2039,7 @@ class Ui_Admin(object):
         self.body_reports_list.setStyleSheet(u"")
         self.reports_list_id_text = QLineEdit(self.body_reports_list)
         self.reports_list_id_text.setObjectName(u"reports_list_id_text")
-        self.reports_list_id_text.setEnabled(True)
+        self.reports_list_id_text.setEnabled(False)
         self.reports_list_id_text.setGeometry(QRect(20, 140, 350, 30))
         self.reports_list_id_text.setFont(font7)
         self.reports_list_id_text.setStyleSheet(u"background-color: rgb(255, 255, 255);")
@@ -2094,8 +2099,8 @@ class Ui_Admin(object):
 
         self.retranslateUi(Admin)
 
-        self.main_pages.setCurrentIndex(5)
-        self.popupPages.setCurrentIndex(5)
+        self.main_pages.setCurrentIndex(0)
+        self.popupPages.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(Admin)
@@ -2238,6 +2243,7 @@ class Ui_Admin(object):
         self.teacher_password_label.setText(QCoreApplication.translate("Admin", u"M\u1eadt kh\u1ea9u", None))
         self.teacher_birth_label.setText(QCoreApplication.translate("Admin", u"Ng\u00e0y sinh", None))
         self.teacher_birth_text.setText("")
+        self.teacher_birth_text.setPlaceholderText(QCoreApplication.translate("Admin", u"dd-mm-yyyy hh:mm:ss", None))
         self.teacher_phone_label.setText(QCoreApplication.translate("Admin", u"S\u1ed1 \u0111i\u1ec7n tho\u1ea1i", None))
         self.teacher_phone_text.setText("")
         self.students_label.setText(QCoreApplication.translate("Admin", u"TH\u00d4NG TIN SINH VI\u00caN", None))
@@ -2252,6 +2258,7 @@ class Ui_Admin(object):
         self.student_address_text.setText("")
         self.student_url_label.setText(QCoreApplication.translate("Admin", u"URL \u1ea2nh", None))
         self.student_birth_label.setText(QCoreApplication.translate("Admin", u"Ng\u00e0y sinh", None))
+        self.student_birth_text.setPlaceholderText(QCoreApplication.translate("Admin", u"dd-mm-yyyy hh:mm:ss", None))
         self.rooms_label.setText(QCoreApplication.translate("Admin", u"TH\u00d4NG TIN L\u1edaP H\u1eccC", None))
         self.rooms_exit_btn.setText("")
         self.room_id_label.setText(QCoreApplication.translate("Admin", u"M\u00e3 l\u1edbp", None))
@@ -2274,6 +2281,8 @@ class Ui_Admin(object):
         self.reports_date_label.setText(QCoreApplication.translate("Admin", u"Ng\u00e0y B\u00e1o c\u00e1o", None))
         self.reports_room_label.setText(QCoreApplication.translate("Admin", u"M\u00e3 l\u1edbp", None))
         self.reports_note_label.setText(QCoreApplication.translate("Admin", u"Ghi chu", None))
+        self.reports_date_text.setPlaceholderText(QCoreApplication.translate("Admin", u"dd-mm-yyyy hh:mm:ss", None))
+        self.reports_list_label.setStyleSheet(QCoreApplication.translate("Admin", u"color: rgb(255, 255, 255);", None))
         self.reports_list_label.setText(QCoreApplication.translate("Admin", u"TH\u00d4NG TIN B\u00c1O C\u00c1O \u0110I\u1ec2M DANH", None))
         self.reports_list_exit_btn.setText("")
         self.reports_list_id_label.setText(QCoreApplication.translate("Admin", u"M\u00e3 b\u00e1o c\u00e1o \u0111i\u1ec3m danh", None))
