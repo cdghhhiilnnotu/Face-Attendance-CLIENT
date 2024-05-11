@@ -1,9 +1,7 @@
-from main_importer import *
-
-from main_attendance import AttendanceWindow
-from main_login import LoginWindow
-from main_admin import AdminWindow
-# import resources.resources
+from hau_main.main_importer import *
+from hau_main.main_attendance import AttendanceWindow
+from hau_main.main_login import LoginWindow
+from hau_main.main_admin import AdminWindow
 
 app = QApplication(sys.argv)
 widget = QtWidgets.QStackedWidget()

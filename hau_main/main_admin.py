@@ -1,15 +1,14 @@
-from main_importer import *
-from ui_admin import *
-from Custom_Widgets.Widgets import *
+from .main_importer import *
+from hau_ui.ui_admin import *
+from Custom_Widgets.Widgets import * 
 
 class AdminWindow(QMainWindow):
     def __init__(self, widget):
         super(AdminWindow, self).__init__()
-        # loadUi("attendance.ui", self)
         self.widget = widget
         self.ui = Ui_Admin()
         self.ui.setupUi(self)
-        loadJsonStyle(self, self.ui, jsonFiles={'style-admin.json'})
+        loadJsonStyle(self, self.ui, jsonFiles={'hau_ui\\style-admin.json'})
         self.admin_api = {}
         self.reset_api()
         self.admin_save_mode = ""
@@ -298,7 +297,6 @@ class AdminWindow(QMainWindow):
             self.ui.admin_username_text.setText("")
             self.ui.admin_password_text.setText("")
             self.admin_save_mode = "add"
-        # admin_idx = self.ui.admins_table.selectRow(-1)
         
     def adp_collapse_popup(self, mode=""):
         self.ui.popupWidget.collapseMenu()
@@ -316,7 +314,6 @@ class AdminWindow(QMainWindow):
                 self.init_admin()
             except:
                 print("No Connect SERVER!")
-        # admin_idx = self.ui.admins_table.selectRow(-1)
 
     def adp_save_func(self):
         data_admin = {}
@@ -400,7 +397,6 @@ class AdminWindow(QMainWindow):
             self.ui.teacher_password_text.setText("")
             self.ui.teacher_phone_text.setText("")
             self.teacher_save_mode = "add"
-        # teacher_idx = self.ui.teachers_table.selectRow(-1)
         
     def tp_collapse_popup(self, mode=""):
         self.ui.popupWidget.collapseMenu()
@@ -854,19 +850,5 @@ class AdminWindow(QMainWindow):
                 self.init_admin()
             except:
                 print("No Connect SERVER!")
-        
-# if __name__ == '__main__':
-#     app = QApplication(sys.argv)
-#     widget = QtWidgets.QStackedWidget()
-#     adminWin = AdminWindow(widget)
-
-#     widget.addWidget(adminWin)
-
-#     widget.show()
-#     try:
-#         sys.exit(app.exec_())
-#     except:
-#         print("Exiting")
-
 
 

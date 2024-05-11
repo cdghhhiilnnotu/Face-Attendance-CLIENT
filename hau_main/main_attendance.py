@@ -1,8 +1,7 @@
-from main_importer import *
-from ui_attendance import *
+from .main_importer import *
+from hau_ui.ui_attendance import *
 from Custom_Widgets.Widgets import * 
 import time
-
 
 gv_name, gv_pass = "",""
 def background_func(func, args):
@@ -15,16 +14,14 @@ class AttendanceWindow(QMainWindow):
         super(AttendanceWindow, self).__init__()
         self.ui = Ui_Attendance()
         self.ui.setupUi(self)
-        loadJsonStyle(self, self.ui, jsonFiles={'style-client.json'})
+        loadJsonStyle(self, self.ui, jsonFiles={'hau_ui\\style-client.json'})
         self.isRecording = False
 
         # ATTEDANCE ATTRIBUTE
         self.class_id = ""
         self.collector = CollectData.check_user(gv_name, gv_pass)
         self.thread = {}
-        # self.ui.trainning_popup.expandMenu()
         
-        # self.init_attendance()
 
     # COMMONS
     def init_attendance(self):
@@ -151,26 +148,15 @@ class AttendanceWindow(QMainWindow):
         self.ui.model_model_label.setText(self.class_id + ".keras")
 
     def hp_train_func(self):
-        # print("hELO")
-        # self.ui.trainning_popup.expandMenu()
-        # return
         start = time.time()
         DatasetSupport.download_datasets_by_class_id(self.class_id, self.dataset_path, self.collector)
         self.model = HauModel(self.dataset_path, 100, self.class_id, model_dir=self.collector.MODEL_DIR)
-        print(f"Download: {time.time() - start}")
+        print(f"Download Time: {time.time() - start}")
         start = time.time()
         self.model.training()
         self.model.evaluating()
         self.recp_init_page()
-        print(f"Training: {time.time() - start}")
-
-        # dlg = QMessageBox(self)
-        # dlg.setWindowTitle("I have a question!")
-        # dlg.setText("This is a simple dialog")
-        # button = dlg.exec()
-
-        # if button == QMessageBox.Ok:
-        #     print("OK!")
+        print(f"Training Time: {time.time() - start}")
 
 
     # RECOGNIZE
@@ -228,6 +214,7 @@ class AttendanceWindow(QMainWindow):
         self.ui.recognize_img_path_input.setText("")
         HauSettings.display_image_func(self.ui.recognize_output_img_label, HauSettings.UNKNOWN_IMAGE_PATH)
 
+
     # BEGIN DISPLAY CAMERA SECTION
     def closeEvent(self, event):
         self.stop_capture_video()
@@ -265,12 +252,10 @@ class AttendanceWindow(QMainWindow):
             HauSettings.display_image_func(self.ui.recognize_output_img_label, file_name)
 
     def show_wedcam(self, cv_img):
-        """Updates the image_label with a new opencv image"""
         qt_img = self.convert_cv_qt(cv_img)
         self.ui.recognize_output_img_label.setPixmap(qt_img)
 
     def convert_cv_qt(self, cv_img):
-        """Convert from an opencv image to QPixmap"""
         rgb_image = cv2.cvtColor(cv_img, cv2.COLOR_BGR2RGB)
         h, w, ch = rgb_image.shape
         bytes_per_line = ch * w
@@ -310,7 +295,6 @@ class AttendanceWindow(QMainWindow):
         self.recp_show_recognition_table_func1(self.face_guessed)
 
     def recp_open_image_to_guess_func(self):
-        print("PRESS RECOGNIZE OPEN FILE BUTTON")
         try:
             fname = QFileDialog.getOpenFileName(self, "Open File", "", "All Files (*)")
             if fname:
@@ -365,18 +349,5 @@ class AttendanceWindow(QMainWindow):
                     self.ui.report_table.setItem(row, 5, QTableWidgetItem(str(e['GhiChu'])))
                 row += 1
 
-
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    widget = QtWidgets.QStackedWidget()
-    attendanceWin = AttendanceWindow(widget)
-
-    widget.addWidget(attendanceWin)
-
-    widget.show()
-    try:
-        sys.exit(app.exec_())
-    except:
-        print("Exiting")
 
 

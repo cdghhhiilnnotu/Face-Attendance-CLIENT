@@ -171,5 +171,5 @@ back_ups/
 *_acc_loss.png
 *_result.png
 logs/
-api_user.json
+hau_api/
 # *.exe

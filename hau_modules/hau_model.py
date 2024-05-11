@@ -8,13 +8,13 @@ class HauModel():
         self.imgs_path = imgs
         self.epochs = epoch
         self.name = name
-        self.model = self.init_model_nor()
+        self.model = self.init_model_tl()
         self.model_path = model_dir
         self.guessed_students = []
 
     def training(self):
         self.standardized_image()
-        self.augmentation_dataset_main()
+        # self.augmentation_dataset_main()
         self.augmentation_dataset()
         self.data_classify()
         self.compile_model()
@@ -25,13 +25,18 @@ class HauModel():
         # self.plot_train_history('result.png')
 
     def standardized_image(self):
+        print(self.datasets_path)
         for sub in os.listdir(self.datasets_path):
             sub_path = os.path.join(self.datasets_path,sub)
             for image in os.listdir(sub_path):
                 image_path = os.path.join(sub_path, image)
-                img = cv2.imread(image_path)
-                img = cv2.resize(img, (224,224))
-                cv2.imwrite(image_path, img)
+                print(image_path)
+                try:
+                    img = cv2.imread(image_path)
+                    img = cv2.resize(img, (224,224))
+                    cv2.imwrite(image_path, img)
+                except:
+                    pass
 
     def augmentation_dataset_main(self):
         datagen = ImageDataGenerator(
@@ -195,33 +200,10 @@ class HauModel():
                 color = (random.randint(0, 255), random.randint(0, 255), 0)
             elif guesses[i][np.argmax(guesses[i])] > 0.5 and guesses[i][np.argmax(guesses[i])] <= 0.9:
                 color = (0, 255, 255)
-            else:
-                color = (0, 0, 255)
             cv2.rectangle(img, (x, y),(x+w, y+h), color, 3)
             colors.append(color)
         cv2.imwrite(os.path.join(collector.RESULTS_PATH, f"{name}_result.png"), img)
 
-        return os.path.join(collector.RESULTS_PATH, f"{name}_result.png"), colors, [np.argmax(guess) for guess in guesses]
-
-    def plot_train_history(self, file_name_fig):
-        plt.figure(figsize=(15,5))
-        plt.subplot(1,2,1)
-        plt.plot(self.history.history['accuracy'])
-        plt.plot(self.history.history['val_accuracy'])
-        plt.title('Model accuracy')
-        plt.ylabel('accuracy')
-        plt.xlabel('epoch')
-        plt.legend(['train', 'validation'], loc='upper left')
-
-        plt.subplot(1,2,2)
-        plt.plot(self.history.history['loss'])
-        plt.plot(self.history.history['val_loss'])
-        plt.title('Model loss')
-        plt.ylabel('loss')
-        plt.xlabel('epoch')
-        plt.legend(['train', 'validation'], loc='upper left')
-        print(file_name_fig)
-        plt.savefig(file_name_fig)
-    
+        return os.path.join(collector.RESULTS_PATH, f"{name}_result.png"), colors, [np.argmax(guess) for guess in guesses]    
 
 

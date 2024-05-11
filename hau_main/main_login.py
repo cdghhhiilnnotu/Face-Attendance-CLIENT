@@ -1,5 +1,5 @@
-from main_importer import *
-from ui_login import *
+from .main_importer import *
+from hau_ui.ui_login import *
 from Custom_Widgets.Widgets import * 
 
 class LoginWindow(QMainWindow):
@@ -9,7 +9,7 @@ class LoginWindow(QMainWindow):
         self.passwordIsHide = True
         self.ui = Ui_Login()
         self.ui.setupUi(self)
-        loadJsonStyle(self, self.ui, jsonFiles={'style-client.json'})
+        loadJsonStyle(self, self.ui, jsonFiles={'hau_ui\\style-client.json'})
         self.isAdmin = True
         
         self.ui.signin_btn.clicked.connect(self.signin_func)

@@ -7,10 +7,10 @@ class CollectData():
         self.user_api(user['MaGV'])
         # print(user['MaGV'])
         self.username_MGV = user['MaGV']
-        self.DATASETS_PATH = f'{self.username_MGV}_datasets'
-        self.RESULTS_PATH = f'{self.username_MGV}_results'
-        self.STATISTIC_PATH = f'{self.username_MGV}_statistics'
-        self.MODEL_DIR = f'{self.username_MGV}_models'
+        self.DATASETS_PATH = f'.\\{self.username_MGV}_datasets'
+        self.RESULTS_PATH = f'.\\{self.username_MGV}_results'
+        self.STATISTIC_PATH = f'.\\{self.username_MGV}_statistics'
+        self.MODEL_DIR = f'.\\{self.username_MGV}_models'
         self.init_folders()
 
     def init_folders(self):

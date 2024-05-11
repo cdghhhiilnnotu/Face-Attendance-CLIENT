@@ -27,32 +27,27 @@ os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 
 try:
     from .hau_settings import *
-    print("hau_settings")
 except:
-    pass
+    print("Can't import module hau_settings!")
 
 try:
     from .hau_collector import *
-    print("hau_collector")
 except:
-    pass
+    print("Can't import module hau_collector!")
 
 try:
     from .hau_data_supportor import *
-    print("hau_data_supportor")
 except:
-    pass
+    print("Can't import module hau_data_supportor!")
 
 try:
     from .hau_model import *
-    print("hau_model")
 except:
-    pass
+    print("Can't import module hau_model!")
 
 try:
     from .hau_thread import *
-    print("hau_thread")
 except:
-    pass
+    print("Can't import module hau_thread!")
 
 # collector = CollectData.check_user("","")
