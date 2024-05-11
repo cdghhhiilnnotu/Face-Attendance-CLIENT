@@ -5,7 +5,6 @@ class CollectData():
         self.data = {}
         self.user = user
         self.user_api(user['MaGV'])
-        # print(user['MaGV'])
         self.username_MGV = user['MaGV']
         self.DATASETS_PATH = f'.\\{self.username_MGV}_datasets'
         self.RESULTS_PATH = f'.\\{self.username_MGV}_results'

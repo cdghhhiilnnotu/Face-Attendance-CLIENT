@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'loginlqQIrd.ui'
+## Form generated from reading UI file 'loginskALYT.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -141,9 +141,6 @@ class Ui_Login(object):
         self.hide_password_btn.setAutoFillBackground(False)
         self.hide_password_btn.setStyleSheet(u"border-radius: 12px;\n"
 "background-color: rgb(2, 123, 199);")
-        icon1 = QIcon()
-        icon1.addFile(u":/icons/EC8482/alert-circle.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.hide_password_btn.setIcon(icon1)
         self.admin_btn = QPushButton(self.window)
         self.admin_btn.setObjectName(u"admin_btn")
         self.admin_btn.setGeometry(QRect(380, 330, 121, 28))

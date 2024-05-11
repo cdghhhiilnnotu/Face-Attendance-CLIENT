@@ -5,7 +5,7 @@ class HauSettings():
     API_SOURCE = "hau_api\\api_user.json"
 
     OPEN_CAM = True
-    UNKNOWN_IMAGE_PATH = "hau_resources\\apps\\no_data_found.png"
+    UNKNOWN_IMAGE_PATH = "resources\\apps\\no_data_found.png"
     MODEL_FILE_EXTENSION = ".keras"
     MODEL_HAAR = "hau_haar\\haarcascade_frontalface_alt.xml"
     IMGS_DIR = "imgs"

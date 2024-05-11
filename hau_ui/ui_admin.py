@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'adminMznsdr.ui'
+## Form generated from reading UI file 'adminxncWhr.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -395,9 +395,6 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        icon9 = QIcon()
-        icon9.addFile(u":/icons/zap.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.admins_add_btn.setIcon(icon9)
         self.admins_add_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_31.addWidget(self.admins_add_btn)
@@ -413,7 +410,6 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.admins_edit_btn.setIcon(icon9)
         self.admins_edit_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_31.addWidget(self.admins_edit_btn)
@@ -429,7 +425,6 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.admins_del_btn.setIcon(icon9)
         self.admins_del_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_31.addWidget(self.admins_del_btn)
@@ -580,7 +575,6 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.teachers_add_btn.setIcon(icon9)
         self.teachers_add_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_35.addWidget(self.teachers_add_btn)
@@ -596,7 +590,6 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.teachers_edit_btn.setIcon(icon9)
         self.teachers_edit_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_35.addWidget(self.teachers_edit_btn)
@@ -612,7 +605,6 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.teachers_del_btn.setIcon(icon9)
         self.teachers_del_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_35.addWidget(self.teachers_del_btn)
@@ -773,7 +765,6 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.students_add_btn.setIcon(icon9)
         self.students_add_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_39.addWidget(self.students_add_btn)
@@ -789,7 +780,6 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.students_edit_btn.setIcon(icon9)
         self.students_edit_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_39.addWidget(self.students_edit_btn)
@@ -805,7 +795,6 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.students_del_btn.setIcon(icon9)
         self.students_del_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_39.addWidget(self.students_del_btn)
@@ -970,7 +959,6 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.rooms_add_btn.setIcon(icon9)
         self.rooms_add_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_43.addWidget(self.rooms_add_btn)
@@ -986,7 +974,6 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.rooms_edit_btn.setIcon(icon9)
         self.rooms_edit_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_43.addWidget(self.rooms_edit_btn)
@@ -1002,7 +989,6 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.rooms_del_btn.setIcon(icon9)
         self.rooms_del_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_43.addWidget(self.rooms_del_btn)
@@ -1167,7 +1153,6 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.reports_add_btn.setIcon(icon9)
         self.reports_add_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_47.addWidget(self.reports_add_btn)
@@ -1183,7 +1168,6 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.reports_edit_btn.setIcon(icon9)
         self.reports_edit_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_47.addWidget(self.reports_edit_btn)
@@ -1199,7 +1183,6 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.reports_del_btn.setIcon(icon9)
         self.reports_del_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_47.addWidget(self.reports_del_btn)
@@ -1360,7 +1343,6 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.reports_list_add_btn.setIcon(icon9)
         self.reports_list_add_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_27.addWidget(self.reports_list_add_btn)
@@ -1376,7 +1358,6 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.reports_list_edit_btn.setIcon(icon9)
         self.reports_list_edit_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_27.addWidget(self.reports_list_edit_btn)
@@ -1392,7 +1373,6 @@ class Ui_Admin(object):
 "border: 2px solid #000;\n"
 "font-weight: bold;\n"
 "font-size: 12pt;")
-        self.reports_list_del_btn.setIcon(icon9)
         self.reports_list_del_btn.setIconSize(QSize(25, 25))
 
         self.verticalLayout_27.addWidget(self.reports_list_del_btn)
@@ -2114,7 +2094,7 @@ class Ui_Admin(object):
 
         self.retranslateUi(Admin)
 
-        self.main_pages.setCurrentIndex(0)
+        self.main_pages.setCurrentIndex(5)
         self.popupPages.setCurrentIndex(5)
 
 

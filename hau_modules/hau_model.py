@@ -14,7 +14,7 @@ class HauModel():
 
     def training(self):
         self.standardized_image()
-        # self.augmentation_dataset_main()
+        self.augmentation_dataset_main()
         self.augmentation_dataset()
         self.data_classify()
         self.compile_model()
@@ -22,15 +22,12 @@ class HauModel():
 
     def evaluating(self):
         self.evaluate_model()
-        # self.plot_train_history('result.png')
 
     def standardized_image(self):
-        print(self.datasets_path)
         for sub in os.listdir(self.datasets_path):
             sub_path = os.path.join(self.datasets_path,sub)
             for image in os.listdir(sub_path):
                 image_path = os.path.join(sub_path, image)
-                print(image_path)
                 try:
                     img = cv2.imread(image_path)
                     img = cv2.resize(img, (224,224))
@@ -51,7 +48,6 @@ class HauModel():
         
         for className in os.listdir(self.datasets_path):
             classPATH = os.path.join(self.datasets_path, className)
-            len_IMG = len(os.listdir(classPATH))
             for imgName in os.listdir(classPATH):
                 imgPATH = os.path.join(classPATH, imgName)
                 img = load_img(imgPATH)
@@ -156,7 +152,6 @@ class HauModel():
         self.history = self.model.fit(self.train_ds, epochs = self.epochs, validation_data = self.val_ds, callbacks=callbacks)
 
     def evaluate_model(self):
-        # self.model.load_weights(f'{self.model_path}/{self.name}.keras')
         self.score = self.model.evaluate(self.test_ds, verbose=1)
 
     def load_model(self, model_name):

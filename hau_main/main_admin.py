@@ -50,6 +50,23 @@ class AdminWindow(QMainWindow):
 
         
     # TITLE ADMIN
+    def init_admin(self):
+        self.setFixedWidth(1280)
+        self.setFixedHeight(720)
+
+        self.ui.popupWidget.collapseMenu()
+        self.collapse_menu()
+        self.init_searching()
+        self.init_popup_buttons()
+        self.sync_btn_page()
+
+        self.adp_init()
+        self.tp_init()
+        self.sp_init()
+        self.roop_init()
+        self.repp_init()
+        self.relp_init()
+
     def exit_func(self):
         QApplication.quit()
 
@@ -61,7 +78,7 @@ class AdminWindow(QMainWindow):
 
     def logout_func(self):
         self.widget.setCurrentIndex(0)
-        self.widget.currentWidget().login_init() 
+        self.widget.currentWidget().login_init()
         
     def swtich_page_func(self, index):
         self.ui.main_pages.setCurrentIndex(index)
@@ -118,7 +135,6 @@ class AdminWindow(QMainWindow):
                 list_btns[i].setStyleSheet(HauSettings.menu_btns_style(9,9,9,9,1,1,1,1))
 
     def expand_menu(self):
-        # print("EXPAND")
         self.ui.menu.setMinimumWidth(200)
         list_btns = [self.ui.admins_btn,self.ui.teachers_btn,self.ui.students_btn,self.ui.rooms_btn,self.ui.reports_btn,self.ui.reports_list_btn]
         list_btn_names = [" Quản trị viên"," Giảng viên"," Sinh viên"," Lớp học", " Báo cáo SV", " DS báo cáo"]
@@ -181,20 +197,6 @@ class AdminWindow(QMainWindow):
         dslop_completer = QCompleter(dslop_list, self.ui.reports_list_input)
         self.ui.teachers_input.setCompleter(dslop_completer)
 
-    def init_admin(self):
-        self.ui.popupWidget.collapseMenu()
-        self.setFixedWidth(1280)
-        self.setFixedHeight(720)
-        self.collapse_menu()
-        self.init_searching()
-        self.adp_init()
-        self.tp_init()
-        self.sp_init()
-        self.roop_init()
-        self.repp_init()
-        self.relp_init()
-        self.init_popup_buttons()
-        self.sync_btn_page()
     
     def reset_popup(self):
         self.ui.admin_id_text.setText("")
@@ -424,7 +426,6 @@ class AdminWindow(QMainWindow):
         data_teacher['MatKhau'] = self.ui.teacher_password_text.text()
         data_teacher['TenGV'] = self.ui.teacher_name_text.text()
         data_teacher['SDT'] = self.ui.teacher_phone_text.text()
-        print(self.teacher_save_mode)
         if self.teacher_save_mode == "add":
             try:
                 requests.post(HauSettings.BASE_URL + f'teacher/post', data=data_teacher)
@@ -532,7 +533,6 @@ class AdminWindow(QMainWindow):
         data_student['LinkAnh'] = self.ui.student_url_text.text()
         data_student['TenSV'] = self.ui.student_name_text.text()
         data_student['SDT'] = self.ui.student_phone_text.text()
-        print(self.student_save_mode)
         if self.student_save_mode == "add":
             try:
                 requests.post(HauSettings.BASE_URL + f'student/post', data=data_student)
@@ -640,7 +640,6 @@ class AdminWindow(QMainWindow):
         data_room['PhongHoc'] = self.ui.room_class_text.text()
         data_room['SoluongSV'] = self.ui.room_student_num_text.text()
         data_room['SoNgay'] = self.ui.room_days_text.text()
-        print(self.room_save_mode)
         if self.room_save_mode == "add":
             try:
                 requests.post(HauSettings.BASE_URL + f'lophoc/post', data=data_room)
@@ -743,7 +742,7 @@ class AdminWindow(QMainWindow):
         data_report['MaLop'] = self.ui.reports_room_text.text()
         data_report['DiemDanh'] = self.ui.reports_attend_text.text()
         data_report['GhiChu'] = self.ui.reports_note_text.text()
-        print("report")
+
         if self.report_save_mode == "add":
             try:
                 requests.post(HauSettings.BASE_URL + f'baocao/post', data=data_report)

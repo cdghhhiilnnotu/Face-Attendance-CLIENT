@@ -103,7 +103,7 @@ border-top-left-radius: 5px;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap resource="resources/resources.qrc">:/apps/apps/logo_app.png</pixmap>
+          <pixmap resource="../resources/resources.qrc">:/apps/apps/logo_app.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -165,7 +165,7 @@ border-top-left-radius: 5px;</string>
           <string/>
          </property>
          <property name="icon">
-          <iconset resource="resources/resources.qrc">
+          <iconset resource="../resources/resources.qrc">
            <normaloff>:/icon-EC8482/EC8482/x-octagon.svg</normaloff>:/icon-EC8482/EC8482/x-octagon.svg</iconset>
          </property>
          <property name="iconSize">
@@ -288,7 +288,7 @@ font-size: 12pt;
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="resources/resources.qrc">
+             <iconset resource="../resources/resources.qrc">
               <normaloff>:/icon-dark/icon-dark/menu.svg</normaloff>:/icon-dark/icon-dark/menu.svg</iconset>
             </property>
             <property name="iconSize">
@@ -377,7 +377,7 @@ font-size: 10pt;
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="resources/resources.qrc">
+                <iconset resource="../resources/resources.qrc">
                  <normaloff>:/icon-dark/icon-dark/award.svg</normaloff>:/icon-dark/icon-dark/award.svg</iconset>
                </property>
                <property name="iconSize">
@@ -414,7 +414,7 @@ font-size: 10pt;
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="resources/resources.qrc">
+                <iconset resource="../resources/resources.qrc">
                  <normaloff>:/icon-dark/icon-dark/user.svg</normaloff>:/icon-dark/icon-dark/user.svg</iconset>
                </property>
                <property name="iconSize">
@@ -451,7 +451,7 @@ font-size: 10pt;
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="resources/resources.qrc">
+                <iconset resource="../resources/resources.qrc">
                  <normaloff>:/icon-dark/icon-dark/users.svg</normaloff>:/icon-dark/icon-dark/users.svg</iconset>
                </property>
                <property name="iconSize">
@@ -488,7 +488,7 @@ font-size: 10pt;
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="resources/resources.qrc">
+                <iconset resource="../resources/resources.qrc">
                  <normaloff>:/icon-dark/icon-dark/folder.svg</normaloff>:/icon-dark/icon-dark/folder.svg</iconset>
                </property>
                <property name="iconSize">
@@ -525,7 +525,7 @@ font-size: 10pt;
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="resources/resources.qrc">
+                <iconset resource="../resources/resources.qrc">
                  <normaloff>:/icon-dark/icon-dark/message-square.svg</normaloff>:/icon-dark/icon-dark/message-square.svg</iconset>
                </property>
                <property name="iconSize">
@@ -562,7 +562,7 @@ font-size: 10pt;
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="resources/resources.qrc">
+                <iconset resource="../resources/resources.qrc">
                  <normaloff>:/icon-dark/icon-dark/file-text.svg</normaloff>:/icon-dark/icon-dark/file-text.svg</iconset>
                </property>
                <property name="iconSize">
@@ -618,7 +618,7 @@ font-size: 12pt;
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="resources/resources.qrc">
+             <iconset resource="../resources/resources.qrc">
               <normaloff>:/icon-dark/icon-dark/log-out.svg</normaloff>:/icon-dark/icon-dark/log-out.svg</iconset>
             </property>
             <property name="iconSize">
@@ -648,7 +648,7 @@ border-radius: 9px;</string>
           <item>
            <widget class="QStackedWidget" name="main_pages">
             <property name="currentIndex">
-             <number>0</number>
+             <number>5</number>
             </property>
             <widget class="QWidget" name="admins_page">
              <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -903,10 +903,6 @@ font-size: 12pt;</string>
                          <property name="text">
                           <string>Thêm</string>
                          </property>
-                         <property name="icon">
-                          <iconset>
-                           <normaloff>:/icons/zap.svg</normaloff>:/icons/zap.svg</iconset>
-                         </property>
                          <property name="iconSize">
                           <size>
                            <width>25</width>
@@ -948,10 +944,6 @@ font-size: 12pt;</string>
                          <property name="text">
                           <string>Sửa</string>
                          </property>
-                         <property name="icon">
-                          <iconset>
-                           <normaloff>:/icons/zap.svg</normaloff>:/icons/zap.svg</iconset>
-                         </property>
                          <property name="iconSize">
                           <size>
                            <width>25</width>
@@ -992,10 +984,6 @@ font-size: 12pt;</string>
                          </property>
                          <property name="text">
                           <string>Xóa</string>
-                         </property>
-                         <property name="icon">
-                          <iconset>
-                           <normaloff>:/icons/zap.svg</normaloff>:/icons/zap.svg</iconset>
                          </property>
                          <property name="iconSize">
                           <size>
@@ -1381,10 +1369,6 @@ font-size: 12pt;</string>
                          <property name="text">
                           <string>Thêm</string>
                          </property>
-                         <property name="icon">
-                          <iconset>
-                           <normaloff>:/icons/zap.svg</normaloff>:/icons/zap.svg</iconset>
-                         </property>
                          <property name="iconSize">
                           <size>
                            <width>25</width>
@@ -1426,10 +1410,6 @@ font-size: 12pt;</string>
                          <property name="text">
                           <string>Sửa</string>
                          </property>
-                         <property name="icon">
-                          <iconset>
-                           <normaloff>:/icons/zap.svg</normaloff>:/icons/zap.svg</iconset>
-                         </property>
                          <property name="iconSize">
                           <size>
                            <width>25</width>
@@ -1470,10 +1450,6 @@ font-size: 12pt;</string>
                          </property>
                          <property name="text">
                           <string>Xóa</string>
-                         </property>
-                         <property name="icon">
-                          <iconset>
-                           <normaloff>:/icons/zap.svg</normaloff>:/icons/zap.svg</iconset>
                          </property>
                          <property name="iconSize">
                           <size>
@@ -1907,10 +1883,6 @@ font-size: 12pt;</string>
                          <property name="text">
                           <string>Thêm</string>
                          </property>
-                         <property name="icon">
-                          <iconset>
-                           <normaloff>:/icons/zap.svg</normaloff>:/icons/zap.svg</iconset>
-                         </property>
                          <property name="iconSize">
                           <size>
                            <width>25</width>
@@ -1952,10 +1924,6 @@ font-size: 12pt;</string>
                          <property name="text">
                           <string>Sửa</string>
                          </property>
-                         <property name="icon">
-                          <iconset>
-                           <normaloff>:/icons/zap.svg</normaloff>:/icons/zap.svg</iconset>
-                         </property>
                          <property name="iconSize">
                           <size>
                            <width>25</width>
@@ -1996,10 +1964,6 @@ font-size: 12pt;</string>
                          </property>
                          <property name="text">
                           <string>Xóa</string>
-                         </property>
-                         <property name="icon">
-                          <iconset>
-                           <normaloff>:/icons/zap.svg</normaloff>:/icons/zap.svg</iconset>
                          </property>
                          <property name="iconSize">
                           <size>
@@ -2449,10 +2413,6 @@ font-size: 12pt;</string>
                          <property name="text">
                           <string>Thêm</string>
                          </property>
-                         <property name="icon">
-                          <iconset>
-                           <normaloff>:/icons/zap.svg</normaloff>:/icons/zap.svg</iconset>
-                         </property>
                          <property name="iconSize">
                           <size>
                            <width>25</width>
@@ -2494,10 +2454,6 @@ font-size: 12pt;</string>
                          <property name="text">
                           <string>Sửa</string>
                          </property>
-                         <property name="icon">
-                          <iconset>
-                           <normaloff>:/icons/zap.svg</normaloff>:/icons/zap.svg</iconset>
-                         </property>
                          <property name="iconSize">
                           <size>
                            <width>25</width>
@@ -2538,10 +2494,6 @@ font-size: 12pt;</string>
                          </property>
                          <property name="text">
                           <string>Xóa</string>
-                         </property>
-                         <property name="icon">
-                          <iconset>
-                           <normaloff>:/icons/zap.svg</normaloff>:/icons/zap.svg</iconset>
                          </property>
                          <property name="iconSize">
                           <size>
@@ -2991,10 +2943,6 @@ font-size: 12pt;</string>
                          <property name="text">
                           <string>Thêm</string>
                          </property>
-                         <property name="icon">
-                          <iconset>
-                           <normaloff>:/icons/zap.svg</normaloff>:/icons/zap.svg</iconset>
-                         </property>
                          <property name="iconSize">
                           <size>
                            <width>25</width>
@@ -3036,10 +2984,6 @@ font-size: 12pt;</string>
                          <property name="text">
                           <string>Sửa</string>
                          </property>
-                         <property name="icon">
-                          <iconset>
-                           <normaloff>:/icons/zap.svg</normaloff>:/icons/zap.svg</iconset>
-                         </property>
                          <property name="iconSize">
                           <size>
                            <width>25</width>
@@ -3080,10 +3024,6 @@ font-size: 12pt;</string>
                          </property>
                          <property name="text">
                           <string>Xóa</string>
-                         </property>
-                         <property name="icon">
-                          <iconset>
-                           <normaloff>:/icons/zap.svg</normaloff>:/icons/zap.svg</iconset>
                          </property>
                          <property name="iconSize">
                           <size>
@@ -3517,10 +3457,6 @@ font-size: 12pt;</string>
                          <property name="text">
                           <string>Thêm</string>
                          </property>
-                         <property name="icon">
-                          <iconset>
-                           <normaloff>:/icons/zap.svg</normaloff>:/icons/zap.svg</iconset>
-                         </property>
                          <property name="iconSize">
                           <size>
                            <width>25</width>
@@ -3562,10 +3498,6 @@ font-size: 12pt;</string>
                          <property name="text">
                           <string>Sửa</string>
                          </property>
-                         <property name="icon">
-                          <iconset>
-                           <normaloff>:/icons/zap.svg</normaloff>:/icons/zap.svg</iconset>
-                         </property>
                          <property name="iconSize">
                           <size>
                            <width>25</width>
@@ -3606,10 +3538,6 @@ font-size: 12pt;</string>
                          </property>
                          <property name="text">
                           <string>Xóa</string>
-                         </property>
-                         <property name="icon">
-                          <iconset>
-                           <normaloff>:/icons/zap.svg</normaloff>:/icons/zap.svg</iconset>
                          </property>
                          <property name="iconSize">
                           <size>
@@ -3898,7 +3826,7 @@ border-radius: 3px;</string>
                  <string/>
                 </property>
                 <property name="icon">
-                 <iconset resource="resources/resources.qrc">
+                 <iconset resource="../resources/resources.qrc">
                   <normaloff>:/icon-EC8482/EC8482/x-octagon.svg</normaloff>:/icon-EC8482/EC8482/x-octagon.svg</iconset>
                 </property>
                 <property name="iconSize">
@@ -4178,7 +4106,7 @@ border-radius: 3px;</string>
                  <string/>
                 </property>
                 <property name="icon">
-                 <iconset resource="resources/resources.qrc">
+                 <iconset resource="../resources/resources.qrc">
                   <normaloff>:/icon-EC8482/EC8482/x-octagon.svg</normaloff>:/icon-EC8482/EC8482/x-octagon.svg</iconset>
                 </property>
                 <property name="iconSize">
@@ -4590,7 +4518,7 @@ border-radius: 3px;</string>
                  <string/>
                 </property>
                 <property name="icon">
-                 <iconset resource="resources/resources.qrc">
+                 <iconset resource="../resources/resources.qrc">
                   <normaloff>:/icon-EC8482/EC8482/x-octagon.svg</normaloff>:/icon-EC8482/EC8482/x-octagon.svg</iconset>
                 </property>
                 <property name="iconSize">
@@ -5041,7 +4969,7 @@ border-radius: 3px;</string>
                  <string/>
                 </property>
                 <property name="icon">
-                 <iconset resource="resources/resources.qrc">
+                 <iconset resource="../resources/resources.qrc">
                   <normaloff>:/icon-EC8482/EC8482/x-octagon.svg</normaloff>:/icon-EC8482/EC8482/x-octagon.svg</iconset>
                 </property>
                 <property name="iconSize">
@@ -5492,7 +5420,7 @@ border-radius: 3px;</string>
                  <string/>
                 </property>
                 <property name="icon">
-                 <iconset resource="resources/resources.qrc">
+                 <iconset resource="../resources/resources.qrc">
                   <normaloff>:/icon-EC8482/EC8482/x-octagon.svg</normaloff>:/icon-EC8482/EC8482/x-octagon.svg</iconset>
                 </property>
                 <property name="iconSize">
@@ -5901,7 +5829,7 @@ border-radius: 3px;</string>
                  <string/>
                 </property>
                 <property name="icon">
-                 <iconset resource="resources/resources.qrc">
+                 <iconset resource="../resources/resources.qrc">
                   <normaloff>:/icon-EC8482/EC8482/x-octagon.svg</normaloff>:/icon-EC8482/EC8482/x-octagon.svg</iconset>
                 </property>
                 <property name="iconSize">
@@ -6159,7 +6087,8 @@ border-radius: 3px;</string>
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="resources/resources.qrc"/>
+  <include location="../resources/resources.qrc"/>
+  <include location="../resources/resources.qrc"/>
  </resources>
  <connections/>
 </ui>

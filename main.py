@@ -14,7 +14,7 @@ widget.addWidget(attendanceWin)
 widget.addWidget(adminWin)
 widget.showFullScreen()
 
-widget.setWindowFlag(Qt.FramelessWindowHint)
+# widget.setWindowFlag(Qt.FramelessWindowHint)
 widget.setAttribute(Qt.WA_TranslucentBackground)
 widget.show()
 

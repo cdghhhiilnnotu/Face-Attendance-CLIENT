@@ -95,7 +95,7 @@ border-radius: 10px;</string>
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="resources/resources.qrc">:/apps/apps/login_bg.png</pixmap>
+      <pixmap resource="../resources/resources.qrc">:/apps/apps/login_bg.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -265,7 +265,7 @@ QPushButton #exit_btn:hover{
       <string/>
      </property>
      <property name="icon">
-      <iconset resource="resources/resources.qrc">
+      <iconset resource="../resources/resources.qrc">
        <normaloff>:/icon-EC8482/EC8482/x-octagon.svg</normaloff>:/icon-EC8482/EC8482/x-octagon.svg</iconset>
      </property>
     </widget>
@@ -302,10 +302,6 @@ background-color: rgb(2, 123, 199);</string>
      <property name="text">
       <string/>
      </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>:/icons/EC8482/alert-circle.svg</normaloff>:/icons/EC8482/alert-circle.svg</iconset>
-     </property>
     </widget>
     <widget class="QPushButton" name="admin_btn">
      <property name="geometry">
@@ -339,6 +335,7 @@ padding-bottom:0px;</string>
   </widget>
  </widget>
  <resources>
+  <include location="../resources/resources.qrc"/>
   <include location="resources/resources.qrc"/>
  </resources>
  <connections/>

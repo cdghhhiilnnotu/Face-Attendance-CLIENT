@@ -19,7 +19,7 @@ class AttendanceWindow(QMainWindow):
 
         # ATTEDANCE ATTRIBUTE
         self.class_id = ""
-        self.collector = CollectData.check_user(gv_name, gv_pass)
+        # self.collector = CollectData.check_user(gv_name, gv_pass)
         self.thread = {}
         
 
@@ -165,7 +165,6 @@ class AttendanceWindow(QMainWindow):
         self.ui.recognize_img_path_input.setText("")
         self.ui.recognize_models_box.clear()
         if os.path.exists(self.collector.MODEL_DIR):
-            print(self.collector.MODEL_DIR)
             self.ui.recognize_models_box.addItems([m.split(".keras")[0] for m in os.listdir(self.collector.MODEL_DIR)])
 
         if self.ui.recognize_models_box.count() > 0:
