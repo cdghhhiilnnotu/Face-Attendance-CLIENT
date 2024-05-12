@@ -19,7 +19,8 @@ class AttendanceWindow(QMainWindow):
 
         # ATTEDANCE ATTRIBUTE
         self.class_id = ""
-        self.collector = CollectData.check_user(gv_name, gv_pass)
+        self.list_btns = [self.ui.menu_btn,self.ui.home_btn,self.ui.recognize_btn,self.ui.report_btn,self.ui.logout_btn]
+        # self.collector = CollectData.check_user(gv_name, gv_pass)
         self.thread = {}
         
 
@@ -55,7 +56,6 @@ class AttendanceWindow(QMainWindow):
         self.ui.recognize_refresh_btn.clicked.connect(self.recp_refresh_results)
 
     def logout_func(self):
-        self.init_attendance()
         self.widget.setCurrentIndex(0)
         self.widget.currentWidget().login_init() 
 
@@ -73,29 +73,26 @@ class AttendanceWindow(QMainWindow):
 
     def swtich_page_func(self, index):
         self.ui.main_pages.setCurrentIndex(index)
-        list_btns = [self.ui.home_btn,self.ui.recognize_btn,self.ui.report_btn]
-        for i in range(len(list_btns)):
+        for i in range(len(self.list_btns[:-2])):
             if i == index:
-                list_btns[i].setStyleSheet(HauSettings.menu_btns_style(0,9,0,9,1,0,1,1))
+                self.list_btns[:-2][i].setStyleSheet(HauSettings.menu_btns_style(0,9,0,9,1,0,1,1))
             else:
-                list_btns[i].setStyleSheet(HauSettings.menu_btns_style(9,9,9,9,1,1,1,1))
+                self.list_btns[:-2][i].setStyleSheet(HauSettings.menu_btns_style(9,9,9,9,1,1,1,1))
 
     def sync_btn_page(self):
-        list_btns = [self.ui.home_btn,self.ui.recognize_btn,self.ui.report_btn]
         list_pages = [self.ui.home_page,self.ui.recognize_page,self.ui.report_page]
-        for i in range(len(list_btns)):
+        for i in range(len(self.list_btns[:-2])):
             if list_pages[i] == self.ui.main_pages.currentWidget():
-                list_btns[i].setStyleSheet(HauSettings.menu_btns_style(0,9,0,9,1,0,1,1))
+                self.list_btns[:-2][i].setStyleSheet(HauSettings.menu_btns_style(0,9,0,9,1,0,1,1))
             else:
-                list_btns[i].setStyleSheet(HauSettings.menu_btns_style(9,9,9,9,1,1,1,1))
+                self.list_btns[:-2][i].setStyleSheet(HauSettings.menu_btns_style(9,9,9,9,1,1,1,1))
 
     def expand_menu(self):
         self.ui.menu.setMinimumWidth(200)
-        list_btns = [self.ui.home_btn,self.ui.recognize_btn,self.ui.report_btn]
         list_btn_names = ["  Trang chủ","  Điểm danh","  Báo cáo","  Biểu đồ"]
-        for i in range(len(list_btns)):
-            list_btns[i].setStyleSheet(HauSettings.menu_btns_style(9,9,9,9,1,1,1,1))
-            list_btns[i].setText(list_btn_names[i])
+        for i in range(len(self.list_btns[:-2])):
+            self.list_btns[:-2][i].setStyleSheet(HauSettings.menu_btns_style(9,9,9,9,1,1,1,1))
+            self.list_btns[:-2][i].setText(list_btn_names[i])
         self.ui.menu_btn.setStyleSheet(HauSettings.menu_btns_style(9,9,0,0,1,1,1,1))
         self.ui.menu_btn.setText("  MENU")
         self.ui.logout_btn.setStyleSheet(HauSettings.menu_btns_style(0,0,9,9,1,1,1,1))
@@ -103,10 +100,9 @@ class AttendanceWindow(QMainWindow):
         
     def collapse_menu(self):
         self.ui.menu.setMinimumWidth(50)
-        list_btns = [self.ui.menu_btn,self.ui.home_btn,self.ui.recognize_btn,self.ui.report_btn,self.ui.logout_btn]
-        for i in range(len(list_btns)):
-            list_btns[i].setStyleSheet(HauSettings.menu_btns_style(9,9,9,9,1,1,1,1))
-            list_btns[i].setText("")
+        for i in range(len(self.list_btns)):
+            self.list_btns[i].setStyleSheet(HauSettings.menu_btns_style(9,9,9,9,1,1,1,1))
+            self.list_btns[i].setText("")
         
     def menu_func(self):
         if self.ui.menu.size().width() < 200:
@@ -132,15 +128,13 @@ class AttendanceWindow(QMainWindow):
         self.ui.home_table.setColumnWidth(4, 200)
         self.ui.home_table.horizontalHeader().setVisible(True)
         datasv = self.collector.get_sv_by_malop(search)
-        row = 0
         HauSettings.custom_table(self.ui.home_table, len(datasv))
-        for e in datasv:
+        for row, e in enumerate(datasv):
             self.ui.home_table.setItem(row, 0, QTableWidgetItem(e['MaSV']))
             self.ui.home_table.setItem(row, 1, QTableWidgetItem(e['TenSV']))
             self.ui.home_table.setItem(row, 2, QTableWidgetItem(e['LopQL']))
             self.ui.home_table.setItem(row, 3, QTableWidgetItem(e['NgSinh']))
             self.ui.home_table.setItem(row, 4, QTableWidgetItem(e['SDT']))
-            row += 1
         self.dataset_path = os.path.join(self.collector.DATASETS_PATH,search)
 
     def hp_search_func(self):
@@ -322,12 +316,12 @@ class AttendanceWindow(QMainWindow):
         self.ui.report_table.setColumnWidth(4, 200)
         self.ui.report_table.setColumnWidth(5, 200)
         
-        datasv = []
+        data_baocao = []
         if search_student == "":
-            datasv = self.collector.get_baocao_by_malop(search_class)
+            data_baocao = self.collector.get_baocao_by_malop(search_class)
         else:
-            datasv = self.collector.get_baocao_detail(search_class,search_student)
-        if len(datasv) == 0:
+            data_baocao = self.collector.get_baocao_detail(search_class,search_student)
+        if len(data_baocao) == 0:
             self.ui.report_wrong_label.setText("Sai thông tin")
             self.ui.report_class_input.setText("")
             self.ui.report_student_input.setText("")
@@ -335,8 +329,8 @@ class AttendanceWindow(QMainWindow):
             self.ui.report_wrong_label.setText("")
             row = 0
             
-            HauSettings.custom_table(self.ui.report_table, len(datasv))
-            for e in datasv:
+            HauSettings.custom_table(self.ui.report_table, len(data_baocao))
+            for e in data_baocao:
                 self.ui.report_table.setItem(row, 0, QTableWidgetItem(e['MaSV']))
                 self.ui.report_table.setItem(row, 1, QTableWidgetItem(e['TenSV']))
                 self.ui.report_table.setItem(row, 2, QTableWidgetItem(e['LopQL']))

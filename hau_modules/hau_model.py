@@ -94,6 +94,7 @@ class HauModel():
             shuffle=False)
 
     def init_model_nor(self):
+        self.epochs = 100
         inputs = keras.Input(self.input_shape)
         x = keras.layers.Conv2D(64,(5,5),activation='relu', kernel_regularizer=l2(0.001 * 4))(inputs)
         x = keras.layers.MaxPooling2D(pool_size=(3,3))(x)
@@ -110,6 +111,7 @@ class HauModel():
         return model
 
     def init_model_tl(self):
+        self.epochs = 20
         densenet = DenseNet169(weights="imagenet", include_top=False, input_shape=self.input_shape)
         densenet.trainable = False
         inputs = keras.Input(self.input_shape)
