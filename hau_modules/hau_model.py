@@ -61,7 +61,7 @@ class HauModel():
                         break
 
     def augmentation_dataset(self):
-        batch_size = 10
+        gen_batch_size = 10
         
         datagen = ImageDataGenerator(
             rescale=1./255
@@ -73,7 +73,7 @@ class HauModel():
         self.train_ds = datagen.flow_from_directory(
             f'{self.imgs_path}/train',
             target_size = (self.img_height, self.img_width),
-            batch_size = batch_size,
+            batch_size = gen_batch_size,
             subset = 'training',
             class_mode = 'categorical'
         )
@@ -81,7 +81,7 @@ class HauModel():
         self.val_ds = datagen.flow_from_directory(
             f'{self.imgs_path}/val',
             target_size = (self.img_height, self.img_width),
-            batch_size = batch_size,
+            batch_size = gen_batch_size,
             class_mode = 'categorical',
             shuffle = False
         )
@@ -89,14 +89,12 @@ class HauModel():
         self.test_ds = datagen.flow_from_directory(
             f'{self.imgs_path}/test',
             target_size = (self.img_height, self.img_width),
-            batch_size = batch_size,
+            batch_size = gen_batch_size,
             class_mode='categorical',
             shuffle=False)
 
     def init_model_nor(self):
         inputs = keras.Input(self.input_shape)
-        x = keras.layers.Conv2D(128,(5,5),activation='relu', kernel_regularizer=l2(0.001 * 4))(inputs)
-        x = keras.layers.MaxPooling2D(pool_size=(2,2))(x)
         x = keras.layers.Conv2D(64,(5,5),activation='relu', kernel_regularizer=l2(0.001 * 4))(inputs)
         x = keras.layers.MaxPooling2D(pool_size=(3,3))(x)
         x = keras.layers.Conv2D(32,(5,5),activation='relu', kernel_regularizer=l2(0.001 * 1))(x)
@@ -110,7 +108,6 @@ class HauModel():
         model = keras.Model(inputs, x)
 
         return model
-
 
     def init_model_tl(self):
         densenet = DenseNet169(weights="imagenet", include_top=False, input_shape=self.input_shape)
@@ -198,7 +195,10 @@ class HauModel():
             cv2.rectangle(img, (x, y),(x+w, y+h), color, 3)
             colors.append(color)
         cv2.imwrite(os.path.join(collector.RESULTS_PATH, f"{name}_result.png"), img)
-
+        print(colors)
         return os.path.join(collector.RESULTS_PATH, f"{name}_result.png"), colors, [np.argmax(guess) for guess in guesses]    
+
+
+
 
 

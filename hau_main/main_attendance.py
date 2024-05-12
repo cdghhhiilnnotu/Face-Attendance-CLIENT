@@ -19,7 +19,7 @@ class AttendanceWindow(QMainWindow):
 
         # ATTEDANCE ATTRIBUTE
         self.class_id = ""
-        # self.collector = CollectData.check_user(gv_name, gv_pass)
+        self.collector = CollectData.check_user(gv_name, gv_pass)
         self.thread = {}
         
 
@@ -60,7 +60,7 @@ class AttendanceWindow(QMainWindow):
         self.widget.currentWidget().login_init() 
 
     def init_suggesting_search(self):
-        suggestion_list = self.collector.get_ds_malop()
+        suggestion_list = self.collector.get_ds_by_malop()
         completer = QCompleter(suggestion_list, self.ui.home_class_input)
         self.ui.home_class_input.setCompleter(completer)
 
@@ -131,7 +131,7 @@ class AttendanceWindow(QMainWindow):
         self.ui.home_table.setColumnWidth(3, 200)
         self.ui.home_table.setColumnWidth(4, 200)
         self.ui.home_table.horizontalHeader().setVisible(True)
-        datasv = self.collector.get_sv_by_class_id(search)
+        datasv = self.collector.get_sv_by_malop(search)
         row = 0
         HauSettings.custom_table(self.ui.home_table, len(datasv))
         for e in datasv:
@@ -205,7 +205,7 @@ class AttendanceWindow(QMainWindow):
 
             requests.post(HauSettings.BASE_URL + "/giaovien/baocao", data)
         self.collector.user_api(self.collector.username_MGV)
-        self.collector.update_api(data['malop'])
+        # self.collector.update_api(data['malop'])
         self.recp_refresh_results()
 
     def recp_refresh_results(self):
@@ -324,7 +324,7 @@ class AttendanceWindow(QMainWindow):
         
         datasv = []
         if search_student == "":
-            datasv = self.collector.get_baocao_by_class_id(search_class)
+            datasv = self.collector.get_baocao_by_malop(search_class)
         else:
             datasv = self.collector.get_baocao_detail(search_class,search_student)
         if len(datasv) == 0:

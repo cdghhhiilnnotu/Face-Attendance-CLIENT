@@ -57,7 +57,7 @@ class LoginWindow(QMainWindow):
             if CollectData.check_admin(self.ui.signin_username_input.text(),self.ui.signin_password_input.text()):
                 self.signin_admin_success()
                 return
-        self.signin_fail()
+        # self.signin_fail()
         
     def signin_user_success(self):
         self.widget.setCurrentIndex(1)

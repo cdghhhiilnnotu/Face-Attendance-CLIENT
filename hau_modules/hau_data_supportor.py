@@ -9,7 +9,7 @@ class DatasetSupport():
     
     def download_datasets_by_class_id(class_id, datasets_path, collector):
         DatasetSupport.reset_path(datasets_path)
-        list_msv = collector.get_msv_by_class_id(class_id)
+        list_msv = collector.get_msv_by_malop(class_id)
         
         students = []
         for msv in list_msv:
