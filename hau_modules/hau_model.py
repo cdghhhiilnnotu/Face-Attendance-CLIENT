@@ -97,14 +97,11 @@ class HauModel():
         self.epochs = 100
         inputs = keras.Input(self.input_shape)
         x = keras.layers.Conv2D(64,(5,5),activation='relu', kernel_regularizer=l2(0.001 * 4))(inputs)
-        x = keras.layers.MaxPooling2D(pool_size=(3,3))(x)
+        x = keras.layers.AveragePooling2D(pool_size=(3,3))(x)
         x = keras.layers.Conv2D(32,(5,5),activation='relu', kernel_regularizer=l2(0.001 * 1))(x)
         x = keras.layers.MaxPooling2D(pool_size=(3,3))(x)
 
         x = keras.layers.Flatten()(x)
-        x = keras.layers.Dense(256, activation='relu')(x)
-        x = keras.layers.Dropout(0.25)(x)
-        x = keras.layers.Dense(128, activation='relu')(x)
         x = keras.layers.Dense(len(os.listdir(self.datasets_path)), activation='softmax')(x)
         model = keras.Model(inputs, x)
 
